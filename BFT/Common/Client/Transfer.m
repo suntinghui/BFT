@@ -108,6 +108,15 @@ static Transfer *instance = nil;
     return self;
 }
 
+/**
+ *  发送请求
+ *
+ *  @param transCode 请求码
+ *  @param fskCmd    要操作刷卡器器时需传
+ *  @param dic       请求的字段
+ *  @param sucBlock  成功后的回调
+ *  @param failBlock 失败后的回调（传nil时为默认操作：弹出错误框提示操作失败）
+ */
 - (void) startTransfer:(NSString *)transCode
                 fskCmd:(NSString *) fskCmd
               paramDic:(NSDictionary *) dic

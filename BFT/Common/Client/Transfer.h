@@ -88,7 +88,7 @@ typedef void(^RequestErrBlock)();
 
 + (Transfer *) sharedTransfer;
 
-
+//发送请求
 - (void) startTransfer:(NSString *)transCode
                 fskCmd:(NSString *) fskCmd
               paramDic:(NSDictionary *) dic
