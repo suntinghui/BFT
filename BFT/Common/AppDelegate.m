@@ -21,6 +21,8 @@
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
     
+     [[Transfer sharedTransfer] initFSK];
+    
     return YES;
 }
 							

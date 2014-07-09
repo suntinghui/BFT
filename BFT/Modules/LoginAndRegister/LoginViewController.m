@@ -38,10 +38,30 @@
 #pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
 {
-    [self loginAction];
+    [self getPicVerCode];
 }
 
 #pragma mark -http请求
+/**
+ *  获取图片验证码
+ */
+- (void)getPicVerCode
+{
+    NSDictionary *requestDict = @{@"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"" hasTime:YES]};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089021"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requestDict
+                                     success:^(id result) {
+                                         
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                            [SVProgressHUD showSuccessWithStatus:result[@"verifyCode"]];
+                                         }
+                                         
+                                     } fail:nil];
+}
+
 /**
  *  登录请求
  */

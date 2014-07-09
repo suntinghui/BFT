@@ -22,25 +22,28 @@
 
 - (void) initFSK
 {
+ 
     NSLog(@"Init Transfer FSK ...");
     // 初始化对象
     self.m_vcom = [vcom getInstance];
     [self.m_vcom open];
     
     self.m_vcom.eventListener = self;
-    
-    [self.m_vcom setMode:VCOM_TYPE_F2F recvMode:VCOM_TYPE_F2F];
-    
-    
+    [self.m_vcom setMode:VCOM_TYPE_FSK recvMode:VCOM_TYPE_F2F];
     [self.m_vcom setVloumn:75];
     
-    [self.m_vcom setMac:false]; //add wenbin 20140328
-    
     self.fskCmdArray = [[NSMutableArray alloc] init];
+    
 }
 
 - (void) fskAction
 {
+//    if ([self.m_vcom hasHeadset]==0)
+//    {
+//        [SVProgressHUD showErrorWithStatus:@"请先插入刷卡器"];
+//        return;
+//    }
+    
     self.fskCmdArray = [NSMutableArray arrayWithArray:[self.fskCommand componentsSeparatedByString:@"#"]];
     
     [self.m_vcom StartRec];
@@ -560,7 +563,11 @@
 - (void) showFSKProgress
 {
     
-    [SVProgressHUD showWithStatus:[self getWaittingMessage:self.currentFSKMethod] maskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD showWithStatus:[self getWaittingMessage:self.currentFSKMethod] maskType:SVProgressHUDMaskTypeClear cancelBlock:^(id sender) {
+        
+        [SVProgressHUD dismiss];
+        [self.m_vcom StopRec];
+    }];
 }
 
 - (NSString *) getWaittingMessage:(NSString *) methodName
@@ -625,19 +632,9 @@
     [self.m_vcom setMode:VCOM_TYPE_F2F recvMode:VCOM_TYPE_F2F];
     int smode=[self.m_vcom getSendMode];
     
-    //    [m_vcom Request_GetDes:0 keyIndex:1 random:"12345678" randomLen:3 time:60];
+
     
-    
-    //        if (ctrlFlag == 0x08)
-    //        {
-    //            [m_vcom f2f_getMiWenCiKa:0x14 tiemout:0x1E randLen:4 rand:"1234" fjLen:0 fjData:"20131025142500000013"];
-    //        }
-    //        else
-    //        {
-    //            [m_vcom f2f_getMiWenCiKa:0x14 tiemout:0x1E randLen:4 rand:"1234" fjLen:0 fjData:"20131025142500000013"];
-    //        }
-    
-    [self.m_vcom startDetector:14 random:"1234" randomLen:4 data:nil datalen:0 time:30];
+//    [self.m_vcom startDetector:14 random:"1234" randomLen:4 data:nil datalen:0 time:30];
     [self.m_vcom StartRec];
     
 }

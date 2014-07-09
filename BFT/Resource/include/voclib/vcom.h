@@ -28,13 +28,6 @@
 #define CTRL_FLAG_REPORT_MAC              0xE
 #define CTRL_FLAG_RANDOM_NUM_TWO_SIDES    0xF
 
-#define  ERROR -1
-#define  ERROR_FAIL_TO_START -2
-#define  ERROR_FAIL_TO_GET_KSN  -3
-#define  ERROR_DUPLICATE_SWIPER -4
-#define  ERROR_AUDIO_INITIALIZATION_FAIL -5
-#define  ERROR_AUDIO_SESSION_SET_FAIL -6
-
 #define NOTIFY_CHECKMIC @"NOTIFY_CHECKMIC"
 #define NOTIFY_RECORDDATA @"NOTIFY_RECORDDATA"
 
@@ -64,8 +57,7 @@ extern int  ppDataPos;
 -(void)close;
 //初始化,一般在viewDidLoad函数中创建对象后调用一次，
 - (id)init;
-//初始化后，赋值SDK版本信息.
-- (NSString*)GetSDKVerson;
+
 //工具函数,返回bin二进制数据，长度为binlen的十六进制字符串
 -(NSString*) HexValue:(char*)bin Len:(int)binlen;
 //工具函数，打印二进制缓冲区内容
@@ -108,12 +100,6 @@ extern int  ppDataPos;
 //获取随机数
 -(void) Request_GetRandom:(int)randLen;
 
--(void)startDetector:(int)desMode
-              random:(char*)_random
-           randomLen:(int)_randomLen
-                data:(char*)_data
-             datalen:(int)_datalen
-                time:(int)_time;
 //获取psam卡上保存的商户号码和终端号
 -(void) Request_VT;
 
@@ -158,7 +144,7 @@ extern int  ppDataPos;
  @param desMode 模式 请填0
  @param _keyIndex PSAM卡秘钥索引
  @param _cash 消费金额
- @param _cashLen 消费金额长度
+ @param _cashLen 消费金额长度 
  @param _random 随机数 由PSAM卡决定随机数和随机数长度
  @param _randomLen 随机数长度
  @param _panData 参与加密计算的数据
@@ -195,10 +181,10 @@ extern int  ppDataPos;
                     data:(char*)_data dataLen:(int)_dataLen;
 //请求psam卡mac计算
 -(void) Request_CheckMac2:(int)macMode
-                 keyIndex:(int)_keyIndex
-                   random:(char*)_random randomLen:(int)_randomLen
-                     data:(char*)_data dataLen:(int)_dataLen
-                      mac:(char*)_mac maclen:(int)_maclen;
+                keyIndex:(int)_keyIndex
+                  random:(char*)_random randomLen:(int)_randomLen
+                    data:(char*)_data dataLen:(int)_dataLen
+                    mac:(char*)_mac maclen:(int)_maclen;
 //请求pasm卡mac校验
 -(void) Request_CheckMacEx:(int)macMode keyIndex:(int)_keyIndex random:(char *)_random randomLen:(int)_randomLen data:(char *)_data dataLen:(int)_dataLen mac:(char*)_mac maclen:(int)_maclen;
 
@@ -402,13 +388,11 @@ extern int  ppDataPos;
  hardno10bytes:10字节的硬件序列号
  */
 
--(void)GetExtKsnRetData:(char*) psamno8bytes
-                 hardNo:(char*)hardno10bytes;
+ -(void)GetExtKsnRetData:(char*) psamno8bytes
+ hardNo:(char*)hardno10bytes;
 
 -(char *)GetKsnRetData;
-
--(char *)SetNullToRetData;
-
+ 
 //*****************************************************
 //私有函数
 //播放内存的语音。内部调用。

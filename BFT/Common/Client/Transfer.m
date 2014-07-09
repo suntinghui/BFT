@@ -166,9 +166,13 @@ static Transfer *instance = nil;
 }
 - (NSString *)actionString:(NSString *)transCode
 {
-    if ([self.transferCode isEqualToString:@"089016"]){
-        //登录
+    if ([self.transferCode isEqualToString:@"089016"]) //登录
+    {
         return @"login";
+    }
+    else if([self.transferCode isEqualToString:@"089021"]) //图片验证码
+    {
+        return @"verifyCodes";
     }
     return nil;
 }

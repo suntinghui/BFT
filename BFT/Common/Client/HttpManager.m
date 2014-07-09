@@ -78,9 +78,6 @@ static HttpManager  *instance;
          NSLog(@"MKNetwork request error : %@", [error localizedDescription]);
          errorBlock(error);
          
-         // [ApplicationDelegate showErrorPrompt:[error localizedDescription]];
-//         [ApplicationDelegate gotoFailureViewController:[error localizedDescription]];
-         
      }];
     
     [workEngine enqueueOperation:op];

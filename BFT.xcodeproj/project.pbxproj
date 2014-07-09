@@ -150,7 +150,6 @@
 		B8BD248D196CD6430092F2C5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD2489196CD6430092F2C5 /* libcrypto.a */; };
 		B8BD248E196CD6430092F2C5 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248A196CD6430092F2C5 /* libcurl.a */; };
 		B8BD248F196CD6430092F2C5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248B196CD6430092F2C5 /* libssl.a */; };
-		B8BD2490196CD6430092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248C196CD6430092F2C5 /* libvoclib.a */; };
 		B8BD252B196CE3180092F2C5 /* con_req_089020.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EE196CE3180092F2C5 /* con_req_089020.xml */; };
 		B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EF196CE3180092F2C5 /* con_req_080000.xml */; };
 		B8BD252D196CE3180092F2C5 /* con_req_020001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F0196CE3180092F2C5 /* con_req_020001.xml */; };
@@ -213,6 +212,7 @@
 		B8BD2566196CE3180092F2C5 /* Copy of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */; };
 		B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */; };
 		B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD256A196CE6B70092F2C5 /* BaseViewController.m */; };
+		B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD256E196D42D00092F2C5 /* libvoclib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -489,7 +489,6 @@
 		B8BD2489196CD6430092F2C5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = BFT/lib/libcrypto.a; sourceTree = "<group>"; };
 		B8BD248A196CD6430092F2C5 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = BFT/lib/libcurl.a; sourceTree = "<group>"; };
 		B8BD248B196CD6430092F2C5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = BFT/lib/libssl.a; sourceTree = "<group>"; };
-		B8BD248C196CD6430092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvoclib.a; path = BFT/lib/libvoclib.a; sourceTree = "<group>"; };
 		B8BD2493196CD8870092F2C5 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		B8BD2494196CD8870092F2C5 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
 		B8BD2495196CD8870092F2C5 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
@@ -639,6 +638,7 @@
 		B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy (2) of con_req_020022.xml"; sourceTree = "<group>"; };
 		B8BD2569196CE6B70092F2C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B8BD256A196CE6B70092F2C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B8BD256E196D42D00092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,7 +661,7 @@
 				B83A702E196BE0CE0080D593 /* CoreLocation.framework in Frameworks */,
 				B83A702C196BE0C80080D593 /* CFNetwork.framework in Frameworks */,
 				B83A702A196BE0C30080D593 /* Security.framework in Frameworks */,
-				B8BD2490196CD6430092F2C5 /* libvoclib.a in Frameworks */,
+				B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */,
 				B83A7026196BE0900080D593 /* libsqlite3.dylib in Frameworks */,
 				B83A7024196BE0890080D593 /* libz.dylib in Frameworks */,
 				B83A6F4A196BDCF70080D593 /* CoreGraphics.framework in Frameworks */,
@@ -704,10 +704,10 @@
 		B83A6F46196BDCF70080D593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8BD256E196D42D00092F2C5 /* libvoclib.a */,
 				B8BD2489196CD6430092F2C5 /* libcrypto.a */,
 				B8BD248A196CD6430092F2C5 /* libcurl.a */,
 				B8BD248B196CD6430092F2C5 /* libssl.a */,
-				B8BD248C196CD6430092F2C5 /* libvoclib.a */,
 				B83A703D196BE10E0080D593 /* ImageIO.framework */,
 				B83A703B196BE1070080D593 /* SystemConfiguration.framework */,
 				B83A7039196BE1000080D593 /* CoreAudio.framework */,
