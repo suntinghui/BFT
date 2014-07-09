@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 银行卡修改 -->
+<root
+    isJson="true"
+    shouldMac="false" >
+
+    <field
+        key="fieldTrancode"
+        value="089029" />
+
+    <field
+        key="psamNo"
+        value="__psamNo" />
+
+    <field
+        key="name"
+        value="__name" />
+
+    <field
+        key="pldNo"
+        value="__pldNo" />
+
+    <field
+        key="oldBkCardNo"
+        value="__oldBkCardNo" />
+
+    <field
+        key="bankNo"
+        value="__bankNo" />
+
+    <field
+        key="bkCardNo"
+        value="__bkCardNo" />
+
+    <field
+        key="verifyCode"
+        value="__verifyCode" />
+
+</root>

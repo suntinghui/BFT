@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root
+    isJson="true"
+    shouldMac="false" >
+
+    <field
+        key="fieldTrancode"
+        value="089021" />
+
+    <field
+        key="sendTime"
+        value="__sendTime" />
+
+    <field
+        key="psamNo"
+        value="__PSAMNO" />
+
+</root>

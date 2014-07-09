@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 实名认证 -->
+<root
+    isJson="true"
+    shouldMac="false" >
+<field key="fieldTrancode" value="089020" />
+
+    <field
+        key="psamNo"
+        value="__PsamNo" />
+
+
+    <field
+        key="bankNo"
+        value="123456789" />
+
+    <field
+        key="bkCardNo"
+        value="__bkCardNo"/>
+
+    <field
+        key="mctName"
+        value="建行" />
+
+    <field
+        key="verifyCode"
+        value="__verifyCode" />
+    
+     <field
+        key="attachments"
+        value="__attachments" />
+    
+
+</root>
