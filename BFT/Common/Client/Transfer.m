@@ -300,11 +300,14 @@ static Transfer *instance = nil;
             }
             //把 jsonDic中的数据转换格式 变为json格式
 //            NSLog(@"%@", [self.jsonDic JSONString]);
-            NSLog(@"------%@", [self DataTOjsonString:self.jsonDic]);
-            [self.sendDic setObject:[self.jsonDic JSONString] forKey:@"arg"];
+//            NSLog(@"------%@", [self DataTOjsonString:self.jsonDic]);
+//            [self.sendDic setObject:[self.jsonDic JSONString] forKey:@"arg"];
+//            
+            [self.sendDic addEntriesFromDictionary:self.jsonDic];
             if (![tmp_mac isEqualToString:@""]) {
                 [self.sendDic setObject:[EncryptionUtil MD5Encrypt:macString] forKey:@"mac"];
             }
+            
             [self sendPacket];
         }
         //走8583
