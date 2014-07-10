@@ -107,4 +107,10 @@
     [UIView commitAnimations];
 }
 
+-(void) setBgTextWithHint:(NSString *) bg Text:(NSString* ) text Hint:(NSString* ) hint
+{
+    [_leftImage setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:bg]]];
+    [_contentTF setText:text];
+    [_contentTF setPlaceholder:hint];
+}
 @end
