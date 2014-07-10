@@ -50,6 +50,13 @@
     deckController.leftSize =150;
     [self.navigationController pushViewController:deckController animated:YES];
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 #pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
 {
