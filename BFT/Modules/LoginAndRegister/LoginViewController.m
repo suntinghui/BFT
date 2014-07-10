@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.codeView.delete = self;
+    [self.codeView setCodeString:@"点击获取验证码"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +39,12 @@
 
 #pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
+{
+    [self loginAction];
+}
+
+#pragma mark -CodeViewDelegate
+- (void)CodeViewClicked
 {
     [self getPicVerCode];
 }
@@ -52,11 +60,12 @@
     [[Transfer sharedTransfer] startTransfer:@"089021"
                                       fskCmd:@"Request_GetExtKsn"
                                     paramDic:requestDict
+                                        mess:@"正在获取验证码"
                                      success:^(id result) {
                                          
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
-                                            [SVProgressHUD showSuccessWithStatus:result[@"verifyCode"]];
+                                             [self.codeView setCodeString:result[@"verifyCode"]];
                                          }
                                          
                                      } fail:nil];
@@ -71,10 +80,11 @@
                                  @"lgnPass":@"123",
                                  @"verifyCode":@"1234",
                                  @"version":@"1"};
-    
+
     [[Transfer sharedTransfer] startTransfer:@"089016"
                                       fskCmd:nil
                                     paramDic:requstDict
+                                        mess:@"正在登陆" 
                                      success:^(id result) {
                                          
                                      } fail:nil];

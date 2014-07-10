@@ -18,8 +18,11 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
+#import "PooCodeView.h"
 
-@interface LoginViewController : BaseViewController
+@interface LoginViewController : BaseViewController<CodeViewDelegate>
+
+@property (weak, nonatomic) IBOutlet PooCodeView *codeView;
 
 - (IBAction)buttonClickHandle:(id)sender;
 

@@ -18,9 +18,19 @@
  //
  ----------------------------------------------------------------*/
 #import "StaticTools.h"
-
+#import "MessageViewController.h"
+#import "DateSelectViewController.h"
 
 @interface StaticTools (UIOperation)
 
+//显示信息提示页面
++(void)showMessagePageWithType:(kMessageType)type
+                          mess:(NSString*)mess
+                       clicked:(ButtonClickBlock)block;
 
+
+//显示日期选择页面  可包含年、月、日  也可只包含年、月
++ (void)showDateSelectWithIndexDate:(NSString*)dateStr
+                               type:(kDatePickerType)pickerType
+                            clickOk:(DateSelectAction)block;
 @end

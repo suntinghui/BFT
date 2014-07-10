@@ -62,7 +62,8 @@
 
             NSString *cmd = [self.fskCmdArray objectAtIndex:0];
             
-            [self performSelectorOnMainThread:@selector(showFSKProgress) withObject:nil waitUntilDone:NO];
+//            [self performSelectorOnMainThread:@selector(showFSKProgress) withObject:nil waitUntilDone:NO];
+            [self showFSKProgress];
             
             [self invokeFSKCmd:cmd];
             
