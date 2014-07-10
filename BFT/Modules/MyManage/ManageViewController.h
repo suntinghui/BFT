@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  ManageViewController.h
 //  BFT
 //
 //  Created by 文彬 on 14-7-10.
@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface MyManageHomeViewController : BaseViewController
+@interface ManageViewController : UIViewController
 
 @end
