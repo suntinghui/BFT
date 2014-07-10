@@ -22,5 +22,6 @@
 #import "BaseViewController.h"
 #import "Transfer.h"
 #import "Transfer+FSK.h"
+#import "IIViewDeckController.h"
 
 #endif

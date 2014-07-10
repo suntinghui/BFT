@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BFT/Common/Client/HttpManager.m"
-            timestampString = "426668199.189496"
+            filePath = "BFT/Resource/External/ECSlidingViewController/LeftMenuDevViewController.m"
+            timestampString = "426674376.630638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "-transfer:successHandler:errorHandler:actionString:"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-setUnderLeftViewController:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

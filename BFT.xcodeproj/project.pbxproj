@@ -145,6 +145,13 @@
 		B83A7128196BE8790080D593 /* StaticUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A7123196BE8790080D593 /* StaticUITools.m */; };
 		B83A712D196BEA900080D593 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B83A712A196BEA900080D593 /* SVProgressHUD.bundle */; };
 		B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A712C196BEA900080D593 /* SVProgressHUD.m */; };
+		B8732F6A196E7F0B00095BDD /* MyManageHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F68196E7F0B00095BDD /* MyManageHomeViewController.m */; };
+		B8732F6B196E7F0B00095BDD /* MyManageHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8732F69196E7F0B00095BDD /* MyManageHomeViewController.xib */; };
+		B8732F6F196E7F3000095BDD /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F6D196E7F3000095BDD /* LeftMenuViewController.m */; };
+		B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8732F6E196E7F3000095BDD /* LeftMenuViewController.xib */; };
+		B8732F7B196E8F5000095BDD /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F76196E8F5000095BDD /* IISideController.m */; };
+		B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F78196E8F5000095BDD /* IIViewDeckController.m */; };
+		B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F7A196E8F5000095BDD /* IIWrapController.m */; };
 		B8932379196E2D8500D4C161 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8932377196E2D8500D4C161 /* MessageViewController.m */; };
 		B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8932378196E2D8500D4C161 /* MessageViewController.xib */; };
 		B8BD248D196CD6430092F2C5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD2489196CD6430092F2C5 /* libcrypto.a */; };
@@ -485,6 +492,18 @@
 		B83A712A196BEA900080D593 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		B83A712B196BEA900080D593 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		B83A712C196BEA900080D593 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B8732F67196E7F0B00095BDD /* MyManageHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyManageHomeViewController.h; sourceTree = "<group>"; };
+		B8732F68196E7F0B00095BDD /* MyManageHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyManageHomeViewController.m; sourceTree = "<group>"; };
+		B8732F69196E7F0B00095BDD /* MyManageHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyManageHomeViewController.xib; sourceTree = "<group>"; };
+		B8732F6C196E7F3000095BDD /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		B8732F6D196E7F3000095BDD /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		B8732F6E196E7F3000095BDD /* LeftMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuViewController.xib; sourceTree = "<group>"; };
+		B8732F75196E8F5000095BDD /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		B8732F76196E8F5000095BDD /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		B8732F77196E8F5000095BDD /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		B8732F78196E8F5000095BDD /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		B8732F79196E8F5000095BDD /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		B8732F7A196E8F5000095BDD /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
 		B8932376196E2D8500D4C161 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B8932377196E2D8500D4C161 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		B8932378196E2D8500D4C161 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
@@ -780,9 +799,10 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
+				B8732F66196E7EE900095BDD /* MyManageAndLeftMenu */,
 				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
-				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -935,6 +955,7 @@
 		B83A7047196BE1750080D593 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				B8732F74196E8F5000095BDD /* ViewDeck */,
 				B83A7129196BEA900080D593 /* SVProgressHUD */,
 				B83A7048196BE1750080D593 /* AFNetworking */,
 				B83A704A196BE1750080D593 /* CocoaLumberjack */,
@@ -1232,6 +1253,33 @@
 				B83A712C196BEA900080D593 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		B8732F66196E7EE900095BDD /* MyManageAndLeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B8732F6C196E7F3000095BDD /* LeftMenuViewController.h */,
+				B8732F6D196E7F3000095BDD /* LeftMenuViewController.m */,
+				B8732F6E196E7F3000095BDD /* LeftMenuViewController.xib */,
+				B8732F67196E7F0B00095BDD /* MyManageHomeViewController.h */,
+				B8732F68196E7F0B00095BDD /* MyManageHomeViewController.m */,
+				B8732F69196E7F0B00095BDD /* MyManageHomeViewController.xib */,
+			);
+			name = MyManageAndLeftMenu;
+			path = HomeAndLeftMenu;
+			sourceTree = "<group>";
+		};
+		B8732F74196E8F5000095BDD /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				B8732F75196E8F5000095BDD /* IISideController.h */,
+				B8732F76196E8F5000095BDD /* IISideController.m */,
+				B8732F77196E8F5000095BDD /* IIViewDeckController.h */,
+				B8732F78196E8F5000095BDD /* IIViewDeckController.m */,
+				B8732F79196E8F5000095BDD /* IIWrapController.h */,
+				B8732F7A196E8F5000095BDD /* IIWrapController.m */,
+			);
+			path = ViewDeck;
 			sourceTree = "<group>";
 		};
 		B8932375196E2CD500D4C161 /* CommonController */ = {
@@ -1549,6 +1597,7 @@
 				B8BD253C196CE3180092F2C5 /* con_req_089021.xml in Resources */,
 				B8BD2548196CE3180092F2C5 /* con_req_089010.xml in Resources */,
 				B8BD2560196CE3180092F2C5 /* con_req_readme.txt in Resources */,
+				B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */,
 				B8BD253A196CE3180092F2C5 /* con_req_089034.xml in Resources */,
 				B83A70C0196BE1750080D593 /* README.txt in Resources */,
 				B8BD2544196CE3180092F2C5 /* con_req_089027.xml in Resources */,
@@ -1564,6 +1613,7 @@
 				B8BD255B196CE3180092F2C5 /* con_req_100004.xml in Resources */,
 				B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */,
 				B8BD2542196CE3180092F2C5 /* con_req_089031.xml in Resources */,
+				B8732F6B196E7F0B00095BDD /* MyManageHomeViewController.xib in Resources */,
 				B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */,
 				B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */,
 				B8BD2551196CE3180092F2C5 /* con_req_600000001.xml in Resources */,
@@ -1620,9 +1670,11 @@
 				B83A701D196BE04C0080D593 /* PwdLeftTextField.m in Sources */,
 				B83A6FF9196BE04C0080D593 /* UploadSignImageDBHelper.m in Sources */,
 				B83A7105196BE2600080D593 /* AreaModel.m in Sources */,
+				B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */,
 				B83A70BD196BE1750080D593 /* DDContextFilterLogFormatter.m in Sources */,
 				B83A6FF6196BE04C0080D593 /* PayeeAccountDBHelper.m in Sources */,
 				B83A7128196BE8790080D593 /* StaticUITools.m in Sources */,
+				B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */,
 				B83A70E4196BE1750080D593 /* TBXML+Compression.m in Sources */,
 				B83A70CE196BE1750080D593 /* FMDatabasePool.m in Sources */,
 				B83A710E196BE2600080D593 /* TradeDetail.m in Sources */,
@@ -1661,6 +1713,7 @@
 				B83A70E0196BE1750080D593 /* HSK_CFUtilities.m in Sources */,
 				B83A7110196BE2600080D593 /* TransferModel.m in Sources */,
 				B83A7124196BE8790080D593 /* StaticDataTools.m in Sources */,
+				B8732F6F196E7F3000095BDD /* LeftMenuViewController.m in Sources */,
 				B83A70CA196BE1750080D593 /* NSData+NSString.m in Sources */,
 				B83A6FF7196BE04C0080D593 /* ReversalDBHelper.m in Sources */,
 				B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */,
@@ -1686,6 +1739,7 @@
 				B83A70E6196BE1750080D593 /* TBXML.m in Sources */,
 				B83A70D4196BE1750080D593 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				B83A70C4196BE1750080D593 /* GCDAsyncSocket.m in Sources */,
+				B8732F7B196E8F5000095BDD /* IISideController.m in Sources */,
 				B83A7009196BE04C0080D593 /* NSObject+MutPerformSel.m in Sources */,
 				B83A7006196BE04C0080D593 /* EncryptionUtil.m in Sources */,
 				B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */,
@@ -1711,6 +1765,7 @@
 				B83A70D8196BE1750080D593 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				B83A70DF196BE1750080D593 /* Base64Transcoder.m in Sources */,
 				B83A701A196BE04C0080D593 /* PasswordTextField.m in Sources */,
+				B8732F6A196E7F0B00095BDD /* MyManageHomeViewController.m in Sources */,
 				B83A710A196BE2600080D593 /* PayeeAccountModel.m in Sources */,
 				B83A6FF5196BE04C0080D593 /* BaseDBHelper.m in Sources */,
 				B83A6FF4196BE04C0080D593 /* AppDataCenter.m in Sources */,

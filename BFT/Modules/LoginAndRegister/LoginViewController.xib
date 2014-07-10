@@ -27,9 +27,10 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="h4I-0C-dew" customClass="PooCodeView">
-                    <rect key="frame" x="141" y="179" width="105" height="57"/>
+                    <rect key="frame" x="101" y="102" width="105" height="57"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.81334918478260865" green="0.73961500455049922" blue="0.79359128584693484" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
