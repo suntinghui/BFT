@@ -97,9 +97,7 @@ static Transfer *instance = nil;
         _jsonDic = [[NSMutableDictionary alloc] init];
         _receData = [[NSData alloc] init];
         
-        self.requestErrBlock = ^{
-            [SVProgressHUD showErrorWithStatus:@"操作失败，请稍后再试！"];
-        };
+        
         
 //        _asyncSocket = [[AsyncSocket alloc] initWithDelegate:self];
 //        [_asyncSocket setRunLoopModes:[NSArray arrayWithObject:NSRunLoopCommonModes]];
@@ -108,9 +106,20 @@ static Transfer *instance = nil;
     return self;
 }
 
+/**
+ *  发送请求
+ *
+ *  @param transCode 请求码
+ *  @param fskCmd    要操作刷卡器器时需传
+ *  @param dic       请求的字段
+  *  @param mess     请求时的加载框文字 传nil时不显示加载框
+ *  @param sucBlock  成功后的回调
+ *  @param failBlock 失败后的回调（传nil时为默认操作：弹出错误框提示操作失败）
+ */
 - (void) startTransfer:(NSString *)transCode
                 fskCmd:(NSString *) fskCmd
               paramDic:(NSDictionary *) dic
+                  mess:(NSString*)mess
                success:(requestSucBlock)sucBlock
                   fail:(RequestErrBlock)failBlock
 {
@@ -130,10 +139,17 @@ static Transfer *instance = nil;
     self.nextViewController = nil;
     
     _paramDic = dic;
+    self.requestMessStr = mess;
     self.requestSucBlock = sucBlock;
     if (failBlock!=nil)
     {
            self.requestErrBlock = failBlock;
+    }
+    else
+    {
+        self.requestErrBlock = ^{
+            [SVProgressHUD showErrorWithStatus:@"操作失败，请稍后再试！"];
+        };
     }
  
     
@@ -157,9 +173,13 @@ static Transfer *instance = nil;
 }
 - (NSString *)actionString:(NSString *)transCode
 {
-    if ([self.transferCode isEqualToString:@"089016"]){
-        //登录
+    if ([self.transferCode isEqualToString:@"089016"]) //登录
+    {
         return @"login";
+    }
+    else if([self.transferCode isEqualToString:@"089021"]) //图片验证码
+    {
+        return @"verifyCodes";
     }
     return nil;
 }
@@ -189,7 +209,8 @@ static Transfer *instance = nil;
         NSArray *fieldArray = self.transferModel.fieldModelArray;
         
         if (fieldArray == nil || [fieldArray count] == 0) {
-//            [ApplicationDelegate gotoFailureViewController:[NSString stringWithFormat:@"应用程序加载文件出错，重新登陆(%@)", self.transferCode]];
+            
+            [StaticTools showMessagePageWithType:kMessageTypeFail mess:[NSString stringWithFormat:@"应用程序加载文件出错，重新登陆(%@)", self.transferCode] clicked:nil];
             return;
         }
         
@@ -300,11 +321,14 @@ static Transfer *instance = nil;
             }
             //把 jsonDic中的数据转换格式 变为json格式
 //            NSLog(@"%@", [self.jsonDic JSONString]);
-            NSLog(@"------%@", [self DataTOjsonString:self.jsonDic]);
-            [self.sendDic setObject:[self.jsonDic JSONString] forKey:@"arg"];
+//            NSLog(@"------%@", [self DataTOjsonString:self.jsonDic]);
+//            [self.sendDic setObject:[self.jsonDic JSONString] forKey:@"arg"];
+//            
+            [self.sendDic addEntriesFromDictionary:self.jsonDic];
             if (![tmp_mac isEqualToString:@""]) {
                 [self.sendDic setObject:[EncryptionUtil MD5Encrypt:macString] forKey:@"mac"];
             }
+            
             [self sendPacket];
         }
         //走8583
@@ -328,7 +352,7 @@ static Transfer *instance = nil;
                     // 进行MAC计算
 //                    [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil];
                 
-                [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil success:self.requestSucBlock fail:self.requestErrBlock];
+                [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil mess:nil  success:self.requestSucBlock fail:self.requestErrBlock];
             }
             else {
                 [self sendPacket];
@@ -338,7 +362,7 @@ static Transfer *instance = nil;
     @catch (NSException *exception) {
         NSLog(@"--%@", exception);
         NSLog(@"--%@", [exception callStackSymbols]);
-//        [ApplicationDelegate gotoFailureViewController:[NSString stringWithFormat:@"%@", exception]];
+        [StaticTools showMessagePageWithType:kMessageTypeFail mess:[NSString stringWithFormat:@"%@", exception] clicked:nil];
     }
 }
 
@@ -402,11 +426,11 @@ static Transfer *instance = nil;
         [self sendRequestEFET];
     }
     
-    //签购单上传不需要加载框
-    if (![self.transferCode isEqualToString:@"089014"])
+    if (self.requestMessStr!=nil)
     {
-        [SVProgressHUD showWithStatus:@"正在加载..." maskType:SVProgressHUDMaskTypeClear];
+        [SVProgressHUD showWithStatus:self.requestMessStr maskType:SVProgressHUDMaskTypeClear];
     }
+    
     
 }
 
@@ -459,7 +483,7 @@ static Transfer *instance = nil;
         NSLog(@"--%@", exception);
         NSLog(@"--%@", [exception callStackSymbols]);
         
-//        [ApplicationDelegate gotoFailureViewController:@"服务器返回数据有误，请重试。"];
+        [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"服务器返回数据有误，请重试。" clicked:nil];
     }
 }
 
@@ -495,7 +519,7 @@ static Transfer *instance = nil;
                 
 //                    [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_CheckMac|string:%@,string:%@", bitmapHexStr, [self.receDic objectForKey:@"field64"]] paramDic:nil];
                 
-                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil success:self.requestSucBlock fail:self.requestErrBlock];
+                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil mess:nil success:self.requestSucBlock fail:self.requestErrBlock];
                 
 //                byte[] tempByte = new byte[respByte.length - 8 - 11];
 //                System.arraycopy(respByte, 11, tempByte, 0, tempByte.length);
@@ -512,7 +536,7 @@ static Transfer *instance = nil;
         NSLog(@"--%@", exception);
         NSLog(@"--%@", [exception callStackSymbols]);
         
-//        [ApplicationDelegate gotoFailureViewController:@"服务器返回数据有误，请重试。"];
+        [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"服务器返回数据有误，请重试。" clicked:nil];
     }
     
 }

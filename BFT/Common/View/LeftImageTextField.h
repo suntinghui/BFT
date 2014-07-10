@@ -31,4 +31,6 @@
 
 -(void)setLeftWidth:(float)width;
 
+-(void) setBgTextWithHint:(NSString *) bg Text:(NSString* ) text Hint:(NSString* ) hint;
+
 @end

@@ -52,14 +52,10 @@ static HttpManager  *instance;
     
     MKNetworkEngine *workEngine = [[MKNetworkEngine alloc] initWithHostName:HOST];
     
-
-//    域名/yunpaiApi/api/action?arg={加密的json}&mac=?
-    
     NSMutableString *url = [[NSMutableString alloc] init];
     [url appendString:JSONURL];
     [url appendString:actionString];
 
-    //https
     MKNetworkOperation *op = [workEngine operationWithPath:url params:reqDic httpMethod:@"POST" ssl:NO];
 //    [op setStringEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
      [op setStringEncoding:NSUTF8StringEncoding];
@@ -81,9 +77,6 @@ static HttpManager  *instance;
      }errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {
          NSLog(@"MKNetwork request error : %@", [error localizedDescription]);
          errorBlock(error);
-         
-         // [ApplicationDelegate showErrorPrompt:[error localizedDescription]];
-//         [ApplicationDelegate gotoFailureViewController:[error localizedDescription]];
          
      }];
     

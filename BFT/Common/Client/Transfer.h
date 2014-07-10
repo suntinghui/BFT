@@ -67,6 +67,7 @@ typedef void(^RequestErrBlock)();
 
 @property (nonatomic, strong) requestSucBlock requestSucBlock; //请求成功回调
 @property (nonatomic, strong) RequestErrBlock requestErrBlock; //请求失败回调
+@property (nonatomic, strong) NSString *requestMessStr;        //请示时加载框文字
 
 @property (nonatomic, strong) vcom                          *m_vcom;
 @property (nonatomic, strong) NSMutableArray                *fskCmdArray;
@@ -88,10 +89,11 @@ typedef void(^RequestErrBlock)();
 
 + (Transfer *) sharedTransfer;
 
-
+//发送请求
 - (void) startTransfer:(NSString *)transCode
                 fskCmd:(NSString *) fskCmd
               paramDic:(NSDictionary *) dic
+                  mess:(NSString*)mess
                success:(requestSucBlock)sucBlock
                   fail:(RequestErrBlock)failBlock;
 

@@ -31,7 +31,6 @@
 		B83A6FFE196BE04C0080D593 /* Transfer+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FA9196BE04C0080D593 /* Transfer+Action.m */; };
 		B83A6FFF196BE04C0080D593 /* Transfer+FSK.mm in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */; };
 		B83A7000196BE04C0080D593 /* Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FAD196BE04C0080D593 /* Transfer.m */; };
-		B83A7001196BE04C0080D593 /* UINavigationController+ios6.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FAF196BE04C0080D593 /* UINavigationController+ios6.m */; };
 		B83A7002196BE04C0080D593 /* UpdateAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */; };
 		B83A7003196BE04C0080D593 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB4196BE04C0080D593 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B83A7004196BE04C0080D593 /* ConvertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB6196BE04C0080D593 /* ConvertUtil.m */; };
@@ -147,10 +146,11 @@
 		B83A7128196BE8790080D593 /* StaticUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A7123196BE8790080D593 /* StaticUITools.m */; };
 		B83A712D196BEA900080D593 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B83A712A196BEA900080D593 /* SVProgressHUD.bundle */; };
 		B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A712C196BEA900080D593 /* SVProgressHUD.m */; };
+		B8932379196E2D8500D4C161 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8932377196E2D8500D4C161 /* MessageViewController.m */; };
+		B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8932378196E2D8500D4C161 /* MessageViewController.xib */; };
 		B8BD248D196CD6430092F2C5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD2489196CD6430092F2C5 /* libcrypto.a */; };
 		B8BD248E196CD6430092F2C5 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248A196CD6430092F2C5 /* libcurl.a */; };
 		B8BD248F196CD6430092F2C5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248B196CD6430092F2C5 /* libssl.a */; };
-		B8BD2490196CD6430092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248C196CD6430092F2C5 /* libvoclib.a */; };
 		B8BD252B196CE3180092F2C5 /* con_req_089020.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EE196CE3180092F2C5 /* con_req_089020.xml */; };
 		B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EF196CE3180092F2C5 /* con_req_080000.xml */; };
 		B8BD252D196CE3180092F2C5 /* con_req_020001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F0196CE3180092F2C5 /* con_req_020001.xml */; };
@@ -213,6 +213,10 @@
 		B8BD2566196CE3180092F2C5 /* Copy of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */; };
 		B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */; };
 		B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD256A196CE6B70092F2C5 /* BaseViewController.m */; };
+		B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD256E196D42D00092F2C5 /* libvoclib.a */; };
+		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
+		B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */; };
+		B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,8 +271,6 @@
 		B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Transfer+FSK.mm"; sourceTree = "<group>"; };
 		B83A6FAC196BE04C0080D593 /* Transfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transfer.h; sourceTree = "<group>"; };
 		B83A6FAD196BE04C0080D593 /* Transfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transfer.m; sourceTree = "<group>"; };
-		B83A6FAE196BE04C0080D593 /* UINavigationController+ios6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ios6.h"; sourceTree = "<group>"; };
-		B83A6FAF196BE04C0080D593 /* UINavigationController+ios6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ios6.m"; sourceTree = "<group>"; };
 		B83A6FB0196BE04C0080D593 /* UpdateAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAppHelper.h; sourceTree = "<group>"; };
 		B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAppHelper.m; sourceTree = "<group>"; };
 		B83A6FB3196BE04C0080D593 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
@@ -486,10 +488,12 @@
 		B83A712A196BEA900080D593 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		B83A712B196BEA900080D593 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		B83A712C196BEA900080D593 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B8932376196E2D8500D4C161 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		B8932377196E2D8500D4C161 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		B8932378196E2D8500D4C161 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		B8BD2489196CD6430092F2C5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = BFT/lib/libcrypto.a; sourceTree = "<group>"; };
 		B8BD248A196CD6430092F2C5 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = BFT/lib/libcurl.a; sourceTree = "<group>"; };
 		B8BD248B196CD6430092F2C5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = BFT/lib/libssl.a; sourceTree = "<group>"; };
-		B8BD248C196CD6430092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libvoclib.a; path = BFT/lib/libvoclib.a; sourceTree = "<group>"; };
 		B8BD2493196CD8870092F2C5 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curl.h; sourceTree = "<group>"; };
 		B8BD2494196CD8870092F2C5 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlbuild.h; sourceTree = "<group>"; };
 		B8BD2495196CD8870092F2C5 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = curlrules.h; sourceTree = "<group>"; };
@@ -639,6 +643,12 @@
 		B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy (2) of con_req_020022.xml"; sourceTree = "<group>"; };
 		B8BD2569196CE6B70092F2C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B8BD256A196CE6B70092F2C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B8BD256E196D42D00092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
+		B8E0EFC6196D8E6300946DF2 /* PooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PooCodeView.h; sourceTree = "<group>"; };
+		B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PooCodeView.m; sourceTree = "<group>"; };
+		B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
+		B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
+		B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,7 +671,7 @@
 				B83A702E196BE0CE0080D593 /* CoreLocation.framework in Frameworks */,
 				B83A702C196BE0C80080D593 /* CFNetwork.framework in Frameworks */,
 				B83A702A196BE0C30080D593 /* Security.framework in Frameworks */,
-				B8BD2490196CD6430092F2C5 /* libvoclib.a in Frameworks */,
+				B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */,
 				B83A7026196BE0900080D593 /* libsqlite3.dylib in Frameworks */,
 				B83A7024196BE0890080D593 /* libz.dylib in Frameworks */,
 				B83A6F4A196BDCF70080D593 /* CoreGraphics.framework in Frameworks */,
@@ -704,10 +714,10 @@
 		B83A6F46196BDCF70080D593 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8BD256E196D42D00092F2C5 /* libvoclib.a */,
 				B8BD2489196CD6430092F2C5 /* libcrypto.a */,
 				B8BD248A196CD6430092F2C5 /* libcurl.a */,
 				B8BD248B196CD6430092F2C5 /* libssl.a */,
-				B8BD248C196CD6430092F2C5 /* libvoclib.a */,
 				B83A703D196BE10E0080D593 /* ImageIO.framework */,
 				B83A703B196BE1070080D593 /* SystemConfiguration.framework */,
 				B83A7039196BE1000080D593 /* CoreAudio.framework */,
@@ -773,6 +783,7 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
 				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
 			);
@@ -816,8 +827,6 @@
 				B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */,
 				B83A6FAC196BE04C0080D593 /* Transfer.h */,
 				B83A6FAD196BE04C0080D593 /* Transfer.m */,
-				B83A6FAE196BE04C0080D593 /* UINavigationController+ios6.h */,
-				B83A6FAF196BE04C0080D593 /* UINavigationController+ios6.m */,
 				B83A6FB0196BE04C0080D593 /* UpdateAppHelper.h */,
 				B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */,
 			);
@@ -890,6 +899,8 @@
 		B83A6FD3196BE04C0080D593 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8E0EFC6196D8E6300946DF2 /* PooCodeView.h */,
+				B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */,
 				B83A6FD4196BE04C0080D593 /* AFPickerView.h */,
 				B83A6FD5196BE04C0080D593 /* AFPickerView.m */,
 				B83A6FD6196BE04C0080D593 /* DateTextField.h */,
@@ -1228,6 +1239,19 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		B8932375196E2CD500D4C161 /* CommonController */ = {
+			isa = PBXGroup;
+			children = (
+				B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */,
+				B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */,
+				B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */,
+				B8932376196E2D8500D4C161 /* MessageViewController.h */,
+				B8932377196E2D8500D4C161 /* MessageViewController.m */,
+				B8932378196E2D8500D4C161 /* MessageViewController.xib */,
+			);
+			path = CommonController;
+			sourceTree = "<group>";
+		};
 		B8BD2491196CD8870092F2C5 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1535,6 +1559,7 @@
 				B8BD2544196CE3180092F2C5 /* con_req_089027.xml in Resources */,
 				B8BD2557196CE3180092F2C5 /* con_req_089009.xml in Resources */,
 				B8BD2556196CE3180092F2C5 /* con_req_089008.xml in Resources */,
+				B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */,
 				B8BD2531196CE3180092F2C5 /* con_req_400000022.xml in Resources */,
 				B8BD255E196CE3180092F2C5 /* con_req_999000002.xml in Resources */,
 				B8BD254E196CE3180092F2C5 /* con_req_200001111.xml in Resources */,
@@ -1551,6 +1576,7 @@
 				B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */,
 				B8BD2552196CE3180092F2C5 /* con_req_080001.xml in Resources */,
 				B8BD2561196CE3180092F2C5 /* con_req_089007.xml in Resources */,
+				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
 				B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */,
 				B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */,
@@ -1615,6 +1641,7 @@
 				B83A70C3196BE1750080D593 /* FieldType.m in Sources */,
 				B83A7106196BE2600080D593 /* BankModel.m in Sources */,
 				B83A6FFC196BE04C0080D593 /* LocationHelper.m in Sources */,
+				B8932379196E2D8500D4C161 /* MessageViewController.m in Sources */,
 				B83A7018196BE04C0080D593 /* LeftTextField.m in Sources */,
 				B83A7107196BE2600080D593 /* CatalogModel.m in Sources */,
 				B83A70C2196BE1750080D593 /* FieldParserInfo.mm in Sources */,
@@ -1641,6 +1668,7 @@
 				B83A7124196BE8790080D593 /* StaticDataTools.m in Sources */,
 				B83A70CA196BE1750080D593 /* NSData+NSString.m in Sources */,
 				B83A6FF7196BE04C0080D593 /* ReversalDBHelper.m in Sources */,
+				B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */,
 				B83A70E5196BE1750080D593 /* TBXML+HTTP.m in Sources */,
 				B83A710B196BE2600080D593 /* RechargeModel.m in Sources */,
 				B83A70C1196BE1750080D593 /* EFETFieldModel.m in Sources */,
@@ -1674,6 +1702,7 @@
 				B83A7008196BE04C0080D593 /* NSDataUtil.m in Sources */,
 				B83A7104196BE2600080D593 /* AnnouncementModel.m in Sources */,
 				B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */,
+				B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */,
 				B83A70D9196BE1750080D593 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				B83A70BA196BE1750080D593 /* DDFileLogger.m in Sources */,
 				B83A6FFB196BE04C0080D593 /* HttpManager.m in Sources */,
@@ -1682,7 +1711,6 @@
 				B83A7019196BE04C0080D593 /* PageView.m in Sources */,
 				B83A70DD196BE1750080D593 /* Reachability.m in Sources */,
 				B83A7013196BE04C0080D593 /* AFPickerView.m in Sources */,
-				B83A7001196BE04C0080D593 /* UINavigationController+ios6.m in Sources */,
 				B83A7002196BE04C0080D593 /* UpdateAppHelper.m in Sources */,
 				B83A701F196BE04C0080D593 /* TKAddressBook.m in Sources */,
 				B83A710C196BE2600080D593 /* ReversalTransferModel.m in Sources */,
