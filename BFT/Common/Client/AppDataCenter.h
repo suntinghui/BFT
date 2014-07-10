@@ -10,6 +10,8 @@
 //#import <voclib/vcom.h>
 #import "vcom.h"
 
+#define APPDataCenter [AppDataCenter sharedAppDataCenter]
+
 @interface AppDataCenter : NSObject
 {
     @private
@@ -86,9 +88,7 @@
 @property (nonatomic, strong) NSString                              *__RANDOM;
 @property (nonatomic, strong) NSString                              *__ENCTRACKS;
 
-@property (nonatomic, strong) NSString * status;
-@property (nonatomic)         BOOL                                  hasSign;
-@property (nonatomic, strong) NSString *temPhone;
+@property (strong, nonatomic) NSString *cookid;
 
 + (AppDataCenter *) sharedAppDataCenter;
 

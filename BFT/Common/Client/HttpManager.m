@@ -56,21 +56,52 @@ static HttpManager  *instance;
     [url appendString:JSONURL];
     [url appendString:actionString];
 
-    MKNetworkOperation *op = [workEngine operationWithPath:url params:reqDic httpMethod:@"POST" ssl:NO];
-//    [op setStringEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
+    NSString *postType = @"POST";
+    if ([actionString isEqualToString:@"version"])
+    {
+        postType = @"GET";
+    }
+    
+    MKNetworkOperation *op = [workEngine operationWithPath:url params:reqDic httpMethod:postType ssl:NO];
+    
+    if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCode"])
+    {
+        [op addHeaders:@{@"cookie2":APPDataCenter.cookid}];
+    }
      [op setStringEncoding:NSUTF8StringEncoding];
     [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
      {
-         // the completionBlock will be called twice.
-         // if you are interested only in new values, move that code within the else block
          if([completedOperation isCachedResponse]) {
              NSLog(@"Data from cache %@", [completedOperation responseString]);
          }
          else {
              NSLog(@"Data from server %@", [completedOperation responseString]);
          }
+         
+         if ([actionString isEqualToString:@"verifyCode"])
+         {
+             NSDictionary *header =completedOperation.readonlyResponse.allHeaderFields;
+             NSLog(@"response header:%@",header);
+             if (header[@"Set-Cookie"]!=nil)
+             {
+                 NSLog(@"cook is:%@",header[@"Set-Cookie"]);
+                 NSString *cookid =header[@"Set-Cookie"];
+                 NSArray *temarr = [cookid componentsSeparatedByString:@";"];
+                 NSString *cook = temarr[2];
+                 NSArray *arr = [cook componentsSeparatedByString:@","];
+                 NSString *uuid = arr[1];
+                 uuid = [uuid substringFromIndex:6];
+                 APPDataCenter.cookid = uuid;
+                 NSLog(@"uuid:%@",uuid);
+                 APPDataCenter.cookid =header[@"Set-Cookie"];
+                 
+                 //             NSLog(@"get cookids:%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
+             }
+             //         NSLog(@"dd:%@", [NSHTTPCookie requestHeaderFieldsWithCookies:[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]]);
+         }
+       
          
          NSDictionary *respDic = [[completedOperation responseString] objectFromJSONString];
          successBlock(respDic);
