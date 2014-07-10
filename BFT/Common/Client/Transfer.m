@@ -179,7 +179,11 @@ static Transfer *instance = nil;
     }
     else if([self.transferCode isEqualToString:@"089021"]) //图片验证码
     {
-        return @"verifyCodes";
+        return @"verifyCode";
+    }
+    else if([self.transferCode isEqualToString:@"089018"]) //版本号
+    {
+        return @"version";
     }
     return nil;
 }

@@ -32,11 +32,9 @@
 @synthesize __TRACEAUDITNUM,__BATCHNUM,__ADDRESS,__PHONENUM,__CURRENTVERSION,__VERSIONCODE,__SERVEREDATE;
 @synthesize transferNameDic = _transferNameDic;
 @synthesize reversalDic = _reversalDic;
-@synthesize hasSign = _hasSign;
 @synthesize __FIELD35,__FIELD36;
 
 @synthesize __RANDOM, __ENCTRACKS;
-@synthesize status = _status;
 static AppDataCenter *instance = nil;
 
 /*
@@ -61,7 +59,6 @@ static AppDataCenter *instance = nil;
         __ADDRESS = @"UNKNOWN";
         __FIELD22 = @"021";
         __SERVEREDATE = [DateUtil getSystemDate2];
-        _hasSign = false;
 
     }
     
@@ -229,10 +226,7 @@ static AppDataCenter *instance = nil;
     }
     
     __PHONENUM = [UserDefaults stringForKey:PHONENUM];
-    if (__PHONENUM == nil) {
-        
-        __PHONENUM = self.temPhone;
-    }
+   
     
     return __PHONENUM;
 }

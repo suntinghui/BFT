@@ -31,7 +31,6 @@
 		B83A6FFE196BE04C0080D593 /* Transfer+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FA9196BE04C0080D593 /* Transfer+Action.m */; };
 		B83A6FFF196BE04C0080D593 /* Transfer+FSK.mm in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */; };
 		B83A7000196BE04C0080D593 /* Transfer.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FAD196BE04C0080D593 /* Transfer.m */; };
-		B83A7002196BE04C0080D593 /* UpdateAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */; };
 		B83A7003196BE04C0080D593 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB4196BE04C0080D593 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B83A7004196BE04C0080D593 /* ConvertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB6196BE04C0080D593 /* ConvertUtil.m */; };
 		B83A7005196BE04C0080D593 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A6FB8196BE04C0080D593 /* DateUtil.m */; };
@@ -271,8 +270,6 @@
 		B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Transfer+FSK.mm"; sourceTree = "<group>"; };
 		B83A6FAC196BE04C0080D593 /* Transfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transfer.h; sourceTree = "<group>"; };
 		B83A6FAD196BE04C0080D593 /* Transfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transfer.m; sourceTree = "<group>"; };
-		B83A6FB0196BE04C0080D593 /* UpdateAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAppHelper.h; sourceTree = "<group>"; };
-		B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAppHelper.m; sourceTree = "<group>"; };
 		B83A6FB3196BE04C0080D593 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		B83A6FB4196BE04C0080D593 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		B83A6FB5196BE04C0080D593 /* ConvertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertUtil.h; sourceTree = "<group>"; };
@@ -827,8 +824,6 @@
 				B83A6FAB196BE04C0080D593 /* Transfer+FSK.mm */,
 				B83A6FAC196BE04C0080D593 /* Transfer.h */,
 				B83A6FAD196BE04C0080D593 /* Transfer.m */,
-				B83A6FB0196BE04C0080D593 /* UpdateAppHelper.h */,
-				B83A6FB1196BE04C0080D593 /* UpdateAppHelper.m */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -1711,7 +1706,6 @@
 				B83A7019196BE04C0080D593 /* PageView.m in Sources */,
 				B83A70DD196BE1750080D593 /* Reachability.m in Sources */,
 				B83A7013196BE04C0080D593 /* AFPickerView.m in Sources */,
-				B83A7002196BE04C0080D593 /* UpdateAppHelper.m in Sources */,
 				B83A701F196BE04C0080D593 /* TKAddressBook.m in Sources */,
 				B83A710C196BE2600080D593 /* ReversalTransferModel.m in Sources */,
 				B83A70D8196BE1750080D593 /* NSString+MKNetworkKitAdditions.m in Sources */,
