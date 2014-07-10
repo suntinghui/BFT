@@ -7,6 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import "LeftMenuViewController.h"
+#import "MyManageHomeViewController.h"
+#import "IIViewDeckController.h"
 
 @interface LoginViewController ()
 
@@ -38,6 +41,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -功能函数
+- (void)gotoHome
+{
+    LeftMenuViewController* leftController = [[LeftMenuViewController alloc] init];
+    MyManageHomeViewController *centerController = [[MyManageHomeViewController alloc] init];
+    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:centerController leftViewController:leftController rightViewController:nil];
+    deckController.leftSize =150;
+    [self.navigationController pushViewController:deckController animated:YES];
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -48,7 +60,8 @@
 #pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
 {
-    [self loginAction];
+//    [self loginAction];
+    [self gotoHome];
 }
 
 #pragma mark -CodeViewDelegate
