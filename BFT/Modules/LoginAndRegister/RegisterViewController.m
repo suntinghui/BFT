@@ -38,7 +38,8 @@
     self.listTableView.tableFooterView = self.footView;
     self.listTableView.backgroundColor = [UIColor clearColor];
     self.listTableView.backgroundView = nil;
-    images = @[@"",@"",@"",@"",@"",@""];
+    self.listTableView.separatorColor = [UIColor clearColor];
+    images = @[@"icon_user",@"icon_user",@"icon_idcard",@"icon_phone",@"icon_pwd-1",@"icon_pwd-1"];
     placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"密码确认"];
     resutDict = [[NSMutableDictionary alloc]init];
 }
@@ -174,14 +175,19 @@
         [view removeFromSuperview];
     }
     
-    UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 5, 30, 30)];
-    headView.backgroundColor = [UIColor lightGrayColor];
-    [cell.contentView addSubview:headView];
+    UIImageView *bgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.listTableView.frame.size.width, 45)];
+    bgView.backgroundColor = [UIColor clearColor];
+    bgView.image = [UIImage imageNamed:@"input_bg"];
+    [cell.contentView addSubview:bgView];
     
+    UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
+    headView.backgroundColor = [UIColor clearColor];
+    headView.image = [UIImage imageNamed:images[indexPath.section]];
+    [cell.contentView addSubview:headView];
     
     if (indexPath.section==4||indexPath.section==5)
     {
-        YLTPasswordTextField *inputTxtField = [[YLTPasswordTextField alloc] initWithFrame:CGRectMake(55, 5, 260, 30)];
+        YLTPasswordTextField *inputTxtField = [[YLTPasswordTextField alloc] initWithFrame:CGRectMake(35, 5, 270, 30)];
         inputTxtField.pwdTF.tag = indexPath.section+100;
         inputTxtField.delegate = self;
         [cell.contentView addSubview:inputTxtField];
@@ -190,7 +196,7 @@
     }
     else
     {
-        UITextField *inputTxtField = [[UITextField alloc] initWithFrame:CGRectMake(55, 10, 260, 30)];
+        UITextField *inputTxtField = [[UITextField alloc] initWithFrame:CGRectMake(35, 10, 270, 30)];
         [cell.contentView addSubview:inputTxtField];
         inputTxtField.font = [UIFont systemFontOfSize:15];
         inputTxtField.delegate = self;
@@ -209,7 +215,7 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
