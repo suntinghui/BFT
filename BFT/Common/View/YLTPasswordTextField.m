@@ -58,6 +58,35 @@
     return self;
 }
 
+-(void) awakeFromNib{
+    value = [[NSMutableString alloc] init];
+    
+    
+    // Initialization code
+//    UIImageView *bgIV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+//    [bgIV setImage:[UIImage imageNamed:@"loginInputbg_long.png"]];
+//    [self addSubview:bgIV];
+    
+    float y = 3.0;
+    if (DeviceVersion >= 7)
+    {
+        y = 3.0;
+    }
+    else
+    {
+        y = 10.0;
+    }
+    pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(0, y, self.frame.size.width, self.frame.size.height)];
+    self.backgroundColor = [UIColor clearColor];
+    pwdTF.delegate = self;
+    [pwdTF setPlaceholder:@"请输入密码"];
+    [pwdTF setFont:[UIFont systemFontOfSize:15]];
+    
+    randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
+    pwdTF.inputView = randomKeyBoardView;
+    randomKeyBoardView.delegate = self;
+    [self addSubview:pwdTF];
+}
 - (void) numberKeyBoardInput:(NSInteger) number
 {
 #ifndef DEMO
