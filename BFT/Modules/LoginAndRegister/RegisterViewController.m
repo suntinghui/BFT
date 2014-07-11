@@ -9,6 +9,11 @@
 #import "RegisterViewController.h"
 #import "YLTPasswordTextField.h"
 
+#define Button_Tag_Select 100
+#define Button_Tag_Reader 101
+#define Button_Tag_Commit 102
+#define Button_Tag_GetCode 103
+
 @interface RegisterViewController ()
 
 @end
@@ -33,6 +38,9 @@
     self.listTableView.tableFooterView = self.footView;
     images = @[@"",@"",@"",@"",@"",@""];
     placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"再次输入登录密码"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -45,7 +53,90 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -功能函数
+- (void)resetTableView
+{
+    [self.view endEditing:YES];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.listTableView.contentOffset=CGPointMake(0,0);
+        self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
+    }];
+}
+#pragma mark -按钮点击
+- (IBAction)buttonClick:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    switch (button.tag) {
+        case Button_Tag_Select:
+        {
+        }
+            break;
+        case Button_Tag_GetCode: //获取验证码
+        {
+            
+        }
+            break;
+        case Button_Tag_Reader: //阅读协议
+        {
+            
+        }
+            break;
+        case Button_Tag_Commit: //下一步
+        {
+            [self resetTableView];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
+
+#pragma mark -UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    currentTxtField = textField;
+    self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,iPhone5?700: 620);
+    
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    currentTxtField=nil;
+     self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
+}
+
+#pragma mark -keyboardDelegate
+-(void)keyboardWasShown:(NSNotification *)notification
+{
+    
+    NSValue  *valu_=[notification.userInfo objectForKey:@"UIKeyboardBoundsUserInfoKey"];
+    CGRect rectForkeyBoard=[valu_ CGRectValue];
+    keyBoardLastHeight=rectForkeyBoard.size.height;
+    
+//    NSIndexPath * indexPath=[NSIndexPath indexPathForRow:currentEditIndex inSection:0];
+//    CGRect rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
+    if (currentTxtField==self.messCodeTxtField)
+    {
+        
+    }
+    CGRect  rect = [self.view convertRect:currentTxtField.frame fromView:self.listTableView];
+    
+    float touchSetY=(iPhone5?548:460)-rectForkeyBoard.size.height-rect.size.height-self.listTableView.frame.origin.y-49;
+    if (rect.origin.y>touchSetY) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.3];
+        self.listTableView.contentOffset=CGPointMake(0,rect.origin.y-touchSetY);
+        [UIView commitAnimations];
+    }
+}
+
+-(void)keyboardWasHidden:(NSNotification *)notification
+{
+    keyBoardLastHeight=0;
+}
 
 #pragma mark -UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -62,7 +153,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 60;
+    return 45;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,7 +187,13 @@
     {
         UITextField *inputTxtField = [[UITextField alloc] initWithFrame:CGRectMake(50, 5, 260, 30)];
         [cell.contentView addSubview:inputTxtField];
+        inputTxtField.delegate = self;
         inputTxtField.placeholder = placeHolds[indexPath.row];
+        
+        if (indexPath.row==2||indexPath.row==3)
+        {
+            inputTxtField.keyboardAppearance = UIKeyboardTypeNumberPad;
+        }
     }
     
     return cell;
