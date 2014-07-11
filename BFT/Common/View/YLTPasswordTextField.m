@@ -44,7 +44,7 @@
         {
             y = 10.0;
         }
-        pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(10, y, frame.size.width, frame.size.height)];
+        pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(0, y, frame.size.width, frame.size.height)];
         self.backgroundColor = [UIColor clearColor];
         pwdTF.delegate = self;
         [pwdTF setPlaceholder:@"请输入密码"];
