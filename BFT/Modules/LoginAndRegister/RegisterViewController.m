@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"注册";
     [StaticTools setExtraCellLineHidden:self.listTableView];
+    self.listTableView.tableFooterView = self.footView;
     images = @[@"",@"",@"",@"",@"",@""];
     placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"再次输入登录密码"];
 }
