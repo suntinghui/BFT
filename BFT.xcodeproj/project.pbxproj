@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0CD2BF196FB95F00580084 /* GetBackPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */; };
+		8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */; };
 		B83A6F48196BDCF70080D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F47196BDCF70080D593 /* Foundation.framework */; };
 		B83A6F4A196BDCF70080D593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F49196BDCF70080D593 /* CoreGraphics.framework */; };
 		B83A6F4C196BDCF70080D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F4B196BDCF70080D593 /* UIKit.framework */; };
@@ -248,6 +250,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0CD2BC196FB95F00580084 /* GetBackPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBackPwdViewController.h; sourceTree = "<group>"; };
+		8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBackPwdViewController.m; sourceTree = "<group>"; };
+		8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetBackPwdViewController.xib; sourceTree = "<group>"; };
 		B83A6F44196BDCF70080D593 /* BFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83A6F47196BDCF70080D593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B83A6F49196BDCF70080D593 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -739,6 +744,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0CD2BB196FB94800580084 /* Pwd */ = {
+			isa = PBXGroup;
+			children = (
+				8D0CD2BC196FB95F00580084 /* GetBackPwdViewController.h */,
+				8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */,
+				8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */,
+			);
+			path = Pwd;
+			sourceTree = "<group>";
+		};
 		B83A6F3B196BDCF70080D593 = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +844,7 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8D0CD2BB196FB94800580084 /* Pwd */,
 				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
 				B8732F66196E7EE900095BDD /* HomeAndLeftMenu */,
@@ -1662,6 +1678,7 @@
 				B8BD2538196CE3180092F2C5 /* con_req_089016.xml in Resources */,
 				B8BD2530196CE3180092F2C5 /* con_req_400200023.xml in Resources */,
 				B8BD2549196CE3180092F2C5 /* con_req_100001.xml in Resources */,
+				8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */,
 				B8BD2547196CE3180092F2C5 /* con_req_032000.xml in Resources */,
 				B8BD255F196CE3180092F2C5 /* con_req_999000003.xml in Resources */,
 				B8BD2541196CE3180092F2C5 /* con_req_089024.xml in Resources */,
@@ -1794,6 +1811,7 @@
 				B83A7020196BE04C0080D593 /* TopView.m in Sources */,
 				B83A7021196BE04C0080D593 /* UITextField+HideKeyBoard.m in Sources */,
 				B83A7015196BE04C0080D593 /* HandSignPanel.m in Sources */,
+				8D0CD2BF196FB95F00580084 /* GetBackPwdViewController.m in Sources */,
 				B83A700B196BE04C0080D593 /* ParseXMLUtil.m in Sources */,
 				B83A7011196BE04C0080D593 /* UIImage+Scaling.m in Sources */,
 				B83A70CB196BE1750080D593 /* Util.mm in Sources */,

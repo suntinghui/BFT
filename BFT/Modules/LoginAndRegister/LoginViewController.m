@@ -32,8 +32,12 @@
 
 - (void)viewDidLoad
 {
+    self.navigationItem.title = @"登录";
+    self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+
     self.codeView.delete = self;
     [self.codeView setCodeString:@"点击获取验证码"];
     
@@ -58,7 +62,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark -按钮点击事件
@@ -159,6 +162,12 @@
     [self.btn_select setSelected:!self.btn_select.selected];
     [UserDefaults setBool:self.btn_select.selected forKey:@"isSelect"];
     [UserDefaults synchronize];
+}
+
+- (IBAction)getPwdAction:(id)sender
+{
+    GetBackPwdViewController *vc = [[GetBackPwdViewController alloc] initWithNibName:@"GetBackPwdViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

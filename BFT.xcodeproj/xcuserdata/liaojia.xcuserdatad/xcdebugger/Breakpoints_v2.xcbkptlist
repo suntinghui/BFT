@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Modules/LoginAndRegister/LoginViewController.m"
-            timestampString = "426751719.945654"
+            timestampString = "426758696.731162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "-selectAction:"
             landmarkType = "5">
          </BreakpointContent>
