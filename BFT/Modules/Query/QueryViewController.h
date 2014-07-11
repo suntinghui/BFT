@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface QueryViewController : UIViewController
+@interface QueryViewController : BaseViewController
 
 @end

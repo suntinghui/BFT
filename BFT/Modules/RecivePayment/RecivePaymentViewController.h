@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface RecivePaymentViewController : UIViewController
+@interface RecivePaymentViewController : BaseViewController
 
 @end

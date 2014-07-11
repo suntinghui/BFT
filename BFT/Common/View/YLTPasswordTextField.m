@@ -191,5 +191,19 @@
     [self.randomKeyBoardView refresh:nil];
     return YES;
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([self.delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
+        [self.delegate textFieldDidBeginEditing:textField];
+    }
+    
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
 
+    if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
+    {
+        
+    }
+}
 @end

@@ -20,13 +20,19 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : BaseViewController<UITableViewDataSource,
-    UITableViewDelegate>
+    UITableViewDelegate,
+    UITextFieldDelegate>
 {
     NSArray *images;
     NSArray *placeHolds;
+    float keyBoardLastHeight;
+    UITextField *currentTxtField;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 @property (weak, nonatomic) IBOutlet UIView *footView;
+@property (weak, nonatomic) IBOutlet UITextField *messCodeTxtField;
+
+- (IBAction)buttonClick:(id)sender;
 
 @end
