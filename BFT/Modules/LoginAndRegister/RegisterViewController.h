@@ -27,5 +27,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
+@property (weak, nonatomic) IBOutlet UIView *footView;
 
 @end
