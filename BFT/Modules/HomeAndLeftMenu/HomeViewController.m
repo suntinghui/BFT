@@ -88,6 +88,7 @@
     }
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:centerController];
+    [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nav leftViewController:leftController rightViewController:nil];
     deckController.leftSize =150;
     [self.navigationController pushViewController:deckController animated:YES];

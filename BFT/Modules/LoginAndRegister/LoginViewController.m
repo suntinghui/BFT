@@ -9,6 +9,10 @@
 #import "LoginViewController.h"
 #import "LeftMenuViewController.h"
 #import "HomeViewController.h"
+#import "RegisterViewController.h"
+
+#define Button_Tag_Register  100
+#define Button_Tag_Login     101
 
 @interface LoginViewController ()
 
@@ -56,8 +60,24 @@
 #pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
 {
-//    [self loginAction];
-    [self gotoHome];
+    UIButton *button = (UIButton*)sender;
+    switch (button.tag) {
+        case Button_Tag_Register:
+        {
+            RegisterViewController *registerController = [[RegisterViewController alloc]init];
+            [self.navigationController pushViewController:registerController animated:YES];
+        }
+            break;
+        case Button_Tag_Login:
+        {
+            //    [self loginAction];
+            [self gotoHome];
+        }
+            
+        default:
+            break;
+    }
+
 }
 
 #pragma mark -CodeViewDelegate

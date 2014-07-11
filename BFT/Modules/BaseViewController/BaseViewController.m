@@ -83,15 +83,16 @@
 {
     UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 44)];
     
-    UIImageView *backImg = [[UIImageView alloc]initWithFrame:CGRectMake(5, 13, 12, 20)];
-    backImg.image = [UIImage imageNamed:@"ip_jtou"];
-    [leftView addSubview:backImg];
-    
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, 60, 44);
+    [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_n"] forState:UIControlStateNormal];
+     [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_s"] forState:UIControlStateNormal];
+    backBtn.frame = CGRectMake(0, 7, 50, 30);
+    backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-//    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [leftView addSubview:backBtn];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftView];

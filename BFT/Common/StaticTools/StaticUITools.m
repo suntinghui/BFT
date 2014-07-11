@@ -110,6 +110,10 @@
  */
 + (void)setNavigationBarBackgroundImage:(UINavigationBar *)navigationBar withImg:(NSString*)name
 {
+    if (IOS7_OR_LATER)
+    {
+        [navigationBar setBackgroundImage:[UIImage imageNamed:name] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
+    }
     if ([navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]){
 		[navigationBar setBackgroundImage:[UIImage imageNamed:name] forBarMetrics:UIBarMetricsDefault];
         //navigationBar.tintColor=[UIColor redColor];

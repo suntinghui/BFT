@@ -145,6 +145,8 @@
 		B83A7128196BE8790080D593 /* StaticUITools.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A7123196BE8790080D593 /* StaticUITools.m */; };
 		B83A712D196BEA900080D593 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B83A712A196BEA900080D593 /* SVProgressHUD.bundle */; };
 		B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A712C196BEA900080D593 /* SVProgressHUD.m */; };
+		B840F18C196F7FE1007CA174 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B840F18A196F7FE1007CA174 /* RegisterViewController.m */; };
+		B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B840F18B196F7FE1007CA174 /* RegisterViewController.xib */; };
 		B8732F6A196E7F0B00095BDD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F68196E7F0B00095BDD /* HomeViewController.m */; };
 		B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8732F69196E7F0B00095BDD /* HomeViewController.xib */; };
 		B8732F6F196E7F3000095BDD /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F6D196E7F3000095BDD /* LeftMenuViewController.m */; };
@@ -502,6 +504,9 @@
 		B83A712A196BEA900080D593 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		B83A712B196BEA900080D593 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		B83A712C196BEA900080D593 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B840F189196F7FE1007CA174 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B840F18A196F7FE1007CA174 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B840F18B196F7FE1007CA174 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		B8732F67196E7F0B00095BDD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B8732F68196E7F0B00095BDD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B8732F69196E7F0B00095BDD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -853,6 +858,9 @@
 				B83A6F8B196BDFAF0080D593 /* LoginViewController.h */,
 				B83A6F8C196BDFAF0080D593 /* LoginViewController.m */,
 				B83A6F8D196BDFAF0080D593 /* LoginViewController.xib */,
+				B840F189196F7FE1007CA174 /* RegisterViewController.h */,
+				B840F18A196F7FE1007CA174 /* RegisterViewController.m */,
+				B840F18B196F7FE1007CA174 /* RegisterViewController.xib */,
 			);
 			path = LoginAndRegister;
 			sourceTree = "<group>";
@@ -1688,6 +1696,7 @@
 				B8CF711E196EDDEE00C7B09E /* SystemsViewController.xib in Resources */,
 				B8BD255E196CE3180092F2C5 /* con_req_999000002.xml in Resources */,
 				B8BD254E196CE3180092F2C5 /* con_req_200001111.xml in Resources */,
+				B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */,
 				B8BD254C196CE3180092F2C5 /* con_req_080002.xml in Resources */,
 				B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */,
 				B8CF7107196EDCF500C7B09E /* QueryViewController.xib in Resources */,
@@ -1821,6 +1830,7 @@
 				B83A7000196BE04C0080D593 /* Transfer.m in Sources */,
 				B83A70B8196BE1750080D593 /* DDAbstractDatabaseLogger.m in Sources */,
 				B83A70C8196BE1750080D593 /* TxActionImp.m in Sources */,
+				B840F18C196F7FE1007CA174 /* RegisterViewController.m in Sources */,
 				B83A70D6196BE1750080D593 /* NSDate+RFC1123.m in Sources */,
 				B83A700D196BE04C0080D593 /* StringUtil.mm in Sources */,
 				B83A70E6196BE1750080D593 /* TBXML.m in Sources */,

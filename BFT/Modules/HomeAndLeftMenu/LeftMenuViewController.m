@@ -114,7 +114,8 @@
     }
     
      UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:centerController];
-      self.viewDeckController.centerController =nav;
+     [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
+    self.viewDeckController.centerController =nav;
     [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {
         
         
