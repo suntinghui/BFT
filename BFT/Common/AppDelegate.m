@@ -18,6 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     LoginViewController *loginViewController = [[LoginViewController alloc]init];
     UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:loginViewController];
+    [StaticTools setNavigationBarBackgroundImage:rootNav.navigationBar withImg:@"nav_bg"];
     self.window.rootViewController = rootNav;
     [self.window makeKeyAndVisible];
     
