@@ -24,7 +24,7 @@
 @interface LoginViewController : BaseViewController<CodeViewDelegate>
 
 @property (weak, nonatomic) IBOutlet PooCodeView *codeView;
-@property (weak, nonatomic) IBOutlet LeftImageTextField *tf_username;
+@property (strong, nonatomic) LeftImageTextField *tf_username;
 @property (weak, nonatomic) IBOutlet LeftImageTextField *tf_pwd;
 
 - (IBAction)buttonClickHandle:(id)sender;

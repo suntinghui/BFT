@@ -16,6 +16,8 @@
 @synthesize leftImage = _leftImage;
 @synthesize contentTF = _contentTF;
 
+
+
 - (id)initWithFrame:(CGRect)frame
           leftImage:(NSString *)leftImage
      leftImageFrame:(CGRect)leftImageFrame
@@ -107,9 +109,5 @@
     [UIView commitAnimations];
 }
 
--(void) setBgTextWithHint:(NSString *) bg Hint:(NSString* ) hint
-{
-    [_leftImage setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:bg]]];
-    [_contentTF setPlaceholder:hint];
-}
+
 @end

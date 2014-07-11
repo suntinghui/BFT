@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
                 <outlet property="codeView" destination="h4I-0C-dew" id="LmM-75-7Pz"/>
-                <outlet property="tf_username" destination="ELa-Bu-QKf" id="Yrb-RV-ZIs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -61,11 +60,6 @@
                     <state key="selected" backgroundImage="register_btn_s"/>
                     <state key="highlighted" backgroundImage="register_btn_s"/>
                 </button>
-                <view contentMode="scaleToFill" id="ELa-Bu-QKf" customClass="LeftImageTextField">
-                    <rect key="frame" x="62" y="143" width="221" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

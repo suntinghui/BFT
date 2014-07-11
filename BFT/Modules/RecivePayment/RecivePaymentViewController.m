@@ -1,19 +1,18 @@
 //
-//  HomeViewController.m
+//  RecivePaymentViewController.m
 //  BFT
 //
 //  Created by 文彬 on 14-7-10.
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 
-#import "MyManageHomeViewController.h"
-#import "LeftMenuViewController.h"
+#import "RecivePaymentViewController.h"
 
-@interface MyManageHomeViewController ()
+@interface RecivePaymentViewController ()
 
 @end
 
-@implementation MyManageHomeViewController
+@implementation RecivePaymentViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,8 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-   
+    self.navigationItem.title = @"我要收款";
 }
 
 - (void)didReceiveMemoryWarning

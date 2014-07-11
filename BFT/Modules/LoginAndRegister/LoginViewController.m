@@ -8,8 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LeftMenuViewController.h"
-#import "MyManageHomeViewController.h"
-#import "IIViewDeckController.h"
+#import "HomeViewController.h"
 
 @interface LoginViewController ()
 
@@ -34,7 +33,6 @@
     self.codeView.delete = self;
     [self.codeView setCodeString:@"点击获取验证码"];
     
-    [self.tf_username setBgTextWithHint:@"input_bg" Hint:@"请输入用户名"];
 
     
     [self getAppVersion];
@@ -48,11 +46,8 @@
 #pragma mark -功能函数
 - (void)gotoHome
 {
-    LeftMenuViewController* leftController = [[LeftMenuViewController alloc] init];
-    MyManageHomeViewController *centerController = [[MyManageHomeViewController alloc] init];
-    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:centerController leftViewController:leftController rightViewController:nil];
-    deckController.leftSize =150;
-    [self.navigationController pushViewController:deckController animated:YES];
+    HomeViewController *homeController = [[HomeViewController alloc] init];
+    [self.navigationController pushViewController:homeController animated:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -7,8 +7,11 @@
 //
 
 #import "LeftMenuViewController.h"
-#import "LoginViewController.h"
-#import "MyManageHomeViewController.h"
+#import "MyBankSavingsViewController.h"
+#import "ManageViewController.h"
+#import "QueryViewController.h"
+#import "RecivePaymentViewController.h"
+#import "SystemsViewController.h"
 
 @interface LeftMenuViewController ()
 
@@ -81,15 +84,37 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row==0) {
-        self.viewDeckController.centerController = [[MyManageHomeViewController alloc]init];
-    }
-    else if(indexPath.row==1)
-    {
-      self.viewDeckController.centerController = [[LoginViewController alloc]init];
+    UIViewController *centerController;
+    switch (indexPath.row) {
+        case 0:
+        {
+            centerController = [[ManageViewController alloc]init];
+        }
+            break;
+        case 1:
+        {
+            centerController = [[QueryViewController alloc]init];
+        }
+            break;
+        case 2:
+        {
+            centerController = [[RecivePaymentViewController alloc]init];
+        }
+            break;
+        case 3:
+        {
+            centerController = [[MyBankSavingsViewController alloc]init];
+        }
+            break;
+        case 4:
+        {
+            centerController = [[SystemsViewController alloc]init];
+        }
+            break;
     }
     
-    
+     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:centerController];
+      self.viewDeckController.centerController =nav;
     [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {
         
         
