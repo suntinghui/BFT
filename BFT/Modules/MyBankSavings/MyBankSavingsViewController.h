@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface MyBankSavingsViewController : UIViewController
+@interface MyBankSavingsViewController : BaseViewController
 
 @end

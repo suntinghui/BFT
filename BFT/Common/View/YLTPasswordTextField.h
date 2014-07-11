@@ -15,6 +15,7 @@
 @property(nonatomic, strong) RandomKeyBoardView         *randomKeyBoardView;
 @property(nonatomic, strong, readonly)NSString          *rsaValue;
 @property(nonatomic, strong) NSString                   *md5Value;
+@property(nonatomic, assign) id<UITextFieldDelegate>delegate;
 
 - (void) numberKeyBoardInput:(NSInteger) number;
 - (void) numberKeyBoardDelete;

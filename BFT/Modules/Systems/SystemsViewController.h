@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface SystemsViewController : UIViewController
+@interface SystemsViewController : BaseViewController
 
 @end

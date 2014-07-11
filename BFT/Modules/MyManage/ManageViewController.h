@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface ManageViewController : UIViewController
+@interface ManageViewController : BaseViewController
 
 @end
