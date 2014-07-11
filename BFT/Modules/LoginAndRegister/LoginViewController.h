@@ -20,13 +20,18 @@
 #import <UIKit/UIKit.h>
 #import "PooCodeView.h"
 #import "LeftImageTextField.h"
+#import "YLTPasswordTextField.h"
 
 @interface LoginViewController : BaseViewController<CodeViewDelegate>
 
 @property (weak, nonatomic) IBOutlet PooCodeView *codeView;
-@property (weak, nonatomic) IBOutlet LeftImageTextField *tf_username;
-@property (weak, nonatomic) IBOutlet LeftImageTextField *tf_pwd;
+@property (strong, nonatomic) LeftImageTextField *tf_username;
+@property (weak, nonatomic) IBOutlet YLTPasswordTextField *tf_pwd;
+@property (strong, nonatomic) IBOutlet UIButton *btn_select;
+@property (nonatomic) BOOL isSelect;
+
 
 - (IBAction)buttonClickHandle:(id)sender;
+- (IBAction)selectAction:(id)sender;
 
 @end

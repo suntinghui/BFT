@@ -16,6 +16,8 @@
 @synthesize leftImage = _leftImage;
 @synthesize contentTF = _contentTF;
 
+
+
 - (id)initWithFrame:(CGRect)frame
           leftImage:(NSString *)leftImage
      leftImageFrame:(CGRect)leftImageFrame
@@ -106,5 +108,6 @@
     [self setFrame:frame];
     [UIView commitAnimations];
 }
+
 
 @end

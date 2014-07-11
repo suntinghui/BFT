@@ -20,6 +20,7 @@
 
 @implementation LoginViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,7 +37,10 @@
     self.codeView.delete = self;
     [self.codeView setCodeString:@"点击获取验证码"];
     
+    self.isSelect = [UserDefaults boolForKey:@"isSelect"];
+    self.btn_select.selected = self.isSelect;
     [self getAppVersion];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +150,15 @@
                                          }
                                          
                                      } fail:nil];
+}
+
+
+- (IBAction)selectAction:(id)sender
+{
+    
+    [self.btn_select setSelected:!self.btn_select.selected];
+    [UserDefaults setBool:self.btn_select.selected forKey:@"isSelect"];
+    [UserDefaults synchronize];
 }
 
 @end
