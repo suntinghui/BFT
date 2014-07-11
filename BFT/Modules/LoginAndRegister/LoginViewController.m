@@ -17,6 +17,7 @@
 
 @implementation LoginViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +33,9 @@
     // Do any additional setup after loading the view from its nib.
     self.codeView.delete = self;
     [self.codeView setCodeString:@"点击获取验证码"];
+    
+    [self.tf_username setBgTextWithHint:@"input_bg" Hint:@"请输入用户名"];
+
     
     [self getAppVersion];
 }

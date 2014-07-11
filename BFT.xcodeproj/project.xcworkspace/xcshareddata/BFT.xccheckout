@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D4750F7D-2D74-4C72-A1AC-EBD0B585F5F7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BFT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</key>
+		<string>ssh://github.com/suntinghui/BFT.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BFT.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/suntinghui/BFT.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BFT</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -41,7 +41,6 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="h4I-0C-dew" customClass="PooCodeView">
-
                     <rect key="frame" x="186" y="276" width="105" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.81334918478260865" green="0.73961500455049922" blue="0.79359128584693484" alpha="1" colorSpace="calibratedRGB"/>
