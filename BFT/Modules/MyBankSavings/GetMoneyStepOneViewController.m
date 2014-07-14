@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 
-#import "MyBankSavingsViewController.h"
+#import "GetMoneyStepOneViewController.h"
 
-@interface MyBankSavingsViewController ()
+@interface GetMoneyStepOneViewController ()
 
 @end
 
-@implementation MyBankSavingsViewController
+@implementation GetMoneyStepOneViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"我的存款";
+    self.navigationItem.title = @"提现";
+    
+    [self addTitleView];
 }
 
 
@@ -35,11 +37,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (void)back
-{
-    UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
-    [rootNav popViewControllerAnimated:YES];
 }
 
 @end

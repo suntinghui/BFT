@@ -7,6 +7,7 @@
 //
 
 #import "LevelOneMenuViewController.h"
+#import "GetMoneyStepOneViewController.h"
 
 @interface LevelOneMenuViewController ()
 
@@ -40,17 +41,17 @@
     else if(self.pageType==1)//我要查询
     {
         self.navigationItem.title = @"我要查询";
-        titles = @[@"查询银行卡余额",@"交易查询",@"签购单查询",@"公告查询",@"流量统计"];
+        titles = @[@"银行卡余额查询",@"账户余额查询",@"账户交易查询",@"银行卡交易查询",@"公告查询"];
     }
     else if(self.pageType==2) //我要收款
     {
         self.navigationItem.title = @"我要收款";
         titles = @[@"收款",@"收款撤销"];
     }
-    else if(self.pageType==3) //我的存款
+    else if(self.pageType==3) //
     {
-        self.navigationItem.title = @"我的存款";
-        titles = @[@"商户存款查询"];
+        self.navigationItem.title = @"我要提款";
+        titles = @[@"提现",@"手机充值"];
     }
     else if(self.pageType==4) //系统相关
     {
@@ -126,7 +127,7 @@
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
-    if (self.pageType==3) //我的存款
+    if (self.pageType==3) //我要提款
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
@@ -168,9 +169,13 @@
     {
         
     }
-    if (self.pageType==3) //我的存款
+    if (self.pageType==3) //我要提款
     {
-        
+        if (indexPath.row==0) //提现
+        {
+            GetMoneyStepOneViewController *getMoneyStepOneController = [[GetMoneyStepOneViewController alloc]init];
+            [self.navigationController pushViewController:getMoneyStepOneController animated:YES];
+        }
     }
     if (self.pageType==4) //系统相关
     {

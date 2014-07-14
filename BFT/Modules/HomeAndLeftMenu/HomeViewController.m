@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "LeftMenuViewController.h"
 #import "IIViewDeckController.h"
-#import "MyBankSavingsViewController.h"
+#import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
 #import "QueryViewController.h"
 #import "RecivePaymentViewController.h"

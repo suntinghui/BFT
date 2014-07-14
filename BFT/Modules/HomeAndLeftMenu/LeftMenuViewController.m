@@ -7,7 +7,7 @@
 //
 
 #import "LeftMenuViewController.h"
-#import "MyBankSavingsViewController.h"
+#import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
 #import "QueryViewController.h"
 #import "RecivePaymentViewController.h"
@@ -38,7 +38,8 @@
     self.listTableView.separatorColor =[UIColor blackColor];
     [StaticTools setExtraCellLineHidden:self.listTableView];
     
-    titles = @[@"我的管理",@"我要查询",@"我要收款",@"我的存款",@"系统相关"];
+    titles = @[@"我的管理",@"我要查询",@"我要收款",@"我要提款",@"系统相关"];
+
 }
 
 - (void)didReceiveMemoryWarning
