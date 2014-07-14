@@ -22,6 +22,9 @@
 
 @interface BaseViewController : UIViewController
 
+//返回按钮点击
 - (void)back;
 
+//增加顶部用户名和时间视图
+- (void)addTitleView;
 @end

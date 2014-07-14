@@ -1,18 +1,18 @@
 //
-//  MyBankSavingsViewController.m
+//  ModifyPayPwdViewController.m
 //  BFT
 //
-//  Created by 文彬 on 14-7-10.
+//  Created by liao jia on 14-7-14.
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 
-#import "MyBankSavingsViewController.h"
+#import "ModifyPayPwdViewController.h"
 
-@interface MyBankSavingsViewController ()
+@interface ModifyPayPwdViewController ()
 
 @end
 
-@implementation MyBankSavingsViewController
+@implementation ModifyPayPwdViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,20 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"我的存款";
+    
+    self.navigationItem.title = @"修改支付密码";
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)back
+
+-(void)viewWillAppear:(BOOL)animated
 {
-    UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
-    [rootNav popViewControllerAnimated:YES];
+    self.navigationItem.hidesBackButton = false;
+    
+    [super viewWillAppear:animated];
+    
 }
 
 @end

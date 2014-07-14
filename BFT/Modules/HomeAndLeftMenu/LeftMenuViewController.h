@@ -23,6 +23,8 @@
     UITableViewDelegate>
 {
     NSArray *titles;
+    
 }
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
+@property (assign, nonatomic) int selectRow;
 @end

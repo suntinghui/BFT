@@ -27,11 +27,13 @@
     NSArray *placeHolds;
     float keyBoardLastHeight;
     UITextField *currentTxtField;
+    NSMutableDictionary *resutDict;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 @property (weak, nonatomic) IBOutlet UIView *footView;
 @property (weak, nonatomic) IBOutlet UITextField *messCodeTxtField;
+@property (weak, nonatomic) IBOutlet UIButton *selectBtn;
 
 - (IBAction)buttonClick:(id)sender;
 

@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 短信验证码 -->
-<root
-    isJson="true"
-    shouldMac="false" >
+<root isJson="true" shouldMac="false" >
 
-    <field
-        key="fieldTrancode"
-        value="089006" />
+    <field key="fieldTrancode" value="089006" />
 
-    <field
-        key="mobNo"
-        value="__mobNo" />
+    <field key="mobNo" value="__mobNo" />
 
-    <field
-        key="sendTime"
-        value="__sendTime" />
+    <field key="sendTime" value="__sendTime" />
 
-    <field
-        key="type"
-        value="__type" />
+    <field key="type" value="__type" />
     
     <!-- 请求提现时需要附带金额参数 -->
-     <field
-        key="money"
-        value="__money" />
+     <field key="money" value="__money" />
 
 </root>

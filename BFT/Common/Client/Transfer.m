@@ -185,6 +185,10 @@ static Transfer *instance = nil;
     {
         return @"version";
     }
+    else if([self.transferCode isEqualToString:@"089006"]) //获取短信验证码
+    {
+        return @"phone-verif-code";
+    }
     return nil;
 }
 //

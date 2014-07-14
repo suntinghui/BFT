@@ -10,6 +10,5 @@
 
 @interface SignInViewController : BaseViewController
 
-
-
+-(IBAction)confirmAction:(id)sender;
 @end

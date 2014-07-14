@@ -7,11 +7,12 @@
 //
 
 #import "LeftMenuViewController.h"
-#import "MyBankSavingsViewController.h"
+#import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
 #import "QueryViewController.h"
 #import "RecivePaymentViewController.h"
 #import "SystemsViewController.h"
+#import "LevelOneMenuViewController.h"
 
 @interface LeftMenuViewController ()
 
@@ -34,9 +35,11 @@
     // Do any additional setup after loading the view from its nib.
     self.listTableView.backgroundColor = [UIColor clearColor];
     self.listTableView.backgroundView = nil;
+    self.listTableView.separatorColor =[UIColor blackColor];
     [StaticTools setExtraCellLineHidden:self.listTableView];
     
-    titles = @[@"我的管理",@"我要查询",@"我要收款",@"我的存款",@"系统相关"];
+    titles = @[@"我的管理",@"我要查询",@"我要收款",@"我要提款",@"系统相关"];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +75,30 @@
     {
         cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = titles[indexPath.row];
+    for (UIView *view in cell.contentView.subviews)
+    {
+        [view removeFromSuperview];
+    }
+    
+    UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 15, 30, 30)];
+    headView.backgroundColor = [UIColor clearColor];
+    if (indexPath.row==self.selectRow)
+    {
+       headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"left_icon_%d_s",indexPath.row+1]];
+    }
+    else
+    {
+        headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"left_icon_%d_n",indexPath.row+1]];
+    }
+    
+    [cell.contentView addSubview:headView];
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 15, 200, 30)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = titles[indexPath.row];
+    [cell.contentView addSubview:titleLabel];
     
     return cell;
 }
@@ -80,40 +106,25 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row==self.selectRow)
+    {
+        cell.backgroundColor = [UIColor blueColor];
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor clearColor];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *centerController;
-    switch (indexPath.row) {
-        case 0:
-        {
-            centerController = [[ManageViewController alloc]init];
-        }
-            break;
-        case 1:
-        {
-            centerController = [[QueryViewController alloc]init];
-        }
-            break;
-        case 2:
-        {
-            centerController = [[RecivePaymentViewController alloc]init];
-        }
-            break;
-        case 3:
-        {
-            centerController = [[MyBankSavingsViewController alloc]init];
-        }
-            break;
-        case 4:
-        {
-            centerController = [[SystemsViewController alloc]init];
-        }
-            break;
-    }
+    self.selectRow = indexPath.row;
+    [self.listTableView reloadData];
     
-     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:centerController];
+    LevelOneMenuViewController *levelOneMenuController = [[LevelOneMenuViewController alloc]init];
+    levelOneMenuController.pageType = indexPath.row;
+    
+     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:levelOneMenuController];
      [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
     self.viewDeckController.centerController =nav;
     [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {

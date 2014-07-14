@@ -9,11 +9,12 @@
 #import "HomeViewController.h"
 #import "LeftMenuViewController.h"
 #import "IIViewDeckController.h"
-#import "MyBankSavingsViewController.h"
+#import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
 #import "QueryViewController.h"
 #import "RecivePaymentViewController.h"
 #import "SystemsViewController.h"
+#import "LevelOneMenuViewController.h"
 
 #define Button_Tag_MyManage  100
 #define Button_Tag_Query     101
@@ -40,12 +41,28 @@
 {
     self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
-
     self.navigationItem.title = @"主界面";
-
-   
+    isGoBack = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
+    [rootNav setNavigationBarHidden:NO animated:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if (!isGoBack)
+    {
+        UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
+        [rootNav setNavigationBarHidden:YES animated:animated];
+    }
+   
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -55,45 +72,21 @@
 #pragma mark -按钮点击
 - (IBAction)buttonClickHandle:(id)sender
 {
-    LeftMenuViewController* leftController = [[LeftMenuViewController alloc] init];
-    UIViewController *centerController;
     UIButton *button = (UIButton*)sender;
-    switch (button.tag) {
-        case Button_Tag_MyManage:
-        {
-            centerController = [[ManageViewController alloc]init];
-        }
-            break;
-        case Button_Tag_Query:
-        {
-            centerController = [[QueryViewController alloc]init];
-        }
-            break;
-        case Button_Tag_MakeColection:
-        {
-            centerController = [[RecivePaymentViewController alloc]init];
-        }
-            break;
-        case Button_Tag_MyAccount:
-        {
-            centerController = [[MyBankSavingsViewController alloc]init];
-        }
-            break;
-        case Button_Tag_Setting:
-        {
-            centerController = [[SystemsViewController alloc]init];
-        }
-            break;
-            
-        default:
-            break;
-    }
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:centerController];
+    LeftMenuViewController* leftController = [[LeftMenuViewController alloc] init];
+    leftController.selectRow =button.tag-100;
+    
+    LevelOneMenuViewController *levelOneMenuController = [[LevelOneMenuViewController alloc]init];
+    levelOneMenuController.pageType = button.tag-100;
+    
+    isGoBack = NO;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:levelOneMenuController];
     [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nav leftViewController:leftController rightViewController:nil];
     deckController.leftSize =150;
     [self.navigationController pushViewController:deckController animated:YES];
+  
 }
 
 @end

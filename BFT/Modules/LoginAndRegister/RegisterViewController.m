@@ -36,11 +36,12 @@
     self.navigationItem.title = @"注册";
     [StaticTools setExtraCellLineHidden:self.listTableView];
     self.listTableView.tableFooterView = self.footView;
-    images = @[@"",@"",@"",@"",@"",@""];
-    placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"再次输入登录密码"];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardDidHideNotification object:nil];
+    self.listTableView.backgroundColor = [UIColor clearColor];
+    self.listTableView.backgroundView = nil;
+    self.listTableView.separatorColor = [UIColor clearColor];
+    images = @[@"icon_user",@"icon_user",@"icon_idcard",@"icon_phone",@"icon_pwd-1",@"icon_pwd-1"];
+    placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"密码确认"];
+    resutDict = [[NSMutableDictionary alloc]init];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,11 +72,20 @@
     switch (button.tag) {
         case Button_Tag_Select:
         {
+            self.selectBtn.selected = !self.selectBtn.selected;
         }
             break;
         case Button_Tag_GetCode: //获取验证码
         {
+            [self resetTableView];
             
+            if ([StaticTools isEmptyString:resutDict[placeHolds[3]]])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+                return;
+            }
+            
+            [self getVerCode];
         }
             break;
         case Button_Tag_Reader: //阅读协议
@@ -86,6 +96,20 @@
         case Button_Tag_Commit: //下一步
         {
             [self resetTableView];
+            
+            for (NSString *key in placeHolds)
+            {
+                if ([StaticTools isEmptyString:resutDict[key]])
+                {
+                    [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"请输入%@",key]];
+                    return;
+                }
+            }
+            if ([StaticTools isEmptyString:self.messCodeTxtField.text])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
+                return;
+            }
         }
             break;
             
@@ -100,54 +124,56 @@
 {
     currentTxtField = textField;
     self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,iPhone5?700: 620);
-    
+    if (textField.tag==104||textField.tag==105||textField==self.messCodeTxtField)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.listTableView.contentOffset = CGPointMake(0, 150);
+        }];
+    }
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     currentTxtField=nil;
-     self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
-}
-
-#pragma mark -keyboardDelegate
--(void)keyboardWasShown:(NSNotification *)notification
-{
     
-    NSValue  *valu_=[notification.userInfo objectForKey:@"UIKeyboardBoundsUserInfoKey"];
-    CGRect rectForkeyBoard=[valu_ CGRectValue];
-    keyBoardLastHeight=rectForkeyBoard.size.height;
+    [self resetTableView];
     
-//    NSIndexPath * indexPath=[NSIndexPath indexPathForRow:currentEditIndex inSection:0];
-//    CGRect rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
-    if (currentTxtField==self.messCodeTxtField)
+    if (textField!=self.messCodeTxtField)
     {
-        
+       [resutDict setObject:textField.text==nil?@"":textField.text forKey:placeHolds[textField.tag-100]];
     }
-    CGRect  rect = [self.view convertRect:currentTxtField.frame fromView:self.listTableView];
     
-    float touchSetY=(iPhone5?548:460)-rectForkeyBoard.size.height-rect.size.height-self.listTableView.frame.origin.y-49;
-    if (rect.origin.y>touchSetY) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        self.listTableView.contentOffset=CGPointMake(0,rect.origin.y-touchSetY);
-        [UIView commitAnimations];
-    }
 }
 
--(void)keyboardWasHidden:(NSNotification *)notification
+#pragma mark -http请求
+/**
+ *  获取短信验证码
+ */
+- (void)getVerCode
 {
-    keyBoardLastHeight=0;
+    
+    NSDictionary *requstDict = @{@"mobNo":@"1352007251",
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"" hasTime:YES],
+                                 @"type":@"0"};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089006"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                     } fail:nil];
 }
 
 #pragma mark -UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return images.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return images.count;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -155,7 +181,14 @@
     
     return 45;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [[UIView alloc]initWithFrame:CGRectZero];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -172,27 +205,37 @@
         [view removeFromSuperview];
     }
     
-    UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 30, 30)];
-    headView.backgroundColor = [UIColor lightGrayColor];
+    UIImageView *bgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.listTableView.frame.size.width, 45)];
+    bgView.backgroundColor = [UIColor clearColor];
+    bgView.image = [UIImage imageNamed:@"input_bg"];
+    [cell.contentView addSubview:bgView];
+    
+    UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
+    headView.backgroundColor = [UIColor clearColor];
+    headView.image = [UIImage imageNamed:images[indexPath.section]];
     [cell.contentView addSubview:headView];
     
-    
-    if (indexPath.row==4||indexPath.row==5)
+    if (indexPath.section==4||indexPath.section==5)
     {
-        YLTPasswordTextField *inputTxtField = [[YLTPasswordTextField alloc] initWithFrame:CGRectMake(50, 5, 260, 30)];
+        YLTPasswordTextField *inputTxtField = [[YLTPasswordTextField alloc] initWithFrame:CGRectMake(35, 5, 270, 30)];
+        inputTxtField.pwdTF.tag = indexPath.section+100;
+        inputTxtField.delegate = self;
         [cell.contentView addSubview:inputTxtField];
-        inputTxtField.pwdTF.placeholder = placeHolds[indexPath.row];
+        inputTxtField.pwdTF.placeholder = placeHolds[indexPath.section];
+        inputTxtField.pwdTF.text = resutDict[placeHolds[indexPath.section]];
     }
     else
     {
-        UITextField *inputTxtField = [[UITextField alloc] initWithFrame:CGRectMake(50, 5, 260, 30)];
+        UITextField *inputTxtField = [[UITextField alloc] initWithFrame:CGRectMake(35, 10, 270, 30)];
         [cell.contentView addSubview:inputTxtField];
+        inputTxtField.font = [UIFont systemFontOfSize:15];
         inputTxtField.delegate = self;
-        inputTxtField.placeholder = placeHolds[indexPath.row];
-        
-        if (indexPath.row==2||indexPath.row==3)
+        inputTxtField.placeholder = placeHolds[indexPath.section];
+        inputTxtField.text = resutDict[placeHolds[indexPath.section]];
+        inputTxtField.tag = indexPath.section+100;
+        if (indexPath.section==2||indexPath.section==3)
         {
-            inputTxtField.keyboardAppearance = UIKeyboardTypeNumberPad;
+            inputTxtField.keyboardType = UIKeyboardTypeNumberPad;
         }
     }
     
@@ -202,6 +245,7 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    cell.backgroundColor = [UIColor clearColor];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

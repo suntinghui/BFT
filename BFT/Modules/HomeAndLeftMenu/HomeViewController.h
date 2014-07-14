@@ -20,7 +20,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : BaseViewController
-
+{
+    BOOL isGoBack;
+}
 - (IBAction)buttonClickHandle:(id)sender;
 
 @end

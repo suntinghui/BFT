@@ -10,4 +10,5 @@
 
 @interface SettleViewController : BaseViewController
 
+-(IBAction)confirmAction:(id)sender;
 @end

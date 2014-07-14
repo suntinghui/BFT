@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.title = @"实名认证";
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +36,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationItem.hidesBackButton = false;
+    
+    [super viewWillAppear:animated];
+    
+}
+
+-(IBAction)imageOneAction:(id)sender{
+    
+}
+
+-(IBAction)imageTwoAction:(id)sender{
+    
+}
+
+-(IBAction)imageThreeAction:(id)sender{
+    
+}
+
+-(IBAction)confirmAction:(id)sender{
+    
+}
+
+-(IBAction)bankAction:(id)sender{
+    
+}
+
+-(IBAction)provinceAction:(id)sender{
+    
+}
+
+-(IBAction)cityAction:(id)sender{
+    
+}
+
+-(IBAction)msgAction:(id)sender{
+    
+}
 @end

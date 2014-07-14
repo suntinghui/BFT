@@ -113,15 +113,36 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/**
+ *  增加顶部用户名和时间视图
+ */
+- (void)addTitleView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35)];
+    titleView.backgroundColor = [UIColor clearColor];
+
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35)];
+    imgView.image = [UIImage imageNamed:@"sawtooth_bg"];
+    imgView.backgroundColor = [UIColor clearColor];
+    [titleView addSubview:imgView];
+    
+    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(5, 0, 230, 30)];
+    nameLabel.backgroundColor = [UIColor clearColor];
+    nameLabel.text = @"用户名：wenbin";
+    nameLabel.font = [UIFont systemFontOfSize:15];
+    nameLabel.textColor = [UIColor darkGrayColor];
+    [titleView addSubview:nameLabel];
+    
+    UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 0, 90, 30)];
+    dateLabel.backgroundColor = [UIColor clearColor];
+    dateLabel.text = [StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO];
+    dateLabel.font = [UIFont systemFontOfSize:15];
+    dateLabel.textColor = [UIColor darkGrayColor];
+    [titleView addSubview:dateLabel];
+    
+    [self.view addSubview:titleView];
+    
 }
-*/
 
 @end

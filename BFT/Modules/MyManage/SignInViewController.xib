@@ -16,16 +16,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I5w-Oq-gzw">
-                    <rect key="frame" x="20" y="66" width="280" height="35"/>
+                    <rect key="frame" x="20" y="66" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
-                    <state key="normal" title="签到" backgroundImage="signin_confirm_btn_n">
+                    <state key="normal" title="签到" backgroundImage="ip_button">
                         <color key="titleColor" red="0.99310351169590338" green="1" blue="0.99884966807252873" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" backgroundImage="signin_confirm_btn_s"/>
-                    <state key="highlighted" backgroundImage="signin_confirm_btn_n"/>
+                    <state key="selected" backgroundImage="ip_button"/>
+                    <state key="highlighted" backgroundImage="ip_button2"/>
+                    <connections>
+                        <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="ofd-Jq-7KL"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signin_tips" id="JX7-a3-LhZ">
                     <rect key="frame" x="20" y="134" width="280" height="202"/>
@@ -68,8 +71,8 @@
         </view>
     </objects>
     <resources>
-        <image name="signin_confirm_btn_n" width="151" height="70"/>
-        <image name="signin_confirm_btn_s" width="151" height="70"/>
+        <image name="ip_button" width="292" height="43"/>
+        <image name="ip_button2" width="584" height="86"/>
         <image name="signin_tips" width="447" height="328"/>
     </resources>
 </document>
