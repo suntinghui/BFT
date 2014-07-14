@@ -53,6 +53,12 @@
     {
         [self initNavgationcontrollerLeftButton];
     }
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     [UIColor whiteColor], UITextAttributeTextColor,
+                                                                     [UIColor colorWithRed:0 green:0.7 blue:0.8 alpha:1], UITextAttributeTextShadowColor,
+                                                                     [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
+                                                                     [UIFont fontWithName:@"Arial-Bold" size:0.0], UITextAttributeFont,
+                                                                     nil]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,13 +104,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftView];
     
     
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                     [UIColor whiteColor], UITextAttributeTextColor,
-                                                                     [UIColor colorWithRed:0 green:0.7 blue:0.8 alpha:1], UITextAttributeTextShadowColor,
-                                                                     [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
-                                                                     [UIFont fontWithName:@"Arial-Bold" size:0.0], UITextAttributeFont,
-                                                                     nil]];
-}
+    }
 
 /**
  *  点击导航栏左侧返回按钮  如有必要  可在子类重写

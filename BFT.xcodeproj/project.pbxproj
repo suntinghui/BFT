@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8D0CD2BF196FB95F00580084 /* GetBackPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */; };
 		8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */; };
+		8D137A8C1973781400D631BE /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137A8A1973781400D631BE /* SignInViewController.m */; };
+		8D137A8D1973781400D631BE /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137A8B1973781400D631BE /* SignInViewController.xib */; };
+		8D137A9119737FD500D631BE /* SettleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137A8F19737FD500D631BE /* SettleViewController.m */; };
+		8D137A9219737FD500D631BE /* SettleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137A9019737FD500D631BE /* SettleViewController.xib */; };
+		8D137A961973A3BD00D631BE /* AuthenticationUpImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137A941973A3BD00D631BE /* AuthenticationUpImageViewController.m */; };
+		8D137A971973A3BD00D631BE /* AuthenticationUpImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137A951973A3BD00D631BE /* AuthenticationUpImageViewController.xib */; };
 		B83A6F48196BDCF70080D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F47196BDCF70080D593 /* Foundation.framework */; };
 		B83A6F4A196BDCF70080D593 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F49196BDCF70080D593 /* CoreGraphics.framework */; };
 		B83A6F4C196BDCF70080D593 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F4B196BDCF70080D593 /* UIKit.framework */; };
@@ -253,6 +259,15 @@
 		8D0CD2BC196FB95F00580084 /* GetBackPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBackPwdViewController.h; sourceTree = "<group>"; };
 		8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBackPwdViewController.m; sourceTree = "<group>"; };
 		8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetBackPwdViewController.xib; sourceTree = "<group>"; };
+		8D137A891973781400D631BE /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		8D137A8A1973781400D631BE /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		8D137A8B1973781400D631BE /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		8D137A8E19737FD500D631BE /* SettleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettleViewController.h; sourceTree = "<group>"; };
+		8D137A8F19737FD500D631BE /* SettleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettleViewController.m; sourceTree = "<group>"; };
+		8D137A9019737FD500D631BE /* SettleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettleViewController.xib; sourceTree = "<group>"; };
+		8D137A931973A3BD00D631BE /* AuthenticationUpImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationUpImageViewController.h; sourceTree = "<group>"; };
+		8D137A941973A3BD00D631BE /* AuthenticationUpImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationUpImageViewController.m; sourceTree = "<group>"; };
+		8D137A951973A3BD00D631BE /* AuthenticationUpImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationUpImageViewController.xib; sourceTree = "<group>"; };
 		B83A6F44196BDCF70080D593 /* BFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83A6F47196BDCF70080D593 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B83A6F49196BDCF70080D593 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1548,6 +1563,15 @@
 				B8CF70FD196EDCB700C7B09E /* ManageViewController.h */,
 				B8CF70FE196EDCB700C7B09E /* ManageViewController.m */,
 				B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */,
+				8D137A891973781400D631BE /* SignInViewController.h */,
+				8D137A8A1973781400D631BE /* SignInViewController.m */,
+				8D137A8B1973781400D631BE /* SignInViewController.xib */,
+				8D137A8E19737FD500D631BE /* SettleViewController.h */,
+				8D137A8F19737FD500D631BE /* SettleViewController.m */,
+				8D137A9019737FD500D631BE /* SettleViewController.xib */,
+				8D137A931973A3BD00D631BE /* AuthenticationUpImageViewController.h */,
+				8D137A941973A3BD00D631BE /* AuthenticationUpImageViewController.m */,
+				8D137A951973A3BD00D631BE /* AuthenticationUpImageViewController.xib */,
 			);
 			path = MyManage;
 			sourceTree = "<group>";
@@ -1697,10 +1721,12 @@
 				B8BD252F196CE3180092F2C5 /* con_req_050000.xml in Resources */,
 				B8BD2559196CE3180092F2C5 /* con_req_100002.xml in Resources */,
 				B8BD2553196CE3180092F2C5 /* con_req_080003.xml in Resources */,
+				8D137A8D1973781400D631BE /* SignInViewController.xib in Resources */,
 				B8BD254D196CE3180092F2C5 /* con_req_089012.xml in Resources */,
 				B8BD2555196CE3180092F2C5 /* con_req_089005.xml in Resources */,
 				B8BD253C196CE3180092F2C5 /* con_req_089021.xml in Resources */,
 				B8BD2548196CE3180092F2C5 /* con_req_089010.xml in Resources */,
+				8D137A971973A3BD00D631BE /* AuthenticationUpImageViewController.xib in Resources */,
 				B8BD2560196CE3180092F2C5 /* con_req_readme.txt in Resources */,
 				B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */,
 				B8BD253A196CE3180092F2C5 /* con_req_089034.xml in Resources */,
@@ -1724,6 +1750,7 @@
 				B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */,
 				B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */,
 				B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */,
+				8D137A9219737FD500D631BE /* SettleViewController.xib in Resources */,
 				B8BD2551196CE3180092F2C5 /* con_req_600000001.xml in Resources */,
 				B8BD2545196CE3180092F2C5 /* con_req_089028.xml in Resources */,
 				B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */,
@@ -1782,6 +1809,7 @@
 				B83A6FF9196BE04C0080D593 /* UploadSignImageDBHelper.m in Sources */,
 				B83A7105196BE2600080D593 /* AreaModel.m in Sources */,
 				B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */,
+				8D137A8C1973781400D631BE /* SignInViewController.m in Sources */,
 				B83A70BD196BE1750080D593 /* DDContextFilterLogFormatter.m in Sources */,
 				B83A6FF6196BE04C0080D593 /* PayeeAccountDBHelper.m in Sources */,
 				B83A7128196BE8790080D593 /* StaticUITools.m in Sources */,
@@ -1862,6 +1890,7 @@
 				B83A70D0196BE1750080D593 /* FMResultSet.m in Sources */,
 				B83A70CF196BE1750080D593 /* FMDatabaseQueue.m in Sources */,
 				B83A70C5196BE1750080D593 /* GCDAsyncUdpSocket.m in Sources */,
+				8D137A961973A3BD00D631BE /* AuthenticationUpImageViewController.m in Sources */,
 				B83A7007196BE04C0080D593 /* FileOperatorUtil.m in Sources */,
 				B83A7008196BE04C0080D593 /* NSDataUtil.m in Sources */,
 				B83A7104196BE2600080D593 /* AnnouncementModel.m in Sources */,
@@ -1881,6 +1910,7 @@
 				B83A70D8196BE1750080D593 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				B83A70DF196BE1750080D593 /* Base64Transcoder.m in Sources */,
 				B83A701A196BE04C0080D593 /* PasswordTextField.m in Sources */,
+				8D137A9119737FD500D631BE /* SettleViewController.m in Sources */,
 				B8732F6A196E7F0B00095BDD /* HomeViewController.m in Sources */,
 				B83A710A196BE2600080D593 /* PayeeAccountModel.m in Sources */,
 				B83A6FF5196BE04C0080D593 /* BaseDBHelper.m in Sources */,

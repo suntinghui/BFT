@@ -38,6 +38,7 @@
 
 - (void)viewDidLoad
 {
+    self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
 
     self.navigationItem.title = @"主界面";
