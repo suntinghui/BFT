@@ -61,9 +61,9 @@
             timestampString = "426762064.4515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-buttonClick:"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-resetTableView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Modules/LoginAndRegister/RegisterViewController.m"
-            timestampString = "426762064.4515"
+            timestampString = "426996161.70188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-resetTableView"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-textFieldDidEndEditing:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

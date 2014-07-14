@@ -203,7 +203,7 @@
 
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {
-        
+        [self.delegate textFieldDidEndEditing:textField];
     }
 }
 @end

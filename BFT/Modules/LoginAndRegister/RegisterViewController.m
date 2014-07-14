@@ -77,7 +77,15 @@
             break;
         case Button_Tag_GetCode: //获取验证码
         {
+            [self resetTableView];
             
+            if ([StaticTools isEmptyString:resutDict[placeHolds[3]]])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+                return;
+            }
+            
+            [self getVerCode];
         }
             break;
         case Button_Tag_Reader: //阅读协议
@@ -126,12 +134,34 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     currentTxtField=nil;
-     self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
+    
+    [self resetTableView];
+    
     if (textField!=self.messCodeTxtField)
     {
        [resutDict setObject:textField.text==nil?@"":textField.text forKey:placeHolds[textField.tag-100]];
     }
     
+}
+
+#pragma mark -http请求
+/**
+ *  获取短信验证码
+ */
+- (void)getVerCode
+{
+    
+    NSDictionary *requstDict = @{@"mobNo":@"1352007251",
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"" hasTime:YES],
+                                 @"type":@"0"};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089006"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                     } fail:nil];
 }
 
 #pragma mark -UITableViewDelegate
@@ -202,7 +232,7 @@
         inputTxtField.delegate = self;
         inputTxtField.placeholder = placeHolds[indexPath.section];
         inputTxtField.text = resutDict[placeHolds[indexPath.section]];
-        inputTxtField.tag = indexPath.row+100;
+        inputTxtField.tag = indexPath.section+100;
         if (indexPath.section==2||indexPath.section==3)
         {
             inputTxtField.keyboardType = UIKeyboardTypeNumberPad;
