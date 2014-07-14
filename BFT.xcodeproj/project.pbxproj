@@ -19,6 +19,8 @@
 		8D137A9C1973C23000D631BE /* ModifyBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137A9A1973C23000D631BE /* ModifyBankCardViewController.xib */; };
 		8D137AA81973CB5E00D631BE /* ModifyPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137AA61973CB5E00D631BE /* ModifyPayPwdViewController.m */; };
 		8D137AA91973CB5E00D631BE /* ModifyPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137AA71973CB5E00D631BE /* ModifyPayPwdViewController.xib */; };
+		8D137AAD1973D0A100D631BE /* ResetPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */; };
+		8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */; };
 		B828CD001973778E005760F3 /* LevelOneMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */; };
 		B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */; };
 		B83A6F48196BDCF70080D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F47196BDCF70080D593 /* Foundation.framework */; };
@@ -280,6 +282,9 @@
 		8D137AA51973CB5E00D631BE /* ModifyPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPayPwdViewController.h; sourceTree = "<group>"; };
 		8D137AA61973CB5E00D631BE /* ModifyPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPayPwdViewController.m; sourceTree = "<group>"; };
 		8D137AA71973CB5E00D631BE /* ModifyPayPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyPayPwdViewController.xib; sourceTree = "<group>"; };
+		8D137AAA1973D0A100D631BE /* ResetPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPayPwdViewController.h; sourceTree = "<group>"; };
+		8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPayPwdViewController.m; sourceTree = "<group>"; };
+		8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPayPwdViewController.xib; sourceTree = "<group>"; };
 		B828CCFD1973778E005760F3 /* LevelOneMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMenuViewController.h; sourceTree = "<group>"; };
 		B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMenuViewController.m; sourceTree = "<group>"; };
 		B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelOneMenuViewController.xib; sourceTree = "<group>"; };
@@ -1596,6 +1601,9 @@
 				8D137AA51973CB5E00D631BE /* ModifyPayPwdViewController.h */,
 				8D137AA61973CB5E00D631BE /* ModifyPayPwdViewController.m */,
 				8D137AA71973CB5E00D631BE /* ModifyPayPwdViewController.xib */,
+				8D137AAA1973D0A100D631BE /* ResetPayPwdViewController.h */,
+				8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */,
+				8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */,
 			);
 			path = MyManage;
 			sourceTree = "<group>";
@@ -1730,6 +1738,7 @@
 				B8BD2549196CE3180092F2C5 /* con_req_100001.xml in Resources */,
 				8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */,
 				B8BD2547196CE3180092F2C5 /* con_req_032000.xml in Resources */,
+				8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */,
 				B8BD255F196CE3180092F2C5 /* con_req_999000003.xml in Resources */,
 				B8BD2541196CE3180092F2C5 /* con_req_089024.xml in Resources */,
 				B83A6F63196BDCF70080D593 /* Images.xcassets in Resources */,
@@ -1880,6 +1889,7 @@
 				B83A70BC196BE1750080D593 /* DDTTYLogger.m in Sources */,
 				B83A7125196BE8790080D593 /* StaticFormatTools.m in Sources */,
 				B83A70E3196BE1750080D593 /* SKPSMTPMessage.m in Sources */,
+				8D137AAD1973D0A100D631BE /* ResetPayPwdViewController.m in Sources */,
 				B83A70E0196BE1750080D593 /* HSK_CFUtilities.m in Sources */,
 				B83A7110196BE2600080D593 /* TransferModel.m in Sources */,
 				B83A7124196BE8790080D593 /* StaticDataTools.m in Sources */,
