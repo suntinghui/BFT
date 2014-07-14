@@ -26,14 +26,17 @@
 
 -(void) viewDidAppear:(BOOL)animated{
     
-//    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
-//    [[BaiduMobStat defaultStat] pageviewStartWithName:cName];
+    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
+    //    [[BaiduMobStat defaultStat] pageviewStartWithName:cName];
 }
 
 -(void) viewDidDisappear:(BOOL)animated{
     
-//    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
-//    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
+    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
+    //    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewDidLoad
@@ -76,9 +79,7 @@
 
 - (BOOL)prefersStatusBarHidden
 {
-    
     return NO;
-    
 }
 
 #pragma mark--定制导航栏左侧返回按钮
@@ -91,7 +92,7 @@
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_n"] forState:UIControlStateNormal];
-     [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_s"] forState:UIControlStateNormal];
+    [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_s"] forState:UIControlStateNormal];
     backBtn.frame = CGRectMake(0, 7, 50, 30);
     backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     
@@ -104,7 +105,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftView];
     
     
-    }
+}
 
 /**
  *  点击导航栏左侧返回按钮  如有必要  可在子类重写
@@ -121,7 +122,7 @@
 {
     UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35)];
     titleView.backgroundColor = [UIColor clearColor];
-
+    
     UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35)];
     imgView.image = [UIImage imageNamed:@"sawtooth_bg"];
     imgView.backgroundColor = [UIColor clearColor];
@@ -143,6 +144,53 @@
     
     [self.view addSubview:titleView];
     
+}
+
+
+#pragma mark -keyboardDelegate
+/**
+ *  增加键盘显示、隐藏的通知
+ */
+- (void)addKeyboardNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+-(void)keyboardWasShown:(NSNotification *)notification
+{
+    NSValue  *valu_=[notification.userInfo objectForKey:@"UIKeyboardBoundsUserInfoKey"];
+    CGRect rectForkeyBoard=[valu_ CGRectValue];
+    keyBoardLastHeight=rectForkeyBoard.size.height;
+    
+    [self keyBoardShowWithHeight:keyBoardLastHeight];
+}
+
+-(void)keyboardWasHidden:(NSNotification *)notification
+{
+    keyBoardLastHeight=0;
+    [self keyBoardHidden];
+}
+
+/**
+ *  键盘显示时调用 需要处理键盘弹出的可在子类重写该函数
+ *
+ *  @param height 键盘高度
+ */
+- (void)keyBoardShowWithHeight:(float)height
+{
+    
+}
+
+//键盘隐藏时调用 需要处理键盘隐藏的可在子类重写该函数
+- (void)keyBoardHidden
+{
+    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 @end

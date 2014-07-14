@@ -20,12 +20,11 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : BaseViewController<UITableViewDataSource,
-    UITableViewDelegate,
-    UITextFieldDelegate>
+UITableViewDelegate,
+UITextFieldDelegate>
 {
     NSArray *images;
     NSArray *placeHolds;
-    float keyBoardLastHeight;
     UITextField *currentTxtField;
     NSMutableDictionary *resutDict;
 }

@@ -171,10 +171,14 @@
     }
     if (self.pageType==3) //我要提款
     {
-        if (indexPath.row==0) //提现
+        if (indexPath.section==0) //提现
         {
             GetMoneyStepOneViewController *getMoneyStepOneController = [[GetMoneyStepOneViewController alloc]init];
             [self.navigationController pushViewController:getMoneyStepOneController animated:YES];
+        }
+        else if(indexPath.section==1) //手机充值
+        {
+            [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"功能暂未开通" clicked:nil];
         }
     }
     if (self.pageType==4) //系统相关

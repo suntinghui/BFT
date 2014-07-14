@@ -21,6 +21,10 @@
 		8D137AA91973CB5E00D631BE /* ModifyPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137AA71973CB5E00D631BE /* ModifyPayPwdViewController.xib */; };
 		8D137AAD1973D0A100D631BE /* ResetPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */; };
 		8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */; };
+		B803066519740C8E00C2FB98 /* GetMoneyStepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B803066019740C8E00C2FB98 /* GetMoneyStepOneViewController.m */; };
+		B803066619740C8E00C2FB98 /* GetMoneyStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B803066119740C8E00C2FB98 /* GetMoneyStepOneViewController.xib */; };
+		B803066719740C8E00C2FB98 /* GetMoneyStepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B803066319740C8E00C2FB98 /* GetMoneyStepTwoViewController.m */; };
+		B803066819740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */; };
 		B828CD001973778E005760F3 /* LevelOneMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */; };
 		B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */; };
 		B83A6F48196BDCF70080D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F47196BDCF70080D593 /* Foundation.framework */; };
@@ -244,8 +248,6 @@
 		B8CF7107196EDCF500C7B09E /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7105196EDCF500C7B09E /* QueryViewController.xib */; };
 		B8CF710C196EDD3B00C7B09E /* RecivePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF710A196EDD3B00C7B09E /* RecivePaymentViewController.m */; };
 		B8CF710D196EDD3B00C7B09E /* RecivePaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF710B196EDD3B00C7B09E /* RecivePaymentViewController.xib */; };
-		B8CF7112196EDD9D00C7B09E /* GetMoneyStepOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF7110196EDD9D00C7B09E /* GetMoneyStepOneViewController.m */; };
-		B8CF7113196EDD9D00C7B09E /* GetMoneyStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7111196EDD9D00C7B09E /* GetMoneyStepOneViewController.xib */; };
 		B8CF711D196EDDEE00C7B09E /* SystemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */; };
 		B8CF711E196EDDEE00C7B09E /* SystemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */; };
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
@@ -285,6 +287,12 @@
 		8D137AAA1973D0A100D631BE /* ResetPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPayPwdViewController.h; sourceTree = "<group>"; };
 		8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPayPwdViewController.m; sourceTree = "<group>"; };
 		8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPayPwdViewController.xib; sourceTree = "<group>"; };
+		B803065F19740C8E00C2FB98 /* GetMoneyStepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMoneyStepOneViewController.h; sourceTree = "<group>"; };
+		B803066019740C8E00C2FB98 /* GetMoneyStepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMoneyStepOneViewController.m; sourceTree = "<group>"; };
+		B803066119740C8E00C2FB98 /* GetMoneyStepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetMoneyStepOneViewController.xib; sourceTree = "<group>"; };
+		B803066219740C8E00C2FB98 /* GetMoneyStepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMoneyStepTwoViewController.h; sourceTree = "<group>"; };
+		B803066319740C8E00C2FB98 /* GetMoneyStepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMoneyStepTwoViewController.m; sourceTree = "<group>"; };
+		B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetMoneyStepTwoViewController.xib; sourceTree = "<group>"; };
 		B828CCFD1973778E005760F3 /* LevelOneMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMenuViewController.h; sourceTree = "<group>"; };
 		B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMenuViewController.m; sourceTree = "<group>"; };
 		B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelOneMenuViewController.xib; sourceTree = "<group>"; };
@@ -724,9 +732,6 @@
 		B8CF7109196EDD3B00C7B09E /* RecivePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecivePaymentViewController.h; sourceTree = "<group>"; };
 		B8CF710A196EDD3B00C7B09E /* RecivePaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecivePaymentViewController.m; sourceTree = "<group>"; };
 		B8CF710B196EDD3B00C7B09E /* RecivePaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecivePaymentViewController.xib; sourceTree = "<group>"; };
-		B8CF710F196EDD9D00C7B09E /* GetMoneyStepOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMoneyStepOneViewController.h; sourceTree = "<group>"; };
-		B8CF7110196EDD9D00C7B09E /* GetMoneyStepOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMoneyStepOneViewController.m; sourceTree = "<group>"; };
-		B8CF7111196EDD9D00C7B09E /* GetMoneyStepOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetMoneyStepOneViewController.xib; sourceTree = "<group>"; };
 		B8CF711A196EDDEE00C7B09E /* SystemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemsViewController.h; sourceTree = "<group>"; };
 		B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemsViewController.m; sourceTree = "<group>"; };
 		B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsViewController.xib; sourceTree = "<group>"; };
@@ -787,6 +792,19 @@
 				8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */,
 			);
 			path = Pwd;
+			sourceTree = "<group>";
+		};
+		B803065E19740C6000C2FB98 /* GetMoney */ = {
+			isa = PBXGroup;
+			children = (
+				B803065F19740C8E00C2FB98 /* GetMoneyStepOneViewController.h */,
+				B803066019740C8E00C2FB98 /* GetMoneyStepOneViewController.m */,
+				B803066119740C8E00C2FB98 /* GetMoneyStepOneViewController.xib */,
+				B803066219740C8E00C2FB98 /* GetMoneyStepTwoViewController.h */,
+				B803066319740C8E00C2FB98 /* GetMoneyStepTwoViewController.m */,
+				B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */,
+			);
+			path = GetMoney;
 			sourceTree = "<group>";
 		};
 		B83A6F3B196BDCF70080D593 = {
@@ -886,8 +904,8 @@
 				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
 				B8CF70FC196EDCA600C7B09E /* MyManage */,
 				B8CF7102196EDCE600C7B09E /* Query */,
+				B803065E19740C6000C2FB98 /* GetMoney */,
 				B8CF7108196EDD2600C7B09E /* RecivePayment */,
-				B8CF710E196EDD7D00C7B09E /* GetMoney */,
 				B8CF7119196EDDEE00C7B09E /* Systems */,
 			);
 			path = Modules;
@@ -1628,17 +1646,6 @@
 			path = RecivePayment;
 			sourceTree = "<group>";
 		};
-		B8CF710E196EDD7D00C7B09E /* GetMoney */ = {
-			isa = PBXGroup;
-			children = (
-				B8CF710F196EDD9D00C7B09E /* GetMoneyStepOneViewController.h */,
-				B8CF7110196EDD9D00C7B09E /* GetMoneyStepOneViewController.m */,
-				B8CF7111196EDD9D00C7B09E /* GetMoneyStepOneViewController.xib */,
-			);
-			name = GetMoney;
-			path = MyBankSavings;
-			sourceTree = "<group>";
-		};
 		B8CF7119196EDDEE00C7B09E /* Systems */ = {
 			isa = PBXGroup;
 			children = (
@@ -1749,7 +1756,6 @@
 				B8BD2540196CE3180092F2C5 /* con_req_089022.xml in Resources */,
 				B83A6F52196BDCF70080D593 /* InfoPlist.strings in Resources */,
 				B8BD2564196CE3180092F2C5 /* con_req_700000001.xml in Resources */,
-				B8CF7113196EDD9D00C7B09E /* GetMoneyStepOneViewController.xib in Resources */,
 				B8BD2546196CE3180092F2C5 /* con_req_089002.xml in Resources */,
 				B8BD254B196CE3180092F2C5 /* con_req_600000002.xml in Resources */,
 				B83A70D2196BE1750080D593 /* MBProgressHUD.bundle in Resources */,
@@ -1785,6 +1791,7 @@
 				B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */,
 				B8BD2542196CE3180092F2C5 /* con_req_089031.xml in Resources */,
 				B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */,
+				B803066819740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib in Resources */,
 				B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */,
 				B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */,
 				8D137A9219737FD500D631BE /* SettleViewController.xib in Resources */,
@@ -1792,6 +1799,7 @@
 				B8BD2545196CE3180092F2C5 /* con_req_089028.xml in Resources */,
 				B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */,
 				B8BD2552196CE3180092F2C5 /* con_req_080001.xml in Resources */,
+				B803066619740C8E00C2FB98 /* GetMoneyStepOneViewController.xib in Resources */,
 				B8BD2561196CE3180092F2C5 /* con_req_089007.xml in Resources */,
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
@@ -1877,6 +1885,7 @@
 				B83A7109196BE2600080D593 /* FieldModel.m in Sources */,
 				B83A7020196BE04C0080D593 /* TopView.m in Sources */,
 				B83A7021196BE04C0080D593 /* UITextField+HideKeyBoard.m in Sources */,
+				B803066519740C8E00C2FB98 /* GetMoneyStepOneViewController.m in Sources */,
 				B83A7015196BE04C0080D593 /* HandSignPanel.m in Sources */,
 				8D0CD2BF196FB95F00580084 /* GetBackPwdViewController.m in Sources */,
 				B83A700B196BE04C0080D593 /* ParseXMLUtil.m in Sources */,
@@ -1913,6 +1922,7 @@
 				B83A70E1196BE1750080D593 /* NSData+Base64Additions.m in Sources */,
 				B83A70CD196BE1750080D593 /* FMDatabaseAdditions.m in Sources */,
 				B83A70D5196BE1750080D593 /* NSData+MKBase64.m in Sources */,
+				B803066719740C8E00C2FB98 /* GetMoneyStepTwoViewController.m in Sources */,
 				B83A7000196BE04C0080D593 /* Transfer.m in Sources */,
 				B83A70B8196BE1750080D593 /* DDAbstractDatabaseLogger.m in Sources */,
 				B83A70C8196BE1750080D593 /* TxActionImp.m in Sources */,
@@ -1939,7 +1949,6 @@
 				B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */,
 				B83A70D9196BE1750080D593 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				B83A70BA196BE1750080D593 /* DDFileLogger.m in Sources */,
-				B8CF7112196EDD9D00C7B09E /* GetMoneyStepOneViewController.m in Sources */,
 				B83A6FFB196BE04C0080D593 /* HttpManager.m in Sources */,
 				B83A700A196BE04C0080D593 /* NSString+TKUtilities.m in Sources */,
 				B83A6F89196BDF770080D593 /* AppDelegate.m in Sources */,
