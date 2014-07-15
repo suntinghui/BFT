@@ -242,12 +242,12 @@
 		B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */; };
 		B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD256A196CE6B70092F2C5 /* BaseViewController.m */; };
 		B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD256E196D42D00092F2C5 /* libvoclib.a */; };
+		B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */; };
+		B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */; };
 		B8CF7100196EDCB700C7B09E /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF70FE196EDCB700C7B09E /* ManageViewController.m */; };
 		B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */; };
 		B8CF7106196EDCF500C7B09E /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF7104196EDCF500C7B09E /* QueryViewController.m */; };
 		B8CF7107196EDCF500C7B09E /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7105196EDCF500C7B09E /* QueryViewController.xib */; };
-		B8CF710C196EDD3B00C7B09E /* RecivePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF710A196EDD3B00C7B09E /* RecivePaymentViewController.m */; };
-		B8CF710D196EDD3B00C7B09E /* RecivePaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF710B196EDD3B00C7B09E /* RecivePaymentViewController.xib */; };
 		B8CF711D196EDDEE00C7B09E /* SystemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */; };
 		B8CF711E196EDDEE00C7B09E /* SystemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */; };
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
@@ -723,15 +723,15 @@
 		B8BD2569196CE6B70092F2C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B8BD256A196CE6B70092F2C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B8BD256E196D42D00092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
+		B8C0A2561975608B00AE5C67 /* InputMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputMoneyViewController.h; sourceTree = "<group>"; };
+		B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputMoneyViewController.m; sourceTree = "<group>"; };
+		B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputMoneyViewController.xib; sourceTree = "<group>"; };
 		B8CF70FD196EDCB700C7B09E /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		B8CF70FE196EDCB700C7B09E /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
 		B8CF7103196EDCF500C7B09E /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
 		B8CF7104196EDCF500C7B09E /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
 		B8CF7105196EDCF500C7B09E /* QueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryViewController.xib; sourceTree = "<group>"; };
-		B8CF7109196EDD3B00C7B09E /* RecivePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecivePaymentViewController.h; sourceTree = "<group>"; };
-		B8CF710A196EDD3B00C7B09E /* RecivePaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecivePaymentViewController.m; sourceTree = "<group>"; };
-		B8CF710B196EDD3B00C7B09E /* RecivePaymentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecivePaymentViewController.xib; sourceTree = "<group>"; };
 		B8CF711A196EDDEE00C7B09E /* SystemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemsViewController.h; sourceTree = "<group>"; };
 		B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemsViewController.m; sourceTree = "<group>"; };
 		B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsViewController.xib; sourceTree = "<group>"; };
@@ -897,6 +897,7 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B8C0A2551975605B00AE5C67 /* RecivePayment */,
 				8D0CD2BB196FB94800580084 /* Pwd */,
 				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
@@ -905,7 +906,6 @@
 				B8CF70FC196EDCA600C7B09E /* MyManage */,
 				B8CF7102196EDCE600C7B09E /* Query */,
 				B803065E19740C6000C2FB98 /* GetMoney */,
-				B8CF7108196EDD2600C7B09E /* RecivePayment */,
 				B8CF7119196EDDEE00C7B09E /* Systems */,
 			);
 			path = Modules;
@@ -1598,6 +1598,16 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		B8C0A2551975605B00AE5C67 /* RecivePayment */ = {
+			isa = PBXGroup;
+			children = (
+				B8C0A2561975608B00AE5C67 /* InputMoneyViewController.h */,
+				B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */,
+				B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */,
+			);
+			path = RecivePayment;
+			sourceTree = "<group>";
+		};
 		B8CF70FC196EDCA600C7B09E /* MyManage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1634,16 +1644,6 @@
 				B8CF7105196EDCF500C7B09E /* QueryViewController.xib */,
 			);
 			path = Query;
-			sourceTree = "<group>";
-		};
-		B8CF7108196EDD2600C7B09E /* RecivePayment */ = {
-			isa = PBXGroup;
-			children = (
-				B8CF7109196EDD3B00C7B09E /* RecivePaymentViewController.h */,
-				B8CF710A196EDD3B00C7B09E /* RecivePaymentViewController.m */,
-				B8CF710B196EDD3B00C7B09E /* RecivePaymentViewController.xib */,
-			);
-			path = RecivePayment;
 			sourceTree = "<group>";
 		};
 		B8CF7119196EDDEE00C7B09E /* Systems */ = {
@@ -1806,8 +1806,8 @@
 				B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */,
 				B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */,
 				B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */,
+				B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */,
 				B8BD2563196CE3180092F2C5 /* con_req_089018.xml in Resources */,
-				B8CF710D196EDD3B00C7B09E /* RecivePaymentViewController.xib in Resources */,
 				B8BD252E196CE3180092F2C5 /* con_req_089006.xml in Resources */,
 				B8BD254F196CE3180092F2C5 /* con_req_999000001.xml in Resources */,
 				B8BD252D196CE3180092F2C5 /* con_req_020001.xml in Resources */,
@@ -1855,6 +1855,7 @@
 				B83A7105196BE2600080D593 /* AreaModel.m in Sources */,
 				B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */,
 				8D137A8C1973781400D631BE /* SignInViewController.m in Sources */,
+				B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */,
 				B83A70BD196BE1750080D593 /* DDContextFilterLogFormatter.m in Sources */,
 				8D137AA81973CB5E00D631BE /* ModifyPayPwdViewController.m in Sources */,
 				B83A6FF6196BE04C0080D593 /* PayeeAccountDBHelper.m in Sources */,
@@ -1970,7 +1971,6 @@
 				B83A701B196BE04C0080D593 /* PullSelectAccountVirew.m in Sources */,
 				B83A70C7196BE1750080D593 /* MessageFactory.mm in Sources */,
 				B83A70D1196BE1750080D593 /* JSONKit.m in Sources */,
-				B8CF710C196EDD3B00C7B09E /* RecivePaymentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

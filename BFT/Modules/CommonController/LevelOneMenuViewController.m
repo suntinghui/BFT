@@ -8,6 +8,7 @@
 
 #import "LevelOneMenuViewController.h"
 #import "GetMoneyStepOneViewController.h"
+#import "InputMoneyViewController.h"
 
 @interface LevelOneMenuViewController ()
 
@@ -167,7 +168,16 @@
     }
     if (self.pageType==2) //我要收款
     {
-        
+        if (indexPath.row==0) //收款
+        {
+            InputMoneyViewController *inputMoneyController =[[InputMoneyViewController alloc] init];
+            [self.navigationController pushViewController:inputMoneyController animated:YES];
+            
+        }
+        else if(indexPath.row==1) //收款撤销
+        {
+            
+        }
     }
     if (self.pageType==3) //我要提款
     {

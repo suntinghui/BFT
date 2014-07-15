@@ -48,6 +48,8 @@
     if ( IOS7_OR_LATER )
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
     
 #endif

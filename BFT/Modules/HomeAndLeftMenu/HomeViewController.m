@@ -12,7 +12,6 @@
 #import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
 #import "QueryViewController.h"
-#import "RecivePaymentViewController.h"
 #import "SystemsViewController.h"
 #import "LevelOneMenuViewController.h"
 

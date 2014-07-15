@@ -65,6 +65,16 @@
             break;
         case Button_Tag_Commit:
         {
+            if ([StaticTools isEmptyString:self.pswTxtField.pwdTF.text])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入交易密码"];
+                return;
+            }
+            else if ([StaticTools isEmptyString:self.verCodeTxtField.text])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
+                return;
+            }
             
         }
             break;
