@@ -9,9 +9,8 @@
 #import "LeftMenuViewController.h"
 #import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
-#import "QueryViewController.h"
-#import "RecivePaymentViewController.h"
-#import "SystemsViewController.h"
+#import "BankCardTradeQueryViewController.h"
+#import "FeedBackViewController.h"
 #import "LevelOneMenuViewController.h"
 
 @interface LeftMenuViewController ()

@@ -8,6 +8,16 @@
 
 #import "LevelOneMenuViewController.h"
 #import "GetMoneyStepOneViewController.h"
+#import "InputMoneyViewController.h"
+#import "BankCardTradeQueryViewController.h"
+#import "FeedBackViewController.h"
+#import "SignInViewController.h"
+#import "SettleViewController.h"
+#import "AuthenticationUpImageViewController.h"
+#import "ModifyBankCardViewController.h"
+#import "ModifyPayPwdViewController.h"
+#import "ResetPayPwdViewController.h"
+
 
 @interface LevelOneMenuViewController ()
 
@@ -36,7 +46,7 @@
     if (self.pageType==0) //我的管理
    {
        self.navigationItem.title = @"我的管理";
-       titles = @[@"签到",@"结算",@"签退",@"修改商户密码"];
+       titles = @[@"签到",@"结算",@"签退",@"实名认证",@"修改银行卡",@"修改支付密码",@"重置支付密码"];
     }
     else if(self.pageType==1)//我要查询
     {
@@ -123,15 +133,15 @@
     {
          headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"query_left_%d",indexPath.section]];
     }
-    if (self.pageType==2) //我要收款
+    else if (self.pageType==2) //我要收款
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
-    if (self.pageType==3) //我要提款
+    else if (self.pageType==3) //我要提款
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
-    if (self.pageType==4) //系统相关
+    else if (self.pageType==4) //系统相关
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"system_left_%d",indexPath.section]];
     }
@@ -159,27 +169,82 @@
     
     if (self.pageType==0) //我的管理
     {
-       
+        if (indexPath.section==0) //签到
+        {
+            SignInViewController *signinController = [[SignInViewController alloc]init];
+            [self.navigationController pushViewController:signinController animated:YES];
+        }
+        else if(indexPath.section==1) //结算
+        {
+            SettleViewController *settleController = [[SettleViewController alloc]init];
+            [self.navigationController pushViewController:settleController animated:YES];
+        }
+        else if(indexPath.section==2) //签退
+        {
+            
+        }
+        else if(indexPath.section==3) //实名认证
+        {
+            AuthenticationUpImageViewController *authController = [[AuthenticationUpImageViewController alloc]init];
+            [self.navigationController pushViewController:authController animated:YES];
+        }
+        else if(indexPath.section==4) //修改银行卡
+        {
+            ModifyBankCardViewController *modifyBankCardController = [[ModifyBankCardViewController alloc]init];
+            [self.navigationController pushViewController:modifyBankCardController animated:YES];
+        }
+        else if(indexPath.section==5) //修改支付密码
+        {
+            ModifyPayPwdViewController *modifyPayController = [[ModifyPayPwdViewController alloc]init];
+            [self.navigationController pushViewController:modifyPayController animated:YES];
+        }
+        else if(indexPath.section==6) //重置支付密码
+        {
+            ResetPayPwdViewController *resetController = [[ResetPayPwdViewController alloc]init];
+            [self.navigationController pushViewController:resetController animated:YES];
+        }
     }
     else if (self.pageType==1)//我要查询
     {
+        if (indexPath.section==3) //银行卡交易查询
+        {
+            BankCardTradeQueryViewController *bankCardTradeQueryController = [[BankCardTradeQueryViewController alloc]init];
+            [self.navigationController pushViewController:bankCardTradeQueryController animated:YES];
+        }
         
     }
     if (self.pageType==2) //我要收款
     {
-        
+        if (indexPath.row==0) //收款
+        {
+            InputMoneyViewController *inputMoneyController =[[InputMoneyViewController alloc] init];
+            [self.navigationController pushViewController:inputMoneyController animated:YES];
+            
+        }
+        else if(indexPath.row==1) //收款撤销
+        {
+            
+        }
     }
     if (self.pageType==3) //我要提款
     {
-        if (indexPath.row==0) //提现
+        if (indexPath.section==0) //提现
         {
             GetMoneyStepOneViewController *getMoneyStepOneController = [[GetMoneyStepOneViewController alloc]init];
             [self.navigationController pushViewController:getMoneyStepOneController animated:YES];
         }
+        else if(indexPath.section==1) //手机充值
+        {
+            [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"功能暂未开通" clicked:nil];
+        }
     }
     if (self.pageType==4) //系统相关
     {
-        
+        if (indexPath.section==1) //意见反馈
+        {
+            FeedBackViewController *feedBackController = [[FeedBackViewController alloc]init];
+            [self.navigationController pushViewController:feedBackController animated:YES];
+        }
     }
     
 }

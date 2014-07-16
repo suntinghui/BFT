@@ -21,10 +21,23 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-
+{
+    float keyBoardLastHeight;
+    BOOL addKeyBoardNotification; //是否添加键盘通知
+    BOOL hasTitleView;  //是否添加顶部的用户名和时间视图
+}
 //返回按钮点击
 - (void)back;
 
 //增加顶部用户名和时间视图
 - (void)addTitleView;
+
+//增加键盘显示、隐藏的通知
+- (void)addKeyboardNotification;
+
+//键盘显示时调用
+- (void)keyBoardShowWithHeight:(float)height;
+
+//键盘隐藏时调用
+- (void)keyBoardHidden;
 @end

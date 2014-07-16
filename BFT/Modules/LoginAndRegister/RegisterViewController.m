@@ -31,9 +31,13 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"注册";
+    addKeyBoardNotification = YES;
+    hasTitleView = NO;
+    
     [StaticTools setExtraCellLineHidden:self.listTableView];
     self.listTableView.tableFooterView = self.footView;
     self.listTableView.backgroundColor = [UIColor clearColor];
@@ -124,26 +128,54 @@
 {
     currentTxtField = textField;
     self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,iPhone5?700: 620);
-    if (textField.tag==104||textField.tag==105||textField==self.messCodeTxtField)
-    {
-        [UIView animateWithDuration:0.3 animations:^{
-            self.listTableView.contentOffset = CGPointMake(0, 150);
-        }];
-    }
+    //    if (textField.tag==104||textField.tag==105||textField==self.messCodeTxtField)
+    //    {
+    //        [UIView animateWithDuration:0.3 animations:^{
+    //            self.listTableView.contentOffset = CGPointMake(0, 150);
+    //        }];
+    //    }
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     currentTxtField=nil;
     
-    [self resetTableView];
-    
     if (textField!=self.messCodeTxtField)
     {
-       [resutDict setObject:textField.text==nil?@"":textField.text forKey:placeHolds[textField.tag-100]];
+        [resutDict setObject:textField.text==nil?@"":textField.text forKey:placeHolds[textField.tag-100]];
     }
     
 }
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    CGRect rectForRow;
+    if (currentTxtField==self.messCodeTxtField)
+    {
+        
+        NSIndexPath * indexPath=[NSIndexPath indexPathForRow:0 inSection:5];
+        rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
+        rectForRow = CGRectMake(rectForRow.origin.x, rectForRow.origin.y+50, rectForRow.size.width, rectForRow.size.height);
+    }
+    else
+    {
+        NSIndexPath * indexPath=[NSIndexPath indexPathForRow:0 inSection:currentTxtField.tag-100];
+        rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
+    }
+    
+    float touchSetY=(iPhone5?548:460)-height-rectForRow.size.height-self.listTableView.frame.origin.y-49;
+    if (rectForRow.origin.y>touchSetY) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.3];
+        self.listTableView.contentOffset=CGPointMake(0,rectForRow.origin.y-touchSetY);
+        [UIView commitAnimations];
+    }
+}
 
+- (void)keyBoardHidden
+{
+    [self resetTableView];
+    
+}
 #pragma mark -http请求
 /**
  *  获取短信验证码

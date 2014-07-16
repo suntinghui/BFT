@@ -11,16 +11,15 @@
 #import "IIViewDeckController.h"
 #import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
-#import "QueryViewController.h"
-#import "RecivePaymentViewController.h"
-#import "SystemsViewController.h"
+#import "BankCardTradeQueryViewController.h"
+#import "FeedBackViewController.h"
 #import "LevelOneMenuViewController.h"
 
-#define Button_Tag_MyManage  100
-#define Button_Tag_Query     101
-#define Button_Tag_MakeColection  102
-#define Button_Tag_MyAccount  103
-#define Button_Tag_Setting  104
+#define Button_Tag_MyManage      100
+#define Button_Tag_Query         101
+#define Button_Tag_MakeColection 102
+#define Button_Tag_MyAccount     103
+#define Button_Tag_Setting       104
 
 @interface HomeViewController ()
 
