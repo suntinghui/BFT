@@ -24,6 +24,14 @@
     return self;
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -59,6 +67,11 @@
     if (addKeyBoardNotification)
     {
         [self addKeyboardNotification];
+    }
+    
+    if (hasTitleView)
+    {
+        [self addTitleView];
     }
 }
 

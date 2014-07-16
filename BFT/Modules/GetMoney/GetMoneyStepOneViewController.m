@@ -30,8 +30,8 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"提现";
     
-    [self addTitleView];
     addKeyBoardNotification = YES;
+    hasTitleView = YES;
     
     self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
     self.messView.layer.borderWidth = 1;

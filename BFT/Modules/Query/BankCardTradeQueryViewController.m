@@ -34,7 +34,7 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"银行卡交易查询";
     
-    [self addTitleView];
+    hasTitleView = YES;
     
     [self.cardTypeBtn setTitle:@"银行卡" forState:UIControlStateNormal];
     [self.startTimeBtn setTitle:[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];

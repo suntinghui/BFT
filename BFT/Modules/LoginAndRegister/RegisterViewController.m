@@ -31,10 +31,12 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"注册";
     addKeyBoardNotification = YES;
+    hasTitleView = NO;
     
     [StaticTools setExtraCellLineHidden:self.listTableView];
     self.listTableView.tableFooterView = self.footView;

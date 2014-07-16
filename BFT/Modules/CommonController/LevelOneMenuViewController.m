@@ -10,7 +10,7 @@
 #import "GetMoneyStepOneViewController.h"
 #import "InputMoneyViewController.h"
 #import "BankCardTradeQueryViewController.h"
-
+#import "FeedBackViewController.h"
 
 @interface LevelOneMenuViewController ()
 
@@ -200,7 +200,11 @@
     }
     if (self.pageType==4) //系统相关
     {
-        
+        if (indexPath.section==1) //意见反馈
+        {
+            FeedBackViewController *feedBackController = [[FeedBackViewController alloc]init];
+            [self.navigationController pushViewController:feedBackController animated:YES];
+        }
     }
     
 }

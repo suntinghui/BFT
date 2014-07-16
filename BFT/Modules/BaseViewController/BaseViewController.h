@@ -24,6 +24,7 @@
 {
     float keyBoardLastHeight;
     BOOL addKeyBoardNotification; //是否添加键盘通知
+    BOOL hasTitleView;  //是否添加顶部的用户名和时间视图
 }
 //返回按钮点击
 - (void)back;

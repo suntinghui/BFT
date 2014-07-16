@@ -32,8 +32,8 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"提现";
     
-    [self addTitleView];
     addKeyBoardNotification = YES;
+    hasTitleView = YES;
     
     self.pswTxtField.delegate = self;
     

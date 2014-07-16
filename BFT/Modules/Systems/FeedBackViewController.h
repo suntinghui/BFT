@@ -9,7 +9,7 @@
  // Copyright (C)
  // 版权所有。
  //
- // 文件功能描述：系统相关首页
+ // 文件功能描述：意见反馈
  
  // 创建标识：
  // 修改标识：
@@ -19,6 +19,6 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface SystemsViewController : BaseViewController
+@interface FeedBackViewController : BaseViewController
 
 @end

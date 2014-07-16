@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 
-#import "SystemsViewController.h"
+#import "FeedBackViewController.h"
 
-@interface SystemsViewController ()
+@interface FeedBackViewController ()
 
 @end
 
-@implementation SystemsViewController
+@implementation FeedBackViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"系统相关";
+    self.navigationItem.title = @"意见反馈";
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,9 +35,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)back
-{
-    UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
-    [rootNav popViewControllerAnimated:YES];
-}
+
 @end
