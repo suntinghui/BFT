@@ -11,7 +11,7 @@
 #import "IIViewDeckController.h"
 #import "GetMoneyStepOneViewController.h"
 #import "ManageViewController.h"
-#import "QueryViewController.h"
+#import "BankCardTradeQueryViewController.h"
 #import "SystemsViewController.h"
 #import "LevelOneMenuViewController.h"
 

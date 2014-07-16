@@ -246,8 +246,8 @@
 		B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */; };
 		B8CF7100196EDCB700C7B09E /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF70FE196EDCB700C7B09E /* ManageViewController.m */; };
 		B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */; };
-		B8CF7106196EDCF500C7B09E /* QueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF7104196EDCF500C7B09E /* QueryViewController.m */; };
-		B8CF7107196EDCF500C7B09E /* QueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7105196EDCF500C7B09E /* QueryViewController.xib */; };
+		B8CF7106196EDCF500C7B09E /* BankCardTradeQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */; };
+		B8CF7107196EDCF500C7B09E /* BankCardTradeQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */; };
 		B8CF711D196EDDEE00C7B09E /* SystemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */; };
 		B8CF711E196EDDEE00C7B09E /* SystemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */; };
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
@@ -729,9 +729,9 @@
 		B8CF70FD196EDCB700C7B09E /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		B8CF70FE196EDCB700C7B09E /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
-		B8CF7103196EDCF500C7B09E /* QueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryViewController.h; sourceTree = "<group>"; };
-		B8CF7104196EDCF500C7B09E /* QueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryViewController.m; sourceTree = "<group>"; };
-		B8CF7105196EDCF500C7B09E /* QueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryViewController.xib; sourceTree = "<group>"; };
+		B8CF7103196EDCF500C7B09E /* BankCardTradeQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTradeQueryViewController.h; sourceTree = "<group>"; };
+		B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTradeQueryViewController.m; sourceTree = "<group>"; };
+		B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTradeQueryViewController.xib; sourceTree = "<group>"; };
 		B8CF711A196EDDEE00C7B09E /* SystemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemsViewController.h; sourceTree = "<group>"; };
 		B8CF711B196EDDEE00C7B09E /* SystemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemsViewController.m; sourceTree = "<group>"; };
 		B8CF711C196EDDEE00C7B09E /* SystemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemsViewController.xib; sourceTree = "<group>"; };
@@ -1639,9 +1639,9 @@
 		B8CF7102196EDCE600C7B09E /* Query */ = {
 			isa = PBXGroup;
 			children = (
-				B8CF7103196EDCF500C7B09E /* QueryViewController.h */,
-				B8CF7104196EDCF500C7B09E /* QueryViewController.m */,
-				B8CF7105196EDCF500C7B09E /* QueryViewController.xib */,
+				B8CF7103196EDCF500C7B09E /* BankCardTradeQueryViewController.h */,
+				B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */,
+				B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -1785,7 +1785,7 @@
 				B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */,
 				B8BD254C196CE3180092F2C5 /* con_req_080002.xml in Resources */,
 				B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */,
-				B8CF7107196EDCF500C7B09E /* QueryViewController.xib in Resources */,
+				B8CF7107196EDCF500C7B09E /* BankCardTradeQueryViewController.xib in Resources */,
 				B8BD2537196CE3180092F2C5 /* con_req_089001.xml in Resources */,
 				B8BD255B196CE3180092F2C5 /* con_req_100004.xml in Resources */,
 				B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */,
@@ -1908,7 +1908,7 @@
 				B83A6FF7196BE04C0080D593 /* ReversalDBHelper.m in Sources */,
 				B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */,
 				B83A70E5196BE1750080D593 /* TBXML+HTTP.m in Sources */,
-				B8CF7106196EDCF500C7B09E /* QueryViewController.m in Sources */,
+				B8CF7106196EDCF500C7B09E /* BankCardTradeQueryViewController.m in Sources */,
 				B83A710B196BE2600080D593 /* RechargeModel.m in Sources */,
 				B83A70C1196BE1750080D593 /* EFETFieldModel.m in Sources */,
 				B83A701E196BE04C0080D593 /* RandomKeyBoardView.m in Sources */,

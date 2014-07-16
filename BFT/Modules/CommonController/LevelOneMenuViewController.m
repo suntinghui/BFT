@@ -9,6 +9,8 @@
 #import "LevelOneMenuViewController.h"
 #import "GetMoneyStepOneViewController.h"
 #import "InputMoneyViewController.h"
+#import "BankCardTradeQueryViewController.h"
+
 
 @interface LevelOneMenuViewController ()
 
@@ -164,6 +166,11 @@
     }
     else if (self.pageType==1)//我要查询
     {
+        if (indexPath.section==3) //银行卡交易查询
+        {
+            BankCardTradeQueryViewController *bankCardTradeQueryController = [[BankCardTradeQueryViewController alloc]init];
+            [self.navigationController pushViewController:bankCardTradeQueryController animated:YES];
+        }
         
     }
     if (self.pageType==2) //我要收款

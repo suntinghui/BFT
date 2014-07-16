@@ -33,6 +33,7 @@
     self.navigationItem.title = @"提现";
     
     [self addTitleView];
+    addKeyBoardNotification = YES;
     
     self.pswTxtField.delegate = self;
     
@@ -40,12 +41,7 @@
     self.messView.layer.borderWidth = 1;
     self.messView.layer.cornerRadius = 8;
 }
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self addKeyboardNotification];
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

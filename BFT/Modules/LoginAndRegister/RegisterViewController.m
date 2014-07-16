@@ -34,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"注册";
+    addKeyBoardNotification = YES;
+    
     [StaticTools setExtraCellLineHidden:self.listTableView];
     self.listTableView.tableFooterView = self.footView;
     self.listTableView.backgroundColor = [UIColor clearColor];
@@ -48,7 +50,6 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [self addKeyboardNotification];
 }
 - (void)didReceiveMemoryWarning
 {

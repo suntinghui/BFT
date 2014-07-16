@@ -24,20 +24,6 @@
     return self;
 }
 
--(void) viewDidAppear:(BOOL)animated{
-    
-    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
-    //    [[BaiduMobStat defaultStat] pageviewStartWithName:cName];
-}
-
--(void) viewDidDisappear:(BOOL)animated{
-    
-    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
-    //    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-}
 
 - (void)viewDidLoad
 {
@@ -64,6 +50,31 @@
                                                                      [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
                                                                      [UIFont fontWithName:@"Arial-Bold" size:0.0], UITextAttributeFont,
                                                                      nil]];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (addKeyBoardNotification)
+    {
+        [self addKeyboardNotification];
+    }
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    
+    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
+    //    [[BaiduMobStat defaultStat] pageviewStartWithName:cName];
+}
+
+-(void) viewDidDisappear:(BOOL)animated{
+    
+    //    NSString *cName = [NSString stringWithFormat:@"%@", self.class, nil];
+    //    [[BaiduMobStat defaultStat] pageviewEndWithName:cName];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning

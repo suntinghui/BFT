@@ -23,6 +23,7 @@
 @interface BaseViewController : UIViewController
 {
     float keyBoardLastHeight;
+    BOOL addKeyBoardNotification; //是否添加键盘通知
 }
 //返回按钮点击
 - (void)back;
