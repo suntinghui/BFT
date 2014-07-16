@@ -124,15 +124,15 @@
     {
          headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"query_left_%d",indexPath.section]];
     }
-    if (self.pageType==2) //我要收款
+    else if (self.pageType==2) //我要收款
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
-    if (self.pageType==3) //我要提款
+    else if (self.pageType==3) //我要提款
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"gather_left_%d",indexPath.section]];
     }
-    if (self.pageType==4) //系统相关
+    else if (self.pageType==4) //系统相关
     {
         headView.image = [UIImage imageNamed:[NSString stringWithFormat:@"system_left_%d",indexPath.section]];
     }

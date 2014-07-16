@@ -75,7 +75,6 @@
                 [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
                 return;
             }
-            
         }
             break;
             
