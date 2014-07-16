@@ -162,12 +162,13 @@
         rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
     }
     
-    float touchSetY=(iPhone5?548:460)-height-rectForRow.size.height-self.listTableView.frame.origin.y-49;
-    if (rectForRow.origin.y>touchSetY) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        self.listTableView.contentOffset=CGPointMake(0,rectForRow.origin.y-touchSetY);
-        [UIView commitAnimations];
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.listTableView.contentOffset=CGPointMake(0,rectForRow.origin.y+rectForRow.size.height-touchSetY);
+        }];
     }
 }
 

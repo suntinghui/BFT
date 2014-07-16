@@ -19,6 +19,11 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface FeedBackViewController : BaseViewController
+@interface FeedBackViewController : BaseViewController<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *inputTxtView;
+@property (weak, nonatomic) IBOutlet UITextField *emailTxtField;
+
+- (IBAction)buttonClickHandle:(id)sender;
 
 @end
