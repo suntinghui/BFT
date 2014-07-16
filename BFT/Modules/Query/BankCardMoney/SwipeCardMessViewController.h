@@ -1,15 +1,15 @@
 //
-//  HomeViewController.h
+//  SwipeCardMessViewController.h
 //  BFT
 //
-//  Created by 文彬 on 14-7-10.
+//  Created by 文彬 on 14-7-16.
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 /*----------------------------------------------------------------
  // Copyright (C)
  // 版权所有。
  //
- // 文件功能描述：我的管理首页
+ // 文件功能描述：刷卡提示页面
  
  // 创建标识：
  // 修改标识：
@@ -19,10 +19,9 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : BaseViewController
-{
-    BOOL isGoBack;
-}
+@interface SwipeCardMessViewController : BaseViewController
+
+@property (weak, nonatomic) IBOutlet UIView *messView;
 
 - (IBAction)buttonClickHandle:(id)sender;
 

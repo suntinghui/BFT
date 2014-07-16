@@ -64,7 +64,7 @@
             
         }
             break;
-        case Button_Tag_StartTime:
+        case Button_Tag_StartTime: //开始时间
         {
             [StaticTools showDateSelectWithIndexDate:self.startTimeBtn.titleLabel.text type:kDatePickerTypeFull clickOk:^(NSString *selectDateStr) {
                 
@@ -72,7 +72,7 @@
             }];
         }
             break;
-        case Button_Tag_EndTime:
+        case Button_Tag_EndTime: //结束时间
         {
             [StaticTools showDateSelectWithIndexDate:self.endTimeBtn.titleLabel.text type:kDatePickerTypeFull clickOk:^(NSString *selectDateStr) {
                 

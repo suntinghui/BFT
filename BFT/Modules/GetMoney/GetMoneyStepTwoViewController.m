@@ -37,7 +37,7 @@
     
     self.pswTxtField.delegate = self;
     
-    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
+    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
     self.messView.layer.borderWidth = 1;
     self.messView.layer.cornerRadius = 8;
 }

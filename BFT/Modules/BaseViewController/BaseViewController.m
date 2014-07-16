@@ -114,7 +114,7 @@
  */
 - (void)initNavgationcontrollerLeftButton
 {
-    UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 44)];
+    UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 44)];
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [backBtn setBackgroundImage:[UIImage imageNamed:@"back_btn_n"] forState:UIControlStateNormal];

@@ -33,11 +33,11 @@
     addKeyBoardNotification = YES;
     hasTitleView = YES;
     
-    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
+    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
     self.messView.layer.borderWidth = 1;
     self.messView.layer.cornerRadius = 8;
     
-    self.moneyTxtField.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
+    self.moneyTxtField.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
     self.moneyTxtField.layer.borderWidth = 1;
     self.moneyTxtField.layer.cornerRadius = 3;
 }

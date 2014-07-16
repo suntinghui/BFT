@@ -17,7 +17,8 @@
 #import "ModifyBankCardViewController.h"
 #import "ModifyPayPwdViewController.h"
 #import "ResetPayPwdViewController.h"
-
+#import "InputPswViewController.h"
+#import "SwipeCardMessViewController.h"
 
 @interface LevelOneMenuViewController ()
 
@@ -206,7 +207,22 @@
     }
     else if (self.pageType==1)//我要查询
     {
-        if (indexPath.section==3) //银行卡交易查询
+        if (indexPath.section==0) //银行卡余额查询
+        {
+            SwipeCardMessViewController *swipeCardMessController  = [[SwipeCardMessViewController alloc]init];
+            [self.navigationController pushViewController:swipeCardMessController animated:YES];
+        }
+        else if (indexPath.section==1) //账户余额查询
+        {
+            InputPswViewController *inputPswController = [[InputPswViewController alloc]init];
+            [self.navigationController pushViewController:inputPswController animated:YES];
+        }
+        else if (indexPath.section==2) //账户交易查询
+        {
+            InputPswViewController *inputPswController = [[InputPswViewController alloc]init];
+            [self.navigationController pushViewController:inputPswController animated:YES];
+        }
+        else if (indexPath.section==3) //银行卡交易查询
         {
             BankCardTradeQueryViewController *bankCardTradeQueryController = [[BankCardTradeQueryViewController alloc]init];
             [self.navigationController pushViewController:bankCardTradeQueryController animated:YES];
@@ -215,13 +231,12 @@
     }
     if (self.pageType==2) //我要收款
     {
-        if (indexPath.row==0) //收款
+        if (indexPath.section==0) //收款
         {
             InputMoneyViewController *inputMoneyController =[[InputMoneyViewController alloc] init];
             [self.navigationController pushViewController:inputMoneyController animated:YES];
-            
         }
-        else if(indexPath.row==1) //收款撤销
+        else if(indexPath.section==1) //收款撤销
         {
             
         }
@@ -246,7 +261,6 @@
             [self.navigationController pushViewController:feedBackController animated:YES];
         }
     }
-    
 }
 
 @end

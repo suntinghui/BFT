@@ -74,6 +74,7 @@
     UIButton *button = (UIButton*)sender;
     
     LeftMenuViewController* leftController = [[LeftMenuViewController alloc] init];
+    
     leftController.selectRow =button.tag-100;
     
     LevelOneMenuViewController *levelOneMenuController = [[LevelOneMenuViewController alloc]init];
@@ -82,10 +83,10 @@
     isGoBack = NO;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:levelOneMenuController];
     [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
+    
     IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nav leftViewController:leftController rightViewController:nil];
     deckController.leftSize =150;
     [self.navigationController pushViewController:deckController animated:YES];
-  
 }
 
 @end
