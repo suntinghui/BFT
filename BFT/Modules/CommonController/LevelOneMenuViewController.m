@@ -227,6 +227,10 @@
             BankCardTradeQueryViewController *bankCardTradeQueryController = [[BankCardTradeQueryViewController alloc]init];
             [self.navigationController pushViewController:bankCardTradeQueryController animated:YES];
         }
+        else if(indexPath.section==4) //公告查询
+        {
+            [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"功能暂未开通" clicked:nil];
+        }
         
     }
     if (self.pageType==2) //我要收款
