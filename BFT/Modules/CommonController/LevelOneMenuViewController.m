@@ -11,6 +11,13 @@
 #import "InputMoneyViewController.h"
 #import "BankCardTradeQueryViewController.h"
 #import "FeedBackViewController.h"
+#import "SignInViewController.h"
+#import "SettleViewController.h"
+#import "AuthenticationUpImageViewController.h"
+#import "ModifyBankCardViewController.h"
+#import "ModifyPayPwdViewController.h"
+#import "ResetPayPwdViewController.h"
+
 
 @interface LevelOneMenuViewController ()
 
@@ -39,7 +46,7 @@
     if (self.pageType==0) //我的管理
    {
        self.navigationItem.title = @"我的管理";
-       titles = @[@"签到",@"结算",@"签退",@"修改商户密码"];
+       titles = @[@"签到",@"结算",@"签退",@"实名认证",@"修改银行卡",@"修改支付密码",@"重置支付密码"];
     }
     else if(self.pageType==1)//我要查询
     {
@@ -162,7 +169,40 @@
     
     if (self.pageType==0) //我的管理
     {
-       
+        if (indexPath.section==0) //签到
+        {
+            SignInViewController *signinController = [[SignInViewController alloc]init];
+            [self.navigationController pushViewController:signinController animated:YES];
+        }
+        else if(indexPath.section==1) //结算
+        {
+            SettleViewController *settleController = [[SettleViewController alloc]init];
+            [self.navigationController pushViewController:settleController animated:YES];
+        }
+        else if(indexPath.section==2) //签退
+        {
+            
+        }
+        else if(indexPath.section==3) //实名认证
+        {
+            AuthenticationUpImageViewController *authController = [[AuthenticationUpImageViewController alloc]init];
+            [self.navigationController pushViewController:authController animated:YES];
+        }
+        else if(indexPath.section==4) //修改银行卡
+        {
+            ModifyBankCardViewController *modifyBankCardController = [[ModifyBankCardViewController alloc]init];
+            [self.navigationController pushViewController:modifyBankCardController animated:YES];
+        }
+        else if(indexPath.section==5) //修改支付密码
+        {
+            ModifyPayPwdViewController *modifyPayController = [[ModifyPayPwdViewController alloc]init];
+            [self.navigationController pushViewController:modifyPayController animated:YES];
+        }
+        else if(indexPath.section==6) //重置支付密码
+        {
+            ResetPayPwdViewController *resetController = [[ResetPayPwdViewController alloc]init];
+            [self.navigationController pushViewController:resetController animated:YES];
+        }
     }
     else if (self.pageType==1)//我要查询
     {
