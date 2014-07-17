@@ -43,8 +43,11 @@
     
     self.isSelect = [UserDefaults boolForKey:@"isSelect"];
     self.btn_select.selected = self.isSelect;
-    [self getAppVersion];
     
+//    [self getAppVersion]; TODO
+    
+    //直接请求时 超时  原因未知
+    [self performSelector:@selector(getPicVerCode) withObject:nil afterDelay:0.5];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +64,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 #pragma mark -按钮点击事件
@@ -136,6 +143,9 @@
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
                                              APPDataCenter.CertificationStatus = result[@"CertificationStatus"];
+                                             [UserDefaults setObject:self.tf_username.contentTF.text forKey:PHONENUM];
+                                             [UserDefaults synchronize];
+                                             
                                              [self gotoHome];
                                          }
                                          else
