@@ -77,8 +77,8 @@
             break;
         case Button_Tag_Login:
         {
-            //    [self loginAction];
-            [self gotoHome];
+            [self loginAction];
+//            [self gotoHome];
         }
             
         default:
@@ -122,9 +122,9 @@
 {
     NSString *pubKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"publicKey" ofType:@"xml"]  encoding:NSUTF8StringEncoding error:nil];
 
-    NSDictionary *requstDict = @{@"login":@"1352007251",
+    NSDictionary *requstDict = @{@"login":@"13520072513",
                                  @"lgnPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
-                                 @"verifyCode":@"1234",
+                                 @"verifyCode":self.codeTxtField.text,
                                  @"version":@"1.0"};
 
     [[Transfer sharedTransfer] startTransfer:@"089016"
@@ -132,6 +132,16 @@
                                     paramDic:requstDict
                                         mess:@"正在登陆" 
                                      success:^(id result) {
+                                         
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             APPDataCenter.CertificationStatus = result[@"CertificationStatus"];
+                                             [self gotoHome];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
                                          
                                      } fail:nil];
 }

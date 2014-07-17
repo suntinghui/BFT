@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet YLTPasswordTextField *tf_pwd;
 @property (strong, nonatomic) IBOutlet UIButton *btn_select;
 @property (strong, nonatomic) IBOutlet UIButton *btn_getpwd;
+@property (weak, nonatomic) IBOutlet UITextField *codeTxtField;
 @property (nonatomic) BOOL isSelect;
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "BankCardTradeQueryViewController.h"
+#import "CardTradeListViewController.h"
 
 #define Button_Tag_CardType  100
 #define Button_Tag_StartTime  101
@@ -82,7 +83,8 @@
             break;
         case Button_Tag_Quety:
         {
-            
+            CardTradeListViewController *cardTradeListController = [[CardTradeListViewController alloc]init];
+            [self.navigationController pushViewController:cardTradeListController animated:YES];
         }
             break;
             
