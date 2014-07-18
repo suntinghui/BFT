@@ -159,9 +159,11 @@
 
 -(void)setRsa
 {
+#ifndef DEMO
     if([value length] == 6){
         rsaValue = [NSString stringWithString:[EncryptionUtil rsaEncrypt:[NSString stringWithFormat:@"%@FF",value]]];
     }
+#endif
 }
 
 - (NSString *)rsaValue

@@ -136,6 +136,11 @@
                     return;
                 }
             }
+            if (![resutDict[placeHolds[4]] isEqualToString:resutDict[placeHolds[5]]])
+            {
+                [SVProgressHUD showErrorWithStatus:@"两次输入的密码不一致"];
+                return;
+            }
             
             if ([StaticTools isEmptyString:self.messCodeTxtField.text])
             {
@@ -253,7 +258,7 @@
                                  @"name":resutDict[placeHolds[0]],
                                  @"pIdNo":resutDict[placeHolds[2]],
                                  @"login":resutDict[placeHolds[1]],
-                                 @"lgnPass":resutDict[placeHolds[1]],
+                                 @"lgnPass":pswRsaValue,
                                  @"verifyCode":self.messCodeTxtField.text,
                                  @"version":[StaticTools getCurrentVersion]};
     
