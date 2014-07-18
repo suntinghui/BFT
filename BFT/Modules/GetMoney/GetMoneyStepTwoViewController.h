@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel; //交易金额
 @property (weak, nonatomic) IBOutlet YLTPasswordTextField *pswTxtField; //交易密码
 @property (weak, nonatomic) IBOutlet UITextField *verCodeTxtField; //验证码
+@property (weak, nonatomic) NSString *money;
 
 - (IBAction)buttonClickHandle:(id)sender;
 

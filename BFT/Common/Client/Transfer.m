@@ -193,6 +193,14 @@ static Transfer *instance = nil;
     {
         return @"register";
     }
+    else if([self.transferCode isEqualToString:@"089027"]) //账户余额查询
+    {
+        return @"query-bal";
+    }
+    else if([self.transferCode isEqualToString:@"089025"]) //提现
+    {
+        return @"draw-cash";
+    }
     return nil;
 }
 //

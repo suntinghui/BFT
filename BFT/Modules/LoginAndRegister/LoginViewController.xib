@@ -12,6 +12,7 @@
                 <outlet property="codeTxtField" destination="zov-n2-bt8" id="azL-qx-5Ov"/>
                 <outlet property="codeView" destination="h4I-0C-dew" id="LmM-75-7Pz"/>
                 <outlet property="tf_pwd" destination="OO8-x5-ItP" id="O9l-Ma-g84"/>
+                <outlet property="userNameTxtField" destination="5LS-vq-eJU" id="aYA-UF-Keh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

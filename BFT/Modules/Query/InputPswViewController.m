@@ -40,6 +40,36 @@
 
 - (IBAction)buttonClickHandle:(id)sender
 {
+    if (self.pageType==0) //账户余额查询
+    {
+        [self accoutnMoneyQuery];
+    }
+}
+
+#pragma mark-http请求
+/**
+ *  账户余额查询
+ */
+- (void)accoutnMoneyQuery
+{
+    NSDictionary *requstDict = @{@"login":[UserDefaults objectForKey:PHONENUM],
+                                 @"payPass":self.pswTxtField.rsaValue};
     
+    [[Transfer sharedTransfer] startTransfer:@"089027"
+                                      fskCmd:nil
+                                    paramDic:requstDict
+                                        mess:@"正在加载"
+                                     success:^(id result) {
+                                         
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             [StaticTools showMessagePageWithType:kMessageTypeSeccuss mess:[NSString stringWithFormat:@"账户余额：%@",result[@"accBlc"]] clicked:nil];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
+                                         
+                                     } fail:nil];
 }
 @end

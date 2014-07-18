@@ -59,6 +59,7 @@
     }
     
     GetMoneyStepTwoViewController *getMoneyStepTwoController = [[GetMoneyStepTwoViewController alloc]init];
+    getMoneyStepTwoController.money = self.moneyTxtField.text;
     [self.navigationController pushViewController:getMoneyStepTwoController animated:YES];
 }
 
