@@ -28,6 +28,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"重置支付密码";
+    hasTitleView = true;
 }
 
 - (void)didReceiveMemoryWarning

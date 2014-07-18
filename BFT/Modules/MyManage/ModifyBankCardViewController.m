@@ -28,6 +28,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"修改银行卡";
+    hasTitleView = true;
+    
 }
 
 - (void)didReceiveMemoryWarning
