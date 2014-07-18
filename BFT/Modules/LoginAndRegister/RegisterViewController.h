@@ -33,6 +33,8 @@ UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *footView;
 @property (weak, nonatomic) IBOutlet UITextField *messCodeTxtField;
 @property (weak, nonatomic) IBOutlet UIButton *selectBtn;
+@property (weak, nonatomic) IBOutlet UIView *protocalView;
+@property (weak, nonatomic) IBOutlet UITextView *protocalTxtView;
 
 - (IBAction)buttonClick:(id)sender;
 

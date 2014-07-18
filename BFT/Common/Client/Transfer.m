@@ -179,7 +179,7 @@ static Transfer *instance = nil;
     }
     else if([self.transferCode isEqualToString:@"089021"]) //图片验证码
     {
-        return @"verifyCode";
+        return @"verifyCodes";
     }
     else if([self.transferCode isEqualToString:@"089018"]) //版本号
     {
@@ -393,7 +393,7 @@ static Transfer *instance = nil;
 - (void) sendPacket
 {
     if ([self.transferModel.isJson isEqualToString:@"true"]){
-        self.MKOperation = [[HttpManager sharedHttpManager] transfer:self.sendDic
+        self.MKOperation = [[HttpManager sharedHttpManager] transfer:@{@"common":[self.sendDic jsonEncodedKeyValueString]}
                                                       successHandler:^(NSDictionary *respDic)
                             {
                                 [self.timer invalidate];

@@ -33,11 +33,11 @@
     addKeyBoardNotification = YES;
     hasTitleView = YES;
     
-    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
+    self.messView.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
     self.messView.layer.borderWidth = 1;
     self.messView.layer.cornerRadius = 8;
     
-    self.moneyTxtField.layer.borderColor = RGBACOLOR(230, 115, 27, 1).CGColor;
+    self.moneyTxtField.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
     self.moneyTxtField.layer.borderWidth = 1;
     self.moneyTxtField.layer.cornerRadius = 3;
 }
@@ -66,11 +66,12 @@
 - (void)keyBoardShowWithHeight:(float)height
 {
     CGRect rectForRow=self.moneyTxtField.frame;
-    float touchSetY=(iPhone5?548:460)-height-rectForRow.size.height-49-(IOS7_OR_LATER?-64:0);
-    if (rectForRow.origin.y>touchSetY)
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
     {
         [UIView animateWithDuration:0.3 animations:^{
-           self.view.frame = CGRectMake(0, -(rectForRow.origin.y-touchSetY), self.view.frame.size.width, self.view.frame.size.height);
+            
+            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
         }];
     }
 }

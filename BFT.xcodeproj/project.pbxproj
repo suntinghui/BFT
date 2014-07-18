@@ -176,6 +176,16 @@
 		B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F7A196E8F5000095BDD /* IIWrapController.m */; };
 		B8932379196E2D8500D4C161 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8932377196E2D8500D4C161 /* MessageViewController.m */; };
 		B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8932378196E2D8500D4C161 /* MessageViewController.xib */; };
+		B8A588F1197670F90057AABD /* InputPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A588EF197670F90057AABD /* InputPswViewController.m */; };
+		B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A588F0197670F90057AABD /* InputPswViewController.xib */; };
+		B8A588FC197676890057AABD /* SwipeCardMessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A588FA197676890057AABD /* SwipeCardMessViewController.m */; };
+		B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A588FB197676890057AABD /* SwipeCardMessViewController.xib */; };
+		B8A58902197676DA0057AABD /* BankCardTradeQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A58900197676DA0057AABD /* BankCardTradeQueryViewController.m */; };
+		B8A58903197676DA0057AABD /* BankCardTradeQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A58901197676DA0057AABD /* BankCardTradeQueryViewController.xib */; };
+		B8B235261977B86F00518EA8 /* CardTradeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B235241977B86F00518EA8 /* CardTradeListViewController.m */; };
+		B8B235271977B86F00518EA8 /* CardTradeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B235251977B86F00518EA8 /* CardTradeListViewController.xib */; };
+		B8B2352B1977B9B100518EA8 /* CardTradeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B235291977B9B100518EA8 /* CardTradeTableViewCell.m */; };
+		B8B2352C1977B9B100518EA8 /* CardTradeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8B2352A1977B9B100518EA8 /* CardTradeTableViewCell.xib */; };
 		B8BD248D196CD6430092F2C5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD2489196CD6430092F2C5 /* libcrypto.a */; };
 		B8BD248E196CD6430092F2C5 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248A196CD6430092F2C5 /* libcurl.a */; };
 		B8BD248F196CD6430092F2C5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248B196CD6430092F2C5 /* libssl.a */; };
@@ -246,8 +256,6 @@
 		B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */; };
 		B8CF7100196EDCB700C7B09E /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF70FE196EDCB700C7B09E /* ManageViewController.m */; };
 		B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */; };
-		B8CF7106196EDCF500C7B09E /* BankCardTradeQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */; };
-		B8CF7107196EDCF500C7B09E /* BankCardTradeQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */; };
 		B8CF711D196EDDEE00C7B09E /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF711B196EDDEE00C7B09E /* FeedBackViewController.m */; };
 		B8CF711E196EDDEE00C7B09E /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF711C196EDDEE00C7B09E /* FeedBackViewController.xib */; };
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
@@ -570,6 +578,21 @@
 		B8932376196E2D8500D4C161 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B8932377196E2D8500D4C161 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		B8932378196E2D8500D4C161 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		B8A588EE197670F90057AABD /* InputPswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPswViewController.h; sourceTree = "<group>"; };
+		B8A588EF197670F90057AABD /* InputPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPswViewController.m; sourceTree = "<group>"; };
+		B8A588F0197670F90057AABD /* InputPswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPswViewController.xib; sourceTree = "<group>"; };
+		B8A588F9197676890057AABD /* SwipeCardMessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCardMessViewController.h; sourceTree = "<group>"; };
+		B8A588FA197676890057AABD /* SwipeCardMessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCardMessViewController.m; sourceTree = "<group>"; };
+		B8A588FB197676890057AABD /* SwipeCardMessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeCardMessViewController.xib; sourceTree = "<group>"; };
+		B8A588FF197676DA0057AABD /* BankCardTradeQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTradeQueryViewController.h; sourceTree = "<group>"; };
+		B8A58900197676DA0057AABD /* BankCardTradeQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTradeQueryViewController.m; sourceTree = "<group>"; };
+		B8A58901197676DA0057AABD /* BankCardTradeQueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTradeQueryViewController.xib; sourceTree = "<group>"; };
+		B8B235231977B86F00518EA8 /* CardTradeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTradeListViewController.h; sourceTree = "<group>"; };
+		B8B235241977B86F00518EA8 /* CardTradeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTradeListViewController.m; sourceTree = "<group>"; };
+		B8B235251977B86F00518EA8 /* CardTradeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTradeListViewController.xib; sourceTree = "<group>"; };
+		B8B235281977B9B100518EA8 /* CardTradeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTradeTableViewCell.h; sourceTree = "<group>"; };
+		B8B235291977B9B100518EA8 /* CardTradeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTradeTableViewCell.m; sourceTree = "<group>"; };
+		B8B2352A1977B9B100518EA8 /* CardTradeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTradeTableViewCell.xib; sourceTree = "<group>"; };
 		B8BD2489196CD6430092F2C5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = BFT/lib/libcrypto.a; sourceTree = "<group>"; };
 		B8BD248A196CD6430092F2C5 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = BFT/lib/libcurl.a; sourceTree = "<group>"; };
 		B8BD248B196CD6430092F2C5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = BFT/lib/libssl.a; sourceTree = "<group>"; };
@@ -729,9 +752,6 @@
 		B8CF70FD196EDCB700C7B09E /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		B8CF70FE196EDCB700C7B09E /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
-		B8CF7103196EDCF500C7B09E /* BankCardTradeQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTradeQueryViewController.h; sourceTree = "<group>"; };
-		B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTradeQueryViewController.m; sourceTree = "<group>"; };
-		B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTradeQueryViewController.xib; sourceTree = "<group>"; };
 		B8CF711A196EDDEE00C7B09E /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		B8CF711B196EDDEE00C7B09E /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		B8CF711C196EDDEE00C7B09E /* FeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
@@ -1404,6 +1424,32 @@
 			path = CommonController;
 			sourceTree = "<group>";
 		};
+		B8A588F8197676890057AABD /* BankCardMoney */ = {
+			isa = PBXGroup;
+			children = (
+				B8A588F9197676890057AABD /* SwipeCardMessViewController.h */,
+				B8A588FA197676890057AABD /* SwipeCardMessViewController.m */,
+				B8A588FB197676890057AABD /* SwipeCardMessViewController.xib */,
+			);
+			path = BankCardMoney;
+			sourceTree = "<group>";
+		};
+		B8A588FE197676DA0057AABD /* BankCardTrade */ = {
+			isa = PBXGroup;
+			children = (
+				B8A588FF197676DA0057AABD /* BankCardTradeQueryViewController.h */,
+				B8A58900197676DA0057AABD /* BankCardTradeQueryViewController.m */,
+				B8A58901197676DA0057AABD /* BankCardTradeQueryViewController.xib */,
+				B8B235231977B86F00518EA8 /* CardTradeListViewController.h */,
+				B8B235241977B86F00518EA8 /* CardTradeListViewController.m */,
+				B8B235251977B86F00518EA8 /* CardTradeListViewController.xib */,
+				B8B235281977B9B100518EA8 /* CardTradeTableViewCell.h */,
+				B8B235291977B9B100518EA8 /* CardTradeTableViewCell.m */,
+				B8B2352A1977B9B100518EA8 /* CardTradeTableViewCell.xib */,
+			);
+			path = BankCardTrade;
+			sourceTree = "<group>";
+		};
 		B8BD2491196CD8870092F2C5 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1639,9 +1685,11 @@
 		B8CF7102196EDCE600C7B09E /* Query */ = {
 			isa = PBXGroup;
 			children = (
-				B8CF7103196EDCF500C7B09E /* BankCardTradeQueryViewController.h */,
-				B8CF7104196EDCF500C7B09E /* BankCardTradeQueryViewController.m */,
-				B8CF7105196EDCF500C7B09E /* BankCardTradeQueryViewController.xib */,
+				B8A588F8197676890057AABD /* BankCardMoney */,
+				B8A588FE197676DA0057AABD /* BankCardTrade */,
+				B8A588EE197670F90057AABD /* InputPswViewController.h */,
+				B8A588EF197670F90057AABD /* InputPswViewController.m */,
+				B8A588F0197670F90057AABD /* InputPswViewController.xib */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -1785,17 +1833,18 @@
 				B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */,
 				B8BD254C196CE3180092F2C5 /* con_req_080002.xml in Resources */,
 				B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */,
-				B8CF7107196EDCF500C7B09E /* BankCardTradeQueryViewController.xib in Resources */,
 				B8BD2537196CE3180092F2C5 /* con_req_089001.xml in Resources */,
 				B8BD255B196CE3180092F2C5 /* con_req_100004.xml in Resources */,
 				B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */,
 				B8BD2542196CE3180092F2C5 /* con_req_089031.xml in Resources */,
+				B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */,
 				B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */,
 				B803066819740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib in Resources */,
 				B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */,
 				B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */,
 				8D137A9219737FD500D631BE /* SettleViewController.xib in Resources */,
 				B8BD2551196CE3180092F2C5 /* con_req_600000001.xml in Resources */,
+				B8A58903197676DA0057AABD /* BankCardTradeQueryViewController.xib in Resources */,
 				B8BD2545196CE3180092F2C5 /* con_req_089028.xml in Resources */,
 				B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */,
 				B8BD2552196CE3180092F2C5 /* con_req_080001.xml in Resources */,
@@ -1804,6 +1853,7 @@
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
 				B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */,
+				B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */,
 				B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */,
 				B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */,
 				B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */,
@@ -1815,8 +1865,10 @@
 				B8BD2532196CE3180092F2C5 /* con_req_020022.xml in Resources */,
 				B8BD253E196CE3180092F2C5 /* con_req_089029.xml in Resources */,
 				B8BD2533196CE3180092F2C5 /* con_req_020023.xml in Resources */,
+				B8B235271977B86F00518EA8 /* CardTradeListViewController.xib in Resources */,
 				B8BD253F196CE3180092F2C5 /* con_req_089025.xml in Resources */,
 				B8BD253B196CE3180092F2C5 /* con_req_089011.xml in Resources */,
+				B8B2352C1977B9B100518EA8 /* CardTradeTableViewCell.xib in Resources */,
 				B8BD2566196CE3180092F2C5 /* Copy of con_req_020022.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1854,6 +1906,7 @@
 				B83A6FF9196BE04C0080D593 /* UploadSignImageDBHelper.m in Sources */,
 				B83A7105196BE2600080D593 /* AreaModel.m in Sources */,
 				B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */,
+				B8B235261977B86F00518EA8 /* CardTradeListViewController.m in Sources */,
 				8D137A8C1973781400D631BE /* SignInViewController.m in Sources */,
 				B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */,
 				B83A70BD196BE1750080D593 /* DDContextFilterLogFormatter.m in Sources */,
@@ -1862,14 +1915,17 @@
 				B83A7128196BE8790080D593 /* StaticUITools.m in Sources */,
 				B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */,
 				B83A70E4196BE1750080D593 /* TBXML+Compression.m in Sources */,
+				B8A588FC197676890057AABD /* SwipeCardMessViewController.m in Sources */,
 				B83A70CE196BE1750080D593 /* FMDatabasePool.m in Sources */,
 				B83A710E196BE2600080D593 /* TradeDetail.m in Sources */,
 				B83A70C9196BE1750080D593 /* FormatUtil.mm in Sources */,
 				B83A7111196BE2600080D593 /* UserModel.m in Sources */,
+				B8A58902197676DA0057AABD /* BankCardTradeQueryViewController.m in Sources */,
 				B83A6FFE196BE04C0080D593 /* Transfer+Action.m in Sources */,
 				B83A7016196BE04C0080D593 /* InputTextField.m in Sources */,
 				B83A700E196BE04C0080D593 /* TimedoutUtil.m in Sources */,
 				B83A7004196BE04C0080D593 /* ConvertUtil.m in Sources */,
+				B8A588F1197670F90057AABD /* InputPswViewController.m in Sources */,
 				B83A70DA196BE1750080D593 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				B83A70C3196BE1750080D593 /* FieldType.m in Sources */,
 				B83A7106196BE2600080D593 /* BankModel.m in Sources */,
@@ -1908,7 +1964,6 @@
 				B83A6FF7196BE04C0080D593 /* ReversalDBHelper.m in Sources */,
 				B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */,
 				B83A70E5196BE1750080D593 /* TBXML+HTTP.m in Sources */,
-				B8CF7106196EDCF500C7B09E /* BankCardTradeQueryViewController.m in Sources */,
 				B83A710B196BE2600080D593 /* RechargeModel.m in Sources */,
 				B83A70C1196BE1750080D593 /* EFETFieldModel.m in Sources */,
 				B83A701E196BE04C0080D593 /* RandomKeyBoardView.m in Sources */,
@@ -1940,6 +1995,7 @@
 				B83A70B9196BE1750080D593 /* DDASLLogger.m in Sources */,
 				B83A70D0196BE1750080D593 /* FMResultSet.m in Sources */,
 				B83A70CF196BE1750080D593 /* FMDatabaseQueue.m in Sources */,
+				B8B2352B1977B9B100518EA8 /* CardTradeTableViewCell.m in Sources */,
 				B83A70C5196BE1750080D593 /* GCDAsyncUdpSocket.m in Sources */,
 				8D137A961973A3BD00D631BE /* AuthenticationUpImageViewController.m in Sources */,
 				B83A7007196BE04C0080D593 /* FileOperatorUtil.m in Sources */,

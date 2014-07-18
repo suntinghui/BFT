@@ -158,8 +158,8 @@
 
     NSLog(@"rsaEncrypt length:%d", [encryptStr length]);
     NSLog(@"rsaEncrypt value: %@", encryptStr);
-    
-    return [encryptStr substringToIndex:32];
+    return encryptStr;
+//    return [encryptStr substringToIndex:32];
 }
 
 

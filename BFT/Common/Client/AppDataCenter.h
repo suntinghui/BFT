@@ -89,6 +89,7 @@
 @property (nonatomic, strong) NSString                              *__ENCTRACKS;
 
 @property (strong, nonatomic) NSString *cookid;
+@property (strong, nonatomic) NSString *CertificationStatus;  //实名认证状态
 
 + (AppDataCenter *) sharedAppDataCenter;
 

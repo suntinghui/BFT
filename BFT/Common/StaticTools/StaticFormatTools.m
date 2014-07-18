@@ -105,11 +105,11 @@
     {
         if ([cutStr isEqualToString:@""])
         {
-             str = [NSString stringWithFormat:@"yyyyMMddHHmmss"];
+             str = [NSString stringWithFormat:@"yyyyMMddHHmmSS"];
         }
         else
         {
-             str = [NSString stringWithFormat:@"yyyy%@MM%@dd HH:mm:ss",cutStr,cutStr];
+             str = [NSString stringWithFormat:@"yyyy%@MM%@dd HH:mm:SS",cutStr,cutStr];
         }
        
     }

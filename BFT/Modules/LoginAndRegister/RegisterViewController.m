@@ -9,10 +9,11 @@
 #import "RegisterViewController.h"
 #import "YLTPasswordTextField.h"
 
-#define Button_Tag_Select 100
-#define Button_Tag_Reader 101
-#define Button_Tag_Commit 102
+#define Button_Tag_Select  100
+#define Button_Tag_Reader  101
+#define Button_Tag_Commit  102
 #define Button_Tag_GetCode 103
+#define Button_Tag_HasRead 104
 
 @interface RegisterViewController ()
 
@@ -46,6 +47,9 @@
     images = @[@"icon_user",@"icon_user",@"icon_idcard",@"icon_phone",@"icon_pwd-1",@"icon_pwd-1"];
     placeHolds = @[@"真实姓名",@"登录名",@"身份证号码",@"手机号码",@"登录密码",@"密码确认"];
     resutDict = [[NSMutableDictionary alloc]init];
+    
+    self.protocalView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height);
+    [self.view addSubview:self.protocalView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -69,6 +73,29 @@
         self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
     }];
 }
+/**
+ *  查看阅读协议
+ */
+- (void)showTxtReadView
+{
+    self.protocalView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.protocalView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+}
+
+/**
+ *  隐藏阅读协议
+ */
+- (void)hideTxtReadView
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.protocalView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height);
+    } completion:^(BOOL finished) {
+    }];
+}
+
 #pragma mark -按钮点击
 - (IBAction)buttonClick:(id)sender
 {
@@ -94,7 +121,7 @@
             break;
         case Button_Tag_Reader: //阅读协议
         {
-            
+            [self showTxtReadView];
         }
             break;
         case Button_Tag_Commit: //下一步
@@ -114,6 +141,11 @@
                 [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
                 return;
             }
+        }
+            break;
+        case Button_Tag_HasRead: //已经阅读
+        {
+            [self hideTxtReadView];
         }
             break;
             
@@ -162,12 +194,13 @@
         rectForRow=[self.listTableView rectForRowAtIndexPath:indexPath];
     }
     
-    float touchSetY=(iPhone5?548:460)-height-rectForRow.size.height-self.listTableView.frame.origin.y-49;
-    if (rectForRow.origin.y>touchSetY) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        self.listTableView.contentOffset=CGPointMake(0,rectForRow.origin.y-touchSetY);
-        [UIView commitAnimations];
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.listTableView.contentOffset=CGPointMake(0,rectForRow.origin.y+rectForRow.size.height-touchSetY);
+        }];
     }
 }
 
@@ -184,11 +217,12 @@
 {
     
     NSDictionary *requstDict = @{@"mobNo":@"1352007251",
-                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"" hasTime:YES],
-                                 @"type":@"0"};
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
     
     [[Transfer sharedTransfer] startTransfer:@"089006"
-                                      fskCmd:@"Request_GetExtKsn"
+                                      fskCmd:nil
                                     paramDic:requstDict
                                         mess:@"正在获取验证码"
                                      success:^(id result) {

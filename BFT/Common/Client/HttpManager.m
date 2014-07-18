@@ -63,13 +63,15 @@ static HttpManager  *instance;
     }
     
     MKNetworkOperation *op = [workEngine operationWithPath:url params:reqDic httpMethod:postType ssl:NO];
+    //CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+    [op setStringEncoding:NSUTF8StringEncoding];
+    [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
-    if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCode"])
+    if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCodes"])
     {
+        NSLog(@"cookid:%@",APPDataCenter.cookid);
         [op addHeaders:@{@"cookie2":APPDataCenter.cookid}];
     }
-     [op setStringEncoding:NSUTF8StringEncoding];
-    [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
      {
@@ -80,10 +82,9 @@ static HttpManager  *instance;
              NSLog(@"Data from server %@", [completedOperation responseString]);
          }
          
-         if ([actionString isEqualToString:@"verifyCode"])
+         if ([actionString isEqualToString:@"verifyCodes"])
          {
              NSDictionary *header =completedOperation.readonlyResponse.allHeaderFields;
-             NSLog(@"response header:%@",header);
              if (header[@"Set-Cookie"]!=nil)
              {
                  NSLog(@"cook is:%@",header[@"Set-Cookie"]);
@@ -94,8 +95,6 @@ static HttpManager  *instance;
                  NSString *uuid = arr[1];
                  uuid = [uuid substringFromIndex:6];
                  APPDataCenter.cookid = uuid;
-                 NSLog(@"uuid:%@",uuid);
-                 APPDataCenter.cookid =header[@"Set-Cookie"];
                  
                  //             NSLog(@"get cookids:%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
              }
