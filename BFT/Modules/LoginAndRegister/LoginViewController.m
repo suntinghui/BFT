@@ -132,7 +132,7 @@
     NSDictionary *requstDict = @{@"login":@"13520072513",
                                  @"lgnPass":pwd,
                                  @"verifyCode":self.codeTxtField.text,
-                                 @"version":@"1.0"};
+                                 @"version":[StaticTools getCurrentVersion]};
 
     [[Transfer sharedTransfer] startTransfer:@"089016"
                                       fskCmd:nil
