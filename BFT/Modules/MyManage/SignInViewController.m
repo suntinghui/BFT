@@ -28,6 +28,7 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"签到";
+    hasTitleView = true;
 }
 
 - (void)didReceiveMemoryWarning

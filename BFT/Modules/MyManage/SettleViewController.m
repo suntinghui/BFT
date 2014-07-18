@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"结算";
+    hasTitleView = true;
 }
 
 - (void)didReceiveMemoryWarning

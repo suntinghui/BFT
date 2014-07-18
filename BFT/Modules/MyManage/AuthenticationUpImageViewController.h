@@ -19,14 +19,16 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface AuthenticationUpImageViewController : BaseViewController
+@interface AuthenticationUpImageViewController : BaseViewController< UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>{
+    int operateType;
+}
 
 @property(strong, nonatomic)IBOutlet UITextField *tf_cardNo;
 @property(strong, nonatomic)IBOutlet UITextField *tf_merchantName;
 @property(strong, nonatomic)IBOutlet UITextField *tf_msg;
--(IBAction)imageOneAction:(id)sender;
--(IBAction)imageTwoAction:(id)sender;
--(IBAction)imageThreeAction:(id)sender;
+@property(strong, nonatomic)IBOutlet UIScrollView *scrollView;
+- (IBAction)buttonClickHandle:(id)sender;
 
 -(IBAction)confirmAction:(id)sender;
 -(IBAction)bankAction:(id)sender;
