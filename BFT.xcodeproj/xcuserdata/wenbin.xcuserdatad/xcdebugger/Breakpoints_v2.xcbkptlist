@@ -57,13 +57,59 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BFT/Resource/External/MKNetworkKit/Categories/NSDictionary+RequestEncoding.m"
-            timestampString = "427278393.750596"
+            filePath = "BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
+            timestampString = "427279973.395738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-jsonEncodedKeyValueString"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "cardPlaceLabel"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CardTradeTableViewCell cardPlaceLabel]"
+                  moduleName = "BFT"
+                  urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
+                  timestampString = "427342317.642901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CardTradeTableViewCell setCardPlaceLabel:]"
+                  moduleName = "BFT"
+                  urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
+                  timestampString = "427342317.643058"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BFT/Common/Utility/EncryptionUtil.m"
+            timestampString = "427301768.014765"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "+rsaEncrypt:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,14 +119,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-            timestampString = "427279973.395738"
+            filePath = "BFT/Common/Utility/EncryptionUtil.m"
+            timestampString = "427339471.322266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "cardPlaceLabel"
-            landmarkType = "19">
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "+rsaEncrypt:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

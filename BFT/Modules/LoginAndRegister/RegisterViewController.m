@@ -141,6 +141,8 @@
                 [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
                 return;
             }
+            
+            [self userRegister];
         }
             break;
         case Button_Tag_HasRead: //已经阅读
@@ -216,7 +218,7 @@
 - (void)getVerCode
 {
     
-    NSDictionary *requstDict = @{@"mobNo":@"1352007251",
+    NSDictionary *requstDict = @{@"mobNo":resutDict[placeHolds[3]],
                                  @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
                                  @"type":@"0",
                                  @"money":@""};
@@ -227,9 +229,30 @@
                                         mess:@"正在获取验证码"
                                      success:^(id result) {
                                          
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
                                      } fail:nil];
 }
 
+/**
+ *  用户注册
+ */
+- (void)userRegister
+{
+    
+    NSDictionary *requstDict = @{@"mobNo":resutDict[placeHolds[3]],
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089001"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
+                                     } fail:nil];
+}
 #pragma mark -UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

@@ -189,6 +189,10 @@ static Transfer *instance = nil;
     {
         return @"phone-verif-code";
     }
+    else if ([self.transferCode isEqualToString:@"089001"]) //用户注册
+    {
+        return @"register";
+    }
     return nil;
 }
 //

@@ -90,11 +90,24 @@ static HttpManager  *instance;
                  NSLog(@"cook is:%@",header[@"Set-Cookie"]);
                  NSString *cookid =header[@"Set-Cookie"];
                  NSArray *temarr = [cookid componentsSeparatedByString:@";"];
-                 NSString *cook = temarr[2];
+                 
+                 NSString *cook;
+                 for (NSString *tem in temarr)
+                 {
+                     if ([tem hasPrefix:@"uuid"])
+                     {
+                         cook = tem;
+                     }
+                 }
                  NSArray *arr = [cook componentsSeparatedByString:@","];
-                 NSString *uuid = arr[1];
-                 uuid = [uuid substringFromIndex:6];
-                 APPDataCenter.cookid = uuid;
+                 if (arr.count>1)
+                 {
+                     
+                     NSString *uuid = arr[1];
+                     uuid = [uuid substringFromIndex:6];
+                     APPDataCenter.cookid = uuid;
+                 }
+                 
                  
                  //             NSLog(@"get cookids:%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
              }
