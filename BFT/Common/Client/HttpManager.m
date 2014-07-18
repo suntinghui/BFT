@@ -46,7 +46,6 @@ static HttpManager  *instance;
     NSLog(@"request:%@", reqDic);
 //    NSString *methodName = [MethodNameUtil getMethodNameWithTransferCode:actionString];
     
-#ifndef DEMO
     if (![StaticTools checkNetAvailable])
         return nil;
     
@@ -126,31 +125,33 @@ static HttpManager  *instance;
     [workEngine enqueueOperation:op];
     
     return op;
-#endif
+
     
     
-#ifdef DEMO
-    MKNetworkEngine *workEngine = [[MKNetworkEngine alloc] initWithHostName:@"www.baidu.com"];
-    MKNetworkOperation *op = [workEngine operationWithPath:@"" params:reqDic httpMethod:@"POST"];
-    [op setStringEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
-    [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
+//#ifdef DEMO
+//    MKNetworkEngine *workEngine = [[MKNetworkEngine alloc] initWithHostName:@"www.baidu.com"];
+//    MKNetworkOperation *op = [workEngine operationWithPath:@"" params:reqDic httpMethod:@"POST"];
+//    [op setStringEncoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
+//    [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
+//    
+//    [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
+//     {
+//         NSDictionary *respDic = [[DemoClient getMessageWithTranCode:[reqDic objectForKey:@"fieldTrancode"]] objectFromJSONString];
+//         NSLog(@"response:%@", respDic);
+//         successBlock(respDic);
+//         
+//     }errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {
+//         NSLog(@"MKNetwork request error : %@", [error localizedDescription]);
+//         errorBlock(error);
+//         
+//     }];
+//    
+//    [workEngine enqueueOperation:op];
+//    return op;
+//    
+//#endif
     
-    [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
-     {
-         NSDictionary *respDic = [[DemoClient getMessageWithTranCode:[reqDic objectForKey:@"fieldTrancode"]] objectFromJSONString];
-         NSLog(@"response:%@", respDic);
-         successBlock(respDic);
-         
-     }errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {
-         NSLog(@"MKNetwork request error : %@", [error localizedDescription]);
-         errorBlock(error);
-         
-     }];
-    
-    [workEngine enqueueOperation:op];
-    return op;
-    
-#endif
+    return nil;
     
 }
 
