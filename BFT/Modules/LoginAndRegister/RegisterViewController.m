@@ -128,7 +128,7 @@
         {
             [self resetTableView];
             
-            for (NSString *key in placeHolds)
+            for (NSString *key in placeHolds) //输入值判断
             {
                 if ([StaticTools isEmptyString:resutDict[key]])
                 {
@@ -136,10 +136,15 @@
                     return;
                 }
             }
+            
             if ([StaticTools isEmptyString:self.messCodeTxtField.text])
             {
                 [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
                 return;
+            }
+            if (!self.selectBtn.selected)
+            {
+                [SVProgressHUD showErrorWithStatus:@"请先同意阅读协议"];
             }
             
             [self userRegister];
@@ -178,6 +183,11 @@
         [resutDict setObject:textField.text==nil?@"":textField.text forKey:placeHolds[textField.tag-100]];
     }
     
+    if (textField.tag==104||textField.tag==105)
+    {
+        YLTPasswordTextField *view = (YLTPasswordTextField*)[textField superview];
+        pswRsaValue = view.rsaValue;
+    }
 }
 #pragma mark -keyboard
 - (void)keyBoardShowWithHeight:(float)height
@@ -239,10 +249,13 @@
 - (void)userRegister
 {
     
-    NSDictionary *requstDict = @{@"mobNo":resutDict[placeHolds[3]],
-                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
-                                 @"type":@"0",
-                                 @"money":@""};
+    NSDictionary *requstDict = @{@"sctMobNo":resutDict[placeHolds[3]],
+                                 @"name":resutDict[placeHolds[0]],
+                                 @"pIdNo":resutDict[placeHolds[2]],
+                                 @"login":resutDict[placeHolds[1]],
+                                 @"lgnPass":resutDict[placeHolds[1]],
+                                 @"verifyCode":self.messCodeTxtField.text,
+                                 @"version":[StaticTools getCurrentVersion]};
     
     [[Transfer sharedTransfer] startTransfer:@"089001"
                                       fskCmd:@"Request_GetExtKsn"

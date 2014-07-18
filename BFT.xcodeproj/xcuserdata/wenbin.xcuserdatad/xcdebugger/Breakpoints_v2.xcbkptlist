@@ -73,7 +73,7 @@
                   symbolName = "-[CardTradeTableViewCell cardPlaceLabel]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "427342317.642901"
+                  timestampString = "427354242.354936"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -87,7 +87,7 @@
                   symbolName = "-[CardTradeTableViewCell setCardPlaceLabel:]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "427342317.643058"
+                  timestampString = "427354242.355345"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -104,29 +104,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Common/Utility/EncryptionUtil.m"
-            timestampString = "427301768.014765"
+            timestampString = "427353653.079391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "+rsaEncrypt:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BFT/Common/Utility/EncryptionUtil.m"
-            timestampString = "427339471.322266"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "+rsaEncrypt:"
-            landmarkType = "5">
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "@implementation EncryptionUtil"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

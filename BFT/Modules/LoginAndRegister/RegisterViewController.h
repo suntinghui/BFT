@@ -27,6 +27,7 @@ UITextFieldDelegate>
     NSArray *placeHolds;
     UITextField *currentTxtField;
     NSMutableDictionary *resutDict;
+    NSString *pswRsaValue;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
