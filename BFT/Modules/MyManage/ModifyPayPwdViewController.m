@@ -29,6 +29,8 @@
     
     self.navigationItem.title = @"修改支付密码";
     hasTitleView = true;
+    
+    resutDict = [[NSMutableDictionary alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,25 +47,71 @@
     
 }
 
+-(BOOL) checkValue{
+    if(self.tf_old_pwd.pwdTF.text.length  == 0){
+        [SVProgressHUD showErrorWithStatus:@"原密码不能为空"];
+        return false;
+    }else if(self.tf_new_pwd.pwdTF.text.length  == 0){
+        [SVProgressHUD showErrorWithStatus:@"新密码不能为空"];
+        return false;
+    }else if(self.tf_old_pwd.pwdTF.text.length  == 0){
+        [SVProgressHUD showErrorWithStatus:@"确认密码不能为空"];
+        return false;
+    }else if(self.tf_sms.text.length == 0){
+        [SVProgressHUD showErrorWithStatus:@"短信验证码不能为空"];
+        return false;
+    }else if(![self.tf_new_pwd.pwdTF.text isEqualToString:self.tf_confirm_pwd.pwdTF.text]){
+        [SVProgressHUD showErrorWithStatus:@"两次密码输入不一致"];
+        return false;
+    }
+    return true;
+}
+
+
+#pragma mark -http请求
 /**
- *  修改支付密码
+ *  获取短信验证码
  */
-- (void)loginAction
+- (IBAction)getVerCode:(id)sender
 {
-    NSString *pubKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"publicKey" ofType:@"xml"]  encoding:NSUTF8StringEncoding error:nil];
     
-    NSDictionary *requstDict = @{@"login":@"1352007251",
-                                 @"lgnPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
-                                 @"verifyCode":@"1234",
-                                 @"version":@"1.0"};
+    NSDictionary *requstDict = @{@"mobNo":[UserDefaults stringForKey:PHONENUM],
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
     
-    [[Transfer sharedTransfer] startTransfer:@"089016"
+    [[Transfer sharedTransfer] startTransfer:@"089006"
                                       fskCmd:nil
                                     paramDic:requstDict
-                                        mess:@"正在登陆"
+                                        mess:@"正在获取验证码"
                                      success:^(id result) {
                                          
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
                                      } fail:nil];
 }
 
+/**
+ * 修改支付密码
+ */
+
+- (IBAction)confirmAction:(id)sender{
+    if(![self checkValue]){
+        return;
+    }
+    NSString *pubKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"publicKey" ofType:@"xml"]  encoding:NSUTF8StringEncoding error:nil];
+    
+    NSDictionary *requstDict =  @{@"oldPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
+                                  @"newPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
+                                  @"verifyCode":self.tf_sms.text,
+                                  @"type":@"2"};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089024"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requstDict
+                                        mess:@"正在请求数据..."
+                                     success:^(id result) {
+                                         [SVProgressHUD showErrorWithStatus:@"密码修改成功"];
+                                         [self.navigationController popViewControllerAnimated:YES];
+                                     } fail:nil];
+}
 @end

@@ -18,7 +18,17 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
+#import "YLTPasswordTextField.h"
+@interface ResetPayPwdViewController : BaseViewController{
+    
+}
+@property(strong, nonatomic)IBOutlet YLTPasswordTextField *tf_new_pwd;
+@property(strong, nonatomic)IBOutlet UITextField *tf_idCard;
+@property(strong, nonatomic)IBOutlet UITextField *tf_bankCardNum;
+@property(strong, nonatomic)IBOutlet UITextField *tf_sms;
 
-@interface ResetPayPwdViewController : BaseViewController
+
+- (IBAction)getVerCode:(id)sender;
+- (IBAction)confirmAction:(id)sender;
 
 @end

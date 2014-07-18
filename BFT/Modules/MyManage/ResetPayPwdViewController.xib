@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResetPayPwdViewController">
             <connections>
+                <outlet property="tf_bankCardNum" destination="AiH-Dl-3kQ" id="oaN-pc-Z6Y"/>
+                <outlet property="tf_idCard" destination="8Wp-IJ-8w5" id="tz2-3B-XIi"/>
+                <outlet property="tf_sms" destination="Jim-RW-4Ey" id="beU-rz-wNg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,6 +25,9 @@
                     <state key="normal" title="确定" backgroundImage="ip_button">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="es3-R3-2JF"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="短信验证码" placeholder="请输入商户名" minimumFontSize="17" background="input_bg" id="Jim-RW-4Ey">
                     <rect key="frame" x="20" y="205" width="130" height="40"/>
@@ -35,6 +41,9 @@
                     <state key="normal" title="获取短信校验码" backgroundImage="ip_button">
                         <color key="titleColor" red="0.017239317600000002" green="0.015348079840000001" blue="0.015683222069999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="getVerCode:" destination="-1" eventType="touchUpInside" id="QYf-uA-pSR"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pwd" id="H1h-vp-kdv">
                     <rect key="frame" x="32" y="43" width="14" height="15"/>
