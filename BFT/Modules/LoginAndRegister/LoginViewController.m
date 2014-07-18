@@ -127,19 +127,12 @@
  */
 - (void)loginAction
 {
-    NSString *pubKey = [NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"publicKey" ofType:@"xml"]  encoding:NSUTF8StringEncoding error:nil];
 
-<<<<<<< HEAD
-    //3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0
-    NSDictionary *requstDict = @{@"login":@"13520072513",
-                                 @"lgnPass":self.tf_pwd.rsaValue,
-=======
 //    @"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0"
 //    
     NSString *pwd = [self.tf_pwd rsaValue];
     NSDictionary *requstDict = @{@"login":@"13520072513",
                                  @"lgnPass":pwd,
->>>>>>> 3024138b885c4d19d5a2711af5d3c212b8b26888
                                  @"verifyCode":self.codeTxtField.text,
                                  @"version":@"1.0"};
 
