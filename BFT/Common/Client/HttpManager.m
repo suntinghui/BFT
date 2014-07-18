@@ -66,6 +66,7 @@ static HttpManager  *instance;
     [op setStringEncoding:NSUTF8StringEncoding];
     [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
+    
     if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCodes"])
     {
         NSLog(@"cookid:%@",APPDataCenter.cookid);

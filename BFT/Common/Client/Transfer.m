@@ -201,6 +201,10 @@ static Transfer *instance = nil;
     {
         return @"draw-cash";
     }
+    else if([self.transferCode isEqualToString:@"089028"]) //账户交易查询
+    {
+        return @"query-acc-trade";
+    }
     return nil;
 }
 //

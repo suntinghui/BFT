@@ -23,7 +23,7 @@
 @interface InputPswViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet YLTPasswordTextField *pswTxtField;
-@property (assign, nonatomic) int pageType;  //0:账户余额查询的密码输入
+@property (assign, nonatomic) int pageType;  //0:账户余额查询的密码输入 1:账户交易查询的密码输入
 
 - (IBAction)buttonClickHandle:(id)sender;
 

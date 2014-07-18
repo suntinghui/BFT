@@ -167,6 +167,8 @@
 		B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A712C196BEA900080D593 /* SVProgressHUD.m */; };
 		B840F18C196F7FE1007CA174 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B840F18A196F7FE1007CA174 /* RegisterViewController.m */; };
 		B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B840F18B196F7FE1007CA174 /* RegisterViewController.xib */; };
+		B853B2831979039A00E37812 /* AccountTradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B853B2811979039A00E37812 /* AccountTradeViewController.m */; };
+		B853B2841979039A00E37812 /* AccountTradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B853B2821979039A00E37812 /* AccountTradeViewController.xib */; };
 		B8732F6A196E7F0B00095BDD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F68196E7F0B00095BDD /* HomeViewController.m */; };
 		B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8732F69196E7F0B00095BDD /* HomeViewController.xib */; };
 		B8732F6F196E7F3000095BDD /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F6D196E7F3000095BDD /* LeftMenuViewController.m */; };
@@ -563,6 +565,9 @@
 		B840F189196F7FE1007CA174 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		B840F18A196F7FE1007CA174 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		B840F18B196F7FE1007CA174 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		B853B2801979039A00E37812 /* AccountTradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTradeViewController.h; sourceTree = "<group>"; };
+		B853B2811979039A00E37812 /* AccountTradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTradeViewController.m; sourceTree = "<group>"; };
+		B853B2821979039A00E37812 /* AccountTradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountTradeViewController.xib; sourceTree = "<group>"; };
 		B8732F67196E7F0B00095BDD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B8732F68196E7F0B00095BDD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B8732F69196E7F0B00095BDD /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -1382,6 +1387,16 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		B853B27F1979038400E37812 /* AccountTrade */ = {
+			isa = PBXGroup;
+			children = (
+				B853B2801979039A00E37812 /* AccountTradeViewController.h */,
+				B853B2811979039A00E37812 /* AccountTradeViewController.m */,
+				B853B2821979039A00E37812 /* AccountTradeViewController.xib */,
+			);
+			path = AccountTrade;
+			sourceTree = "<group>";
+		};
 		B8732F66196E7EE900095BDD /* HomeAndLeftMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1685,6 +1700,7 @@
 		B8CF7102196EDCE600C7B09E /* Query */ = {
 			isa = PBXGroup;
 			children = (
+				B853B27F1979038400E37812 /* AccountTrade */,
 				B8A588F8197676890057AABD /* BankCardMoney */,
 				B8A588FE197676DA0057AABD /* BankCardTrade */,
 				B8A588EE197670F90057AABD /* InputPswViewController.h */,
@@ -1853,6 +1869,7 @@
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
 				B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */,
+				B853B2841979039A00E37812 /* AccountTradeViewController.xib in Resources */,
 				B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */,
 				B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */,
 				B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */,
@@ -1906,6 +1923,7 @@
 				B83A6FF9196BE04C0080D593 /* UploadSignImageDBHelper.m in Sources */,
 				B83A7105196BE2600080D593 /* AreaModel.m in Sources */,
 				B8732F7C196E8F5000095BDD /* IIViewDeckController.m in Sources */,
+				B853B2831979039A00E37812 /* AccountTradeViewController.m in Sources */,
 				B8B235261977B86F00518EA8 /* CardTradeListViewController.m in Sources */,
 				8D137A8C1973781400D631BE /* SignInViewController.m in Sources */,
 				B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */,

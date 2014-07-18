@@ -1,19 +1,18 @@
 //
-//  inputPswViewController.m
+//  AccountTradeViewController.m
 //  BFT
 //
-//  Created by 文彬 on 14-7-16.
+//  Created by 文彬 on 14-7-18.
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 
-#import "InputPswViewController.h"
 #import "AccountTradeViewController.h"
 
-@interface InputPswViewController ()
+@interface AccountTradeViewController ()
 
 @end
 
-@implementation InputPswViewController
+@implementation AccountTradeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,9 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"密码输入";
-    
+    self.navigationItem.title = @"账户交易查询";
     hasTitleView = YES;
+    [self accoutTradeQuery];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,38 +39,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonClickHandle:(id)sender
-{
-    if (self.pageType==0) //账户余额查询
-    {
-        [self accoutnMoneyQuery];
-    }
-    else if(self.pageType==1) //账户交易查询
-    {
-        AccountTradeViewController *accountTradeController = [[AccountTradeViewController alloc]init];
-        accountTradeController.pswRsaValue = self.pswTxtField.rsaValue;
-        [self.navigationController pushViewController:accountTradeController animated:YES];
-    }
-}
-
 #pragma mark-http请求
 /**
- *  账户余额查询
+ *  账户交易查询
  */
-- (void)accoutnMoneyQuery
+- (void)accoutTradeQuery
 {
     NSDictionary *requstDict = @{@"login":[UserDefaults objectForKey:PHONENUM],
-                                 @"payPass":self.pswTxtField.rsaValue};
+                                 @"payPass":self.pswRsaValue,
+                                 @"currPage":[NSString stringWithFormat:@"%d",currentPage+1]};
     
-    [[Transfer sharedTransfer] startTransfer:@"089027"
-                                      fskCmd:nil
+    [[Transfer sharedTransfer] startTransfer:@"089028"
+                                      fskCmd:@"Request_GetExtKsn"
                                     paramDic:requstDict
                                         mess:@"正在加载"
                                      success:^(id result) {
                                          
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
-                                             [StaticTools showMessagePageWithType:kMessageTypeSeccuss mess:[NSString stringWithFormat:@"账户余额：%@",result[@"accBlc"]] clicked:nil];
+                                             NSArray *list = result[@"pageList"];
+                                             if (list.count==0&&currentPage==0)
+                                             {
+                                                 [SVProgressHUD showErrorWithStatus:@"暂无交易数据"];
+                                             }
+                                             else
+                                             {
+                                                currentPage++;
+                                             }
+                                             
                                          }
                                          else
                                          {
@@ -79,4 +75,5 @@
                                          
                                      } fail:nil];
 }
+
 @end
