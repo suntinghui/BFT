@@ -162,7 +162,6 @@
 //    return [encryptStr substringToIndex:32];
 }
 
-
 #pragma mark - For Test
 /*
  

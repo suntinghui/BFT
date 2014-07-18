@@ -220,6 +220,7 @@
         else if (indexPath.section==2) //账户交易查询
         {
             InputPswViewController *inputPswController = [[InputPswViewController alloc]init];
+            inputPswController.pageType=1;
             [self.navigationController pushViewController:inputPswController animated:YES];
         }
         else if (indexPath.section==3) //银行卡交易查询

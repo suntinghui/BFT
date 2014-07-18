@@ -56,7 +56,8 @@
     {
         case Button_Tag_VerCode:
         {
-            
+         
+            [self getVerCode];
         }
             break;
         case Button_Tag_Commit:
@@ -71,6 +72,8 @@
                 [SVProgressHUD showErrorWithStatus:@"请输入短信验证码"];
                 return;
             }
+            
+            [self getMoney];
         }
             break;
             
@@ -110,4 +113,52 @@
     }];
 }
 
+#pragma mark -http请求
+/**
+ *  获取短信验证码
+ */
+- (void)getVerCode
+{
+    
+    NSDictionary *requstDict = @{@"mobNo":@"15101532374", //[UserDefaults objectForKey:PHONENUM]
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089006"
+                                      fskCmd:nil
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
+                                     } fail:nil];
+}
+
+/**
+ *  提现
+ */
+- (void)getMoney
+{
+    NSDictionary *requstDict = @{@"payPass":self.pswTxtField.rsaValue,
+                                 @"verifyCode":self.verCodeTxtField.text,
+                                 @"money":self.money};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089025"
+                                      fskCmd:@"Request_GetExtKsn"
+                                    paramDic:requstDict
+                                        mess:@"正在加载"
+                                     success:^(id result) {
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             [SVProgressHUD showSuccessWithStatus:@"提现成功"];
+                                             [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-3] animated:YES];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
+                                        
+                                     } fail:nil];
+}
 @end

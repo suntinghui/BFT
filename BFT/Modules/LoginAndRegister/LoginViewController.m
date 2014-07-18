@@ -48,6 +48,8 @@
     
     //直接请求时 超时  原因未知
     [self performSelector:@selector(getPicVerCode) withObject:nil afterDelay:0.5];
+    
+    self.userNameTxtField.text = @"13520072513"; //TODO
 }
 
 - (void)didReceiveMemoryWarning
@@ -129,10 +131,10 @@
 {
   
     NSString *pwd = [self.tf_pwd rsaValue];
-    NSDictionary *requstDict = @{@"login":@"13520072513",
+    NSDictionary *requstDict = @{@"login":self.userNameTxtField.text,
                                  @"lgnPass":pwd,
                                  @"verifyCode":self.codeTxtField.text,
-                                 @"version":@"1.0"};
+                                 @"version":[StaticTools getCurrentVersion]};
 
     [[Transfer sharedTransfer] startTransfer:@"089016"
                                       fskCmd:nil
@@ -143,7 +145,7 @@
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
                                              APPDataCenter.CertificationStatus = result[@"CertificationStatus"];
-                                             [UserDefaults setObject:self.tf_username.contentTF.text forKey:PHONENUM];
+                                             [UserDefaults setObject:self.userNameTxtField.text forKey:PHONENUM];
                                              [UserDefaults synchronize];
                                              
                                              [self gotoHome];

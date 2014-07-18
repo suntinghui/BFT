@@ -4,24 +4,14 @@
     isJson="true"
     shouldMac="false" >
 
-    <field
-        key="fieldTrancode"
-        value="089025" />
+    <field key="fieldTrancode" value="089025" />
 
-    <field
-        key="psamNo"
-        value="__psamNo" />
+    <field key="psamNo" value="__psamNo" />
 
-    <field
-        key="money"
-        value="__money" />
+    <field key="money" value="__money" />
 
-    <field
-        key="payPass"
-        value="__payPass" />
+    <field key="payPass" value="__payPass" />
 
-    <field
-        key="verifyCode"
-        value="__verifyCode" />
+    <field key="verifyCode" value="__verifyCode" />
 
 </root>

@@ -66,6 +66,7 @@ static HttpManager  *instance;
     [op setStringEncoding:NSUTF8StringEncoding];
     [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
+    
     if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCodes"])
     {
         NSLog(@"cookid:%@",APPDataCenter.cookid);
@@ -88,26 +89,13 @@ static HttpManager  *instance;
              {
                  NSLog(@"cook is:%@",header[@"Set-Cookie"]);
                  NSString *cookid =header[@"Set-Cookie"];
-                 NSArray *temarr = [cookid componentsSeparatedByString:@";"];
-                 
-                 NSString *cook;
-                 for (NSString *tem in temarr)
+                 NSString *uuidAll = [cookid substringFromIndex:[cookid rangeOfString:@"uuid="].location+5];
+                 NSString *uuid = [uuidAll substringToIndex:[uuidAll rangeOfString:@";"].location];
+                 if (![StaticTools isEmptyString:uuid])
                  {
-                     if ([tem hasPrefix:@"uuid"])
-                     {
-                         cook = tem;
-                     }
-                 }
-                 NSArray *arr = [cook componentsSeparatedByString:@","];
-                 if (arr.count>1)
-                 {
-                     
-                     NSString *uuid = arr[1];
-                     uuid = [uuid substringFromIndex:6];
                      APPDataCenter.cookid = uuid;
                  }
-                 
-                 
+
                  //             NSLog(@"get cookids:%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
              }
              //         NSLog(@"dd:%@", [NSHTTPCookie requestHeaderFieldsWithCookies:[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]]);

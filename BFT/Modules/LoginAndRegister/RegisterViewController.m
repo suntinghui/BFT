@@ -115,6 +115,11 @@
                 [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
                 return;
             }
+            if (![StaticTools isMobileNumber:resutDict[placeHolds[3]]])
+            {
+                [SVProgressHUD showErrorWithStatus:@"请输入一个正确的手机号"];
+                return;
+            }
             
             [self getVerCode];
         }
@@ -268,7 +273,15 @@
                                         mess:@"正在获取验证码"
                                      success:^(id result) {
                                          
-                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             [SVProgressHUD showSuccessWithStatus:@"注册成功，您可使用此账号登录"];
+                                             [self.navigationController popViewControllerAnimated:YES];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
                                      } fail:nil];
 }
 #pragma mark -UITableViewDelegate
