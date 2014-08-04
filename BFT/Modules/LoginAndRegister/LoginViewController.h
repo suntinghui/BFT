@@ -18,19 +18,18 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
-#import "PooCodeView.h"
 #import "LeftImageTextField.h"
 #import "YLTPasswordTextField.h"
 #import "GetBackPwdViewController.h"
 
-@interface LoginViewController : BaseViewController<CodeViewDelegate>
+@interface LoginViewController : BaseViewController
 
-@property (weak, nonatomic) IBOutlet PooCodeView *codeView;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTxtField;
 @property (weak, nonatomic) IBOutlet YLTPasswordTextField *tf_pwd;
 @property (strong, nonatomic) IBOutlet UIButton *btn_select;
 @property (strong, nonatomic) IBOutlet UIButton *btn_getpwd;
 @property (weak, nonatomic) IBOutlet UITextField *codeTxtField;
+@property (weak, nonatomic) IBOutlet UIButton *verCodeBtn;
 @property (nonatomic) BOOL isSelect;
 
 

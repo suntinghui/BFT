@@ -14,6 +14,7 @@
 #import "BankCardTradeQueryViewController.h"
 #import "FeedBackViewController.h"
 #import "LevelOneMenuViewController.h"
+#import "YRSideViewController.h"
 
 #define Button_Tag_MyManage      100
 #define Button_Tag_Query         101
@@ -79,14 +80,30 @@
     
     LevelOneMenuViewController *levelOneMenuController = [[LevelOneMenuViewController alloc]init];
     levelOneMenuController.pageType = button.tag-100;
-    
     isGoBack = NO;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:levelOneMenuController];
     [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
     
-    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nav leftViewController:leftController rightViewController:nil];
-    deckController.leftSize =150;
-    [self.navigationController pushViewController:deckController animated:YES];
+ 
+    YRSideViewController *sideViewController=[[YRSideViewController alloc]initWithNibName:nil bundle:nil];
+    sideViewController.rootViewController=nav;
+    sideViewController.leftViewController=leftController;
+    APPDataCenter.yrSideViewController = sideViewController;
+
+    sideViewController.leftViewShowWidth=200;
+    sideViewController.needSwipeShowMenu=true;//默认开启的可滑动展示
+//    [sideViewController setRootViewMoveBlock:^(UIView *rootView, CGRect orginFrame, CGFloat xoffset) {
+//        //使用简单的平移动画 自定义滑动动画
+//        rootView.frame=CGRectMake(xoffset, orginFrame.origin.y, orginFrame.size.width, orginFrame.size.height);
+//    }];
+
+//    IIViewDeckController* deckController =  [[IIViewDeckController alloc] initWithCenterViewController:nav leftViewController:leftController rightViewController:nil];
+//    deckController.leftSize =150;
+    
+    //IIViewDeckController在iphone5上显示有问题 所以改用YRSideViewController
+
+    
+    [self.navigationController pushViewController:sideViewController animated:YES];
 }
 
 @end

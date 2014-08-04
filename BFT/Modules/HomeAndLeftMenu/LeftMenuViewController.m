@@ -125,11 +125,15 @@
     
      UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:levelOneMenuController];
      [StaticTools setNavigationBarBackgroundImage:nav.navigationBar withImg:@"nav_bg"];
-    self.viewDeckController.centerController =nav;
-    [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {
-        
-        
-    }];
+    
+    APPDataCenter.yrSideViewController.rootViewController = nav;
+    [APPDataCenter.yrSideViewController hideSideViewController:YES];
+    
+//    self.viewDeckController.centerController =nav;
+//    [self.viewDeckController closeLeftViewBouncing:^(IIViewDeckController *controller) {
+//        
+//        
+//    }];
 }
 
 @end

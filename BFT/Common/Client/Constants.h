@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 
-
 #define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 #define UserDefaults [NSUserDefaults standardUserDefaults]
 

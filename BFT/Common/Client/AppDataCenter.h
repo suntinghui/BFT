@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import <voclib/vcom.h>
 #import "vcom.h"
+#import "YRSideViewController.h"
 
 #define APPDataCenter [AppDataCenter sharedAppDataCenter]
 
@@ -90,6 +91,7 @@
 
 @property (strong, nonatomic) NSString *cookid;
 @property (strong, nonatomic) NSString *CertificationStatus;  //实名认证状态
+@property (strong, nonatomic) YRSideViewController *yrSideViewController;
 
 + (AppDataCenter *) sharedAppDataCenter;
 

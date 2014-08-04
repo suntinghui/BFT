@@ -13,6 +13,7 @@
 
 #define Button_Tag_Register  100
 #define Button_Tag_Login     101
+#define Button_Tag_VerCode   102
 
 @interface LoginViewController ()
 
@@ -38,8 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     
 
-    self.codeView.delete = self;
-    [self.codeView setCodeString:@"点击获取验证码"];
+    [self.verCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     
     self.isSelect = [UserDefaults boolForKey:@"isSelect"];
     self.btn_select.selected = self.isSelect;
@@ -78,17 +78,22 @@
 {
     UIButton *button = (UIButton*)sender;
     switch (button.tag) {
-        case Button_Tag_Register:
+        case Button_Tag_Register: //注册
         {
             RegisterViewController *registerController = [[RegisterViewController alloc]init];
             [self.navigationController pushViewController:registerController animated:YES];
         }
             break;
-        case Button_Tag_Login:
+        case Button_Tag_Login: //登录
         {
 //            [self loginAction];
             [self gotoHome];
         }
+        case Button_Tag_VerCode: //获取验证码
+        {
+            [self getPicVerCode];
+        }
+            break;
             
         default:
             break;
@@ -118,7 +123,7 @@
                                          
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
-                                             [self.codeView setCodeString:result[@"verifyCode"]];
+                                              [self.verCodeBtn setTitle:result[@"verifyCode"] forState:UIControlStateNormal];
                                          }
                                          
                                      } fail:nil];

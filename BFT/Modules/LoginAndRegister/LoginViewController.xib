@@ -10,9 +10,9 @@
                 <outlet property="btn_getpwd" destination="tMa-PE-7nR" id="Wab-qf-F6b"/>
                 <outlet property="btn_select" destination="udk-gd-wax" id="l5z-Mr-gcy"/>
                 <outlet property="codeTxtField" destination="zov-n2-bt8" id="azL-qx-5Ov"/>
-                <outlet property="codeView" destination="h4I-0C-dew" id="LmM-75-7Pz"/>
                 <outlet property="tf_pwd" destination="OO8-x5-ItP" id="O9l-Ma-g84"/>
                 <outlet property="userNameTxtField" destination="5LS-vq-eJU" id="aYA-UF-Keh"/>
+                <outlet property="verCodeBtn" destination="O9s-X0-YGp" id="KD3-0A-9Hj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,11 +42,6 @@
                         <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="9fR-1E-ooc"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" id="h4I-0C-dew" customClass="PooCodeView">
-                    <rect key="frame" x="189" y="212" width="105" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.81334918478260865" green="0.73961500455049922" blue="0.79359128584693484" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" id="SU8-Ae-5vI">
                     <rect key="frame" x="107" y="52" width="115" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,7 +89,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入验证码" minimumFontSize="17" background="input_bg" id="zov-n2-bt8">
-                    <rect key="frame" x="27" y="212" width="141" height="40"/>
+                    <rect key="frame" x="27" y="212" width="147" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits"/>
@@ -136,6 +131,18 @@
                         <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="Nfe-Vf-S8d"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O9s-X0-YGp">
+                    <rect key="frame" x="207" y="213" width="87" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="bg_code">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="nGt-lV-UbY"/>
+                    </connections>
+                </button>
             </subviews>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -143,6 +150,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bg_code" width="97" height="67"/>
         <image name="check_btn_n" width="17" height="17"/>
         <image name="check_btn_s" width="17" height="17"/>
         <image name="icon_pwd" width="14" height="15"/>
