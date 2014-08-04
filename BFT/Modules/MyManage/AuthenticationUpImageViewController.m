@@ -89,8 +89,6 @@
         [button setBackgroundImage:image forState:UIControlStateNormal];
         [picker dismissViewControllerAnimated:YES completion:^{}];
         
-        [SVProgressHUD showWithStatus:@"正在处理图片" maskType:SVProgressHUDMaskTypeClear cancelBlock:nil];
-        [NSThread detachNewThreadSelector:@selector(handleImage:) toTarget:self withObject:image];
         
         //        [self uploadImageWithType:operateType image:image];
     }
@@ -103,27 +101,70 @@
 }
 
 #pragma mark -http请求
-- (void)handleImage:(UIImage*)image
+/**
+ *  获取短信验证码
+ */
+- (void)getVerCode
 {
-    NSString *imgBase = [Base64 encode:UIImageJPEGRepresentation(image, 1)];
-    [SVProgressHUD dismiss];
     
+    NSDictionary *requstDict = @{@"mobNo":@"15101532374", //TODO
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089006"
+                                      fskCmd:nil
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
+                                     } fail:nil];
 }
 
--(IBAction)imageOneAction:(id)sender{
+/**
+ *  实名认证
+ */
+- (void)realNameAuth
+{
+    NSDictionary *requstDict = @{@"verifyCode":self.tf_msg.text,
+                                 @"bankNo":self.tf_cardNo.text,
+                                 @"bkCardNo":@"1234",
+                                 @"pIdImg0":@"attach0",
+                                 @"pIdImg1":@"attach1",
+                                 @"bkCardImg":@"attach2"};
     
-}
-
--(IBAction)imageTwoAction:(id)sender{
+    NSMutableArray *attach = [[NSMutableArray alloc]init];
+    for (int i=100; i<103; i++)
+    {
+       UIButton *button = (UIButton*)[self.view viewWithTag:i];
+       [attach addObject:UIImageJPEGRepresentation([button backgroundImageForState:UIControlStateNormal], 1)];
+    }
     
-}
-
--(IBAction)imageThreeAction:(id)sender{
-    
+    [[Transfer sharedTransfer] startTransfer:@"089020"
+                                      fskCmd:nil
+                                    paramDic:requstDict
+                                      attach:attach
+                                        mess:@"正在上传信息"
+                                     success:^(id result) {
+                                         
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             [SVProgressHUD showSuccessWithStatus:@"信息已上传，等待后台人员审核。"];
+                                             [self.navigationController popViewControllerAnimated:YES];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
+                                         
+                                          
+                                      } fail:nil];;
 }
 
 -(IBAction)confirmAction:(id)sender{
     
+    [self realNameAuth];
 }
 
 -(IBAction)bankAction:(id)sender{
@@ -140,5 +181,6 @@
 
 -(IBAction)msgAction:(id)sender{
     
+    [self getVerCode];
 }
 @end

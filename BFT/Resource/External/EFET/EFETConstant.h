@@ -6,12 +6,8 @@
 //  Copyright (c) 2013 DHC. All rights reserved.
 //
 
-#define HEADER      @"603110000000"
-
-//#define TPDU        @"6000050000" // test
-//#define IP          @"58.221.92.138" //test
-//#define PORT        9099  //test
-
-#define IP          @"61.132.75.110"
-#define PORT        9999
-#define TPDU        @"6000140000"
+//#define HEADER      @"603110000000"
+#define HEADER      @"603120000000"
+#define IP          @"114.80.227.152"
+#define PORT        2003
+#define TPDU        @"6000120000"

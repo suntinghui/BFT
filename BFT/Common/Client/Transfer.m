@@ -105,6 +105,18 @@ static Transfer *instance = nil;
     
     return self;
 }
+//发送请求 带附件 attachs数组里存的是nadata
+- (void) startTransfer:(NSString *)transCode
+                fskCmd:(NSString *) fskCmd
+              paramDic:(NSDictionary *) dic
+                attach:(NSArray*)attachs
+                  mess:(NSString*)mess
+               success:(requestSucBlock)sucBlock
+                  fail:(RequestErrBlock)failBlock
+{
+    attachments = attachs;
+    [self startTransfer:transCode fskCmd:fskCmd paramDic:dic mess:mess success:sucBlock fail:failBlock];
+}
 
 /**
  *  发送请求
@@ -204,6 +216,10 @@ static Transfer *instance = nil;
     else if([self.transferCode isEqualToString:@"089028"]) //账户交易查询
     {
         return @"query-acc-trade";
+    }
+    else if([self.transferCode isEqualToString:@"089020"]) //实名认证
+    {
+        return @"identifyMerchant";
     }
     return nil;
 }
@@ -409,7 +425,7 @@ static Transfer *instance = nil;
 - (void) sendPacket
 {
     if ([self.transferModel.isJson isEqualToString:@"true"]){
-        self.MKOperation = [[HttpManager sharedHttpManager] transfer:@{@"common":[self.sendDic jsonEncodedKeyValueString]}
+        self.MKOperation = [[HttpManager sharedHttpManager] transfer:@{@"parament":@{@"common":[self.sendDic jsonEncodedKeyValueString]},@"attach":attachments==nil?@[]:attachments}
                                                       successHandler:^(NSDictionary *respDic)
                             {
                                 [self.timer invalidate];
@@ -699,7 +715,7 @@ static Transfer *instance = nil;
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
-	NSLog(@"socket:didWriteDataWithTag:");
+	NSLog(@"socket:didWriteDataWithTag:%ld",tag);
     
 }
 
@@ -729,8 +745,9 @@ static Transfer *instance = nil;
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
-//	 [ApplicationDelegate hideProcess];
-//    [ApplicationDelegate showErrorPrompt:@"服务器连接失败，请稍后再试！"];
+    
+    [SVProgressHUD dismiss];
+    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
     
 	NSLog(@"socketDidDisconnect:withError: \"%@\"", err);
 }

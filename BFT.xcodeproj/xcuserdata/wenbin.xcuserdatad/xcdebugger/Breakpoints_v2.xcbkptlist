@@ -73,7 +73,7 @@
                   symbolName = "-[CardTradeTableViewCell cardPlaceLabel]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "427357824.062439"
+                  timestampString = "427618172.287109"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -87,7 +87,7 @@
                   symbolName = "-[CardTradeTableViewCell setCardPlaceLabel:]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "427357824.063203"
+                  timestampString = "427618172.287399"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -126,6 +126,38 @@
             startingLineNumber = "144"
             endingLineNumber = "144"
             landmarkName = "-buttonClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BFT/Common/Client/HttpManager.m"
+            timestampString = "427366682.924625"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-transfer:successHandler:errorHandler:actionString:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BFT/Common/Client/Transfer.m"
+            timestampString = "427618147.730158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "-packet"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

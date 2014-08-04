@@ -53,6 +53,8 @@ typedef void(^RequestErrBlock)();
     NSData                  *_reqData;
     
     TransferModel           *_transferModel;
+    
+    NSArray *attachments; //附件信息 array里面存的nsdata
 }
 @property (nonatomic, strong)TransferModel                  *transferModel;
 
@@ -93,6 +95,14 @@ typedef void(^RequestErrBlock)();
 - (void) startTransfer:(NSString *)transCode
                 fskCmd:(NSString *) fskCmd
               paramDic:(NSDictionary *) dic
+                  mess:(NSString*)mess
+               success:(requestSucBlock)sucBlock
+                  fail:(RequestErrBlock)failBlock;
+//发送请求 带附件
+- (void) startTransfer:(NSString *)transCode
+                fskCmd:(NSString *) fskCmd
+              paramDic:(NSDictionary *) dic
+                attach:(NSArray*)attachs
                   mess:(NSString*)mess
                success:(requestSucBlock)sucBlock
                   fail:(RequestErrBlock)failBlock;

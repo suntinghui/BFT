@@ -48,5 +48,9 @@
 -(IBAction)confirmAction:(id)sender
 {
     
+    [[Transfer sharedTransfer]startTransfer:@"080000" fskCmd:@"Request_VT#Request_GetExtKsn" paramDic:nil mess:@"正在签到" success:^(id result) {
+        
+    } fail:nil];
+    
 }
 @end

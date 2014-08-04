@@ -43,7 +43,8 @@ static HttpManager  *instance;
                      errorHandler:(MKNKErrorBlock) errorBlock
                      actionString:(NSString *)actionString
 {
-    NSLog(@"request:%@", reqDic);
+    NSDictionary *requestDit = reqDic[@"parament"];
+    NSLog(@"request:%@", requestDit);
 //    NSString *methodName = [MethodNameUtil getMethodNameWithTransferCode:actionString];
     
     if (![StaticTools checkNetAvailable])
@@ -61,15 +62,23 @@ static HttpManager  *instance;
         postType = @"GET";
     }
     
-    MKNetworkOperation *op = [workEngine operationWithPath:url params:reqDic httpMethod:postType ssl:NO];
+    MKNetworkOperation *op = [workEngine operationWithPath:url params:requestDit httpMethod:postType ssl:NO];
     //CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
     [op setStringEncoding:NSUTF8StringEncoding];
     [op setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
+    NSArray *attachs = reqDic[@"attach"]; //增加附件上传
+    if (attachs.count>0)
+    {
+        for (int i=0; i<attachs.count; i++)
+        {
+//            [op addData:attachs[i] forKey:[NSString stringWithFormat:@"attach%d",i]];
+            [op addData:attachs[i] forKey:[NSString stringWithFormat:@"attach%d",i] mimeType:@"application/octet-stream" fileName:[NSString stringWithFormat:@"attach%d",i]];
+        }
+    }
     
     if (APPDataCenter.cookid!=nil&&![actionString isEqualToString:@"verifyCodes"])
     {
-        NSLog(@"cookid:%@",APPDataCenter.cookid);
         [op addHeaders:@{@"cookie2":APPDataCenter.cookid}];
     }
     
@@ -95,13 +104,9 @@ static HttpManager  *instance;
                  {
                      APPDataCenter.cookid = uuid;
                  }
-
-                 //             NSLog(@"get cookids:%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
              }
-             //         NSLog(@"dd:%@", [NSHTTPCookie requestHeaderFieldsWithCookies:[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]]);
          }
        
-         
          NSDictionary *respDic = [[completedOperation responseString] objectFromJSONString];
          successBlock(respDic);
      }errorHandler:^(MKNetworkOperation *errorOp, NSError* error) {

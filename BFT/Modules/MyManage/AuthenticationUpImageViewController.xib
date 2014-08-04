@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationUpImageViewController">
@@ -79,7 +79,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="短信验证码" placeholder="请输入商户名" minimumFontSize="17" background="input_bg" id="HgA-op-er6">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="短信验证码" minimumFontSize="17" background="input_bg" id="HgA-op-er6">
                             <rect key="frame" x="20" y="647" width="130" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,14 +152,8 @@
         <image name="add_card_icon_one" width="135" height="146"/>
         <image name="add_card_icon_two" width="135" height="146"/>
         <image name="input_bg" width="254" height="40"/>
-        <image name="input_bg" width="254" height="40"/>
-        <image name="input_bg" width="254" height="40"/>
-        <image name="ip_button" width="292" height="43"/>
         <image name="ip_button" width="292" height="43"/>
         <image name="ip_button2" width="584" height="86"/>
-        <image name="ip_button2" width="584" height="86"/>
-        <image name="line" width="421" height="2"/>
-        <image name="line" width="421" height="2"/>
         <image name="line" width="421" height="2"/>
     </resources>
 </document>

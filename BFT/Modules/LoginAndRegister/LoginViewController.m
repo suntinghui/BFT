@@ -86,8 +86,8 @@
             break;
         case Button_Tag_Login:
         {
-            [self loginAction];
-//            [self gotoHome];
+//            [self loginAction];
+            [self gotoHome];
         }
             
         default:

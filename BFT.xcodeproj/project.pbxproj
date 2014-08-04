@@ -263,6 +263,7 @@
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
 		B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */; };
 		B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */; };
+		B8EF3D7A197CEFF600F8A825 /* msg_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8EF3D79197CEFF600F8A825 /* msg_config.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -765,6 +766,7 @@
 		B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
+		B8EF3D79197CEFF600F8A825 /* msg_config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = msg_config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1646,6 +1648,7 @@
 				B8BD2528196CE3180092F2C5 /* con_req_700000002.xml */,
 				B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */,
 				B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */,
+				B8EF3D79197CEFF600F8A825 /* msg_config.xml */,
 			);
 			path = XML;
 			sourceTree = "<group>";
@@ -1833,6 +1836,7 @@
 				B8BD2555196CE3180092F2C5 /* con_req_089005.xml in Resources */,
 				B8BD253C196CE3180092F2C5 /* con_req_089021.xml in Resources */,
 				B8BD2548196CE3180092F2C5 /* con_req_089010.xml in Resources */,
+				B8EF3D7A197CEFF600F8A825 /* msg_config.xml in Resources */,
 				8D137A971973A3BD00D631BE /* AuthenticationUpImageViewController.xib in Resources */,
 				B8BD2560196CE3180092F2C5 /* con_req_readme.txt in Resources */,
 				B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */,

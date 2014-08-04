@@ -49,7 +49,7 @@ static LocationHelper *instance = nil;
             //[self.locationManager startMonitoringSignificantLocationChanges];
             
         } else {
-            NSLog(@"手机定位服务已打开，但是盒付宝没有获得定位权限.");
+            NSLog(@"手机定位服务已打开，但是佰付通没有获得定位权限.");
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"为了保证交易安全，强烈建议您打开手机定位服务，并允许%@访问您的位置。",@"百付通"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
