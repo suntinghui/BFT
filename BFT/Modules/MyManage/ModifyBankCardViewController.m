@@ -29,6 +29,7 @@
     
     self.navigationItem.title = @"修改银行卡";
     hasTitleView = true;
+    addKeyBoardNotification = YES;
     
 }
 
@@ -45,6 +46,29 @@
     [super viewWillAppear:animated];
     
 }
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    currentTxtfield = textField;
+}
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    CGRect rectForRow=currentTxtfield.frame;
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
+        }];
+    }
+}
+- (void)keyBoardHidden
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.view.frame = CGRectMake(0, IOS7_OR_LATER?64:0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+}
 
 @end

@@ -19,7 +19,9 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface ModifyBankCardViewController : BaseViewController
-
+@interface ModifyBankCardViewController : BaseViewController<UITextFieldDelegate>
+{
+    UITextField *currentTxtfield;
+}
 
 @end

@@ -29,6 +29,10 @@
     
     self.navigationItem.title = @"修改支付密码";
     hasTitleView = true;
+    addKeyBoardNotification = YES;
+    self.tf_old_pwd.pwdTF.placeholder = @"请输入原密码";
+    self.tf_new_pwd.pwdTF.placeholder = @"请输入新密码";
+    self.tf_confirm_pwd.pwdTF.placeholder = @"请确认新密码";
     
     resutDict = [[NSMutableDictionary alloc]init];
 }
