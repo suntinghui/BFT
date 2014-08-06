@@ -86,9 +86,10 @@
             break;
         case Button_Tag_Login: //登录
         {
-//            [self loginAction];
-            [self gotoHome];
+            [self loginAction];
+//            [self gotoHome];
         }
+            break;
         case Button_Tag_VerCode: //获取验证码
         {
             [self getPicVerCode];

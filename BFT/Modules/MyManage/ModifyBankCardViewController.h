@@ -23,5 +23,12 @@
 {
     UITextField *currentTxtfield;
 }
+@property (weak, nonatomic) IBOutlet UITextField *nameTxtField;
+@property (weak, nonatomic) IBOutlet UITextField *idCardTxtField;
+@property (weak, nonatomic) IBOutlet UITextField *oldBankCardTxtField;
+@property (weak, nonatomic) IBOutlet UITextField *nowBankCardTxtField;
+@property (weak, nonatomic) IBOutlet UITextField *verCodeTxtField;
+
+- (IBAction)buttonClickHandle:(id)sender;
 
 @end

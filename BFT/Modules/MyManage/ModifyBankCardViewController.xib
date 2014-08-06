@@ -7,6 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModifyBankCardViewController">
             <connections>
+                <outlet property="idCardTxtField" destination="TeH-Jw-AcN" id="hJc-XR-BTf"/>
+                <outlet property="nameTxtField" destination="HNh-qP-rhs" id="ch4-6b-MUV"/>
+                <outlet property="nowBankCardTxtField" destination="nEz-ib-VP2" id="0a0-gd-VlL"/>
+                <outlet property="oldBankCardTxtField" destination="YAf-cN-W7k" id="T3f-3H-SCN"/>
+                <outlet property="verCodeTxtField" destination="zMW-R5-w8o" id="RaE-82-hjy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -104,20 +109,26 @@
                         <outlet property="delegate" destination="-1" id="fu6-Di-w1Z"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hdy-cC-R4t">
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hdy-cC-R4t">
                     <rect key="frame" x="182" y="291" width="118" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="获取短信校验码" backgroundImage="ip_button">
                         <color key="titleColor" red="0.017239317600000002" green="0.015348079840000001" blue="0.015683222069999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="tUN-eq-gag"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8cg-hc-QfC">
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8cg-hc-QfC">
                     <rect key="frame" x="20" y="403" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <state key="normal" title="确认修改" backgroundImage="ip_button">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="4Z0-By-6ce"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

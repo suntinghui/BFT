@@ -221,6 +221,18 @@ static Transfer *instance = nil;
     {
         return @"identifyMerchant";
     }
+    else if([self.transferCode isEqualToString:@"089029"]) //修改银行卡
+    {
+        return @"modify-bk";
+    }
+    else if([self.transferCode isEqualToString:@"089024"]) //修改密码
+    {
+        return @"set-pay-pwd";
+    }
+    else if([self.transferCode isEqualToString:@"089023"]) //充值支付密码
+    {
+        return @"reset-pay-pwd";
+    }
     return nil;
 }
 //

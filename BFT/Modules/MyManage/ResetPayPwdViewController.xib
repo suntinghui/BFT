@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="tf_bankCardNum" destination="AiH-Dl-3kQ" id="oaN-pc-Z6Y"/>
                 <outlet property="tf_idCard" destination="8Wp-IJ-8w5" id="tz2-3B-XIi"/>
+                <outlet property="tf_new_pwd" destination="bpH-O2-dkp" id="mL3-FR-Dqo"/>
                 <outlet property="tf_sms" destination="Jim-RW-4Ey" id="beU-rz-wNg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -83,14 +84,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="身份证" minimumFontSize="17" id="8Wp-IJ-8w5">
                     <rect key="frame" x="54" y="102" width="210" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pwd" id="cZ7-TW-Sh2">
                     <rect key="frame" x="32" y="52" width="14" height="15"/>

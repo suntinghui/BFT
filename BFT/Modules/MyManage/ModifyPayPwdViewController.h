@@ -32,4 +32,5 @@
 
 - (IBAction)getVerCode:(id)sender;
 - (IBAction)confirmAction:(id)sender;
+
 @end

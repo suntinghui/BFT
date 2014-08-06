@@ -120,7 +120,7 @@
 - (void)getVerCode
 {
     
-    NSDictionary *requstDict = @{@"mobNo":@"15101532374", //[UserDefaults objectForKey:PHONENUM]
+    NSDictionary *requstDict = @{@"mobNo":[UserDefaults objectForKey:PHONENUM],
                                  @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
                                  @"type":@"0",
                                  @"money":@""};
