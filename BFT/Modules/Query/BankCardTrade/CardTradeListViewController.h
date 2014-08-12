@@ -23,7 +23,11 @@
     UITableViewDelegate>
 {
     NSMutableArray *trades;
+    int currentPage;
 }
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
+@property (strong, nonatomic) NSString *startTime;
+@property (strong, nonatomic) NSString *endTime;
+@property (assign, nonatomic) int cardType; //卡类型
 
 @end

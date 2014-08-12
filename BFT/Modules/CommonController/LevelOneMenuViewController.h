@@ -20,7 +20,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LevelOneMenuViewController : BaseViewController<UITableViewDataSource,
-    UITableViewDelegate>
+    UITableViewDelegate,
+    UIAlertViewDelegate>
 {
     NSArray *titles;
 }

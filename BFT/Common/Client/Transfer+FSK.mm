@@ -635,7 +635,8 @@
     
 
     
-//    [self.m_vcom startDetector:14 random:"1234" randomLen:4 data:nil datalen:0 time:30];
+
+//     [self.m_vcom startDetector:14 random:"1234" randomLen:4 data:nil datalen:0 time:30];
     [self.m_vcom StartRec];
     
 }

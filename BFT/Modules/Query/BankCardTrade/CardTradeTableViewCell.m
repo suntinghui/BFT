@@ -22,4 +22,14 @@
     // Configure the view for the selected state
 }
 
+- (void)setCellDataWithDictonary:(NSDictionary*)dict
+{
+    self.tradeTypeLabel.text = dict[@"transType"];
+    self.cardTypeLabel.text = dict[@"type"];
+    self.cardNumLabel.text = dict[@"pan"];
+//    self.cardPlaceLabel.text = dict[@""];
+//    self.tradeMoneyLabel.text = dict[@""];
+    self.tradeDateLabel.text = dict[@"date"];
+    self.tradeStateLabel.text = dict[@"state"];
+}
 @end

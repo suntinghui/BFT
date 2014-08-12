@@ -20,6 +20,8 @@
 #import "InputPswViewController.h"
 #import "SwipeCardMessViewController.h"
 
+#define Alert_Tag_SignOut   100
+
 @interface LevelOneMenuViewController ()
 
 @end
@@ -80,6 +82,19 @@
 {
     UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
     [rootNav popViewControllerAnimated:YES];
+}
+
+#pragma mark -UIAletViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == Alert_Tag_SignOut) //是否签退
+    {
+        if (buttonIndex!=alertView.cancelButtonIndex)
+        {
+             UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
+            [rootNav popToRootViewControllerAnimated:YES];
+        }
+    }
 }
 
 #pragma mark -UITableViewDelegate
@@ -182,7 +197,7 @@
         }
         else if(indexPath.section==2) //签退
         {
-            
+            [StaticTools showAlertWithTag:Alert_Tag_SignOut title:nil message:@"您确定要签退吗" AlertType:CAlertTypeCacel SuperView:self];
         }
         else if(indexPath.section==3) //实名认证
         {

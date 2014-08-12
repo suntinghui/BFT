@@ -38,6 +38,7 @@
     hasTitleView = YES;
     
     [self.cardTypeBtn setTitle:@"银行卡" forState:UIControlStateNormal];
+    cardType = 1;
     [self.startTimeBtn setTitle:[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];
     [self.endTimeBtn setTitle:[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];
 }
@@ -84,6 +85,11 @@
         case Button_Tag_Quety:
         {
             CardTradeListViewController *cardTradeListController = [[CardTradeListViewController alloc]init];
+            NSString *start = self.startTimeBtn.titleLabel.text;
+            NSString *end = self.endTimeBtn.titleLabel.text;
+            cardTradeListController.startTime = [start stringByReplacingOccurrencesOfString:@"-" withString:@""];
+            cardTradeListController.endTime = [end stringByReplacingOccurrencesOfString:@"-" withString:@""];
+            cardTradeListController.cardType = cardType;
             [self.navigationController pushViewController:cardTradeListController animated:YES];
         }
             break;
@@ -100,10 +106,12 @@
     if (buttonIndex==1)
     {
         [self.cardTypeBtn setTitle:@"银行卡" forState:UIControlStateNormal];
+        cardType = 1;
     }
     else if(buttonIndex==2)
     {
          [self.cardTypeBtn setTitle:@"预付卡" forState:UIControlStateNormal];
+        cardType = 2;
     }
 }
 @end

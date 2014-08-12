@@ -18,4 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tradeDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tradeStateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *stateImageView;
+
+- (void)setCellDataWithDictonary:(NSDictionary*)dict;
+
 @end

@@ -25,6 +25,69 @@
 		B803066619740C8E00C2FB98 /* GetMoneyStepOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B803066119740C8E00C2FB98 /* GetMoneyStepOneViewController.xib */; };
 		B803066719740C8E00C2FB98 /* GetMoneyStepTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B803066319740C8E00C2FB98 /* GetMoneyStepTwoViewController.m */; };
 		B803066819740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */; };
+		B826CDF619937EED000CD368 /* con_req_020001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDB719937EED000CD368 /* con_req_020001.xml */; };
+		B826CDF719937EED000CD368 /* con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDB819937EED000CD368 /* con_req_020022.xml */; };
+		B826CDF819937EED000CD368 /* con_req_020023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDB919937EED000CD368 /* con_req_020023.xml */; };
+		B826CDF919937EED000CD368 /* con_req_032000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBA19937EED000CD368 /* con_req_032000.xml */; };
+		B826CDFA19937EED000CD368 /* con_req_050000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBB19937EED000CD368 /* con_req_050000.xml */; };
+		B826CDFB19937EED000CD368 /* con_req_080000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBC19937EED000CD368 /* con_req_080000.xml */; };
+		B826CDFC19937EED000CD368 /* con_req_080001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBD19937EED000CD368 /* con_req_080001.xml */; };
+		B826CDFD19937EED000CD368 /* con_req_080002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBE19937EED000CD368 /* con_req_080002.xml */; };
+		B826CDFE19937EED000CD368 /* con_req_080003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDBF19937EED000CD368 /* con_req_080003.xml */; };
+		B826CDFF19937EED000CD368 /* con_req_082001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC019937EED000CD368 /* con_req_082001.xml */; };
+		B826CE0019937EED000CD368 /* con_req_089000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC119937EED000CD368 /* con_req_089000.xml */; };
+		B826CE0119937EED000CD368 /* con_req_089001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC219937EED000CD368 /* con_req_089001.xml */; };
+		B826CE0219937EED000CD368 /* con_req_089002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC319937EED000CD368 /* con_req_089002.xml */; };
+		B826CE0319937EED000CD368 /* con_req_089004.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC419937EED000CD368 /* con_req_089004.xml */; };
+		B826CE0419937EED000CD368 /* con_req_089005.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC519937EED000CD368 /* con_req_089005.xml */; };
+		B826CE0519937EED000CD368 /* con_req_089006.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC619937EED000CD368 /* con_req_089006.xml */; };
+		B826CE0619937EED000CD368 /* con_req_089007.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC719937EED000CD368 /* con_req_089007.xml */; };
+		B826CE0719937EED000CD368 /* con_req_089008.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC819937EED000CD368 /* con_req_089008.xml */; };
+		B826CE0819937EED000CD368 /* con_req_089009.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDC919937EED000CD368 /* con_req_089009.xml */; };
+		B826CE0919937EED000CD368 /* con_req_089010.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCA19937EED000CD368 /* con_req_089010.xml */; };
+		B826CE0A19937EED000CD368 /* con_req_089011.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCB19937EED000CD368 /* con_req_089011.xml */; };
+		B826CE0B19937EED000CD368 /* con_req_089012.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCC19937EED000CD368 /* con_req_089012.xml */; };
+		B826CE0C19937EED000CD368 /* con_req_089013.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCD19937EED000CD368 /* con_req_089013.xml */; };
+		B826CE0D19937EED000CD368 /* con_req_089014.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCE19937EED000CD368 /* con_req_089014.xml */; };
+		B826CE0E19937EED000CD368 /* con_req_089016.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDCF19937EED000CD368 /* con_req_089016.xml */; };
+		B826CE0F19937EED000CD368 /* con_req_089018.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD019937EED000CD368 /* con_req_089018.xml */; };
+		B826CE1019937EED000CD368 /* con_req_089019.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD119937EED000CD368 /* con_req_089019.xml */; };
+		B826CE1119937EED000CD368 /* con_req_089020.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD219937EED000CD368 /* con_req_089020.xml */; };
+		B826CE1219937EED000CD368 /* con_req_089021.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD319937EED000CD368 /* con_req_089021.xml */; };
+		B826CE1319937EED000CD368 /* con_req_089022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD419937EED000CD368 /* con_req_089022.xml */; };
+		B826CE1419937EED000CD368 /* con_req_089023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD519937EED000CD368 /* con_req_089023.xml */; };
+		B826CE1519937EED000CD368 /* con_req_089024.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD619937EED000CD368 /* con_req_089024.xml */; };
+		B826CE1619937EED000CD368 /* con_req_089025.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD719937EED000CD368 /* con_req_089025.xml */; };
+		B826CE1719937EED000CD368 /* con_req_089026.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD819937EED000CD368 /* con_req_089026.xml */; };
+		B826CE1819937EED000CD368 /* con_req_089027.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDD919937EED000CD368 /* con_req_089027.xml */; };
+		B826CE1919937EED000CD368 /* con_req_089028.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDA19937EED000CD368 /* con_req_089028.xml */; };
+		B826CE1A19937EED000CD368 /* con_req_089029.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDB19937EED000CD368 /* con_req_089029.xml */; };
+		B826CE1B19937EED000CD368 /* con_req_089031.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDC19937EED000CD368 /* con_req_089031.xml */; };
+		B826CE1C19937EED000CD368 /* con_req_089032.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDD19937EED000CD368 /* con_req_089032.xml */; };
+		B826CE1D19937EED000CD368 /* con_req_089034.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDE19937EED000CD368 /* con_req_089034.xml */; };
+		B826CE1E19937EED000CD368 /* con_req_100001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDDF19937EED000CD368 /* con_req_100001.xml */; };
+		B826CE1F19937EED000CD368 /* con_req_100002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE019937EED000CD368 /* con_req_100002.xml */; };
+		B826CE2019937EED000CD368 /* con_req_100003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE119937EED000CD368 /* con_req_100003.xml */; };
+		B826CE2119937EED000CD368 /* con_req_100004.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE219937EED000CD368 /* con_req_100004.xml */; };
+		B826CE2219937EED000CD368 /* con_req_100005.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE319937EED000CD368 /* con_req_100005.xml */; };
+		B826CE2319937EED000CD368 /* con_req_200001111.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE419937EED000CD368 /* con_req_200001111.xml */; };
+		B826CE2419937EED000CD368 /* con_req_200001112.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE519937EED000CD368 /* con_req_200001112.xml */; };
+		B826CE2519937EED000CD368 /* con_req_400000022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE619937EED000CD368 /* con_req_400000022.xml */; };
+		B826CE2619937EED000CD368 /* con_req_400200023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE719937EED000CD368 /* con_req_400200023.xml */; };
+		B826CE2719937EED000CD368 /* con_req_500000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE819937EED000CD368 /* con_req_500000001.xml */; };
+		B826CE2819937EED000CD368 /* con_req_600000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDE919937EED000CD368 /* con_req_600000001.xml */; };
+		B826CE2919937EED000CD368 /* con_req_600000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDEA19937EED000CD368 /* con_req_600000002.xml */; };
+		B826CE2A19937EED000CD368 /* con_req_700000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDEB19937EED000CD368 /* con_req_700000001.xml */; };
+		B826CE2B19937EED000CD368 /* con_req_700000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDEC19937EED000CD368 /* con_req_700000002.xml */; };
+		B826CE2C19937EED000CD368 /* con_req_999000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDED19937EED000CD368 /* con_req_999000001.xml */; };
+		B826CE2D19937EED000CD368 /* con_req_999000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDEE19937EED000CD368 /* con_req_999000002.xml */; };
+		B826CE2E19937EED000CD368 /* con_req_999000003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDEF19937EED000CD368 /* con_req_999000003.xml */; };
+		B826CE2F19937EED000CD368 /* con_req_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = B826CDF019937EED000CD368 /* con_req_readme.txt */; };
+		B826CE3019937EED000CD368 /* Copy (2) of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDF119937EED000CD368 /* Copy (2) of con_req_020022.xml */; };
+		B826CE3119937EED000CD368 /* Copy of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDF219937EED000CD368 /* Copy of con_req_020022.xml */; };
+		B826CE3219937EED000CD368 /* msg_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDF419937EED000CD368 /* msg_config.xml */; };
+		B826CE3319937EED000CD368 /* publicKey.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CDF519937EED000CD368 /* publicKey.xml */; };
+		B826CE3519937F02000CD368 /* reversalmap.xml in Resources */ = {isa = PBXBuildFile; fileRef = B826CE3419937F02000CD368 /* reversalmap.xml */; };
 		B828CD001973778E005760F3 /* LevelOneMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */; };
 		B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */; };
 		B83A6F48196BDCF70080D593 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83A6F47196BDCF70080D593 /* Foundation.framework */; };
@@ -179,6 +242,8 @@
 		B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8732F7A196E8F5000095BDD /* IIWrapController.m */; };
 		B8932379196E2D8500D4C161 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8932377196E2D8500D4C161 /* MessageViewController.m */; };
 		B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8932378196E2D8500D4C161 /* MessageViewController.xib */; };
+		B89EB87B1999BE6100BFD79E /* SetLoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89EB8791999BE6100BFD79E /* SetLoginPasswordViewController.m */; };
+		B89EB87C1999BE6100BFD79E /* SetLoginPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89EB87A1999BE6100BFD79E /* SetLoginPasswordViewController.xib */; };
 		B8A588F1197670F90057AABD /* InputPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A588EF197670F90057AABD /* InputPswViewController.m */; };
 		B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A588F0197670F90057AABD /* InputPswViewController.xib */; };
 		B8A588FC197676890057AABD /* SwipeCardMessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A588FA197676890057AABD /* SwipeCardMessViewController.m */; };
@@ -192,67 +257,6 @@
 		B8BD248D196CD6430092F2C5 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD2489196CD6430092F2C5 /* libcrypto.a */; };
 		B8BD248E196CD6430092F2C5 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248A196CD6430092F2C5 /* libcurl.a */; };
 		B8BD248F196CD6430092F2C5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248B196CD6430092F2C5 /* libssl.a */; };
-		B8BD252B196CE3180092F2C5 /* con_req_089020.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EE196CE3180092F2C5 /* con_req_089020.xml */; };
-		B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24EF196CE3180092F2C5 /* con_req_080000.xml */; };
-		B8BD252D196CE3180092F2C5 /* con_req_020001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F0196CE3180092F2C5 /* con_req_020001.xml */; };
-		B8BD252E196CE3180092F2C5 /* con_req_089006.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F1196CE3180092F2C5 /* con_req_089006.xml */; };
-		B8BD252F196CE3180092F2C5 /* con_req_050000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F2196CE3180092F2C5 /* con_req_050000.xml */; };
-		B8BD2530196CE3180092F2C5 /* con_req_400200023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F3196CE3180092F2C5 /* con_req_400200023.xml */; };
-		B8BD2531196CE3180092F2C5 /* con_req_400000022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F4196CE3180092F2C5 /* con_req_400000022.xml */; };
-		B8BD2532196CE3180092F2C5 /* con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F5196CE3180092F2C5 /* con_req_020022.xml */; };
-		B8BD2533196CE3180092F2C5 /* con_req_020023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F6196CE3180092F2C5 /* con_req_020023.xml */; };
-		B8BD2534196CE3180092F2C5 /* con_req_089026.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F7196CE3180092F2C5 /* con_req_089026.xml */; };
-		B8BD2535196CE3180092F2C5 /* con_req_089023.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F8196CE3180092F2C5 /* con_req_089023.xml */; };
-		B8BD2536196CE3180092F2C5 /* publicKey.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24F9196CE3180092F2C5 /* publicKey.xml */; };
-		B8BD2537196CE3180092F2C5 /* con_req_089001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FA196CE3180092F2C5 /* con_req_089001.xml */; };
-		B8BD2538196CE3180092F2C5 /* con_req_089016.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FB196CE3180092F2C5 /* con_req_089016.xml */; };
-		B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FC196CE3180092F2C5 /* con_req_089032.xml */; };
-		B8BD253A196CE3180092F2C5 /* con_req_089034.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FD196CE3180092F2C5 /* con_req_089034.xml */; };
-		B8BD253B196CE3180092F2C5 /* con_req_089011.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FE196CE3180092F2C5 /* con_req_089011.xml */; };
-		B8BD253C196CE3180092F2C5 /* con_req_089021.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD24FF196CE3180092F2C5 /* con_req_089021.xml */; };
-		B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2500196CE3180092F2C5 /* con_req_089000.xml */; };
-		B8BD253E196CE3180092F2C5 /* con_req_089029.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2501196CE3180092F2C5 /* con_req_089029.xml */; };
-		B8BD253F196CE3180092F2C5 /* con_req_089025.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2502196CE3180092F2C5 /* con_req_089025.xml */; };
-		B8BD2540196CE3180092F2C5 /* con_req_089022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2503196CE3180092F2C5 /* con_req_089022.xml */; };
-		B8BD2541196CE3180092F2C5 /* con_req_089024.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2504196CE3180092F2C5 /* con_req_089024.xml */; };
-		B8BD2542196CE3180092F2C5 /* con_req_089031.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2505196CE3180092F2C5 /* con_req_089031.xml */; };
-		B8BD2543196CE3180092F2C5 /* con_req_089019.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2506196CE3180092F2C5 /* con_req_089019.xml */; };
-		B8BD2544196CE3180092F2C5 /* con_req_089027.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2507196CE3180092F2C5 /* con_req_089027.xml */; };
-		B8BD2545196CE3180092F2C5 /* con_req_089028.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2508196CE3180092F2C5 /* con_req_089028.xml */; };
-		B8BD2546196CE3180092F2C5 /* con_req_089002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2509196CE3180092F2C5 /* con_req_089002.xml */; };
-		B8BD2547196CE3180092F2C5 /* con_req_032000.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250A196CE3180092F2C5 /* con_req_032000.xml */; };
-		B8BD2548196CE3180092F2C5 /* con_req_089010.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250B196CE3180092F2C5 /* con_req_089010.xml */; };
-		B8BD2549196CE3180092F2C5 /* con_req_100001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250C196CE3180092F2C5 /* con_req_100001.xml */; };
-		B8BD254A196CE3180092F2C5 /* con_req_500000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250D196CE3180092F2C5 /* con_req_500000001.xml */; };
-		B8BD254B196CE3180092F2C5 /* con_req_600000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250E196CE3180092F2C5 /* con_req_600000002.xml */; };
-		B8BD254C196CE3180092F2C5 /* con_req_080002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD250F196CE3180092F2C5 /* con_req_080002.xml */; };
-		B8BD254D196CE3180092F2C5 /* con_req_089012.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2510196CE3180092F2C5 /* con_req_089012.xml */; };
-		B8BD254E196CE3180092F2C5 /* con_req_200001111.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2511196CE3180092F2C5 /* con_req_200001111.xml */; };
-		B8BD254F196CE3180092F2C5 /* con_req_999000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2512196CE3180092F2C5 /* con_req_999000001.xml */; };
-		B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2513196CE3180092F2C5 /* con_req_089004.xml */; };
-		B8BD2551196CE3180092F2C5 /* con_req_600000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2514196CE3180092F2C5 /* con_req_600000001.xml */; };
-		B8BD2552196CE3180092F2C5 /* con_req_080001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2515196CE3180092F2C5 /* con_req_080001.xml */; };
-		B8BD2553196CE3180092F2C5 /* con_req_080003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2516196CE3180092F2C5 /* con_req_080003.xml */; };
-		B8BD2554196CE3180092F2C5 /* con_req_082001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2517196CE3180092F2C5 /* con_req_082001.xml */; };
-		B8BD2555196CE3180092F2C5 /* con_req_089005.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2518196CE3180092F2C5 /* con_req_089005.xml */; };
-		B8BD2556196CE3180092F2C5 /* con_req_089008.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2519196CE3180092F2C5 /* con_req_089008.xml */; };
-		B8BD2557196CE3180092F2C5 /* con_req_089009.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251A196CE3180092F2C5 /* con_req_089009.xml */; };
-		B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251B196CE3180092F2C5 /* con_req_089013.xml */; };
-		B8BD2559196CE3180092F2C5 /* con_req_100002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251C196CE3180092F2C5 /* con_req_100002.xml */; };
-		B8BD255A196CE3180092F2C5 /* con_req_100003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251D196CE3180092F2C5 /* con_req_100003.xml */; };
-		B8BD255B196CE3180092F2C5 /* con_req_100004.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251E196CE3180092F2C5 /* con_req_100004.xml */; };
-		B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD251F196CE3180092F2C5 /* con_req_100005.xml */; };
-		B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2520196CE3180092F2C5 /* con_req_200001112.xml */; };
-		B8BD255E196CE3180092F2C5 /* con_req_999000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2521196CE3180092F2C5 /* con_req_999000002.xml */; };
-		B8BD255F196CE3180092F2C5 /* con_req_999000003.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2522196CE3180092F2C5 /* con_req_999000003.xml */; };
-		B8BD2560196CE3180092F2C5 /* con_req_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2523196CE3180092F2C5 /* con_req_readme.txt */; };
-		B8BD2561196CE3180092F2C5 /* con_req_089007.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2524196CE3180092F2C5 /* con_req_089007.xml */; };
-		B8BD2562196CE3180092F2C5 /* con_req_089014.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2525196CE3180092F2C5 /* con_req_089014.xml */; };
-		B8BD2563196CE3180092F2C5 /* con_req_089018.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2526196CE3180092F2C5 /* con_req_089018.xml */; };
-		B8BD2564196CE3180092F2C5 /* con_req_700000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2527196CE3180092F2C5 /* con_req_700000001.xml */; };
-		B8BD2565196CE3180092F2C5 /* con_req_700000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2528196CE3180092F2C5 /* con_req_700000002.xml */; };
-		B8BD2566196CE3180092F2C5 /* Copy of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */; };
-		B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */; };
 		B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD256A196CE6B70092F2C5 /* BaseViewController.m */; };
 		B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD256E196D42D00092F2C5 /* libvoclib.a */; };
 		B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */; };
@@ -264,7 +268,6 @@
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
 		B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */; };
 		B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */; };
-		B8EF3D7A197CEFF600F8A825 /* msg_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8EF3D79197CEFF600F8A825 /* msg_config.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +308,69 @@
 		B803066219740C8E00C2FB98 /* GetMoneyStepTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMoneyStepTwoViewController.h; sourceTree = "<group>"; };
 		B803066319740C8E00C2FB98 /* GetMoneyStepTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMoneyStepTwoViewController.m; sourceTree = "<group>"; };
 		B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetMoneyStepTwoViewController.xib; sourceTree = "<group>"; };
+		B826CDB719937EED000CD368 /* con_req_020001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020001.xml; sourceTree = "<group>"; };
+		B826CDB819937EED000CD368 /* con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020022.xml; sourceTree = "<group>"; };
+		B826CDB919937EED000CD368 /* con_req_020023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020023.xml; sourceTree = "<group>"; };
+		B826CDBA19937EED000CD368 /* con_req_032000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_032000.xml; sourceTree = "<group>"; };
+		B826CDBB19937EED000CD368 /* con_req_050000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_050000.xml; sourceTree = "<group>"; };
+		B826CDBC19937EED000CD368 /* con_req_080000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080000.xml; sourceTree = "<group>"; };
+		B826CDBD19937EED000CD368 /* con_req_080001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080001.xml; sourceTree = "<group>"; };
+		B826CDBE19937EED000CD368 /* con_req_080002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080002.xml; sourceTree = "<group>"; };
+		B826CDBF19937EED000CD368 /* con_req_080003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080003.xml; sourceTree = "<group>"; };
+		B826CDC019937EED000CD368 /* con_req_082001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_082001.xml; sourceTree = "<group>"; };
+		B826CDC119937EED000CD368 /* con_req_089000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089000.xml; sourceTree = "<group>"; };
+		B826CDC219937EED000CD368 /* con_req_089001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089001.xml; sourceTree = "<group>"; };
+		B826CDC319937EED000CD368 /* con_req_089002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089002.xml; sourceTree = "<group>"; };
+		B826CDC419937EED000CD368 /* con_req_089004.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089004.xml; sourceTree = "<group>"; };
+		B826CDC519937EED000CD368 /* con_req_089005.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089005.xml; sourceTree = "<group>"; };
+		B826CDC619937EED000CD368 /* con_req_089006.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089006.xml; sourceTree = "<group>"; };
+		B826CDC719937EED000CD368 /* con_req_089007.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089007.xml; sourceTree = "<group>"; };
+		B826CDC819937EED000CD368 /* con_req_089008.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089008.xml; sourceTree = "<group>"; };
+		B826CDC919937EED000CD368 /* con_req_089009.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089009.xml; sourceTree = "<group>"; };
+		B826CDCA19937EED000CD368 /* con_req_089010.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089010.xml; sourceTree = "<group>"; };
+		B826CDCB19937EED000CD368 /* con_req_089011.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089011.xml; sourceTree = "<group>"; };
+		B826CDCC19937EED000CD368 /* con_req_089012.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089012.xml; sourceTree = "<group>"; };
+		B826CDCD19937EED000CD368 /* con_req_089013.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089013.xml; sourceTree = "<group>"; };
+		B826CDCE19937EED000CD368 /* con_req_089014.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089014.xml; sourceTree = "<group>"; };
+		B826CDCF19937EED000CD368 /* con_req_089016.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089016.xml; sourceTree = "<group>"; };
+		B826CDD019937EED000CD368 /* con_req_089018.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089018.xml; sourceTree = "<group>"; };
+		B826CDD119937EED000CD368 /* con_req_089019.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089019.xml; sourceTree = "<group>"; };
+		B826CDD219937EED000CD368 /* con_req_089020.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089020.xml; sourceTree = "<group>"; };
+		B826CDD319937EED000CD368 /* con_req_089021.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089021.xml; sourceTree = "<group>"; };
+		B826CDD419937EED000CD368 /* con_req_089022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089022.xml; sourceTree = "<group>"; };
+		B826CDD519937EED000CD368 /* con_req_089023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089023.xml; sourceTree = "<group>"; };
+		B826CDD619937EED000CD368 /* con_req_089024.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089024.xml; sourceTree = "<group>"; };
+		B826CDD719937EED000CD368 /* con_req_089025.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089025.xml; sourceTree = "<group>"; };
+		B826CDD819937EED000CD368 /* con_req_089026.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089026.xml; sourceTree = "<group>"; };
+		B826CDD919937EED000CD368 /* con_req_089027.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089027.xml; sourceTree = "<group>"; };
+		B826CDDA19937EED000CD368 /* con_req_089028.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089028.xml; sourceTree = "<group>"; };
+		B826CDDB19937EED000CD368 /* con_req_089029.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089029.xml; sourceTree = "<group>"; };
+		B826CDDC19937EED000CD368 /* con_req_089031.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089031.xml; sourceTree = "<group>"; };
+		B826CDDD19937EED000CD368 /* con_req_089032.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089032.xml; sourceTree = "<group>"; };
+		B826CDDE19937EED000CD368 /* con_req_089034.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089034.xml; sourceTree = "<group>"; };
+		B826CDDF19937EED000CD368 /* con_req_100001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100001.xml; sourceTree = "<group>"; };
+		B826CDE019937EED000CD368 /* con_req_100002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100002.xml; sourceTree = "<group>"; };
+		B826CDE119937EED000CD368 /* con_req_100003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100003.xml; sourceTree = "<group>"; };
+		B826CDE219937EED000CD368 /* con_req_100004.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100004.xml; sourceTree = "<group>"; };
+		B826CDE319937EED000CD368 /* con_req_100005.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100005.xml; sourceTree = "<group>"; };
+		B826CDE419937EED000CD368 /* con_req_200001111.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_200001111.xml; sourceTree = "<group>"; };
+		B826CDE519937EED000CD368 /* con_req_200001112.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_200001112.xml; sourceTree = "<group>"; };
+		B826CDE619937EED000CD368 /* con_req_400000022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_400000022.xml; sourceTree = "<group>"; };
+		B826CDE719937EED000CD368 /* con_req_400200023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_400200023.xml; sourceTree = "<group>"; };
+		B826CDE819937EED000CD368 /* con_req_500000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_500000001.xml; sourceTree = "<group>"; };
+		B826CDE919937EED000CD368 /* con_req_600000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_600000001.xml; sourceTree = "<group>"; };
+		B826CDEA19937EED000CD368 /* con_req_600000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_600000002.xml; sourceTree = "<group>"; };
+		B826CDEB19937EED000CD368 /* con_req_700000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_700000001.xml; sourceTree = "<group>"; };
+		B826CDEC19937EED000CD368 /* con_req_700000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_700000002.xml; sourceTree = "<group>"; };
+		B826CDED19937EED000CD368 /* con_req_999000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000001.xml; sourceTree = "<group>"; };
+		B826CDEE19937EED000CD368 /* con_req_999000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000002.xml; sourceTree = "<group>"; };
+		B826CDEF19937EED000CD368 /* con_req_999000003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000003.xml; sourceTree = "<group>"; };
+		B826CDF019937EED000CD368 /* con_req_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = con_req_readme.txt; sourceTree = "<group>"; };
+		B826CDF119937EED000CD368 /* Copy (2) of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy (2) of con_req_020022.xml"; sourceTree = "<group>"; };
+		B826CDF219937EED000CD368 /* Copy of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy of con_req_020022.xml"; sourceTree = "<group>"; };
+		B826CDF419937EED000CD368 /* msg_config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = msg_config.xml; sourceTree = "<group>"; };
+		B826CDF519937EED000CD368 /* publicKey.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = publicKey.xml; sourceTree = "<group>"; };
+		B826CE3419937F02000CD368 /* reversalmap.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = reversalmap.xml; sourceTree = "<group>"; };
 		B828CCFD1973778E005760F3 /* LevelOneMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelOneMenuViewController.h; sourceTree = "<group>"; };
 		B828CCFE1973778E005760F3 /* LevelOneMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelOneMenuViewController.m; sourceTree = "<group>"; };
 		B828CCFF1973778E005760F3 /* LevelOneMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelOneMenuViewController.xib; sourceTree = "<group>"; };
@@ -587,6 +653,9 @@
 		B8932376196E2D8500D4C161 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		B8932377196E2D8500D4C161 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		B8932378196E2D8500D4C161 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		B89EB8781999BE6100BFD79E /* SetLoginPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLoginPasswordViewController.h; sourceTree = "<group>"; };
+		B89EB8791999BE6100BFD79E /* SetLoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLoginPasswordViewController.m; sourceTree = "<group>"; };
+		B89EB87A1999BE6100BFD79E /* SetLoginPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetLoginPasswordViewController.xib; sourceTree = "<group>"; };
 		B8A588EE197670F90057AABD /* InputPswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPswViewController.h; sourceTree = "<group>"; };
 		B8A588EF197670F90057AABD /* InputPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPswViewController.m; sourceTree = "<group>"; };
 		B8A588F0197670F90057AABD /* InputPswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputPswViewController.xib; sourceTree = "<group>"; };
@@ -691,67 +760,6 @@
 		B8BD24E7196CD8870092F2C5 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		B8BD24E9196CD8870092F2C5 /* CSwiperStateChangedListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSwiperStateChangedListener.h; sourceTree = "<group>"; };
 		B8BD24EA196CD8870092F2C5 /* vcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcom.h; sourceTree = "<group>"; };
-		B8BD24EE196CE3180092F2C5 /* con_req_089020.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089020.xml; sourceTree = "<group>"; };
-		B8BD24EF196CE3180092F2C5 /* con_req_080000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080000.xml; sourceTree = "<group>"; };
-		B8BD24F0196CE3180092F2C5 /* con_req_020001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020001.xml; sourceTree = "<group>"; };
-		B8BD24F1196CE3180092F2C5 /* con_req_089006.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089006.xml; sourceTree = "<group>"; };
-		B8BD24F2196CE3180092F2C5 /* con_req_050000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_050000.xml; sourceTree = "<group>"; };
-		B8BD24F3196CE3180092F2C5 /* con_req_400200023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_400200023.xml; sourceTree = "<group>"; };
-		B8BD24F4196CE3180092F2C5 /* con_req_400000022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_400000022.xml; sourceTree = "<group>"; };
-		B8BD24F5196CE3180092F2C5 /* con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020022.xml; sourceTree = "<group>"; };
-		B8BD24F6196CE3180092F2C5 /* con_req_020023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_020023.xml; sourceTree = "<group>"; };
-		B8BD24F7196CE3180092F2C5 /* con_req_089026.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089026.xml; sourceTree = "<group>"; };
-		B8BD24F8196CE3180092F2C5 /* con_req_089023.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089023.xml; sourceTree = "<group>"; };
-		B8BD24F9196CE3180092F2C5 /* publicKey.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = publicKey.xml; sourceTree = "<group>"; };
-		B8BD24FA196CE3180092F2C5 /* con_req_089001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089001.xml; sourceTree = "<group>"; };
-		B8BD24FB196CE3180092F2C5 /* con_req_089016.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089016.xml; sourceTree = "<group>"; };
-		B8BD24FC196CE3180092F2C5 /* con_req_089032.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089032.xml; sourceTree = "<group>"; };
-		B8BD24FD196CE3180092F2C5 /* con_req_089034.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089034.xml; sourceTree = "<group>"; };
-		B8BD24FE196CE3180092F2C5 /* con_req_089011.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089011.xml; sourceTree = "<group>"; };
-		B8BD24FF196CE3180092F2C5 /* con_req_089021.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089021.xml; sourceTree = "<group>"; };
-		B8BD2500196CE3180092F2C5 /* con_req_089000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089000.xml; sourceTree = "<group>"; };
-		B8BD2501196CE3180092F2C5 /* con_req_089029.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089029.xml; sourceTree = "<group>"; };
-		B8BD2502196CE3180092F2C5 /* con_req_089025.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089025.xml; sourceTree = "<group>"; };
-		B8BD2503196CE3180092F2C5 /* con_req_089022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089022.xml; sourceTree = "<group>"; };
-		B8BD2504196CE3180092F2C5 /* con_req_089024.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089024.xml; sourceTree = "<group>"; };
-		B8BD2505196CE3180092F2C5 /* con_req_089031.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089031.xml; sourceTree = "<group>"; };
-		B8BD2506196CE3180092F2C5 /* con_req_089019.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089019.xml; sourceTree = "<group>"; };
-		B8BD2507196CE3180092F2C5 /* con_req_089027.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089027.xml; sourceTree = "<group>"; };
-		B8BD2508196CE3180092F2C5 /* con_req_089028.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089028.xml; sourceTree = "<group>"; };
-		B8BD2509196CE3180092F2C5 /* con_req_089002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089002.xml; sourceTree = "<group>"; };
-		B8BD250A196CE3180092F2C5 /* con_req_032000.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_032000.xml; sourceTree = "<group>"; };
-		B8BD250B196CE3180092F2C5 /* con_req_089010.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089010.xml; sourceTree = "<group>"; };
-		B8BD250C196CE3180092F2C5 /* con_req_100001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100001.xml; sourceTree = "<group>"; };
-		B8BD250D196CE3180092F2C5 /* con_req_500000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_500000001.xml; sourceTree = "<group>"; };
-		B8BD250E196CE3180092F2C5 /* con_req_600000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_600000002.xml; sourceTree = "<group>"; };
-		B8BD250F196CE3180092F2C5 /* con_req_080002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080002.xml; sourceTree = "<group>"; };
-		B8BD2510196CE3180092F2C5 /* con_req_089012.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089012.xml; sourceTree = "<group>"; };
-		B8BD2511196CE3180092F2C5 /* con_req_200001111.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_200001111.xml; sourceTree = "<group>"; };
-		B8BD2512196CE3180092F2C5 /* con_req_999000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000001.xml; sourceTree = "<group>"; };
-		B8BD2513196CE3180092F2C5 /* con_req_089004.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089004.xml; sourceTree = "<group>"; };
-		B8BD2514196CE3180092F2C5 /* con_req_600000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_600000001.xml; sourceTree = "<group>"; };
-		B8BD2515196CE3180092F2C5 /* con_req_080001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080001.xml; sourceTree = "<group>"; };
-		B8BD2516196CE3180092F2C5 /* con_req_080003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_080003.xml; sourceTree = "<group>"; };
-		B8BD2517196CE3180092F2C5 /* con_req_082001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_082001.xml; sourceTree = "<group>"; };
-		B8BD2518196CE3180092F2C5 /* con_req_089005.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089005.xml; sourceTree = "<group>"; };
-		B8BD2519196CE3180092F2C5 /* con_req_089008.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089008.xml; sourceTree = "<group>"; };
-		B8BD251A196CE3180092F2C5 /* con_req_089009.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089009.xml; sourceTree = "<group>"; };
-		B8BD251B196CE3180092F2C5 /* con_req_089013.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089013.xml; sourceTree = "<group>"; };
-		B8BD251C196CE3180092F2C5 /* con_req_100002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100002.xml; sourceTree = "<group>"; };
-		B8BD251D196CE3180092F2C5 /* con_req_100003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100003.xml; sourceTree = "<group>"; };
-		B8BD251E196CE3180092F2C5 /* con_req_100004.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100004.xml; sourceTree = "<group>"; };
-		B8BD251F196CE3180092F2C5 /* con_req_100005.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_100005.xml; sourceTree = "<group>"; };
-		B8BD2520196CE3180092F2C5 /* con_req_200001112.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_200001112.xml; sourceTree = "<group>"; };
-		B8BD2521196CE3180092F2C5 /* con_req_999000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000002.xml; sourceTree = "<group>"; };
-		B8BD2522196CE3180092F2C5 /* con_req_999000003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000003.xml; sourceTree = "<group>"; };
-		B8BD2523196CE3180092F2C5 /* con_req_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = con_req_readme.txt; sourceTree = "<group>"; };
-		B8BD2524196CE3180092F2C5 /* con_req_089007.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089007.xml; sourceTree = "<group>"; };
-		B8BD2525196CE3180092F2C5 /* con_req_089014.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089014.xml; sourceTree = "<group>"; };
-		B8BD2526196CE3180092F2C5 /* con_req_089018.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_089018.xml; sourceTree = "<group>"; };
-		B8BD2527196CE3180092F2C5 /* con_req_700000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_700000001.xml; sourceTree = "<group>"; };
-		B8BD2528196CE3180092F2C5 /* con_req_700000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_700000002.xml; sourceTree = "<group>"; };
-		B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy of con_req_020022.xml"; sourceTree = "<group>"; };
-		B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Copy (2) of con_req_020022.xml"; sourceTree = "<group>"; };
 		B8BD2569196CE6B70092F2C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B8BD256A196CE6B70092F2C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B8BD256E196D42D00092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
@@ -769,7 +777,6 @@
 		B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
-		B8EF3D79197CEFF600F8A825 /* msg_config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = msg_config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -814,13 +821,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D0CD2BB196FB94800580084 /* Pwd */ = {
+		8D0CD2BB196FB94800580084 /* RsetLoginPwd */ = {
 			isa = PBXGroup;
 			children = (
 				8D0CD2BC196FB95F00580084 /* GetBackPwdViewController.h */,
 				8D0CD2BD196FB95F00580084 /* GetBackPwdViewController.m */,
 				8D0CD2BE196FB95F00580084 /* GetBackPwdViewController.xib */,
+				B89EB8781999BE6100BFD79E /* SetLoginPasswordViewController.h */,
+				B89EB8791999BE6100BFD79E /* SetLoginPasswordViewController.m */,
+				B89EB87A1999BE6100BFD79E /* SetLoginPasswordViewController.xib */,
 			);
+			name = RsetLoginPwd;
 			path = Pwd;
 			sourceTree = "<group>";
 		};
@@ -835,6 +846,83 @@
 				B803066419740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib */,
 			);
 			path = GetMoney;
+			sourceTree = "<group>";
+		};
+		B826CDB619937EED000CD368 /* TradeField */ = {
+			isa = PBXGroup;
+			children = (
+				B826CDB719937EED000CD368 /* con_req_020001.xml */,
+				B826CDB819937EED000CD368 /* con_req_020022.xml */,
+				B826CDB919937EED000CD368 /* con_req_020023.xml */,
+				B826CDBA19937EED000CD368 /* con_req_032000.xml */,
+				B826CDBB19937EED000CD368 /* con_req_050000.xml */,
+				B826CDBC19937EED000CD368 /* con_req_080000.xml */,
+				B826CDBD19937EED000CD368 /* con_req_080001.xml */,
+				B826CDBE19937EED000CD368 /* con_req_080002.xml */,
+				B826CDBF19937EED000CD368 /* con_req_080003.xml */,
+				B826CDC019937EED000CD368 /* con_req_082001.xml */,
+				B826CDC119937EED000CD368 /* con_req_089000.xml */,
+				B826CDC219937EED000CD368 /* con_req_089001.xml */,
+				B826CDC319937EED000CD368 /* con_req_089002.xml */,
+				B826CDC419937EED000CD368 /* con_req_089004.xml */,
+				B826CDC519937EED000CD368 /* con_req_089005.xml */,
+				B826CDC619937EED000CD368 /* con_req_089006.xml */,
+				B826CDC719937EED000CD368 /* con_req_089007.xml */,
+				B826CDC819937EED000CD368 /* con_req_089008.xml */,
+				B826CDC919937EED000CD368 /* con_req_089009.xml */,
+				B826CDCA19937EED000CD368 /* con_req_089010.xml */,
+				B826CDCB19937EED000CD368 /* con_req_089011.xml */,
+				B826CDCC19937EED000CD368 /* con_req_089012.xml */,
+				B826CDCD19937EED000CD368 /* con_req_089013.xml */,
+				B826CDCE19937EED000CD368 /* con_req_089014.xml */,
+				B826CDCF19937EED000CD368 /* con_req_089016.xml */,
+				B826CDD019937EED000CD368 /* con_req_089018.xml */,
+				B826CDD119937EED000CD368 /* con_req_089019.xml */,
+				B826CDD219937EED000CD368 /* con_req_089020.xml */,
+				B826CDD319937EED000CD368 /* con_req_089021.xml */,
+				B826CDD419937EED000CD368 /* con_req_089022.xml */,
+				B826CDD519937EED000CD368 /* con_req_089023.xml */,
+				B826CDD619937EED000CD368 /* con_req_089024.xml */,
+				B826CDD719937EED000CD368 /* con_req_089025.xml */,
+				B826CDD819937EED000CD368 /* con_req_089026.xml */,
+				B826CDD919937EED000CD368 /* con_req_089027.xml */,
+				B826CDDA19937EED000CD368 /* con_req_089028.xml */,
+				B826CDDB19937EED000CD368 /* con_req_089029.xml */,
+				B826CDDC19937EED000CD368 /* con_req_089031.xml */,
+				B826CDDD19937EED000CD368 /* con_req_089032.xml */,
+				B826CDDE19937EED000CD368 /* con_req_089034.xml */,
+				B826CDDF19937EED000CD368 /* con_req_100001.xml */,
+				B826CDE019937EED000CD368 /* con_req_100002.xml */,
+				B826CDE119937EED000CD368 /* con_req_100003.xml */,
+				B826CDE219937EED000CD368 /* con_req_100004.xml */,
+				B826CDE319937EED000CD368 /* con_req_100005.xml */,
+				B826CDE419937EED000CD368 /* con_req_200001111.xml */,
+				B826CDE519937EED000CD368 /* con_req_200001112.xml */,
+				B826CDE619937EED000CD368 /* con_req_400000022.xml */,
+				B826CDE719937EED000CD368 /* con_req_400200023.xml */,
+				B826CDE819937EED000CD368 /* con_req_500000001.xml */,
+				B826CDE919937EED000CD368 /* con_req_600000001.xml */,
+				B826CDEA19937EED000CD368 /* con_req_600000002.xml */,
+				B826CDEB19937EED000CD368 /* con_req_700000001.xml */,
+				B826CDEC19937EED000CD368 /* con_req_700000002.xml */,
+				B826CDED19937EED000CD368 /* con_req_999000001.xml */,
+				B826CDEE19937EED000CD368 /* con_req_999000002.xml */,
+				B826CDEF19937EED000CD368 /* con_req_999000003.xml */,
+				B826CDF019937EED000CD368 /* con_req_readme.txt */,
+				B826CDF119937EED000CD368 /* Copy (2) of con_req_020022.xml */,
+				B826CDF219937EED000CD368 /* Copy of con_req_020022.xml */,
+			);
+			path = TradeField;
+			sourceTree = "<group>";
+		};
+		B826CDF319937EED000CD368 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B826CE3419937F02000CD368 /* reversalmap.xml */,
+				B826CDF419937EED000CD368 /* msg_config.xml */,
+				B826CDF519937EED000CD368 /* publicKey.xml */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		B83A6F3B196BDCF70080D593 = {
@@ -927,7 +1015,7 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8D0CD2BB196FB94800580084 /* Pwd */,
+				8D0CD2BB196FB94800580084 /* RsetLoginPwd */,
 				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
 				B8732F66196E7EE900095BDD /* HomeAndLeftMenu */,
@@ -1600,68 +1688,8 @@
 		B8BD24EB196CE1CD0092F2C5 /* XML */ = {
 			isa = PBXGroup;
 			children = (
-				B8BD24EE196CE3180092F2C5 /* con_req_089020.xml */,
-				B8BD24EF196CE3180092F2C5 /* con_req_080000.xml */,
-				B8BD24F0196CE3180092F2C5 /* con_req_020001.xml */,
-				B8BD24F1196CE3180092F2C5 /* con_req_089006.xml */,
-				B8BD24F2196CE3180092F2C5 /* con_req_050000.xml */,
-				B8BD24F3196CE3180092F2C5 /* con_req_400200023.xml */,
-				B8BD24F4196CE3180092F2C5 /* con_req_400000022.xml */,
-				B8BD24F5196CE3180092F2C5 /* con_req_020022.xml */,
-				B8BD24F6196CE3180092F2C5 /* con_req_020023.xml */,
-				B8BD24F7196CE3180092F2C5 /* con_req_089026.xml */,
-				B8BD24F8196CE3180092F2C5 /* con_req_089023.xml */,
-				B8BD24F9196CE3180092F2C5 /* publicKey.xml */,
-				B8BD24FA196CE3180092F2C5 /* con_req_089001.xml */,
-				B8BD24FB196CE3180092F2C5 /* con_req_089016.xml */,
-				B8BD24FC196CE3180092F2C5 /* con_req_089032.xml */,
-				B8BD24FD196CE3180092F2C5 /* con_req_089034.xml */,
-				B8BD24FE196CE3180092F2C5 /* con_req_089011.xml */,
-				B8BD24FF196CE3180092F2C5 /* con_req_089021.xml */,
-				B8BD2500196CE3180092F2C5 /* con_req_089000.xml */,
-				B8BD2501196CE3180092F2C5 /* con_req_089029.xml */,
-				B8BD2502196CE3180092F2C5 /* con_req_089025.xml */,
-				B8BD2503196CE3180092F2C5 /* con_req_089022.xml */,
-				B8BD2504196CE3180092F2C5 /* con_req_089024.xml */,
-				B8BD2505196CE3180092F2C5 /* con_req_089031.xml */,
-				B8BD2506196CE3180092F2C5 /* con_req_089019.xml */,
-				B8BD2507196CE3180092F2C5 /* con_req_089027.xml */,
-				B8BD2508196CE3180092F2C5 /* con_req_089028.xml */,
-				B8BD2509196CE3180092F2C5 /* con_req_089002.xml */,
-				B8BD250A196CE3180092F2C5 /* con_req_032000.xml */,
-				B8BD250B196CE3180092F2C5 /* con_req_089010.xml */,
-				B8BD250C196CE3180092F2C5 /* con_req_100001.xml */,
-				B8BD250D196CE3180092F2C5 /* con_req_500000001.xml */,
-				B8BD250E196CE3180092F2C5 /* con_req_600000002.xml */,
-				B8BD250F196CE3180092F2C5 /* con_req_080002.xml */,
-				B8BD2510196CE3180092F2C5 /* con_req_089012.xml */,
-				B8BD2511196CE3180092F2C5 /* con_req_200001111.xml */,
-				B8BD2512196CE3180092F2C5 /* con_req_999000001.xml */,
-				B8BD2513196CE3180092F2C5 /* con_req_089004.xml */,
-				B8BD2514196CE3180092F2C5 /* con_req_600000001.xml */,
-				B8BD2515196CE3180092F2C5 /* con_req_080001.xml */,
-				B8BD2516196CE3180092F2C5 /* con_req_080003.xml */,
-				B8BD2517196CE3180092F2C5 /* con_req_082001.xml */,
-				B8BD2518196CE3180092F2C5 /* con_req_089005.xml */,
-				B8BD2519196CE3180092F2C5 /* con_req_089008.xml */,
-				B8BD251A196CE3180092F2C5 /* con_req_089009.xml */,
-				B8BD251B196CE3180092F2C5 /* con_req_089013.xml */,
-				B8BD251C196CE3180092F2C5 /* con_req_100002.xml */,
-				B8BD251D196CE3180092F2C5 /* con_req_100003.xml */,
-				B8BD251E196CE3180092F2C5 /* con_req_100004.xml */,
-				B8BD251F196CE3180092F2C5 /* con_req_100005.xml */,
-				B8BD2520196CE3180092F2C5 /* con_req_200001112.xml */,
-				B8BD2521196CE3180092F2C5 /* con_req_999000002.xml */,
-				B8BD2522196CE3180092F2C5 /* con_req_999000003.xml */,
-				B8BD2523196CE3180092F2C5 /* con_req_readme.txt */,
-				B8BD2524196CE3180092F2C5 /* con_req_089007.xml */,
-				B8BD2525196CE3180092F2C5 /* con_req_089014.xml */,
-				B8BD2526196CE3180092F2C5 /* con_req_089018.xml */,
-				B8BD2527196CE3180092F2C5 /* con_req_700000001.xml */,
-				B8BD2528196CE3180092F2C5 /* con_req_700000002.xml */,
-				B8BD2529196CE3180092F2C5 /* Copy of con_req_020022.xml */,
-				B8BD252A196CE3180092F2C5 /* Copy (2) of con_req_020022.xml */,
-				B8EF3D79197CEFF600F8A825 /* msg_config.xml */,
+				B826CDB619937EED000CD368 /* TradeField */,
+				B826CDF319937EED000CD368 /* data */,
 			);
 			path = XML;
 			sourceTree = "<group>";
@@ -1812,98 +1840,100 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8BD254A196CE3180092F2C5 /* con_req_500000001.xml in Resources */,
-				B8BD2562196CE3180092F2C5 /* con_req_089014.xml in Resources */,
-				B8BD2536196CE3180092F2C5 /* publicKey.xml in Resources */,
 				8D137AA91973CB5E00D631BE /* ModifyPayPwdViewController.xib in Resources */,
-				B8BD2534196CE3180092F2C5 /* con_req_089026.xml in Resources */,
-				B8BD255A196CE3180092F2C5 /* con_req_100003.xml in Resources */,
-				B8BD2543196CE3180092F2C5 /* con_req_089019.xml in Resources */,
-				B8BD252B196CE3180092F2C5 /* con_req_089020.xml in Resources */,
-				B8BD2538196CE3180092F2C5 /* con_req_089016.xml in Resources */,
-				B8BD2530196CE3180092F2C5 /* con_req_400200023.xml in Resources */,
-				B8BD2549196CE3180092F2C5 /* con_req_100001.xml in Resources */,
+				B826CE2E19937EED000CD368 /* con_req_999000003.xml in Resources */,
 				8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */,
-				B8BD2547196CE3180092F2C5 /* con_req_032000.xml in Resources */,
+				B826CDFF19937EED000CD368 /* con_req_082001.xml in Resources */,
 				8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */,
-				B8BD255F196CE3180092F2C5 /* con_req_999000003.xml in Resources */,
-				B8BD2541196CE3180092F2C5 /* con_req_089024.xml in Resources */,
+				B826CE1B19937EED000CD368 /* con_req_089031.xml in Resources */,
+				B826CE1419937EED000CD368 /* con_req_089023.xml in Resources */,
+				B826CE2119937EED000CD368 /* con_req_100004.xml in Resources */,
 				B83A6F63196BDCF70080D593 /* Images.xcassets in Resources */,
+				B826CE2A19937EED000CD368 /* con_req_700000001.xml in Resources */,
+				B826CE2519937EED000CD368 /* con_req_400000022.xml in Resources */,
 				8D137A9C1973C23000D631BE /* ModifyBankCardViewController.xib in Resources */,
-				B8BD2535196CE3180092F2C5 /* con_req_089023.xml in Resources */,
 				B83A712D196BEA900080D593 /* SVProgressHUD.bundle in Resources */,
-				B8BD2565196CE3180092F2C5 /* con_req_700000002.xml in Resources */,
-				B8BD2540196CE3180092F2C5 /* con_req_089022.xml in Resources */,
+				B826CE0A19937EED000CD368 /* con_req_089011.xml in Resources */,
+				B89EB87C1999BE6100BFD79E /* SetLoginPasswordViewController.xib in Resources */,
 				B83A6F52196BDCF70080D593 /* InfoPlist.strings in Resources */,
-				B8BD2564196CE3180092F2C5 /* con_req_700000001.xml in Resources */,
-				B8BD2546196CE3180092F2C5 /* con_req_089002.xml in Resources */,
-				B8BD254B196CE3180092F2C5 /* con_req_600000002.xml in Resources */,
+				B826CE2319937EED000CD368 /* con_req_200001111.xml in Resources */,
+				B826CE0419937EED000CD368 /* con_req_089005.xml in Resources */,
+				B826CDFB19937EED000CD368 /* con_req_080000.xml in Resources */,
+				B826CE0219937EED000CD368 /* con_req_089002.xml in Resources */,
 				B83A70D2196BE1750080D593 /* MBProgressHUD.bundle in Resources */,
+				B826CE3319937EED000CD368 /* publicKey.xml in Resources */,
+				B826CE2F19937EED000CD368 /* con_req_readme.txt in Resources */,
+				B826CE0D19937EED000CD368 /* con_req_089014.xml in Resources */,
 				B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */,
-				B8BD2554196CE3180092F2C5 /* con_req_082001.xml in Resources */,
-				B8BD252F196CE3180092F2C5 /* con_req_050000.xml in Resources */,
-				B8BD2559196CE3180092F2C5 /* con_req_100002.xml in Resources */,
-				B8BD2553196CE3180092F2C5 /* con_req_080003.xml in Resources */,
+				B826CE1719937EED000CD368 /* con_req_089026.xml in Resources */,
 				8D137A8D1973781400D631BE /* SignInViewController.xib in Resources */,
-				B8BD254D196CE3180092F2C5 /* con_req_089012.xml in Resources */,
-				B8BD2555196CE3180092F2C5 /* con_req_089005.xml in Resources */,
-				B8BD253C196CE3180092F2C5 /* con_req_089021.xml in Resources */,
-				B8BD2548196CE3180092F2C5 /* con_req_089010.xml in Resources */,
-				B8EF3D7A197CEFF600F8A825 /* msg_config.xml in Resources */,
 				8D137A971973A3BD00D631BE /* AuthenticationUpImageViewController.xib in Resources */,
-				B8BD2560196CE3180092F2C5 /* con_req_readme.txt in Resources */,
+				B826CE2619937EED000CD368 /* con_req_400200023.xml in Resources */,
 				B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */,
-				B8BD253A196CE3180092F2C5 /* con_req_089034.xml in Resources */,
+				B826CE2419937EED000CD368 /* con_req_200001112.xml in Resources */,
+				B826CDF619937EED000CD368 /* con_req_020001.xml in Resources */,
 				B83A70C0196BE1750080D593 /* README.txt in Resources */,
-				B8BD2544196CE3180092F2C5 /* con_req_089027.xml in Resources */,
-				B8BD2557196CE3180092F2C5 /* con_req_089009.xml in Resources */,
-				B8BD2556196CE3180092F2C5 /* con_req_089008.xml in Resources */,
+				B826CE1919937EED000CD368 /* con_req_089028.xml in Resources */,
+				B826CE3019937EED000CD368 /* Copy (2) of con_req_020022.xml in Resources */,
+				B826CE0519937EED000CD368 /* con_req_089006.xml in Resources */,
+				B826CE1E19937EED000CD368 /* con_req_100001.xml in Resources */,
+				B826CE1819937EED000CD368 /* con_req_089027.xml in Resources */,
+				B826CDFD19937EED000CD368 /* con_req_080002.xml in Resources */,
+				B826CDF919937EED000CD368 /* con_req_032000.xml in Resources */,
+				B826CE2919937EED000CD368 /* con_req_600000002.xml in Resources */,
 				B893237A196E2D8500D4C161 /* MessageViewController.xib in Resources */,
-				B8BD2531196CE3180092F2C5 /* con_req_400000022.xml in Resources */,
+				B826CE1119937EED000CD368 /* con_req_089020.xml in Resources */,
+				B826CE3119937EED000CD368 /* Copy of con_req_020022.xml in Resources */,
+				B826CE1219937EED000CD368 /* con_req_089021.xml in Resources */,
+				B826CE0B19937EED000CD368 /* con_req_089012.xml in Resources */,
+				B826CE1C19937EED000CD368 /* con_req_089032.xml in Resources */,
 				B8CF711E196EDDEE00C7B09E /* FeedBackViewController.xib in Resources */,
-				B8BD255E196CE3180092F2C5 /* con_req_999000002.xml in Resources */,
-				B8BD254E196CE3180092F2C5 /* con_req_200001111.xml in Resources */,
+				B826CE2C19937EED000CD368 /* con_req_999000001.xml in Resources */,
+				B826CE1319937EED000CD368 /* con_req_089022.xml in Resources */,
 				B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */,
-				B8BD254C196CE3180092F2C5 /* con_req_080002.xml in Resources */,
-				B8BD2567196CE3180092F2C5 /* Copy (2) of con_req_020022.xml in Resources */,
-				B8BD2537196CE3180092F2C5 /* con_req_089001.xml in Resources */,
-				B8BD255B196CE3180092F2C5 /* con_req_100004.xml in Resources */,
-				B8BD255C196CE3180092F2C5 /* con_req_100005.xml in Resources */,
-				B8BD2542196CE3180092F2C5 /* con_req_089031.xml in Resources */,
+				B826CDF819937EED000CD368 /* con_req_020023.xml in Resources */,
 				B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */,
+				B826CDFE19937EED000CD368 /* con_req_080003.xml in Resources */,
+				B826CE2019937EED000CD368 /* con_req_100003.xml in Resources */,
+				B826CE1619937EED000CD368 /* con_req_089025.xml in Resources */,
 				B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */,
+				B826CE2719937EED000CD368 /* con_req_500000001.xml in Resources */,
 				B803066819740C8E00C2FB98 /* GetMoneyStepTwoViewController.xib in Resources */,
-				B8BD2539196CE3180092F2C5 /* con_req_089032.xml in Resources */,
-				B8BD2558196CE3180092F2C5 /* con_req_089013.xml in Resources */,
 				8D137A9219737FD500D631BE /* SettleViewController.xib in Resources */,
-				B8BD2551196CE3180092F2C5 /* con_req_600000001.xml in Resources */,
+				B826CE1D19937EED000CD368 /* con_req_089034.xml in Resources */,
+				B826CE3219937EED000CD368 /* msg_config.xml in Resources */,
+				B826CE0F19937EED000CD368 /* con_req_089018.xml in Resources */,
+				B826CE0119937EED000CD368 /* con_req_089001.xml in Resources */,
 				B8A58903197676DA0057AABD /* BankCardTradeQueryViewController.xib in Resources */,
-				B8BD2545196CE3180092F2C5 /* con_req_089028.xml in Resources */,
-				B8BD2550196CE3180092F2C5 /* con_req_089004.xml in Resources */,
-				B8BD2552196CE3180092F2C5 /* con_req_080001.xml in Resources */,
+				B826CE1519937EED000CD368 /* con_req_089024.xml in Resources */,
+				B826CE0719937EED000CD368 /* con_req_089008.xml in Resources */,
+				B826CE0919937EED000CD368 /* con_req_089010.xml in Resources */,
+				B826CE1019937EED000CD368 /* con_req_089019.xml in Resources */,
+				B826CDFA19937EED000CD368 /* con_req_050000.xml in Resources */,
+				B826CE0E19937EED000CD368 /* con_req_089016.xml in Resources */,
 				B803066619740C8E00C2FB98 /* GetMoneyStepOneViewController.xib in Resources */,
-				B8BD2561196CE3180092F2C5 /* con_req_089007.xml in Resources */,
+				B826CE0619937EED000CD368 /* con_req_089007.xml in Resources */,
+				B826CE0319937EED000CD368 /* con_req_089004.xml in Resources */,
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
+				B826CE1F19937EED000CD368 /* con_req_100002.xml in Resources */,
+				B826CE2219937EED000CD368 /* con_req_100005.xml in Resources */,
+				B826CE2819937EED000CD368 /* con_req_600000001.xml in Resources */,
+				B826CE0819937EED000CD368 /* con_req_089009.xml in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
-				B8BD253D196CE3180092F2C5 /* con_req_089000.xml in Resources */,
+				B826CE0C19937EED000CD368 /* con_req_089013.xml in Resources */,
 				B853B2841979039A00E37812 /* AccountTradeViewController.xib in Resources */,
 				B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */,
-				B8BD255D196CE3180092F2C5 /* con_req_200001112.xml in Resources */,
-				B8BD252C196CE3180092F2C5 /* con_req_080000.xml in Resources */,
+				B826CE2B19937EED000CD368 /* con_req_700000002.xml in Resources */,
 				B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */,
-				B8BD2563196CE3180092F2C5 /* con_req_089018.xml in Resources */,
-				B8BD252E196CE3180092F2C5 /* con_req_089006.xml in Resources */,
-				B8BD254F196CE3180092F2C5 /* con_req_999000001.xml in Resources */,
-				B8BD252D196CE3180092F2C5 /* con_req_020001.xml in Resources */,
 				B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */,
-				B8BD2532196CE3180092F2C5 /* con_req_020022.xml in Resources */,
-				B8BD253E196CE3180092F2C5 /* con_req_089029.xml in Resources */,
-				B8BD2533196CE3180092F2C5 /* con_req_020023.xml in Resources */,
+				B826CE2D19937EED000CD368 /* con_req_999000002.xml in Resources */,
+				B826CE0019937EED000CD368 /* con_req_089000.xml in Resources */,
+				B826CDFC19937EED000CD368 /* con_req_080001.xml in Resources */,
+				B826CDF719937EED000CD368 /* con_req_020022.xml in Resources */,
+				B826CE1A19937EED000CD368 /* con_req_089029.xml in Resources */,
 				B8B235271977B86F00518EA8 /* CardTradeListViewController.xib in Resources */,
-				B8BD253F196CE3180092F2C5 /* con_req_089025.xml in Resources */,
-				B8BD253B196CE3180092F2C5 /* con_req_089011.xml in Resources */,
+				B826CE3519937F02000CD368 /* reversalmap.xml in Resources */,
 				B8B2352C1977B9B100518EA8 /* CardTradeTableViewCell.xib in Resources */,
-				B8BD2566196CE3180092F2C5 /* Copy of con_req_020022.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1950,6 +1980,7 @@
 				B83A7128196BE8790080D593 /* StaticUITools.m in Sources */,
 				B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */,
 				B83A70E4196BE1750080D593 /* TBXML+Compression.m in Sources */,
+				B89EB87B1999BE6100BFD79E /* SetLoginPasswordViewController.m in Sources */,
 				B8A588FC197676890057AABD /* SwipeCardMessViewController.m in Sources */,
 				B83A70CE196BE1750080D593 /* FMDatabasePool.m in Sources */,
 				B83A710E196BE2600080D593 /* TradeDetail.m in Sources */,

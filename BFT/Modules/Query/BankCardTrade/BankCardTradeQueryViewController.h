@@ -20,7 +20,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BankCardTradeQueryViewController : BaseViewController<UIActionSheetDelegate>
-
+{
+    int cardType;
+}
 @property (weak, nonatomic) IBOutlet UIButton *cardTypeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *startTimeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *endTimeBtn;

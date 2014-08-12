@@ -233,6 +233,18 @@ static Transfer *instance = nil;
     {
         return @"reset-pay-pwd";
     }
+    else if([self.transferCode isEqualToString:@"089026"]) //银行卡交易查询
+    {
+        return @"query-card-trade";
+    }
+    else if([self.transferCode isEqualToString:@"089031"]) //找回密码--身份验证
+    {
+        return @"checkInfo";
+    }
+    else if([self.transferCode isEqualToString:@"089032"]) //设置登录密码
+    {
+        return @"set-login-pwd";
+    }
     return nil;
 }
 //
@@ -545,11 +557,11 @@ static Transfer *instance = nil;
     NSLog(@"正在解析服务器响应报文...");
     @try {
         
-#ifdef DEMO
-        [self checkField39];
-        return ;
-#endif
-        
+//#ifdef DEMO
+//        [self checkField39];
+//        return ;
+//#endif
+//        
         // 如果是上传签购单交易,则特殊处理
         if ([self.transferCode isEqualToString:@"089014"]) {
             if ([[self.receDic objectForKey:@"field39"] isEqualToString:@"00"]) {
@@ -605,6 +617,7 @@ static Transfer *instance = nil;
             [helper deleteAReversalTrans:[self.receDic objectForKey:@"field11"]];
         }
         
+    
         if ([field39 isEqualToString:@"00"]) {
             // 只有在交易成功的时候取服务器日期
             if ([self.receDic objectForKey:@"field13"]) {
@@ -627,11 +640,12 @@ static Transfer *instance = nil;
         } else {
             // 39域不为00，交易失败，跳转到交易失败界面。其它失败情况比如MAC计算失败直接弹窗提示用户重新交易。
             // 如果是点付宝出现异常，将在点付宝逻辑内直接处理掉
-//            [ApplicationDelegate gotoFailureViewController:[self failMessageOfField39:field39]];
+            
+              [StaticTools showMessagePageWithType:kMessageTypeFail mess:[self failMessageOfField39:field39] clicked:nil];
         }
         
     } else {
-//        [ApplicationDelegate gotoFailureViewController:@"服务器返回数据异常(39)"];
+        [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"服务器返回数据异常(39)"clicked:nil];
     }
 }
 

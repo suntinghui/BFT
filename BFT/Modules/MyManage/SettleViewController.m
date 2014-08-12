@@ -41,11 +41,13 @@
     self.navigationItem.hidesBackButton = false;
     
     [super viewWillAppear:animated];
-    
 }
 
 -(IBAction)confirmAction:(id)sender{
     
+    [[Transfer sharedTransfer]startTransfer:@"050000" fskCmd:@"Request_VT#Request_GetExtKsn" paramDic:nil mess:@"正在结算" success:^(id result) {
+        
+    } fail:nil];
 }
 
 @end
