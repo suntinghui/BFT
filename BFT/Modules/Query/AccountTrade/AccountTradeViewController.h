@@ -22,8 +22,11 @@
 @interface AccountTradeViewController : BaseViewController
 {
     int currentPage;
+    NSMutableArray *trades;
 }
-@property (strong, nonatomic) NSString *pswRsaValue;
 
+@property (weak, nonatomic) IBOutlet UITableView *listTableView;
+
+@property (strong, nonatomic) NSString *pswRsaValue;
 
 @end

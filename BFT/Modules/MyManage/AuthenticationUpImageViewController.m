@@ -34,8 +34,12 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"实名认证";
-    [self.scrollView setContentSize:CGSizeMake(320, 931)];
+    [self.scrollView setContentSize:CGSizeMake(320, 731)];
     hasTitleView = true;
+    addKeyBoardNotification = YES;
+    
+    UITapGestureRecognizer *tapGuesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyborad)];
+    [self.scrollView addGestureRecognizer:tapGuesture];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +54,34 @@
     
     [super viewWillAppear:animated];
     
+}
+#pragma mark -功能函数
+- (void)hideKeyborad
+{
+    [self.view endEditing:YES];
+}
+
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    CGRect rectForRow=currentTxtField.frame;
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-100;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.scrollView.contentOffset = CGPointMake(0, (rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0));
+        }];
+    }
+}
+- (void)keyBoardHidden
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+         self.scrollView.contentOffset = CGPointMake(0, 0);
+        self.scrollView.contentSize = CGSizeMake(320, 731);
+
+    }];
 }
 
 #pragma mark -按钮点击事件
@@ -98,6 +130,17 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
 	[self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+#pragma mark-UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    currentTxtField = textField;
+    self.scrollView.contentSize = CGSizeMake(320, 1000);
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
 }
 
 #pragma mark -http请求

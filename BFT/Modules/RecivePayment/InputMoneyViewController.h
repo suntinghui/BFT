@@ -17,6 +17,7 @@
 @property(nonatomic, assign)double fifteenDouble;
 @property(nonatomic, assign)double des;
 @property(nonatomic, strong)NSDictionary *cardInfoDic;//刷卡获取到的卡信息
+
 -(IBAction)buttonAction:(id)sender;
 -(void)pressNumericButton:(int) tag;
 -(NSString*)formatString:(NSString*)moneyStr tag:(int)tag;

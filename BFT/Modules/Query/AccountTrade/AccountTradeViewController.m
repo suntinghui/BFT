@@ -7,6 +7,7 @@
 //
 
 #import "AccountTradeViewController.h"
+#import "CardTradeTableViewCell.h"
 
 @interface AccountTradeViewController ()
 
@@ -29,6 +30,13 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"账户交易查询";
     hasTitleView = YES;
+    [StaticTools setExtraCellLineHidden:self.listTableView];
+    self.listTableView.backgroundColor = [UIColor clearColor];
+    [StaticTools setTableViewAddMoreFootView:self.listTableView withAction:@selector(accoutTradeQuery)];
+    
+    
+    trades = [[NSMutableArray alloc]init];
+    
     [self accoutTradeQuery];
 
 }
@@ -38,6 +46,51 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 5;
+    return trades.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 190;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [[UIView alloc]initWithFrame:CGRectZero];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *CellIdentifier = @"CellIdentifier";
+    CardTradeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell =[[[NSBundle mainBundle]loadNibNamed:@"CardTradeTableViewCell" owner:nil options:nil]objectAtIndex:0];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    //    NSDictionary *dict =trades[indexPath.section];
+    //    [cell setCellDataWithDictonary:dict];
+    
+    return cell;
+}
+
 
 #pragma mark-http请求
 /**

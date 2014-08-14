@@ -30,9 +30,13 @@
     self.navigationItem.title = @"修改支付密码";
     hasTitleView = true;
     addKeyBoardNotification = YES;
+    
     self.tf_old_pwd.pwdTF.placeholder = @"请输入原密码";
+    self.tf_old_pwd.delegate = self;
     self.tf_new_pwd.pwdTF.placeholder = @"请输入新密码";
+    self.tf_new_pwd.delegate = self;
     self.tf_confirm_pwd.pwdTF.placeholder = @"请确认新密码";
+    self.tf_confirm_pwd.delegate = self;
     
     resutDict = [[NSMutableDictionary alloc]init];
 }
@@ -68,7 +72,7 @@
     }else if(self.tf_old_pwd.pwdTF.text.length  == 0){
         [SVProgressHUD showErrorWithStatus:@"确认密码不能为空"];
         return false;
-    }else if(self.tf_sms.text.length == 0){
+    }else if(self.vercodeTxtField.text.length == 0){
         [SVProgressHUD showErrorWithStatus:@"短信验证码不能为空"];
         return false;
     }else if(![self.tf_new_pwd.pwdTF.text isEqualToString:self.tf_confirm_pwd.pwdTF.text]){
@@ -78,6 +82,45 @@
     return true;
 }
 
+#pragma mark -UItextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    currentTxtField = textField;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    CGRect rectForRow;
+    if (currentTxtField==self.vercodeTxtField)
+    {
+        rectForRow = currentTxtField.frame;
+    }
+    else
+    {
+        rectForRow = currentTxtField.superview.frame;
+    }
+    
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
+        }];
+    }
+}
+- (void)keyBoardHidden
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.view.frame = CGRectMake(0, IOS7_OR_LATER?64:0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+}
 
 #pragma mark -http请求
 /**
@@ -111,7 +154,7 @@
     }
     NSDictionary *requstDict =  @{@"oldPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
                                   @"newPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
-                                  @"verifyCode":self.tf_sms.text,
+                                  @"verifyCode":self.vercodeTxtField.text,
                                   @"type":@"2"};
     
     [[Transfer sharedTransfer] startTransfer:@"089024"

@@ -23,8 +23,8 @@
     UITableViewDelegate>
 {
     NSArray *titles;
-    
 }
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
-@property (assign, nonatomic) int selectRow;
+@property (assign, nonatomic) int selectRow; //当前选中的行号
+
 @end

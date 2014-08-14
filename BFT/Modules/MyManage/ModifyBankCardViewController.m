@@ -89,6 +89,11 @@
 {
     currentTxtfield = textField;
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 #pragma mark -按钮点击时间
 - (IBAction)buttonClickHandle:(id)sender

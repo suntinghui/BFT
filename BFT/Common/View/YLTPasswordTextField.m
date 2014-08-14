@@ -128,14 +128,15 @@
 - (void) numberKeyBoardConfim
 {
     [self.pwdTF resignFirstResponder];
-    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
-    NSTimeInterval animationDuration = 0.30f;
-    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    //    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
-    CGRect rect = CGRectMake(0.0f, 0.0f,320,[UIScreen mainScreen].bounds.size.height);
-    self.superview.frame = rect;
-    [UIView commitAnimations];
+    
+//    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+//    NSTimeInterval animationDuration = 0.30f;
+//    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
+//    [UIView setAnimationDuration:animationDuration];
+//    //    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
+//    CGRect rect = CGRectMake(0.0f, 0.0f,320,[UIScreen mainScreen].bounds.size.height);
+//    self.superview.frame = rect;
+//    [UIView commitAnimations];
 }
 
 - (void) numberKeyBoardClear

@@ -10,7 +10,7 @@
                 <outlet property="tf_confirm_pwd" destination="bTD-2D-qOH" id="qxA-lf-Tb8"/>
                 <outlet property="tf_new_pwd" destination="tdr-cG-eZy" id="tKz-5m-Spc"/>
                 <outlet property="tf_old_pwd" destination="pJ2-Gi-BIn" id="ytH-Qk-TIM"/>
-                <outlet property="tf_sms" destination="v0x-zH-41i" id="2ME-cQ-cWI"/>
+                <outlet property="vercodeTxtField" destination="v0x-zH-41i" id="iGS-U4-V07"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -59,13 +59,16 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="短信验证码" minimumFontSize="17" background="input_bg" id="v0x-zH-41i">
-                    <rect key="frame" x="20" y="210" width="130" height="40"/>
+                    <rect key="frame" x="20" y="204" width="92" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="0wx-p6-MCk"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OHF-cr-e3E">
-                    <rect key="frame" x="171" y="210" width="129" height="40"/>
+                    <rect key="frame" x="171" y="204" width="129" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="获取短信校验码" backgroundImage="ip_button">
                         <color key="titleColor" red="0.017239317600000002" green="0.015348079840000001" blue="0.015683222069999999" alpha="1" colorSpace="calibratedRGB"/>

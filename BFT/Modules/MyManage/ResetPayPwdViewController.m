@@ -28,7 +28,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"重置支付密码";
+    self.tf_new_pwd.pwdTF.placeholder = @"请输入新的支付密码";
     hasTitleView = true;
+    addKeyBoardNotification = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,18 +51,51 @@
     if(self.tf_new_pwd.pwdTF.text.length  == 0){
         [SVProgressHUD showErrorWithStatus:@"新密码不能为空"];
         return false;
-    }else if(self.tf_idCard.text.length  == 0){
+    }else if(self.idCardTxtField.text.length  == 0){
         [SVProgressHUD showErrorWithStatus:@"身份证号不能为空"];
         return false;
-    }else if(self.tf_bankCardNum.text.length  == 0){
+    }else if(self.bankCardNumTxtField.text.length  == 0){
         [SVProgressHUD showErrorWithStatus:@"银行卡号不能为空"];
         return false;
-    }else if(self.tf_sms.text.length == 0){
+    }else if(self.vercodeTxtField.text.length == 0){
         [SVProgressHUD showErrorWithStatus:@"短信验证码不能为空"];
         return false;
     }
     return true;
 }
+
+#pragma mark -UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    currentTxtfield = textField;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    CGRect rectForRow=currentTxtfield.frame;
+    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
+        }];
+    }
+}
+- (void)keyBoardHidden
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.view.frame = CGRectMake(0, IOS7_OR_LATER?64:0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+}
+
 #pragma mark -http请求
 /**
  *  获取短信验证码
@@ -93,9 +128,9 @@
     }
     
     NSDictionary *requstDict =  @{@"payPass":@"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0",
-                                  @"pIdNo":self.tf_idCard.text,
-                                  @"verifyCode":self.tf_sms.text,
-                                  @"bkCardNo":self.tf_bankCardNum.text};
+                                  @"pIdNo":self.idCardTxtField.text,
+                                  @"verifyCode":self.vercodeTxtField.text,
+                                  @"bkCardNo":self.bankCardNumTxtField.text};
     
     [[Transfer sharedTransfer] startTransfer:@"089023"
                                       fskCmd:@"Request_GetExtKsn"

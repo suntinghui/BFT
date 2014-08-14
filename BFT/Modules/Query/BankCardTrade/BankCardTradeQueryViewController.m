@@ -39,7 +39,8 @@
     
     [self.cardTypeBtn setTitle:@"银行卡" forState:UIControlStateNormal];
     cardType = 1;
-    [self.startTimeBtn setTitle:[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];
+    NSDate *date = [StaticTools getDateFromDate:[NSDate date] withYear:0 month:0 day:-7];
+    [self.startTimeBtn setTitle:[StaticTools getDateStrWithDate:date withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];
     [self.endTimeBtn setTitle:[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:NO] forState:UIControlStateNormal];
 }
 
@@ -52,6 +53,47 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+/**
+ *  检查选择的时间的合法性
+ *
+ *  @return
+ */
+- (BOOL)checkDateValue
+{
+    NSDate *startDate  = [StaticTools getDateFromDateStr:self.startTimeBtn.titleLabel.text];
+    NSDate *endDate = [StaticTools getDateFromDateStr:self.endTimeBtn.titleLabel.text];
+    NSDate *currentDate = [NSDate date];
+    
+    NSTimeInterval time=[endDate timeIntervalSinceDate:startDate];
+    int days = ((int)time)/(3600*24);
+    
+    NSString *err;
+    if ([startDate earlierDate:currentDate]==currentDate)
+    {
+        err = @"开始日期不能晚于今天的日期";
+    }
+    else if ([endDate earlierDate:currentDate]==currentDate)
+    {
+        err = @"结束日期不能晚于今天的日期";
+    }
+    else if ([startDate earlierDate:endDate]==endDate)
+    {
+        err = @"开始日期不能晚于结束日期";
+    }
+    else if(days>7)
+    {
+        err = @"开始日期和结束日期之间的间隔不能超过7天";
+    }
+    
+    if (err!=nil) {
+        [SVProgressHUD showErrorWithStatus:err];
+        return NO;
+    }
+    return YES;
+    
+    
 }
 
 #pragma mark -按钮点击
@@ -70,6 +112,7 @@
         {
             [StaticTools showDateSelectWithIndexDate:self.startTimeBtn.titleLabel.text type:kDatePickerTypeFull clickOk:^(NSString *selectDateStr) {
                 
+            
                 [self.startTimeBtn setTitle:selectDateStr forState:UIControlStateNormal];
             }];
         }
@@ -84,6 +127,10 @@
             break;
         case Button_Tag_Quety:
         {
+            if (![self checkDateValue])
+            {
+                return;
+            }
             CardTradeListViewController *cardTradeListController = [[CardTradeListViewController alloc]init];
             NSString *start = self.startTimeBtn.titleLabel.text;
             NSString *end = self.endTimeBtn.titleLabel.text;

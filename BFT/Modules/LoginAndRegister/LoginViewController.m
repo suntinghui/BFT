@@ -11,9 +11,13 @@
 #import "HomeViewController.h"
 #import "RegisterViewController.h"
 
-#define Button_Tag_Register  100
-#define Button_Tag_Login     101
-#define Button_Tag_VerCode   102
+#define Button_Tag_Register        100 //注册
+#define Button_Tag_Login           101 //登录
+#define Button_Tag_VerCode         102 //获取验证码
+#define Button_Tag_RemenerPassword 103 //记住密码
+#define Button_Tag_GetBackPassword 104 //取回密码
+
+#define kRemenbPassword   @"RemenberPassword"
 
 @interface LoginViewController ()
 
@@ -37,12 +41,11 @@
     self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    addKeyBoardNotification = YES;
 
     [self.verCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     
-    self.isSelect = [UserDefaults boolForKey:@"isSelect"];
-    self.btn_select.selected = self.isSelect;
+    self.remenberPswBtn.selected = [UserDefaults boolForKey:kRemenbPassword];
     
 //    [self getAppVersion]; TODO
     
@@ -95,6 +98,19 @@
             [self getPicVerCode];
         }
             break;
+        case Button_Tag_RemenerPassword: //记住密码
+        {
+            [self.remenberPswBtn setSelected:!self.remenberPswBtn.selected];
+            [UserDefaults setBool:self.remenberPswBtn.selected forKey:kRemenbPassword];
+            [UserDefaults synchronize];
+        }
+            break;
+        case Button_Tag_GetBackPassword: //取回密码
+        {
+            GetBackPwdViewController *vc = [[GetBackPwdViewController alloc] initWithNibName:@"GetBackPwdViewController" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -102,10 +118,28 @@
 
 }
 
-#pragma mark -CodeViewDelegate
-- (void)CodeViewClicked
+#pragma mark -UItextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self getPicVerCode];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark -keyboard
+- (void)keyBoardShowWithHeight:(float)height
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.loginView.frame = CGRectMake(10, -15, 300, 330);
+    }];
+    
+}
+- (void)keyBoardHidden
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        self.loginView.frame = CGRectMake(10, 35, 300, 330);
+    }];
 }
 
 #pragma mark -http请求
@@ -183,19 +217,5 @@
                                      } fail:nil];
 }
 
-
-- (IBAction)selectAction:(id)sender
-{
-    
-    [self.btn_select setSelected:!self.btn_select.selected];
-    [UserDefaults setBool:self.btn_select.selected forKey:@"isSelect"];
-    [UserDefaults synchronize];
-}
-
-- (IBAction)getPwdAction:(id)sender
-{
-    GetBackPwdViewController *vc = [[GetBackPwdViewController alloc] initWithNibName:@"GetBackPwdViewController" bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 @end

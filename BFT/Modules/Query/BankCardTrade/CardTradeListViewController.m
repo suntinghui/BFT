@@ -66,9 +66,17 @@
                                      success:^(id result) {
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
-                                             currentPage++;
                                              NSArray *list = result[@"pageList"];
                                              [trades addObjectsFromArray:list];
+                                             
+                                             if (list.count==0&&currentPage==0)
+                                             {
+                                                 [SVProgressHUD showErrorWithStatus:@"暂无交易数据"];
+                                             }
+                                             else
+                                             {
+                                                 currentPage++;
+                                             }
                                              
                                              if (trades.count<[result[@"totalNum"] intValue])
                                              {
