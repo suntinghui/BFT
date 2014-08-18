@@ -73,7 +73,7 @@
                   symbolName = "-[CardTradeTableViewCell cardPlaceLabel]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "429674468.870866"
+                  timestampString = "429690135.430658"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -87,7 +87,7 @@
                   symbolName = "-[CardTradeTableViewCell setCardPlaceLabel:]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "429674468.871038"
+                  timestampString = "429690135.430858"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Common/Utility/EncryptionUtil.m"
-            timestampString = "427360473.920519"
+            timestampString = "429691881.482383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "@implementation EncryptionUtil"
             landmarkType = "3">
          </BreakpointContent>
@@ -286,6 +286,38 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "-checkDateValue"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BFT/Common/View/YLTPasswordTextField.m"
+            timestampString = "429687648.119119"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "-setRsa"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BFT/Common/Utility/EncryptionUtil.m"
+            timestampString = "429691881.482383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "+rsaEncrypt:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

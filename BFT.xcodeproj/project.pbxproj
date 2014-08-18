@@ -1015,11 +1015,11 @@
 		B83A6F85196BDF3F0080D593 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
 				8D0CD2BB196FB94800580084 /* RsetLoginPwd */,
 				B8932375196E2CD500D4C161 /* CommonController */,
 				B8BD2568196CE6A10092F2C5 /* BaseViewController */,
 				B8732F66196E7EE900095BDD /* HomeAndLeftMenu */,
-				B83A6F8A196BDF960080D593 /* LoginAndRegister */,
 				B8CF70FC196EDCA600C7B09E /* MyManage */,
 				B8CF7102196EDCE600C7B09E /* Query */,
 				B8C0A2551975605B00AE5C67 /* RecivePayment */,

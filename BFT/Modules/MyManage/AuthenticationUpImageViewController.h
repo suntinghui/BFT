@@ -21,9 +21,10 @@
 
 @interface AuthenticationUpImageViewController : BaseViewController< UIImagePickerControllerDelegate,
     UINavigationControllerDelegate,
-    UITextFieldDelegate>{
+    UITextFieldDelegate>
+{
     int operateType;
-        UITextField *currentTxtField;
+    UITextField *currentTxtField;
 }
 
 @property(strong, nonatomic)IBOutlet UITextField *tf_cardNo;
