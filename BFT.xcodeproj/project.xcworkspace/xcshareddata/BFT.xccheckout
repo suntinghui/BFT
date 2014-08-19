@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FCAC64D0-94DE-4EDB-9343-42FF95EC3CE2</string>
+	<string>8A1966C8-A406-4019-B0D7-28F77B5D60D7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BFT</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</key>
-		<string>ssh://github.com/suntinghui/BFT.git</string>
+		<key>568F4869-7D1B-4AC3-9423-AADC74022E06</key>
+		<string>https://github.com/suntinghui/BFT.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BFT.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</key>
+		<key>568F4869-7D1B-4AC3-9423-AADC74022E06</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/suntinghui/BFT.git</string>
+	<string>https://github.com/suntinghui/BFT.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</string>
+	<string>568F4869-7D1B-4AC3-9423-AADC74022E06</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>13F0E536-76F6-4AD0-AEFC-05311BA1F7E5</string>
+			<string>568F4869-7D1B-4AC3-9423-AADC74022E06</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BFT</string>
 		</dict>

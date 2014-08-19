@@ -268,6 +268,10 @@
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
 		B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */; };
 		B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */; };
+		D564501B19A2F67400F5902F /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564501919A2F67400F5902F /* CheckListViewController.m */; };
+		D564501C19A2F67400F5902F /* CheckListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D564501A19A2F67400F5902F /* CheckListViewController.xib */; };
+		D564502019A329B200F5902F /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564501E19A329B200F5902F /* SignViewController.m */; };
+		D564502119A329B200F5902F /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D564501F19A329B200F5902F /* SignViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -777,6 +781,12 @@
 		B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
 		B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectViewController.m; sourceTree = "<group>"; };
 		B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateSelectViewController.xib; sourceTree = "<group>"; };
+		D564501819A2F67400F5902F /* CheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListViewController.h; sourceTree = "<group>"; };
+		D564501919A2F67400F5902F /* CheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
+		D564501A19A2F67400F5902F /* CheckListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckListViewController.xib; sourceTree = "<group>"; };
+		D564501D19A329B200F5902F /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		D564501E19A329B200F5902F /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
+		D564501F19A329B200F5902F /* SignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1709,6 +1719,12 @@
 				B8C0A2561975608B00AE5C67 /* InputMoneyViewController.h */,
 				B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */,
 				B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */,
+				D564501819A2F67400F5902F /* CheckListViewController.h */,
+				D564501919A2F67400F5902F /* CheckListViewController.m */,
+				D564501A19A2F67400F5902F /* CheckListViewController.xib */,
+				D564501D19A329B200F5902F /* SignViewController.h */,
+				D564501E19A329B200F5902F /* SignViewController.m */,
+				D564501F19A329B200F5902F /* SignViewController.xib */,
 			);
 			path = RecivePayment;
 			sourceTree = "<group>";
@@ -1894,6 +1910,8 @@
 				B826CDF819937EED000CD368 /* con_req_020023.xml in Resources */,
 				B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */,
 				B826CDFE19937EED000CD368 /* con_req_080003.xml in Resources */,
+				D564501C19A2F67400F5902F /* CheckListViewController.xib in Resources */,
+				D564502119A329B200F5902F /* SignViewController.xib in Resources */,
 				B826CE2019937EED000CD368 /* con_req_100003.xml in Resources */,
 				B826CE1619937EED000CD368 /* con_req_089025.xml in Resources */,
 				B8732F6B196E7F0B00095BDD /* HomeViewController.xib in Resources */,
@@ -1980,6 +1998,7 @@
 				B83A7128196BE8790080D593 /* StaticUITools.m in Sources */,
 				B8732F7D196E8F5000095BDD /* IIWrapController.m in Sources */,
 				B83A70E4196BE1750080D593 /* TBXML+Compression.m in Sources */,
+				D564501B19A2F67400F5902F /* CheckListViewController.m in Sources */,
 				B89EB87B1999BE6100BFD79E /* SetLoginPasswordViewController.m in Sources */,
 				B8A588FC197676890057AABD /* SwipeCardMessViewController.m in Sources */,
 				B83A70CE196BE1750080D593 /* FMDatabasePool.m in Sources */,
@@ -2086,6 +2105,7 @@
 				B83A701A196BE04C0080D593 /* PasswordTextField.m in Sources */,
 				8D137A9119737FD500D631BE /* SettleViewController.m in Sources */,
 				B8732F6A196E7F0B00095BDD /* HomeViewController.m in Sources */,
+				D564502019A329B200F5902F /* SignViewController.m in Sources */,
 				B83A710A196BE2600080D593 /* PayeeAccountModel.m in Sources */,
 				B83A6FF5196BE04C0080D593 /* BaseDBHelper.m in Sources */,
 				B83A6FF4196BE04C0080D593 /* AppDataCenter.m in Sources */,
