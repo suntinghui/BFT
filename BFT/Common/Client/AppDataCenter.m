@@ -249,6 +249,8 @@ static AppDataCenter *instance = nil;
 
 - (NSString *) getServerDate
 {
+    NSLog(@"ser data %@",[DateUtil formatMonthDay:__SERVEREDATE]);
+    
     return [DateUtil formatMonthDay:__SERVEREDATE];
 }
 

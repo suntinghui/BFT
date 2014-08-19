@@ -109,4 +109,6 @@
 
 #define IsFirstEnter                       @"ISFIRSTENTER"
 
+#define BordColor  RGBACOLOR(230, 115, 27, 0.7)
+
 
