@@ -7,7 +7,16 @@
 //
 
 #import "BaseViewController.h"
+#import "PaintMaskView.h"
+#import "CheckListViewController.h"
+@interface SignViewController : BaseViewController<UITextFieldDelegate>
+{
+    PaintMaskView *paintCanVasView;
 
-@interface SignViewController : BaseViewController
+}
+@property (weak, nonatomic) IBOutlet UILabel *tradeNum;  //交易金额
+@property (weak, nonatomic) IBOutlet UITextField *phoneNum;  //手机号
+
+- (IBAction)buttonClickHandle:(id)sender;
 
 @end

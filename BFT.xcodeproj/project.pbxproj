@@ -272,6 +272,7 @@
 		D564501C19A2F67400F5902F /* CheckListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D564501A19A2F67400F5902F /* CheckListViewController.xib */; };
 		D564502019A329B200F5902F /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564501E19A329B200F5902F /* SignViewController.m */; };
 		D564502119A329B200F5902F /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D564501F19A329B200F5902F /* SignViewController.xib */; };
+		D564502419A33FAE00F5902F /* PaintMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D564502319A33FAE00F5902F /* PaintMaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -787,6 +788,8 @@
 		D564501D19A329B200F5902F /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
 		D564501E19A329B200F5902F /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
 		D564501F19A329B200F5902F /* SignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
+		D564502219A33FAE00F5902F /* PaintMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintMaskView.h; sourceTree = "<group>"; };
+		D564502319A33FAE00F5902F /* PaintMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintMaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1183,6 +1186,8 @@
 				B83A6FF1196BE04C0080D593 /* UITextField+HideKeyBoard.m */,
 				B83A6FF2196BE04C0080D593 /* YLTPasswordTextField.h */,
 				B83A6FF3196BE04C0080D593 /* YLTPasswordTextField.m */,
+				D564502219A33FAE00F5902F /* PaintMaskView.h */,
+				D564502319A33FAE00F5902F /* PaintMaskView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1980,6 +1985,7 @@
 				B83A70DC196BE1750080D593 /* MKNetworkOperation.m in Sources */,
 				B83A710F196BE2600080D593 /* TransferDetailModel.m in Sources */,
 				B83A70BF196BE1750080D593 /* DDMultiFormatter.m in Sources */,
+				D564502419A33FAE00F5902F /* PaintMaskView.m in Sources */,
 				B83A700C196BE04C0080D593 /* SecurityUtil.m in Sources */,
 				B83A70D3196BE1750080D593 /* MBProgressHUD.m in Sources */,
 				B83A7005196BE04C0080D593 /* DateUtil.m in Sources */,
