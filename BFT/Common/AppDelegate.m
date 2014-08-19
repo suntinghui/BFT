@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "BaseDBHelper.h"
 
 @implementation AppDelegate
 
@@ -23,6 +24,8 @@
     [self.window makeKeyAndVisible];
     
      [[Transfer sharedTransfer] initFSK];
+    
+    [BaseDBHelper createDataBase];
     
     return YES;
 }

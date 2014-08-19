@@ -12,6 +12,7 @@
 #import <openssl/x509.h>
 #import <openssl/pem.h>
 #import <openssl/evp.h>
+#import <openssl/err.h>
 
 
 #define GBKEncoding CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
@@ -103,8 +104,11 @@
 + (NSString *) rsaEncrypt:(NSString *) plainText
 {
     // 得到mod 和 exp
-    NSString *mod = [UserDefaults objectForKey:PUBLICKEY_MOD]?[UserDefaults objectForKey:PUBLICKEY_MOD]:INIT_PUBLICKEY_MOD;
-    NSString *exp = [UserDefaults objectForKey:PUBLICKEY_EXP]?[UserDefaults objectForKey:PUBLICKEY_EXP]:INIT_PUBLICKEY_EXP;
+//    NSString *mod = [UserDefaults objectForKey:PUBLICKEY_MOD]?[UserDefaults objectForKey:PUBLICKEY_MOD]:INIT_PUBLICKEY_MOD;
+//    NSString *exp = [UserDefaults objectForKey:PUBLICKEY_EXP]?[UserDefaults objectForKey:PUBLICKEY_EXP]:INIT_PUBLICKEY_EXP;
+    
+    NSString *mod = INIT_PUBLICKEY_MOD;
+    NSString *exp = INIT_PUBLICKEY_EXP;
     
     // 将mod 和 exp 转为BIGNUM
     BIGNUM *mod_BN = BN_new();
@@ -121,6 +125,7 @@
     unsigned char *encoded = (unsigned char *)malloc(flen);
     bzero(encoded, flen); // 置字节字符串s的前n个字节为零且包括‘\0’
 
+
     // NOTICE: RSA_NO_PADDING -- flen -- 必须是 RSA_size(rsa);
     // NOTICE: RSA_PKCS1_PADDING -- flen -- 可以为 strlen([plainText UTF8String])
     int ret = RSA_public_encrypt(
@@ -132,6 +137,10 @@
                        );
     
     if (ret == -1) { // ERROR
+        
+
+       printf("Error: %s\n", ERR_reason_error_string(-1));
+        
         [NSException raise:@"Encrypt Error" format:@"RSA Encrypt Error: %@ -- rsaEncrypt", [self class]];
         return nil;
     }

@@ -19,6 +19,7 @@
 #import "ResetPayPwdViewController.h"
 #import "InputPswViewController.h"
 #import "SwipeCardMessViewController.h"
+#import "RevokeListViewController.h"
 
 #define Alert_Tag_SignOut   100
 
@@ -258,7 +259,8 @@
         }
         else if(indexPath.section==1) //收款撤销
         {
-            
+            RevokeListViewController *revokeListController = [[RevokeListViewController alloc]init];
+            [self.navigationController pushViewController:revokeListController animated:YES];
         }
     }
     if (self.pageType==3) //我要提款

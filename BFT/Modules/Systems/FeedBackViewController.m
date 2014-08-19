@@ -30,11 +30,11 @@
     self.navigationItem.title = @"意见反馈";
     addKeyBoardNotification  = YES;
     
-    self.inputTxtView.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
+    self.inputTxtView.layer.borderColor = BordColor.CGColor;
     self.inputTxtView.layer.borderWidth = 1;
     self.inputTxtView.layer.cornerRadius = 8;
     
-    self.emailTxtField.layer.borderColor = RGBACOLOR(230, 115, 27, 0.7).CGColor;
+    self.emailTxtField.layer.borderColor = BordColor.CGColor;
     self.emailTxtField.layer.borderWidth = 1;
     self.emailTxtField.layer.cornerRadius = 3;
     
