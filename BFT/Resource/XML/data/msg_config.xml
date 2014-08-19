@@ -98,7 +98,7 @@
 		<field id="13" 	datatype="DATE4"		type="BCD"	length="4" isOk="false"/>
 		<field id="41" 	datatype="ALPHA" 		type="ASCII" 	length="8" isOk="true"/>
 		<field id="42" 	datatype="ALPHA" 		type="ASCII" 	length="15" must="true"/>
-		<field id="60" 	datatype="LLLNVAR" 	type="BCD"		must="true"	addLen="true" align="left"/>
+		<field id="60" 	datatype="LLLNVAR" 	type="BCD"		must="true"	addLen="true" align="left" isOk="true"/>
 		<field id="62" 	datatype="LLLVAR" 	type="ASCII" 	must="true" addLen="true" />
 		<field id="63" 	datatype="LLLVAR" 	type="ASCII" 	must="true" addLen="true"/>
 	</parseinfo>
