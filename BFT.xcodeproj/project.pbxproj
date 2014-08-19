@@ -259,12 +259,16 @@
 		B8BD248F196CD6430092F2C5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD248B196CD6430092F2C5 /* libssl.a */; };
 		B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD256A196CE6B70092F2C5 /* BaseViewController.m */; };
 		B8BD256F196D42D00092F2C5 /* libvoclib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BD256E196D42D00092F2C5 /* libvoclib.a */; };
-		B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */; };
-		B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */; };
 		B8CF7100196EDCB700C7B09E /* ManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF70FE196EDCB700C7B09E /* ManageViewController.m */; };
 		B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */; };
 		B8CF711D196EDDEE00C7B09E /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CF711B196EDDEE00C7B09E /* FeedBackViewController.m */; };
 		B8CF711E196EDDEE00C7B09E /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8CF711C196EDDEE00C7B09E /* FeedBackViewController.xib */; };
+		B8DE453B19A339D9000DAC2D /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DE453319A339D9000DAC2D /* CheckListViewController.m */; };
+		B8DE453C19A339D9000DAC2D /* CheckListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8DE453419A339D9000DAC2D /* CheckListViewController.xib */; };
+		B8DE453D19A339D9000DAC2D /* InputMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DE453619A339D9000DAC2D /* InputMoneyViewController.m */; };
+		B8DE453E19A339D9000DAC2D /* InputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8DE453719A339D9000DAC2D /* InputMoneyViewController.xib */; };
+		B8DE453F19A339D9000DAC2D /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DE453919A339D9000DAC2D /* SignViewController.m */; };
+		B8DE454019A339D9000DAC2D /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8DE453A19A339D9000DAC2D /* SignViewController.xib */; };
 		B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */; };
 		B8E1BA45196E347900AE41A2 /* DateSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E1BA43196E347900AE41A2 /* DateSelectViewController.m */; };
 		B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BA44196E347900AE41A2 /* DateSelectViewController.xib */; };
@@ -769,15 +773,21 @@
 		B8BD2569196CE6B70092F2C5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B8BD256A196CE6B70092F2C5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B8BD256E196D42D00092F2C5 /* libvoclib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoclib.a; sourceTree = "<group>"; };
-		B8C0A2561975608B00AE5C67 /* InputMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputMoneyViewController.h; sourceTree = "<group>"; };
-		B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputMoneyViewController.m; sourceTree = "<group>"; };
-		B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputMoneyViewController.xib; sourceTree = "<group>"; };
 		B8CF70FD196EDCB700C7B09E /* ManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageViewController.h; sourceTree = "<group>"; };
 		B8CF70FE196EDCB700C7B09E /* ManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageViewController.m; sourceTree = "<group>"; };
 		B8CF70FF196EDCB700C7B09E /* ManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManageViewController.xib; sourceTree = "<group>"; };
 		B8CF711A196EDDEE00C7B09E /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		B8CF711B196EDDEE00C7B09E /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		B8CF711C196EDDEE00C7B09E /* FeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
+		B8DE453219A339D9000DAC2D /* CheckListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListViewController.h; sourceTree = "<group>"; };
+		B8DE453319A339D9000DAC2D /* CheckListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
+		B8DE453419A339D9000DAC2D /* CheckListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckListViewController.xib; sourceTree = "<group>"; };
+		B8DE453519A339D9000DAC2D /* InputMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputMoneyViewController.h; sourceTree = "<group>"; };
+		B8DE453619A339D9000DAC2D /* InputMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputMoneyViewController.m; sourceTree = "<group>"; };
+		B8DE453719A339D9000DAC2D /* InputMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputMoneyViewController.xib; sourceTree = "<group>"; };
+		B8DE453819A339D9000DAC2D /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		B8DE453919A339D9000DAC2D /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
+		B8DE453A19A339D9000DAC2D /* SignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
 		B8E0EFC6196D8E6300946DF2 /* PooCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PooCodeView.h; sourceTree = "<group>"; };
 		B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PooCodeView.m; sourceTree = "<group>"; };
 		B8E1BA42196E347900AE41A2 /* DateSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectViewController.h; sourceTree = "<group>"; };
@@ -1721,10 +1731,8 @@
 		B8C0A2551975605B00AE5C67 /* RecivePayment */ = {
 			isa = PBXGroup;
 			children = (
+				B8DE453119A339D9000DAC2D /* Recive */,
 				B8EBF54719A337CE005F8F99 /* Revoke */,
-				B8C0A2561975608B00AE5C67 /* InputMoneyViewController.h */,
-				B8C0A2571975608B00AE5C67 /* InputMoneyViewController.m */,
-				B8C0A2581975608B00AE5C67 /* InputMoneyViewController.xib */,
 			);
 			path = RecivePayment;
 			sourceTree = "<group>";
@@ -1780,18 +1788,34 @@
 			path = Systems;
 			sourceTree = "<group>";
 		};
+		B8DE453119A339D9000DAC2D /* Recive */ = {
+			isa = PBXGroup;
+			children = (
+				B8DE453519A339D9000DAC2D /* InputMoneyViewController.h */,
+				B8DE453619A339D9000DAC2D /* InputMoneyViewController.m */,
+				B8DE453719A339D9000DAC2D /* InputMoneyViewController.xib */,
+				B8DE453219A339D9000DAC2D /* CheckListViewController.h */,
+				B8DE453319A339D9000DAC2D /* CheckListViewController.m */,
+				B8DE453419A339D9000DAC2D /* CheckListViewController.xib */,
+				B8DE453819A339D9000DAC2D /* SignViewController.h */,
+				B8DE453919A339D9000DAC2D /* SignViewController.m */,
+				B8DE453A19A339D9000DAC2D /* SignViewController.xib */,
+			);
+			path = Recive;
+			sourceTree = "<group>";
+		};
 		B8EBF54719A337CE005F8F99 /* Revoke */ = {
 			isa = PBXGroup;
 			children = (
+				B8EBF54E19A337CE005F8F99 /* RevokeListViewController.h */,
+				B8EBF54F19A337CE005F8F99 /* RevokeListViewController.m */,
+				B8EBF55019A337CE005F8F99 /* RevokeListViewController.xib */,
 				B8EBF54819A337CE005F8F99 /* RevokeConfirmViewController.h */,
 				B8EBF54919A337CE005F8F99 /* RevokeConfirmViewController.m */,
 				B8EBF54A19A337CE005F8F99 /* RevokeConfirmViewController.xib */,
 				B8EBF54B19A337CE005F8F99 /* RevokeListTableViewCell.h */,
 				B8EBF54C19A337CE005F8F99 /* RevokeListTableViewCell.m */,
 				B8EBF54D19A337CE005F8F99 /* RevokeListTableViewCell.xib */,
-				B8EBF54E19A337CE005F8F99 /* RevokeListViewController.h */,
-				B8EBF54F19A337CE005F8F99 /* RevokeListViewController.m */,
-				B8EBF55019A337CE005F8F99 /* RevokeListViewController.xib */,
 			);
 			path = Revoke;
 			sourceTree = "<group>";
@@ -1879,6 +1903,7 @@
 				8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */,
 				B826CE1B19937EED000CD368 /* con_req_089031.xml in Resources */,
 				B826CE1419937EED000CD368 /* con_req_089023.xml in Resources */,
+				B8DE454019A339D9000DAC2D /* SignViewController.xib in Resources */,
 				B826CE2119937EED000CD368 /* con_req_100004.xml in Resources */,
 				B83A6F63196BDCF70080D593 /* Images.xcassets in Resources */,
 				B826CE2A19937EED000CD368 /* con_req_700000001.xml in Resources */,
@@ -1895,6 +1920,7 @@
 				B83A70D2196BE1750080D593 /* MBProgressHUD.bundle in Resources */,
 				B826CE3319937EED000CD368 /* publicKey.xml in Resources */,
 				B826CE2F19937EED000CD368 /* con_req_readme.txt in Resources */,
+				B8DE453C19A339D9000DAC2D /* CheckListViewController.xib in Resources */,
 				B826CE0D19937EED000CD368 /* con_req_089014.xml in Resources */,
 				B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */,
 				B826CE1719937EED000CD368 /* con_req_089026.xml in Resources */,
@@ -1953,10 +1979,10 @@
 				B826CE0819937EED000CD368 /* con_req_089009.xml in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
 				B826CE0C19937EED000CD368 /* con_req_089013.xml in Resources */,
+				B8DE453E19A339D9000DAC2D /* InputMoneyViewController.xib in Resources */,
 				B853B2841979039A00E37812 /* AccountTradeViewController.xib in Resources */,
 				B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */,
 				B826CE2B19937EED000CD368 /* con_req_700000002.xml in Resources */,
-				B8C0A25A1975608B00AE5C67 /* InputMoneyViewController.xib in Resources */,
 				B8CF7101196EDCB700C7B09E /* ManageViewController.xib in Resources */,
 				B826CE2D19937EED000CD368 /* con_req_999000002.xml in Resources */,
 				B8EBF55419A337CE005F8F99 /* RevokeListTableViewCell.xib in Resources */,
@@ -1989,6 +2015,7 @@
 				B83A7126196BE8790080D593 /* StaticTools+UIOperation.m in Sources */,
 				B83A6FFD196BE04C0080D593 /* SystemConfig.m in Sources */,
 				B83A6FFF196BE04C0080D593 /* Transfer+FSK.mm in Sources */,
+				B8DE453F19A339D9000DAC2D /* SignViewController.m in Sources */,
 				B8CF711D196EDDEE00C7B09E /* FeedBackViewController.m in Sources */,
 				B83A7017196BE04C0080D593 /* LeftImageTextField.m in Sources */,
 				B83A70CC196BE1750080D593 /* FMDatabase.m in Sources */,
@@ -2008,7 +2035,6 @@
 				B853B2831979039A00E37812 /* AccountTradeViewController.m in Sources */,
 				B8B235261977B86F00518EA8 /* CardTradeListViewController.m in Sources */,
 				8D137A8C1973781400D631BE /* SignInViewController.m in Sources */,
-				B8C0A2591975608B00AE5C67 /* InputMoneyViewController.m in Sources */,
 				B83A70BD196BE1750080D593 /* DDContextFilterLogFormatter.m in Sources */,
 				8D137AA81973CB5E00D631BE /* ModifyPayPwdViewController.m in Sources */,
 				B83A6FF6196BE04C0080D593 /* PayeeAccountDBHelper.m in Sources */,
@@ -2096,6 +2122,7 @@
 				B83A7006196BE04C0080D593 /* EncryptionUtil.m in Sources */,
 				B83A712E196BEA900080D593 /* SVProgressHUD.m in Sources */,
 				B83A70B9196BE1750080D593 /* DDASLLogger.m in Sources */,
+				B8DE453B19A339D9000DAC2D /* CheckListViewController.m in Sources */,
 				B83A70D0196BE1750080D593 /* FMResultSet.m in Sources */,
 				B83A70CF196BE1750080D593 /* FMDatabaseQueue.m in Sources */,
 				B8B2352B1977B9B100518EA8 /* CardTradeTableViewCell.m in Sources */,
@@ -2104,6 +2131,7 @@
 				B83A7007196BE04C0080D593 /* FileOperatorUtil.m in Sources */,
 				B83A7008196BE04C0080D593 /* NSDataUtil.m in Sources */,
 				B83A7104196BE2600080D593 /* AnnouncementModel.m in Sources */,
+				B8DE453D19A339D9000DAC2D /* InputMoneyViewController.m in Sources */,
 				B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */,
 				B828CD001973778E005760F3 /* LevelOneMenuViewController.m in Sources */,
 				B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */,

@@ -10,6 +10,7 @@
 #import "StringUtil.h"
 #import "Transfer+Action.h"
 #import "Transfer.h"
+#import "CheckListViewController.h"
 
 @interface InputMoneyViewController ()
 
@@ -114,6 +115,8 @@
 //                    //                [self.navigationController pushViewController:confirmVC animated:YES];
                 
                 
+                CheckListViewController *CheckListController = [[CheckListViewController alloc]init];
+                [self.navigationController pushViewController:CheckListController animated:YES];
                 
                 
             }
@@ -130,6 +133,7 @@
     }
     
 }
+
 
 -(void)pressNumericButton:(int) tag
 {
