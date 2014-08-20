@@ -8,6 +8,7 @@
 
 #import "SignViewController.h"
 
+
 #define Button_Tag_Clear    101  //清除
 #define Button_Tag_Ok       102  //确定
 
@@ -28,13 +29,14 @@
 
 - (void)viewDidLoad
 {
+    self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"请签名";
-    hasTitleView = YES;
+    hasTitleView = NO;
     
     //初始化画板视图
-    paintCanVasView = [[PaintMaskView alloc]initWithFrame:CGRectMake(0, 114, 320, 390)];
+    paintCanVasView = [[PaintMaskView alloc]initWithFrame:CGRectMake(0, 25, 320,260)];
     [paintCanVasView makePaintMaskViewEnable:YES];
     [paintCanVasView setColorWithRed:0 Green:0 Blue:0];
     [paintCanVasView setPaintLineWidth:3];
@@ -71,10 +73,13 @@
                 return;
             }
             
-            [SVProgressHUD showWithStatus:@"正在处理图片" maskType:SVProgressHUDMaskTypeClear cancelBlock:nil];
+//            [SVProgressHUD showWithStatus:@"正在处理图片" maskType:SVProgressHUDMaskTypeClear cancelBlock:nil];
+//            
+//            [NSThread detachNewThreadSelector:@selector(converImageToHex) toTarget:self withObject:nil];
             
-            [NSThread detachNewThreadSelector:@selector(converImageToHex) toTarget:self withObject:nil];
-
+            //复用签购单页面，进行回调。
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"signFinish" object:paintCanVasView.drawImage.image];
+            [self.navigationController popViewControllerAnimated:YES];
         
         }
             
@@ -83,6 +88,15 @@
     }
     
 }
+
+
+//#pragma mark 点击换行 触发以下方法
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    [textField resignFirstResponder];
+//    return YES;
+//
+//}
 
 #pragma mark -功能函数
 - (void)converImageToHex
@@ -112,7 +126,8 @@
         
        // [self performSelectorOnMainThread:@selector(uploadSignWithImage:) withObject:hexStr waitUntilDone:NO];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        
+       
         
     }
 }
