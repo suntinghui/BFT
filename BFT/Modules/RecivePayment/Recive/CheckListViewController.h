@@ -10,6 +10,7 @@
 
 @interface CheckListViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)buttonClick:(id)sender;
 

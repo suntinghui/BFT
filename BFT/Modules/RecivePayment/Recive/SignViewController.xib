@@ -18,70 +18,70 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_top" id="H78-e9-LmD">
-                    <rect key="frame" x="0.0" y="64" width="320" height="51"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textInput" id="oVW-6A-bxV">
-                    <rect key="frame" x="109" y="71" width="200" height="34"/>
+                    <rect key="frame" x="109" y="6" width="200" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入付款人手机号" minimumFontSize="17" id="eph-3x-rWc">
-                    <rect key="frame" x="173" y="74" width="133" height="30"/>
+                    <rect key="frame" x="173" y="11" width="133" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CQX-WG-cvW">
-                    <rect key="frame" x="119" y="79" width="42" height="21"/>
+                    <rect key="frame" x="119" y="16" width="42" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gEV-3Z-Kgr">
-                    <rect key="frame" x="7" y="93" width="67" height="17"/>
+                    <rect key="frame" x="7" y="29" width="67" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.3589969959" green="0.60855481320000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1o8-aj-fAv">
-                    <rect key="frame" x="7" y="70" width="80" height="21"/>
+                    <rect key="frame" x="7" y="0.0" width="80" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_middle" id="1YX-va-Aee">
-                    <rect key="frame" x="0.0" y="114" width="320" height="390"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="50" width="320" height="449"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign_middle" id="9Ch-VY-fUJ">
-                    <rect key="frame" x="0.0" y="505" width="320" height="68"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="500" width="320" height="68"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：签购单将以短信的形式发送到您的手机上，请妥善保存。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ubu-Wa-qXz">
-                    <rect key="frame" x="7" y="512" width="154" height="51"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="7" y="508" width="154" height="51"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H6Y-Qb-mTs">
-                    <rect key="frame" x="185" y="524" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="sign_clear_btn">
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EJn-CS-ieV">
+                    <rect key="frame" x="176" y="514" width="45" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <state key="normal" image="inputmoney_button_delete">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="lUO-mw-gmu"/>
+                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="bmS-4g-BBN"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Vo-Xm-cJa">
-                    <rect key="frame" x="260" y="524" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="sign_ok_btn">
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7oH-JE-oDq">
+                    <rect key="frame" x="255" y="514" width="45" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <state key="normal" image="inputmoney_button_submit">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="87b-Ds-myg"/>
+                        <action selector="buttonClickHandle:" destination="-1" eventType="touchUpInside" id="5Pe-5T-aUa"/>
                     </connections>
                 </button>
             </subviews>
@@ -91,9 +91,9 @@
         </view>
     </objects>
     <resources>
-        <image name="sign_clear_btn" width="68" height="49"/>
+        <image name="inputmoney_button_delete" width="64" height="48"/>
+        <image name="inputmoney_button_submit" width="64" height="48"/>
         <image name="sign_middle" width="800" height="261"/>
-        <image name="sign_ok_btn" width="68" height="49"/>
         <image name="sign_top" width="800" height="77"/>
         <image name="textInput" width="304" height="45"/>
     </resources>
