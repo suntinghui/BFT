@@ -20,6 +20,7 @@
 #import "InputPswViewController.h"
 #import "SwipeCardMessViewController.h"
 #import "RevokeListViewController.h"
+#import "AboutViewController.h"
 
 #define Alert_Tag_SignOut   100
 
@@ -70,7 +71,7 @@
     else if(self.pageType==4) //系统相关
     {
         self.navigationItem.title = @"系统相关";
-        titles = @[@"新手引导",@"意见反馈",@"关于系统",@"检查更新"];
+        titles = @[@"意见反馈",@"关于系统",@"检查更新"];
     }
 }
 
@@ -277,10 +278,20 @@
     }
     if (self.pageType==4) //系统相关
     {
-        if (indexPath.section==1) //意见反馈
+        if (indexPath.section==0) //意见反馈
         {
             FeedBackViewController *feedBackController = [[FeedBackViewController alloc]init];
             [self.navigationController pushViewController:feedBackController animated:YES];
+        }
+        else if (indexPath.section==1) //关于系统
+        {
+            AboutViewController *aboutViewController = [[AboutViewController alloc]init];
+            [self.navigationController pushViewController:aboutViewController animated:YES];
+            
+        }
+        else if(indexPath.section==2) //检查更新
+        {
+            [SVProgressHUD showSuccessWithStatus:@"已经是最新版本"];
         }
     }
 }
