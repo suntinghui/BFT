@@ -176,7 +176,7 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     currentTxtField = textField;
-    self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,iPhone5?700: 620);
+    self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,iPhone5?740: 620);
     //    if (textField.tag==104||textField.tag==105||textField==self.messCodeTxtField)
     //    {
     //        [UIView animateWithDuration:0.3 animations:^{
