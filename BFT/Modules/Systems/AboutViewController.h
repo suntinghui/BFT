@@ -1,15 +1,15 @@
 //
-//  SystemsViewController.h
+//  AboutViewController.h
 //  BFT
 //
-//  Created by 文彬 on 14-7-10.
+//  Created by 文彬 on 14-8-20.
 //  Copyright (c) 2014年 文彬. All rights reserved.
 //
 /*----------------------------------------------------------------
  // Copyright (C)
  // 版权所有。
  //
- // 文件功能描述：意见反馈
+ // 文件功能描述：关于系统
  
  // 创建标识：
  // 修改标识：
@@ -18,13 +18,10 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
-#import "SKPSMTPMessage.h"
 
-@interface FeedBackViewController : BaseViewController<UITextFieldDelegate,
-    SKPSMTPMessageDelegate>
+@interface AboutViewController : BaseViewController
 
-@property (weak, nonatomic) IBOutlet UITextView *inputTxtView;
-@property (weak, nonatomic) IBOutlet UITextField *emailTxtField;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 - (IBAction)buttonClickHandle:(id)sender;
 

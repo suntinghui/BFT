@@ -54,6 +54,57 @@
         [SVProgressHUD showErrorWithStatus:@"请输入意见内容"];
         return;
     }
+    
+    
+    [SVProgressHUD showWithStatus:@"正在发送..." maskType:SVProgressHUDMaskTypeClear];
+    
+    SKPSMTPMessage *sendMsg = [[SKPSMTPMessage alloc] init];
+    sendMsg.fromEmail = @"jia_people@163.com";
+    sendMsg.toEmail =@"wenbin168.hi@163.com";
+    sendMsg.relayHost = @"smtp.163.com";
+    sendMsg.requiresAuth = YES;
+    sendMsg.login = @"jia_people@163.com";
+    sendMsg.pass = @"jia_people_test";
+    sendMsg.subject = @"BaiFuTong IOS feedback"; // 中文会乱码  意见反馈
+    //testMsg.bccEmail = @"tinghuisun@163.com"; // 抄送
+    sendMsg.wantsSecure = YES; // smtp.gmail.com doesn't work without TLS!
+
+    sendMsg.validateSSLChain = NO;
+    sendMsg.delegate = self;
+    
+    NSString *content =   [NSString stringWithFormat:@"%@ %@", self.inputTxtView.text, [UserDefaults objectForKey:PHONENUM]];
+ 
+    NSDictionary *plainPart = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
+                               [NSString stringWithCString:[content UTF8String] encoding:NSUTF8StringEncoding],kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
+    
+    
+    sendMsg.parts = [NSArray arrayWithObjects:plainPart,nil];
+    [sendMsg send];
+
+}
+
+#pragma mark SKPSMTPMessage Delegate Methods
+- (void)messageState:(SKPSMTPState)messageState;
+{
+    //    NSLog(@"HighestState:%d", HighestState);
+    //    if (messageState > HighestState)
+    //        HighestState = messageState;
+    //
+    //    ProgressBar.progress = (float)HighestState/(float)kSKPSMTPWaitingSendSuccess;
+}
+- (void)messageSent:(SKPSMTPMessage *)SMTPmessage
+{
+    [SVProgressHUD dismiss];
+    
+    [SVProgressHUD showSuccessWithStatus:@"提交成功"];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)messageFailed:(SKPSMTPMessage *)SMTPmessage error:(NSError *)error
+{
+    [SVProgressHUD dismiss];
+    [SVProgressHUD showErrorWithStatus:@"提交失败，请稍后再试"];
+    NSLog(@"email faild: %@",[error localizedDescription]);
+    
 }
 
 #pragma mark -UITextFieldDelegate

@@ -19,10 +19,12 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 
-@interface ModifyBankCardViewController : BaseViewController<UITextFieldDelegate>
+@interface ModifyBankCardViewController : BaseViewController<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
+    int operateType;
     UITextField *currentTxtfield;
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *idCardTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *oldBankCardTxtField;

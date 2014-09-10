@@ -72,10 +72,6 @@
 #define MD5KEY                              @"md5key"
 
 
-// 程序中最新公告编号
-#define SYSTEM_ANNOUNCEMENT_LASTEST_NUM		@"SystemAnnouncementLastestNum"
-#define SERVER_ANNOUNCEMENT_LASTEST_NUM		@"ServerAnnouncementLastestNum"
-
 // 流量相关值
 #define TRAFFIC_MONTH                           @"traffic_month"
 #define MONTH_WIFISEND                          @"month_wifi_send"
@@ -104,10 +100,6 @@
 #define INIT_PUBLICKEY_EXP					@"010001"
 
 #define DEVICEID                               @"deviceId"
-
-#define version_num                         101
-
-#define IsFirstEnter                       @"ISFIRSTENTER"
 
 #define BordColor  RGBACOLOR(230, 115, 27, 0.7)
 

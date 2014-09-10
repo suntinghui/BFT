@@ -8,8 +8,12 @@
 
 #import "ModifyBankCardViewController.h"
 
-#define Button_Tag_VerCode  100
-#define Button_Tag_Commit   101
+#define Button_Tag_VerCode  1000
+#define Button_Tag_Commit   1001
+#define Button_Tag_ImageOne    100        //正面照图片按钮
+#define Button_Tag_ImageTwo    101        //反面照图片按钮
+#define Button_Tag_ImageThree  102        //银行卡图片按钮
+
 
 @interface ModifyBankCardViewController ()
 
@@ -31,10 +35,26 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"修改银行卡";
+    [self.scrollView setContentSize:CGSizeMake(320, 1000)];
+
     hasTitleView = true;
     addKeyBoardNotification = YES;
     
+    UITapGestureRecognizer *tapGuesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyborad)];
+    [self.scrollView addGestureRecognizer:tapGuesture];
+
+    
 }
+
+#pragma mark -功能函数
+- (void)hideKeyborad
+{
+    [self.view endEditing:YES];
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -95,11 +115,25 @@
     return YES;
 }
 
-#pragma mark -按钮点击时间
+#pragma mark -按钮点击事件
 - (IBAction)buttonClickHandle:(id)sender
 {
     UIButton *button = (UIButton*)sender;
     switch (button.tag) {
+        case Button_Tag_ImageOne:
+        case Button_Tag_ImageTwo:
+        case Button_Tag_ImageThree:
+        {
+            UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+            imagePickerController.delegate = self;
+            imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            operateType = button.tag;
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+            
+        }
+            
+            break;
+
         case Button_Tag_VerCode: //获取验证码
         {
             [self getVerCode];
@@ -118,6 +152,32 @@
             break;
     }
 }
+
+#pragma mark - image picker delegte
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    @autoreleasepool
+    {
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        image = [StaticTools imageWithImage:image scaledToSize:CGSizeMake(620, 960)]; //TODO
+        UIButton *button = (UIButton*)[self.view viewWithTag:operateType];
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [picker dismissViewControllerAnimated:YES completion:^{}];
+        
+        
+        //        [self uploadImageWithType:operateType image:image];
+    }
+    
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+
+
+
 #pragma mark -http请求
 /**
  *  获取短信验证码
@@ -171,19 +231,22 @@
                                          
                                      } fail:nil];
 }
-#pragma mark -keyboard
-- (void)keyBoardShowWithHeight:(float)height
-{
-    CGRect rectForRow=currentTxtfield.frame;
-    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
-    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
-    {
-        [UIView animateWithDuration:0.3 animations:^{
-            
-            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
-        }];
-    }
-}
+
+
+//#pragma mark -keyboard
+//- (void)keyBoardShowWithHeight:(float)height
+//{
+//    CGRect rectForRow=currentTxtfield.frame;
+//    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+//    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+//    {
+//        [UIView animateWithDuration:0.3 animations:^{
+//            
+//            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
+//            
+//        }];
+//    }
+//}
 - (void)keyBoardHidden
 {
     [UIView animateWithDuration:0.3 animations:^{

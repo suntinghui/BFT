@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"实名认证";
-    [self.scrollView setContentSize:CGSizeMake(320, 731)];
+    [self.scrollView setContentSize:CGSizeMake(320, 780)];
     hasTitleView = true;
     addKeyBoardNotification = YES;
     
@@ -78,8 +78,8 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         
-         self.scrollView.contentOffset = CGPointMake(0, 0);
-        self.scrollView.contentSize = CGSizeMake(320, 731);
+         self.scrollView.contentOffset = CGPointMake(0, 10);
+        self.scrollView.contentSize = CGSizeMake(320, 780);
 
     }];
 }
