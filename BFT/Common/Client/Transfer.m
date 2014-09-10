@@ -766,8 +766,6 @@ static Transfer *instance = nil;
 
 }
 
-
-
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err
 {
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
