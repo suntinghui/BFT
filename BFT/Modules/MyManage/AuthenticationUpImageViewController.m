@@ -150,7 +150,7 @@
 - (void)getVerCode
 {
     
-    NSDictionary *requstDict = @{@"mobNo":@"15101532374", //TODO
+    NSDictionary *requstDict = @{@"mobNo":@"18734825880", //TODO
                                  @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
                                  @"type":@"0",
                                  @"money":@""};
@@ -171,8 +171,8 @@
 - (void)realNameAuth
 {
     NSDictionary *requstDict = @{@"verifyCode":self.tf_msg.text,
-                                 @"bankNo":self.tf_cardNo.text,
-                                 @"bkCardNo":@"1234",
+                                 @"bankNo":@"1234",
+                                 @"bkCardNo":self.tf_cardNo.text,
                                  @"pIdImg0":@"attach0",
                                  @"pIdImg1":@"attach1",
                                  @"bkCardImg":@"attach2"};
