@@ -102,7 +102,7 @@
 #pragma mark -UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    //return 5;
     return trades.count;
 }
 
@@ -137,8 +137,8 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-//    NSDictionary *dict =trades[indexPath.section];
-//    [cell setCellDataWithDictonary:dict];
+    NSDictionary *dict =trades[indexPath.section];
+    [cell setCellDataWithDictonary:dict];
  
     return cell;
 }

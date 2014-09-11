@@ -70,7 +70,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         
         self.listTableView.contentOffset=CGPointMake(0,0);
-        self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,560);
+        self.listTableView.contentSize = CGSizeMake(self.listTableView.frame.size.width,548);
     }];
 }
 /**

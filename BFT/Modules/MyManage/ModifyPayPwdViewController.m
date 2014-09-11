@@ -162,8 +162,17 @@
                                     paramDic:requstDict
                                         mess:@"正在请求数据..."
                                      success:^(id result) {
-                                         [SVProgressHUD showErrorWithStatus:@"密码修改成功"];
-                                         [self.navigationController popViewControllerAnimated:YES];
+                                         
+                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:@"密码修改成功"];
+                                             [self.navigationController popViewControllerAnimated:YES];
+                                         }
+                                         else
+                                         {
+                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                         }
+                                        
                                      } fail:nil];
 }
 @end

@@ -24,7 +24,7 @@
 
 - (void)setCellDataWithDictonary:(NSDictionary*)dict
 {
-    self.tradeTypeLabel.text = dict[@"transType"];
+    self.tradeTypeLabel.text = [NSString stringWithFormat:@"%@",dict[@"transType"]];
     self.cardTypeLabel.text = dict[@"type"];
     self.cardNumLabel.text = dict[@"pan"];
 //    self.cardPlaceLabel.text = dict[@""];

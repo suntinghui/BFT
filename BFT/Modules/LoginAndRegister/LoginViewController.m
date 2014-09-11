@@ -52,7 +52,7 @@
     //直接请求时 超时  原因未知
     [self performSelector:@selector(getPicVerCode) withObject:nil afterDelay:0.5];
     
-    self.userNameTxtField.text = @"13520072513"; //TODO
+    self.userNameTxtField.text = @"18734825880"; //TODO
 }
 
 - (void)didReceiveMemoryWarning
