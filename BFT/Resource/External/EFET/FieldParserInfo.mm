@@ -31,6 +31,7 @@
 
 - (EFETFieldModel *) parseBinary:(NSData *) respData postion:(int) postion fieldId:(int) fieldId
 {
+   
     @try {
         NSString *value = @"";
         
@@ -178,11 +179,30 @@
                 
                 NSData *tempData = [respData subdataWithRange:NSMakeRange(postion, self.length)];
                 value = [[[tempData description] stringByReplacingOccurrencesOfString:@" " withString:@""] substringWithRange:NSMakeRange(1, self.length)];
+                
+                if ([type isEqualToString:[FieldType fieldTypeEnumToString:DATE10]])
+                {
+                    self.length =10;
+                }
+                else if ([type isEqualToString:[FieldType fieldTypeEnumToString:DATE4]])
+                {
+                    self.length =4;
+                }
+                else if ([type isEqualToString:[FieldType fieldTypeEnumToString:DATE_EXP]])
+                {
+                    self.length =4;
+                }
+                else if ([type isEqualToString:[FieldType fieldTypeEnumToString:TIME]])
+                {
+                    self.length =6;
+                }
             }
             
         }
         
-        //NSLog(@"<field%d -- %@>", fieldId, value);
+         NSLog(@"postion:%d,filedid:%d length:%d",postion,fieldId,self.length);
+        
+        NSLog(@"<field%d -- %@>", fieldId, value);
         
         EFETFieldModel *model = [[EFETFieldModel alloc] initWithDatatype:self.type value:value length:self.length];
         return model;

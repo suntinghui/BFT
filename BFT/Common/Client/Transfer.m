@@ -772,7 +772,7 @@ static Transfer *instance = nil;
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
     
     [SVProgressHUD dismiss];
-    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
+//    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
     
 	NSLog(@"socketDidDisconnect:withError: \"%@\"", err);
 }
