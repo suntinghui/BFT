@@ -188,6 +188,8 @@
         return model;
     }
     @catch (NSException *exception) {
+        
+        NSLog(@"postion:%d,filedid:%d length:%d",postion,fieldId,self.length);
         NSLog(@"%@", exception);
         NSLog(@"%@", [exception callStackSymbols]);
     }

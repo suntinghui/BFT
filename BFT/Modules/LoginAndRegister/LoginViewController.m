@@ -61,6 +61,28 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark -功能函数
+- (BOOL)checkInputValue
+{
+    NSString *err;
+    if ([StaticTools isEmptyString:self.userNameTxtField.text])
+    {
+        err = @"请输入用户名";
+    }
+    else if([StaticTools isEmptyString:self.tf_pwd.pwdTF.text])
+    {
+        err = @"请输入密码";
+    }
+    else if([StaticTools isEmptyString:self.codeTxtField.text])
+    {
+        err = @"请输入验证码";
+    }
+    if (err!=nil)
+    {
+    [SVProgressHUD showErrorWithStatus:err];
+    return NO;
+    }
+    return YES;
+}
 - (void)gotoHome
 {
     HomeViewController *homeController = [[HomeViewController alloc] init];
@@ -169,6 +191,10 @@
  */
 - (void)loginAction
 {
+    if (![self checkInputValue])
+    {
+        return;
+    }
   
     NSString *pwd = [self.tf_pwd rsaValue];
     NSDictionary *requstDict = @{@"login":self.userNameTxtField.text,

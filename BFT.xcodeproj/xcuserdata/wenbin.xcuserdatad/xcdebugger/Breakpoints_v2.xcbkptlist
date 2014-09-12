@@ -41,7 +41,7 @@
                   symbolName = "-[CardTradeTableViewCell cardPlaceLabel]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "430126760.68291"
+                  timestampString = "432196090.040127"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -55,7 +55,7 @@
                   symbolName = "-[CardTradeTableViewCell setCardPlaceLabel:]"
                   moduleName = "BFT"
                   urlString = "file:///Users/wenbin/%E5%A4%96%E6%8E%A5/BFT/BFT/Modules/Query/BankCardTrade/CardTradeTableViewCell.h"
-                  timestampString = "430126760.683123"
+                  timestampString = "432196090.040343"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Common/Client/Transfer.m"
-            timestampString = "429515584.503878"
+            timestampString = "432193585.256092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "565"
-            endingLineNumber = "565"
+            startingLineNumber = "564"
+            endingLineNumber = "564"
             landmarkName = "-parse"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Common/Client/Transfer.m"
-            timestampString = "429515584.503878"
+            timestampString = "432193585.256092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "558"
-            endingLineNumber = "558"
+            startingLineNumber = "557"
+            endingLineNumber = "557"
             landmarkName = "-parse"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Common/Client/Transfer.m"
-            timestampString = "429515584.503878"
+            timestampString = "432193585.256092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "610"
-            endingLineNumber = "610"
+            startingLineNumber = "609"
+            endingLineNumber = "609"
             landmarkName = "-checkField39"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,43 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BFT/Resource/External/EFET/MessageFactory.mm"
-            timestampString = "429501710.233207"
+            timestampString = "432184780.619426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-getMessageFromResp:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BFT/Resource/External/EFET/MessageFactory.mm"
-            timestampString = "429501742.113364"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-getMessageFromResp:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BFT/Resource/External/EFET/MessageFactory.mm"
-            timestampString = "429501753.388024"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-getMessageFromResp:"
             landmarkType = "5">
          </BreakpointContent>
@@ -270,22 +238,6 @@
             startingLineNumber = "165"
             endingLineNumber = "165"
             landmarkName = "-setRsa"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BFT/Common/Utility/EncryptionUtil.m"
-            timestampString = "429691881.482383"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "+rsaEncrypt:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
