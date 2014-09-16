@@ -349,7 +349,10 @@
 - (void) fskActionDone
 {
     if ([self.currentFSKMethod isEqualToString:@"Request_ReNewKey:MacKey:DesKey:"]) {
-        [self updateWorkingKeyDone];
+        
+//        [self updateWorkingKeyDone];
+        self.requestSucBlock(@"");
+        
     } else if ([self.currentFSKMethod isEqualToString:@"Request_GetMac:"]){
         [self.sendDic setObject:[[AppDataCenter sharedAppDataCenter] getValueWithKey:@"__PSAMMAC"] forKey:@"field64"];
         NSLog(@"sendDic+mac:%@",self.sendDic);
@@ -740,7 +743,7 @@
     char *des = new char[100];
     strcpy(des, destemp);
     
-    [self.m_vcom Request_ReNewKey:0 PinKey:pin PinKeyLen:20 MacKey:mac MacKeyLen:12 DesKey:des DesKeyLen:20];
+    [self.m_vcom Request_ReNewKey:0 PinKey:pin PinKeyLen:20 MacKey:mac MacKeyLen:20 DesKey:des DesKeyLen:20];
 }
 
 // 更新终端号码和商户号

@@ -108,7 +108,7 @@
 		<field id="11"	datatype="NUMERIC" type="BCD"	length="6" must="true" />
 		<field id="12" 	datatype="TIME" 	type="BCD"	must="true"/>
 		<field id="13" 	datatype="DATE4" 	type="BCD" 	/>
-		<field id="32" 	datatype="LLVAR" 	type="BCD"	addLen="true"	align="left"/>
+		<field id="32" 	datatype="LLNVAR" 	type="BCD"	addLen="true"	align="left"/>
 		<field id="37"	datatype="ALPHA"	type="ASCII"	length="12" />
 		<field id="39" 	datatype="ALPHA"	type="ASCII"	length="2" />
 		<field id="41" 	datatype="ALPHA"	type="ASCII"	length="8" />

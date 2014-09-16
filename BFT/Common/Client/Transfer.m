@@ -485,7 +485,6 @@ static Transfer *instance = nil;
     
     }else{
         //8583
-        
         _reqData = [self.action first:self.sendDic withXMLData:[FileOperatorUtil getDataFromXML:@"msg_config.xml"]];
      
         
@@ -753,6 +752,8 @@ static Transfer *instance = nil;
     
     NSLog(@"EFET收到响应...");
     NSLog(@"RESP:%@", data);
+    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"recevie:%@",str);
     
     NSData *contentData = [data subdataWithRange:NSMakeRange(2, data.length-2)];
     
@@ -774,7 +775,7 @@ static Transfer *instance = nil;
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
     
     [SVProgressHUD dismiss];
-    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
+//    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
     
 	NSLog(@"socketDidDisconnect:withError: \"%@\"", err);
 }
@@ -911,4 +912,5 @@ static Transfer *instance = nil;
     }
     return [NSString stringWithFormat:@"%@(%@)", str_error, field39];
 }
+
 @end

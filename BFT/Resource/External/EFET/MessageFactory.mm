@@ -89,7 +89,7 @@ static MessageFactory *instance;
     NSData *bitmapData = [respMsgData subdataWithRange:NSMakeRange(5+6+msgTypeData.length, 8)];
     NSString *bitmapHexStr = [[[bitmapData description] stringByReplacingOccurrencesOfString:@" " withString:@""] substringWithRange:NSMakeRange(1, 16)];
     NSString *bitmapBinaryStr = [ConvertUtil hexToBinStr:bitmapHexStr];
-    
+    NSLog(@"消息类型:%@", msgTypeStr);
     NSLog(@"位图:%@", bitmapHexStr);
     NSLog(@"位图:%@", bitmapBinaryStr);
     
@@ -102,6 +102,7 @@ static MessageFactory *instance;
             [fieldArray addObject:[NSNumber numberWithInt:(64-i)]];
         }
     }
+    NSLog(@"fieldArray:%@",fieldArray);
     
     int postion = 5+6+msgTypeData.length+8;
     
