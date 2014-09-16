@@ -582,7 +582,7 @@ static Transfer *instance = nil;
                 
 //                    [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_CheckMac|string:%@,string:%@", bitmapHexStr, [self.receDic objectForKey:@"field64"]] paramDic:nil];
                 
-                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil mess:nil success:self.requestSucBlock fail:self.requestErrBlock];
+                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_CheckMac|string:%@,string:%@", bitmapHexStr, [self.receDic objectForKey:@"field64"]] paramDic:nil mess:nil success:self.requestSucBlock fail:self.requestErrBlock];
                 
 //                byte[] tempByte = new byte[respByte.length - 8 - 11];
 //                System.arraycopy(respByte, 11, tempByte, 0, tempByte.length);

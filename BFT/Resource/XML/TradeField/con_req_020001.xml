@@ -19,7 +19,7 @@
 	<!-- /* 服务点条件码 */ -->
 	<field key="field25" value="00"  />
 	<!-- 密码长度，有无此数据项受22域决定 -->
-	 <field key="field26" value="__FIELD26" />
+	 <field key="field26" value="06" />
 	 <field key="field35" value="__FIELD35" /> 
 	 <field key="field36" value="__FIELD36" /> 
 	<field key="field41" value="__TERID"  />

@@ -16,7 +16,7 @@
 	<!--  卡序列号 C:当POS能够获得该值时存在；--> 
 	<!-- <field key="field23" value="143" /> -->
 	<field key="field25" value="00"  />
-	<field key="field26" value="__FIELD26" />
+	<field key="field26" value="06" />
 	<field key="field35" value="__FIELD35" />
 	<field key="field36" value="__FIELD36" /> 
 	<field key="field41" value="__TERID"  />

@@ -111,7 +111,7 @@
                 NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
                 [dic setObject:[StringUtil amount2String:self.moneyStr] forKey:@"field4"];
             
-            [[Transfer sharedTransfer]startTransfer:@"020022" fskCmd:[NSString stringWithFormat:@"Request_GetDes#Request_GetPin|string:%@",[StringUtil amount2String:self.moneyStr]] paramDic:dic mess:nil success:^(id result) {
+            [[Transfer sharedTransfer]startTransfer:@"020022" fskCmd:[NSString stringWithFormat:@"Request_GetExtKsn#Request_VT#Request_GetTrackPlaintext#Request_GetPin|string:%@",[StringUtil amount2String:self.moneyStr]] paramDic:dic mess:nil success:^(id result) {
                 
             } fail:nil];
          

@@ -44,7 +44,7 @@
 
 - (IBAction)buttonClickHandle:(id)sender
 {
-    [[Transfer sharedTransfer]startTransfer:@"020001" fskCmd:@"Request_GetExtKsn#Request_VT#Request_GetDes#Request_GetPin|string:0" paramDic:nil mess:@"正在签到" success:^(id result) {
+    [[Transfer sharedTransfer]startTransfer:@"020001" fskCmd:@"Request_GetExtKsn#Request_VT#Request_GetTrackPlaintext#Request_GetPin|string:0" paramDic:nil mess:@"正在查询" success:^(id result) {
         
     } fail:nil];
 }
