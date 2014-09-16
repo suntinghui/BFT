@@ -7,8 +7,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckListViewController">
             <connections>
+                <outlet property="advisoryNumLabel" destination="h9v-4a-fgg" id="Zm5-gk-fqB"/>
+                <outlet property="authorizeNumLabel" destination="iHB-D2-q6o" id="6dz-7p-ahm"/>
+                <outlet property="batchNumLabel" destination="JQV-mB-HSG" id="avP-OV-3uH"/>
+                <outlet property="cardBankLabel" destination="8nz-B3-7de" id="Lfg-Zd-NB1"/>
+                <outlet property="cardNumLabel" destination="5Sk-eB-mIv" id="clm-YJ-fba"/>
+                <outlet property="cardWorkDataLabel" destination="Ms1-oS-IHL" id="D3i-k8-cxO"/>
+                <outlet property="commentLabel" destination="Gnr-h7-auC" id="iQV-TD-Z8P"/>
                 <outlet property="scrollView" destination="Blg-Yw-oqz" id="iJi-RV-GXo"/>
+                <outlet property="shopNameLabel" destination="DEq-vf-5rU" id="EjX-2q-BS0"/>
+                <outlet property="shopNumLabel" destination="Hw9-Uo-zpp" id="Ymv-Wo-iL6"/>
                 <outlet property="signButton" destination="BGS-RT-h5I" id="Or3-II-pRn"/>
+                <outlet property="terminalNumLabel" destination="63t-Kn-kdA" id="bom-xA-mlR"/>
+                <outlet property="tradeDateLabel" destination="wqv-wP-CgZ" id="WFa-Sv-QfU"/>
+                <outlet property="tradeNumLabel" destination="fvx-ca-dxa" id="4zN-PR-7ky"/>
+                <outlet property="tradeSerialNumberLabel" destination="QRu-n2-vke" id="Jn4-8E-u5N"/>
+                <outlet property="tradeType" destination="Nm9-FE-uMa" id="Tfe-ES-qrf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -152,7 +166,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本人确认以上交易信息同意将。。。。。本卡账户" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3M-iV-9Ta">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本人确认以上交易信息同意将其计入本卡账户" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h3M-iV-9Ta">
                             <rect key="frame" x="36" y="626" width="238" height="43"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
