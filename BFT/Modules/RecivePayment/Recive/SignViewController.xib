@@ -95,6 +95,6 @@
         <image name="inputmoney_button_submit" width="64" height="48"/>
         <image name="sign_middle" width="800" height="261"/>
         <image name="sign_top" width="800" height="77"/>
-        <image name="textInput" width="304" height="45"/>
+        <image name="textInput" width="152" height="22"/>
     </resources>
 </document>

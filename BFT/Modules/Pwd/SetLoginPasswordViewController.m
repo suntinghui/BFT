@@ -74,11 +74,6 @@
 {
     UIButton *button = (UIButton*)sender;
     switch (button.tag) {
-        case Button_Tag_Vercode: //获取验证码
-        {
-            [self getVerCode];
-        }
-            break;
         case Button_Tag_Commit: //设置密码
         {
             if ([self checkInputValue])
@@ -95,27 +90,6 @@
 }
 
 #pragma mark-http请求
-/**
- *  获取短信验证码
- */
-- (void)getVerCode
-{
-    
-    NSDictionary *requstDict = @{@"mobNo":self.phoneNum,
-                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
-                                 @"type":@"0",
-                                 @"money":@""};
-    
-    [[Transfer sharedTransfer] startTransfer:@"089006"
-                                      fskCmd:nil
-                                    paramDic:requstDict
-                                        mess:@"正在获取验证码"
-                                     success:^(id result) {
-                                         
-                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
-                                     } fail:nil];
-}
-
 
 /**
  *  设置登录密码

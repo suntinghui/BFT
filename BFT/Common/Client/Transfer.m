@@ -227,9 +227,9 @@ static Transfer *instance = nil;
     }
     else if([self.transferCode isEqualToString:@"089024"]) //修改密码
     {
-        return @"set-pay-pwd";
+        return @"modify-pwd";
     }
-    else if([self.transferCode isEqualToString:@"089023"]) //充值支付密码
+    else if([self.transferCode isEqualToString:@"089023"]) //重置支付密码
     {
         return @"reset-pay-pwd";
     }
@@ -244,6 +244,9 @@ static Transfer *instance = nil;
     else if([self.transferCode isEqualToString:@"089032"]) //设置登录密码
     {
         return @"set-login-pwd";
+    }else if([self.transferCode isEqualToString:@"089022"]) //设置支付密码
+    {
+        return @"set-pay-pwd";
     }
     return nil;
 }

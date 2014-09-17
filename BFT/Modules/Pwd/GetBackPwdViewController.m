@@ -84,18 +84,47 @@
                                              SetLoginPasswordViewController *setLoginPswController = [[SetLoginPasswordViewController alloc]init];
                                              setLoginPswController.phoneNum = self.phoneTxtField.text;
                                              [self.navigationController pushViewController:setLoginPswController animated:YES];
+                                             
+                                             
+                                             
+                                             [self getVerCode];
                                          }
                                          else
                                          {
                                              [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
                                              
                                              //TODO
-                                             SetLoginPasswordViewController *setLoginPswController = [[SetLoginPasswordViewController alloc]init];
-                                             setLoginPswController.phoneNum = self.phoneTxtField.text;
-                                             [self.navigationController pushViewController:setLoginPswController animated:YES];
+//                                             SetLoginPasswordViewController *setLoginPswController = [[SetLoginPasswordViewController alloc]init];
+//                                             setLoginPswController.phoneNum = self.phoneTxtField.text;
+//                                             [self.navigationController pushViewController:setLoginPswController animated:YES];
                                          }
                                          
                                      } fail:nil];
 }
+
+
+/**
+ *  获取短信验证码
+ */
+- (void)getVerCode
+{
+    
+    NSDictionary *requstDict = @{@"mobNo":self.phoneTxtField.text,
+                                 @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
+                                 @"type":@"0",
+                                 @"money":@""};
+    
+    [[Transfer sharedTransfer] startTransfer:@"089006"
+                                      fskCmd:nil
+                                    paramDic:requstDict
+                                        mess:@"正在获取验证码"
+                                     success:^(id result) {
+                                         
+                                         [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
+                                     } fail:nil];
+}
+
+
+
 
 @end
