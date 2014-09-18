@@ -248,6 +248,10 @@ static Transfer *instance = nil;
     {
         return @"set-pay-pwd";
     }
+    else if([self.transferCode isEqualToString:@"082001"]) //签退
+    {
+        return @"logout";
+    }
     return nil;
 }
 //
