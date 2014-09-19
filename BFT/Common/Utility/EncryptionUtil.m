@@ -103,13 +103,15 @@
 
 + (NSString *) rsaEncrypt:(NSString *) plainText
 {
+    NSLog(@"plaintext:%@",plainText);
     // 得到mod 和 exp
 //    NSString *mod = [UserDefaults objectForKey:PUBLICKEY_MOD]?[UserDefaults objectForKey:PUBLICKEY_MOD]:INIT_PUBLICKEY_MOD;
 //    NSString *exp = [UserDefaults objectForKey:PUBLICKEY_EXP]?[UserDefaults objectForKey:PUBLICKEY_EXP]:INIT_PUBLICKEY_EXP;
     
-    NSString *mod = INIT_PUBLICKEY_MOD;
+    NSString *mod = INIT_PUBLICKEY_MOD ;
     NSString *exp = INIT_PUBLICKEY_EXP;
-    
+
+
     // 将mod 和 exp 转为BIGNUM
     BIGNUM *mod_BN = BN_new();
     BIGNUM *exp_BN = BN_new();
@@ -128,6 +130,7 @@
 
     // NOTICE: RSA_NO_PADDING -- flen -- 必须是 RSA_size(rsa);
     // NOTICE: RSA_PKCS1_PADDING -- flen -- 可以为 strlen([plainText UTF8String])
+    
     int ret = RSA_public_encrypt(
                        flen,
                        (const unsigned char *)[plainText cStringUsingEncoding:NSUTF8StringEncoding],

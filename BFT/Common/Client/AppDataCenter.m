@@ -113,9 +113,9 @@ static AppDataCenter *instance = nil;
 //    else if([property isEqualToString:@"__ENCTRACKS"]) {
 //        return [AppDataCenter sharedAppDataCenter].__ENCTRACKS;
 //    }
-    else if([property isEqualToString:@"__FIELD35"]) {
-        return [AppDataCenter sharedAppDataCenter].__ENCTRACKS;
-    }
+//    else if([property isEqualToString:@"__FIELD35"]) {
+//        return [AppDataCenter sharedAppDataCenter].__ENCTRACKS;
+//    }
     else if ([property isEqualToString:@"__TERID"]){
         return self.__TERID;
     }

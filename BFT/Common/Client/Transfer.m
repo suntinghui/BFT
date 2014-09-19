@@ -244,6 +244,13 @@ static Transfer *instance = nil;
     else if([self.transferCode isEqualToString:@"089032"]) //设置登录密码
     {
         return @"set-login-pwd";
+    }else if([self.transferCode isEqualToString:@"089022"]) //设置支付密码
+    {
+        return @"set-pay-pwd";
+    }
+    else if([self.transferCode isEqualToString:@"082001"]) //签退
+    {
+        return @"logout";
     }
     else if([self.transferCode isEqualToString:@"089022"]) //设置支付密码
     {
@@ -487,7 +494,6 @@ static Transfer *instance = nil;
     
     }else{
         //8583
-        
         _reqData = [self.action first:self.sendDic withXMLData:[FileOperatorUtil getDataFromXML:@"msg_config.xml"]];
      
         
@@ -588,7 +594,7 @@ static Transfer *instance = nil;
                 
 //                    [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_CheckMac|string:%@,string:%@", bitmapHexStr, [self.receDic objectForKey:@"field64"]] paramDic:nil];
                 
-                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil mess:nil success:self.requestSucBlock fail:self.requestErrBlock];
+                 [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_CheckMac|string:%@,string:%@", bitmapHexStr, [self.receDic objectForKey:@"field64"]] paramDic:nil mess:nil success:self.requestSucBlock fail:self.requestErrBlock];
                 
 //                byte[] tempByte = new byte[respByte.length - 8 - 11];
 //                System.arraycopy(respByte, 11, tempByte, 0, tempByte.length);
@@ -755,6 +761,8 @@ static Transfer *instance = nil;
     
     NSLog(@"EFET收到响应...");
     NSLog(@"RESP:%@", data);
+    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"recevie:%@",str);
     
     NSData *contentData = [data subdataWithRange:NSMakeRange(2, data.length-2)];
     
@@ -776,7 +784,7 @@ static Transfer *instance = nil;
 	// Since we requested HTTP/1.0, we expect the server to close the connection as soon as it has sent the response.
     
     [SVProgressHUD dismiss];
-    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
+//    [SVProgressHUD showErrorWithStatus:[err localizedDescription]];
     
 	NSLog(@"socketDidDisconnect:withError: \"%@\"", err);
 }
@@ -913,4 +921,5 @@ static Transfer *instance = nil;
     }
     return [NSString stringWithFormat:@"%@(%@)", str_error, field39];
 }
+
 @end

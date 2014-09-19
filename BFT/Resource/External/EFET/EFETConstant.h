@@ -9,7 +9,8 @@
 //#define HEADER      @"603110000000"
 #define HEADER      @"603110000000"
 
-#define IP          @"114.80.227.152"
+//#define IP          @"114.80.227.152"
+#define IP          @"www.payfortune.com"
 #define PORT        2003
 
 //#define IP          @"220.194.46.46"

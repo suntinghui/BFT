@@ -100,23 +100,26 @@
             } else
             {
                 
-//                
+                
 //                // 因为在这里有可能交易后验证服务器响应数据时点付宝发生异常，这时应该检查冲正。
 //                if ([[Transfer sharedTransfer] reversalAction]) {
 //                    return ;
 //                }
-//
-//                
-//                    //提示用户刷卡 输入密码 然后跳转到签购单页面
-//                    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-//                    [dic setObject:[StringUtil amount2String:self.moneyStr] forKey:@"field4"];
-//                    [[Transfer sharedTransfer] startTransfer:@"020022" fskCmd:[NSString stringWithFormat:@"Request_GetDes#Request_GetPin|string:%@",[StringUtil amount2String:self.moneyStr]] paramDic:dic];
-//                    //                ConfirmCancelResultViewController *confirmVC = [[ConfirmCancelResultViewController alloc] initWithNibName:nil bundle:nil];
-//                    //                [self.navigationController pushViewController:confirmVC animated:YES];
+
+                
+                //提示用户刷卡 输入密码 然后跳转到签购单页面
+                NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+                [dic setObject:[StringUtil amount2String:self.moneyStr] forKey:@"field4"];
+            
+            [[Transfer sharedTransfer]startTransfer:@"020022" fskCmd:[NSString stringWithFormat:@"Request_GetExtKsn#Request_VT#Request_GetTrackPlaintext#Request_GetPin|string:%@",[StringUtil amount2String:self.moneyStr]] paramDic:dic mess:nil success:^(id result) {
+                
+            } fail:nil];
+         
                 
                 
-                CheckListViewController *CheckListController = [[CheckListViewController alloc]init];
-                [self.navigationController pushViewController:CheckListController animated:YES];
+                
+//                CheckListViewController *CheckListController = [[CheckListViewController alloc]init];
+//                [self.navigationController pushViewController:CheckListController animated:YES];
                 
                 
             }

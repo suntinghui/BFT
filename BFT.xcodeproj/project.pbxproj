@@ -2315,6 +2315,7 @@
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -2341,6 +2342,7 @@
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";

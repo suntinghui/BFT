@@ -244,10 +244,10 @@
             if ([[[AppDataCenter sharedAppDataCenter] reversalDic] objectForKey:self.transferCode]){
                 NSLog(@"MAC 校验失败,发起冲正");
                 
-//                [ApplicationDelegate gotoFailureViewController:@"校验服务器响应数据失败"];
+                [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"校验服务器响应数据失败" clicked:nil];
                 [self reversalAction];
             } else {
-//                [ApplicationDelegate gotoFailureViewController:@"校验服务器响应数据失败，请重新交易"];
+                [StaticTools showMessagePageWithType:kMessageTypeFail mess:@"校验服务器响应数据失败，请重新交易" clicked:nil];
             }
             
         } else {
@@ -345,16 +345,36 @@
 //    }
 }
 
+- (void)onError:(int)errorCode ErrorMessage:(NSString *)errorMessage;
+{
+    if (errorCode == ERROR_FAIL_TO_GET_KSN) {
+        //stateLb.text =  @"取ksn失败";
+        NSLog(@"取ksn失败");
+    }
+    
+    [SVProgressHUD showErrorWithStatus:errorMessage];
+    
+    
+    NSLog(@"onError errorCode:%d , ErrorMessage:%@",errorCode,errorMessage);
+}
+
 #pragma mark -
 - (void) fskActionDone
 {
     if ([self.currentFSKMethod isEqualToString:@"Request_ReNewKey:MacKey:DesKey:"]) {
-        [self updateWorkingKeyDone];
+        
+//        [self updateWorkingKeyDone];
+        self.requestSucBlock(@"");
+        
     } else if ([self.currentFSKMethod isEqualToString:@"Request_GetMac:"]){
+        
+        //TODO
         [self.sendDic setObject:[[AppDataCenter sharedAppDataCenter] getValueWithKey:@"__PSAMMAC"] forKey:@"field64"];
         NSLog(@"sendDic+mac:%@",self.sendDic);
+        
         [self sendPacket];
     } else if ([self.currentFSKMethod isEqualToString:@"Request_CheckMac:macValue:"]){
+        
         // MAC校验成功后检查39域
         [self checkField39];
     }
@@ -443,7 +463,21 @@
                 NSLog(@"磁道密文__FIELD36App Data:%@", [AppDataCenter sharedAppDataCenter].__FIELD36);
 			}
         }
-        
+        // 磁道2明文
+        if (vs->track2Len > 0) {
+            
+            NSString *track = [[self.m_vcom HexValue:vs->Track2 Len:vs->track2Len] uppercaseString];
+            track = [track stringByReplacingOccurrencesOfString:@"F" withString:@""];
+            [AppDataCenter sharedAppDataCenter].__FIELD35 =track;
+            NSLog(@"磁道2:%@", track);
+        }
+        // 磁道3明文
+        if (vs->track3Len > 0) {
+            
+            NSString *track = [[self.m_vcom HexValue:vs->Track3 Len:vs->track3Len] uppercaseString];
+            [AppDataCenter sharedAppDataCenter].__FIELD36 =track;
+            NSLog(@"磁道3:%@", track);
+        }
         // 密码密文
         if (vs->pinEncryptionLen > 0) {
             [AppDataCenter sharedAppDataCenter].__PSAMPIN = [[self.m_vcom HexValue:vs->pinEncryption Len:vs->pinEncryptionLen] uppercaseString];
@@ -674,6 +708,13 @@
     [self.m_vcom Request_GetDes:0 keyIndex:2 random:[StringUtil string2char:@""] randomLen:0 time:60];
 }
 
+
+//获取磁道明文
+- (void)Request_GetTrackPlaintext
+{
+    [self.m_vcom Request_GetTrackPlaintext:60];
+}
+
 // 获取pin密文数据
 -(void) Request_GetPin:(NSString *) cash  
 {
@@ -740,7 +781,7 @@
     char *des = new char[100];
     strcpy(des, destemp);
     
-    [self.m_vcom Request_ReNewKey:0 PinKey:pin PinKeyLen:20 MacKey:mac MacKeyLen:12 DesKey:des DesKeyLen:20];
+    [self.m_vcom Request_ReNewKey:0 PinKey:pin PinKeyLen:20 MacKey:mac MacKeyLen:20 DesKey:des DesKeyLen:20];
 }
 
 // 更新终端号码和商户号
