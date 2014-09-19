@@ -97,9 +97,10 @@
                 
                 UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
                 [rootNav popToRootViewControllerAnimated:YES];
-                if ([result[@""] isEqualToString:@"00"])
+                if ([result[@"rtCd"] isEqualToString:@"00"])
                 {
-                   
+                    [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
+                    
 
                 }
                 else
