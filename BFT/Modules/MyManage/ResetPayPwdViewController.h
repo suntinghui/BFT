@@ -18,6 +18,8 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+
 #import "YLTPasswordTextField.h"
 @interface ResetPayPwdViewController : BaseViewController<UITextFieldDelegate>
 {

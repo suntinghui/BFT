@@ -185,11 +185,14 @@
 - (void)getVerCode
 {
     
+    
     NSDictionary *requstDict = @{@"mobNo":[UserDefaults objectForKey:PHONENUM],
                                  @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
                                  @"type":@"0",
                                  @"money":@""};
     
+    
+   
     [[Transfer sharedTransfer] startTransfer:@"089006"
                                       fskCmd:nil
                                     paramDic:requstDict
@@ -198,6 +201,13 @@
                                          
                                          [SVProgressHUD showSuccessWithStatus:@"短信已发送，请注意查收。"];
                                      } fail:nil];
+    
+    
+    
+    
+
+    
+
 }
 
 /**
@@ -205,22 +215,64 @@
  */
 - (void)changeBankCard
 {
+    //原来的代码
+//    NSDictionary *requstDict = @{@"name":self.nameTxtField.text,
+//                                 @"pldNo":self.idCardTxtField.text,
+//                                 @"oldBkCardNo":self.oldBankCardTxtField.text,
+//                                 @"bkCardNo":self.nowBankCardTxtField.text,
+//                                 @"verifyCode":self.verCodeTxtField.text,
+//                                 @"bankNo":@"111111"}; //银行卡开户卡 随便写的
+    
+    //修改后 
     NSDictionary *requstDict = @{@"name":self.nameTxtField.text,
                                  @"pldNo":self.idCardTxtField.text,
                                  @"oldBkCardNo":self.oldBankCardTxtField.text,
                                  @"bkCardNo":self.nowBankCardTxtField.text,
                                  @"verifyCode":self.verCodeTxtField.text,
-                                 @"bankNo":@"111111"}; //银行卡开户卡 随便写的
+                                 @"bankNo":@"111111",
+                                 @"pIdImg0":@"attach0",
+                                 @"pIdImg1":@"attach1",
+                                 @"bkCardImg":@"attach2"}; //银行卡开户卡 随便写的
+
+    //原来的代码
+//    [[Transfer sharedTransfer] startTransfer:@"089029"
+//                                      fskCmd:@"Request_GetExtKsn"
+//                                    paramDic:requstDict
+//                                        mess:@"正在加载"
+//                                     success:^(id result) {
+//                                         
+//                                         if ([result[@"rtCd"] isEqualToString:@"00"])
+//                                         {
+//                                             [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+//                                             [self.navigationController popViewControllerAnimated:YES];
+//                                         }
+//                                         else
+//                                         {
+//                                             [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+//                                         }
+//                                         
+//                                         
+//                                     } fail:nil];
+    
+    
+    //修改后
+    NSMutableArray *attach = [[NSMutableArray alloc]init];
+    for (int i=100; i<103; i++)
+    {
+        UIButton *button = (UIButton*)[self.view viewWithTag:i];
+        [attach addObject:UIImageJPEGRepresentation([button backgroundImageForState:UIControlStateNormal], 1)];
+    }
     
     [[Transfer sharedTransfer] startTransfer:@"089029"
                                       fskCmd:@"Request_GetExtKsn"
                                     paramDic:requstDict
-                                        mess:@"正在加载"
+                                      attach:attach
+                                        mess:@"正在上传信息"
                                      success:^(id result) {
                                          
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
-                                             [SVProgressHUD showSuccessWithStatus:@"修改成功"];
+                                             [SVProgressHUD showSuccessWithStatus:@"信息已上传，等待后台人员审核。"];
                                              [self.navigationController popViewControllerAnimated:YES];
                                          }
                                          else
@@ -229,7 +281,11 @@
                                          }
                                          
                                          
-                                     } fail:nil];
+                                     } fail:nil];;
+
+
+
+
 }
 
 

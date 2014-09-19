@@ -19,6 +19,7 @@
  ----------------------------------------------------------------*/
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @interface RevokeListViewController : BaseViewController<UITableViewDataSource,
     UITableViewDelegate>
