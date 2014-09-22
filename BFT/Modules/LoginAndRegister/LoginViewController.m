@@ -54,6 +54,23 @@
     
     self.userNameTxtField.text = @"18734825880"; //TODO
     
+    [[Transfer sharedTransfer]startTransfer:@"082001" fskCmd:nil paramDic:nil mess:@"正在退出" success:^(id result) {
+        
+        UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
+        [rootNav popToRootViewControllerAnimated:YES];
+        if ([result[@"rtCd"] isEqualToString:@"00"])
+        {
+            [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
+            
+            
+        }
+        else
+        {
+            
+        }
+        
+    } fail:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning

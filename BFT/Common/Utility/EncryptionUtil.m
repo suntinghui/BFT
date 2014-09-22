@@ -13,6 +13,7 @@
 #import <openssl/pem.h>
 #import <openssl/evp.h>
 #import <openssl/err.h>
+#import "ConvertUtil.h"
 
 
 #define GBKEncoding CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
@@ -103,11 +104,21 @@
 
 + (NSString *) rsaEncrypt:(NSString *) plainText
 {
-    NSLog(@"plaintext:%@",plainText);
-    // 得到mod 和 exp
-//    NSString *mod = [UserDefaults objectForKey:PUBLICKEY_MOD]?[UserDefaults objectForKey:PUBLICKEY_MOD]:INIT_PUBLICKEY_MOD;
-//    NSString *exp = [UserDefaults objectForKey:PUBLICKEY_EXP]?[UserDefaults objectForKey:PUBLICKEY_EXP]:INIT_PUBLICKEY_EXP;
+   
+    //RSA 在不采⽤用 Padding 的模式下,2048 位,每次输⼊入的明⽂文必须是 2048 / 8 = 256 字节。某些框架在⽤用户输⼊入少于 256 字节时,可能采⽤用帮助⽤用户⾃自动补⾜足 256 字节的“⿊黑箱操作”,⽽而使⽤用什么值来补⾜足,由框 架实现,我不知道。但是,openssl 不会这么做,它要求⽤用户必须传⼊入 256 字节的完整数据。另外,.Net 中的 RSA 处于安全考虑屏蔽了 No Padding 模式,从这⾥里也可以看到,具体实现⽅方式依各框架⽽而定。
     
+    NSMutableString *str = [[NSMutableString alloc]init];
+    for (int i=0; i<(128-plainText.length); i++)
+    {
+//        [str appendString:[ConvertUtil hexToBinStr:@"0x00"]];
+        [str appendString:@"0"];
+    }
+    
+    plainText = [NSString stringWithFormat:@"%@%@",str,plainText];
+
+    NSLog(@" plaintext:%@\n",plainText);
+    
+    // 得到mod 和 exp
     NSString *mod = INIT_PUBLICKEY_MOD ;
     NSString *exp = INIT_PUBLICKEY_EXP;
 
@@ -123,10 +134,9 @@
     rsa->e = exp_BN;
     rsa->n = mod_BN;
     
-    int flen = RSA_size(rsa);
+    int flen =  RSA_size(rsa);
     unsigned char *encoded = (unsigned char *)malloc(flen);
-    bzero(encoded, flen); // 置字节字符串s的前n个字节为零且包括‘\0’
-
+    
 
     // NOTICE: RSA_NO_PADDING -- flen -- 必须是 RSA_size(rsa);
     // NOTICE: RSA_PKCS1_PADDING -- flen -- 可以为 strlen([plainText UTF8String])
