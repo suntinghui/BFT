@@ -64,7 +64,9 @@
 //        self.pwdTF.secureTextEntry = YES;
         [self.pwdTF setPlaceholder:prompt];
         [self.pwdTF setFont:[UIFont systemFontOfSize:16]];
-        self.randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
+       // self.randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
+        
+        self.randomKeyBoardView = [[IPhoneCustomKeyboard alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
         self.pwdTF.inputView = self.randomKeyBoardView;
         self.randomKeyBoardView.delegate = self;
         [self addSubview:self.pwdTF];
@@ -166,7 +168,7 @@
 #pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    [self.randomKeyBoardView refresh:nil];
+  //  [self.randomKeyBoardView refresh:nil];
     return YES;
 }
 

@@ -82,6 +82,9 @@
     }
 }
 
+
+
+
 #pragma mark -UITextfieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -92,10 +95,33 @@
     currentTxtField=nil;
 }
 
+//#pragma mark -keyboard
+//- (void)keyBoardShowWithHeight:(float)height
+//{
+//    CGRect rectForRow=currentTxtField.frame;
+//    float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
+//    if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
+//    {
+//        [UIView animateWithDuration:0.3 animations:^{
+//            
+//            self.view.frame = CGRectMake(0, -(rectForRow.origin.y+rectForRow.size.height-touchSetY)+(IOS7_OR_LATER?64:0), self.view.frame.size.width, self.view.frame.size.height);
+//        }];
+//    }
+//}
+
 #pragma mark -keyboard
 - (void)keyBoardShowWithHeight:(float)height
 {
-    CGRect rectForRow=currentTxtField.frame;
+    CGRect rectForRow;
+    if (currentTxtField==self.verCodeTxtField)
+    {
+        rectForRow = currentTxtField.frame;
+    }
+    else
+    {
+        rectForRow = currentTxtField.superview.frame;
+    }
+    
     float touchSetY = [[UIScreen mainScreen] bounds].size.height-height-64;
     if (rectForRow.origin.y+rectForRow.size.height>touchSetY)
     {
@@ -105,6 +131,9 @@
         }];
     }
 }
+
+
+
 - (void)keyBoardHidden
 {
     [UIView animateWithDuration:0.3 animations:^{

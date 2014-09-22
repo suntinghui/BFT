@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RandomKeyBoardView.h"
+//#import "RandomKeyBoardView.h"
+#import "IPhoneCustomKeyboard.h"
 
-@interface PwdLeftTextField : UIView<UITextFieldDelegate, RandomKeyBoardDelegate>
+
+//@interface PwdLeftTextField : UIView<UITextFieldDelegate, RandomKeyBoardDelegate>
+
+@interface PwdLeftTextField : UIView<UITextFieldDelegate>
+
 
 @property(nonatomic, strong) UITextField                *pwdTF;
-@property(nonatomic, strong) RandomKeyBoardView         *randomKeyBoardView;
+//@property(nonatomic, strong) RandomKeyBoardView         *randomKeyBoardView;
+
+@property(nonatomic, strong) IPhoneCustomKeyboard *randomKeyBoardView;
+
 @property(nonatomic, strong, readonly)NSString          *rsaValue;
 @property(nonatomic, strong) NSString                   *md5Value;
 @property(nonatomic, strong) NSString                   *inputStr;

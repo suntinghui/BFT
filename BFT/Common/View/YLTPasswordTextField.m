@@ -48,11 +48,22 @@
         self.backgroundColor = [UIColor clearColor];
         pwdTF.delegate = self;
         [pwdTF setPlaceholder:@"请输入密码"];
+        pwdTF.secureTextEntry = YES;
+
         [pwdTF setFont:[UIFont systemFontOfSize:15]];
         
-        randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
-        pwdTF.inputView = randomKeyBoardView;
+       // randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
+        
+        randomKeyBoardView = [[IPhoneCustomKeyboard alloc] init];
+        
+      //  pwdTF.inputView = randomKeyBoardView;
+        [randomKeyBoardView setTextView:pwdTF];
+        
         randomKeyBoardView.delegate = self;
+        
+        //自己+
+      //  [randomKeyBoardView setTextView:(UITextView *)pwdTF.inputView];
+        
         [self addSubview:pwdTF];
     }
     return self;
@@ -80,10 +91,18 @@
     self.backgroundColor = [UIColor clearColor];
     pwdTF.delegate = self;
     [pwdTF setPlaceholder:@"请输入密码"];
+    pwdTF.secureTextEntry = YES;
     [pwdTF setFont:[UIFont systemFontOfSize:15]];
     
-    randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
-    pwdTF.inputView = randomKeyBoardView;
+  //  randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
+    
+    randomKeyBoardView = [[IPhoneCustomKeyboard alloc]init];
+    
+ //   pwdTF.inputView = randomKeyBoardView;
+ 
+    //自己+
+    [randomKeyBoardView setTextView:pwdTF];
+    
     randomKeyBoardView.delegate = self;
     [self addSubview:pwdTF];
 }
@@ -192,7 +211,7 @@
 #pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    [self.randomKeyBoardView refresh:nil];
+   // [self.randomKeyBoardView refresh:nil];
     return YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
