@@ -284,6 +284,35 @@
 		D55D8C4E19C80A550075353E /* SetPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55D8C4C19C80A550075353E /* SetPayPwdViewController.xib */; };
 		D564502419A33FAE00F5902F /* PaintMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D564502319A33FAE00F5902F /* PaintMaskView.m */; };
 		D564502719A3535100F5902F /* tradeSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564502619A3535100F5902F /* tradeSucViewController.m */; };
+		D576C0B119CFB5C600EAC727 /* IPhoneCustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D576C0AF19CFB5C600EAC727 /* IPhoneCustomKeyboard.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D576C0B219CFB5C600EAC727 /* IPhoneCustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B019CFB5C600EAC727 /* IPhoneCustomKeyboard.xib */; };
+		D576C0CF19CFBD7900EAC727 /* bg_letter.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B419CFBD7900EAC727 /* bg_letter.png */; };
+		D576C0D019CFBD7900EAC727 /* bg_letter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B519CFBD7900EAC727 /* bg_letter@2x.png */; };
+		D576C0D119CFBD7900EAC727 /* bg_punctuation.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B619CFBD7900EAC727 /* bg_punctuation.png */; };
+		D576C0D219CFBD7900EAC727 /* bg_punctuation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B719CFBD7900EAC727 /* bg_punctuation@2x.png */; };
+		D576C0D319CFBD7900EAC727 /* 切换.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B819CFBD7900EAC727 /* 切换.png */; };
+		D576C0D419CFBD7900EAC727 /* 切换1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0B919CFBD7900EAC727 /* 切换1.png */; };
+		D576C0D519CFBD7900EAC727 /* 删除按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BA19CFBD7900EAC727 /* 删除按钮.png */; };
+		D576C0D619CFBD7900EAC727 /* 删除按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BB19CFBD7900EAC727 /* 删除按钮1.png */; };
+		D576C0D719CFBD7900EAC727 /* 取消.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BC19CFBD7900EAC727 /* 取消.png */; };
+		D576C0D819CFBD7900EAC727 /* 取消1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BD19CFBD7900EAC727 /* 取消1.png */; };
+		D576C0D919CFBD7900EAC727 /* 大写按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BE19CFBD7900EAC727 /* 大写按钮.png */; };
+		D576C0DA19CFBD7900EAC727 /* 大写按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0BF19CFBD7900EAC727 /* 大写按钮1.png */; };
+		D576C0DB19CFBD7900EAC727 /* 字母按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C019CFBD7900EAC727 /* 字母按钮.png */; };
+		D576C0DC19CFBD7900EAC727 /* 字母按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C119CFBD7900EAC727 /* 字母按钮1.png */; };
+		D576C0DD19CFBD7900EAC727 /* 完成.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C219CFBD7900EAC727 /* 完成.png */; };
+		D576C0DE19CFBD7900EAC727 /* 完成1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C319CFBD7900EAC727 /* 完成1.png */; };
+		D576C0DF19CFBD7900EAC727 /* 数字按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C419CFBD7900EAC727 /* 数字按钮.png */; };
+		D576C0E019CFBD7900EAC727 /* 数字按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C519CFBD7900EAC727 /* 数字按钮1.png */; };
+		D576C0E119CFBD7900EAC727 /* 数字空格.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C619CFBD7900EAC727 /* 数字空格.png */; };
+		D576C0E219CFBD7900EAC727 /* 数字空格1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C719CFBD7900EAC727 /* 数字空格1.png */; };
+		D576C0E319CFBD7900EAC727 /* 数字选中.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C819CFBD7900EAC727 /* 数字选中.png */; };
+		D576C0E419CFBD7900EAC727 /* 确定按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0C919CFBD7900EAC727 /* 确定按钮.png */; };
+		D576C0E519CFBD7900EAC727 /* 确定按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0CA19CFBD7900EAC727 /* 确定按钮1.png */; };
+		D576C0E619CFBD7900EAC727 /* 空格.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0CB19CFBD7900EAC727 /* 空格.png */; };
+		D576C0E719CFBD7900EAC727 /* 空格1.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0CC19CFBD7900EAC727 /* 空格1.png */; };
+		D576C0E819CFBD7900EAC727 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0CD19CFBD7900EAC727 /* 背景.png */; };
+		D576C0E919CFBD7900EAC727 /* 背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D576C0CE19CFBD7900EAC727 /* 背景@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -818,6 +847,36 @@
 		D564502319A33FAE00F5902F /* PaintMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintMaskView.m; sourceTree = "<group>"; };
 		D564502519A3535100F5902F /* tradeSucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tradeSucViewController.h; sourceTree = "<group>"; };
 		D564502619A3535100F5902F /* tradeSucViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tradeSucViewController.m; sourceTree = "<group>"; };
+		D576C0AE19CFB5C600EAC727 /* IPhoneCustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPhoneCustomKeyboard.h; sourceTree = "<group>"; };
+		D576C0AF19CFB5C600EAC727 /* IPhoneCustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPhoneCustomKeyboard.m; sourceTree = "<group>"; };
+		D576C0B019CFB5C600EAC727 /* IPhoneCustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPhoneCustomKeyboard.xib; sourceTree = "<group>"; };
+		D576C0B419CFBD7900EAC727 /* bg_letter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_letter.png; sourceTree = "<group>"; };
+		D576C0B519CFBD7900EAC727 /* bg_letter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_letter@2x.png"; sourceTree = "<group>"; };
+		D576C0B619CFBD7900EAC727 /* bg_punctuation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_punctuation.png; sourceTree = "<group>"; };
+		D576C0B719CFBD7900EAC727 /* bg_punctuation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_punctuation@2x.png"; sourceTree = "<group>"; };
+		D576C0B819CFBD7900EAC727 /* 切换.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换.png"; sourceTree = "<group>"; };
+		D576C0B919CFBD7900EAC727 /* 切换1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换1.png"; sourceTree = "<group>"; };
+		D576C0BA19CFBD7900EAC727 /* 删除按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除按钮.png"; sourceTree = "<group>"; };
+		D576C0BB19CFBD7900EAC727 /* 删除按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除按钮1.png"; sourceTree = "<group>"; };
+		D576C0BC19CFBD7900EAC727 /* 取消.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "取消.png"; sourceTree = "<group>"; };
+		D576C0BD19CFBD7900EAC727 /* 取消1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "取消1.png"; sourceTree = "<group>"; };
+		D576C0BE19CFBD7900EAC727 /* 大写按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大写按钮.png"; sourceTree = "<group>"; };
+		D576C0BF19CFBD7900EAC727 /* 大写按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大写按钮1.png"; sourceTree = "<group>"; };
+		D576C0C019CFBD7900EAC727 /* 字母按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "字母按钮.png"; sourceTree = "<group>"; };
+		D576C0C119CFBD7900EAC727 /* 字母按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "字母按钮1.png"; sourceTree = "<group>"; };
+		D576C0C219CFBD7900EAC727 /* 完成.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成.png"; sourceTree = "<group>"; };
+		D576C0C319CFBD7900EAC727 /* 完成1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成1.png"; sourceTree = "<group>"; };
+		D576C0C419CFBD7900EAC727 /* 数字按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数字按钮.png"; sourceTree = "<group>"; };
+		D576C0C519CFBD7900EAC727 /* 数字按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数字按钮1.png"; sourceTree = "<group>"; };
+		D576C0C619CFBD7900EAC727 /* 数字空格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数字空格.png"; sourceTree = "<group>"; };
+		D576C0C719CFBD7900EAC727 /* 数字空格1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数字空格1.png"; sourceTree = "<group>"; };
+		D576C0C819CFBD7900EAC727 /* 数字选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "数字选中.png"; sourceTree = "<group>"; };
+		D576C0C919CFBD7900EAC727 /* 确定按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "确定按钮.png"; sourceTree = "<group>"; };
+		D576C0CA19CFBD7900EAC727 /* 确定按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "确定按钮1.png"; sourceTree = "<group>"; };
+		D576C0CB19CFBD7900EAC727 /* 空格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空格.png"; sourceTree = "<group>"; };
+		D576C0CC19CFBD7900EAC727 /* 空格1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "空格1.png"; sourceTree = "<group>"; };
+		D576C0CD19CFBD7900EAC727 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		D576C0CE19CFBD7900EAC727 /* 背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1180,6 +1239,10 @@
 		B83A6FD3196BE04C0080D593 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D576C0B319CFBD7900EAC727 /* Images */,
+				D576C0AE19CFB5C600EAC727 /* IPhoneCustomKeyboard.h */,
+				D576C0AF19CFB5C600EAC727 /* IPhoneCustomKeyboard.m */,
+				D576C0B019CFB5C600EAC727 /* IPhoneCustomKeyboard.xib */,
 				B8E0EFC6196D8E6300946DF2 /* PooCodeView.h */,
 				B8E0EFC7196D8E6300946DF2 /* PooCodeView.m */,
 				B83A6FD4196BE04C0080D593 /* AFPickerView.h */,
@@ -1846,6 +1909,40 @@
 			path = Revoke;
 			sourceTree = "<group>";
 		};
+		D576C0B319CFBD7900EAC727 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D576C0B419CFBD7900EAC727 /* bg_letter.png */,
+				D576C0B519CFBD7900EAC727 /* bg_letter@2x.png */,
+				D576C0B619CFBD7900EAC727 /* bg_punctuation.png */,
+				D576C0B719CFBD7900EAC727 /* bg_punctuation@2x.png */,
+				D576C0B819CFBD7900EAC727 /* 切换.png */,
+				D576C0B919CFBD7900EAC727 /* 切换1.png */,
+				D576C0BA19CFBD7900EAC727 /* 删除按钮.png */,
+				D576C0BB19CFBD7900EAC727 /* 删除按钮1.png */,
+				D576C0BC19CFBD7900EAC727 /* 取消.png */,
+				D576C0BD19CFBD7900EAC727 /* 取消1.png */,
+				D576C0BE19CFBD7900EAC727 /* 大写按钮.png */,
+				D576C0BF19CFBD7900EAC727 /* 大写按钮1.png */,
+				D576C0C019CFBD7900EAC727 /* 字母按钮.png */,
+				D576C0C119CFBD7900EAC727 /* 字母按钮1.png */,
+				D576C0C219CFBD7900EAC727 /* 完成.png */,
+				D576C0C319CFBD7900EAC727 /* 完成1.png */,
+				D576C0C419CFBD7900EAC727 /* 数字按钮.png */,
+				D576C0C519CFBD7900EAC727 /* 数字按钮1.png */,
+				D576C0C619CFBD7900EAC727 /* 数字空格.png */,
+				D576C0C719CFBD7900EAC727 /* 数字空格1.png */,
+				D576C0C819CFBD7900EAC727 /* 数字选中.png */,
+				D576C0C919CFBD7900EAC727 /* 确定按钮.png */,
+				D576C0CA19CFBD7900EAC727 /* 确定按钮1.png */,
+				D576C0CB19CFBD7900EAC727 /* 空格.png */,
+				D576C0CC19CFBD7900EAC727 /* 空格1.png */,
+				D576C0CD19CFBD7900EAC727 /* 背景.png */,
+				D576C0CE19CFBD7900EAC727 /* 背景@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1923,31 +2020,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D137AA91973CB5E00D631BE /* ModifyPayPwdViewController.xib in Resources */,
+				D576C0CF19CFBD7900EAC727 /* bg_letter.png in Resources */,
 				B826CE2E19937EED000CD368 /* con_req_999000003.xml in Resources */,
 				8D0CD2C0196FB95F00580084 /* GetBackPwdViewController.xib in Resources */,
 				B826CDFF19937EED000CD368 /* con_req_082001.xml in Resources */,
 				8D137AAE1973D0A100D631BE /* ResetPayPwdViewController.xib in Resources */,
 				B826CE1B19937EED000CD368 /* con_req_089031.xml in Resources */,
 				B826CE1419937EED000CD368 /* con_req_089023.xml in Resources */,
+				D576C0D619CFBD7900EAC727 /* 删除按钮1.png in Resources */,
+				D576C0E619CFBD7900EAC727 /* 空格.png in Resources */,
 				B8DE454019A339D9000DAC2D /* SignViewController.xib in Resources */,
 				B826CE2119937EED000CD368 /* con_req_100004.xml in Resources */,
 				B83A6F63196BDCF70080D593 /* Images.xcassets in Resources */,
 				B826CE2A19937EED000CD368 /* con_req_700000001.xml in Resources */,
+				D576C0D419CFBD7900EAC727 /* 切换1.png in Resources */,
+				D576C0E119CFBD7900EAC727 /* 数字空格.png in Resources */,
 				B826CE2519937EED000CD368 /* con_req_400000022.xml in Resources */,
 				8D137A9C1973C23000D631BE /* ModifyBankCardViewController.xib in Resources */,
 				B83A712D196BEA900080D593 /* SVProgressHUD.bundle in Resources */,
 				B826CE0A19937EED000CD368 /* con_req_089011.xml in Resources */,
 				B89EB87C1999BE6100BFD79E /* SetLoginPasswordViewController.xib in Resources */,
 				B83A6F52196BDCF70080D593 /* InfoPlist.strings in Resources */,
+				D576C0DA19CFBD7900EAC727 /* 大写按钮1.png in Resources */,
 				B826CE2319937EED000CD368 /* con_req_200001111.xml in Resources */,
 				B826CE0419937EED000CD368 /* con_req_089005.xml in Resources */,
 				B826CDFB19937EED000CD368 /* con_req_080000.xml in Resources */,
 				B826CE0219937EED000CD368 /* con_req_089002.xml in Resources */,
 				B83A70D2196BE1750080D593 /* MBProgressHUD.bundle in Resources */,
+				D576C0E919CFBD7900EAC727 /* 背景@2x.png in Resources */,
+				D576C0E519CFBD7900EAC727 /* 确定按钮1.png in Resources */,
+				D576C0D819CFBD7900EAC727 /* 取消1.png in Resources */,
 				B826CE3319937EED000CD368 /* publicKey.xml in Resources */,
 				B826CE2F19937EED000CD368 /* con_req_readme.txt in Resources */,
 				B8DE453C19A339D9000DAC2D /* CheckListViewController.xib in Resources */,
 				B826CE0D19937EED000CD368 /* con_req_089014.xml in Resources */,
+				D576C0D919CFBD7900EAC727 /* 大写按钮.png in Resources */,
 				B828CD011973778E005760F3 /* LevelOneMenuViewController.xib in Resources */,
 				B826CE1719937EED000CD368 /* con_req_089026.xml in Resources */,
 				8D137A8D1973781400D631BE /* SignInViewController.xib in Resources */,
@@ -1955,13 +2062,17 @@
 				B826CE2619937EED000CD368 /* con_req_400200023.xml in Resources */,
 				B8732F70196E7F3000095BDD /* LeftMenuViewController.xib in Resources */,
 				B826CE2419937EED000CD368 /* con_req_200001112.xml in Resources */,
+				D576C0DD19CFBD7900EAC727 /* 完成.png in Resources */,
 				B826CDF619937EED000CD368 /* con_req_020001.xml in Resources */,
 				B83A70C0196BE1750080D593 /* README.txt in Resources */,
+				D576C0DF19CFBD7900EAC727 /* 数字按钮.png in Resources */,
 				B826CE1919937EED000CD368 /* con_req_089028.xml in Resources */,
 				B826CE3019937EED000CD368 /* Copy (2) of con_req_020022.xml in Resources */,
 				B826CE0519937EED000CD368 /* con_req_089006.xml in Resources */,
+				D576C0D319CFBD7900EAC727 /* 切换.png in Resources */,
 				B826CE1E19937EED000CD368 /* con_req_100001.xml in Resources */,
 				B826CE1819937EED000CD368 /* con_req_089027.xml in Resources */,
+				D576C0E819CFBD7900EAC727 /* 背景.png in Resources */,
 				B826CDFD19937EED000CD368 /* con_req_080002.xml in Resources */,
 				B826CDF919937EED000CD368 /* con_req_032000.xml in Resources */,
 				B826CE2919937EED000CD368 /* con_req_600000002.xml in Resources */,
@@ -1969,7 +2080,9 @@
 				B826CE1119937EED000CD368 /* con_req_089020.xml in Resources */,
 				B826CE3119937EED000CD368 /* Copy of con_req_020022.xml in Resources */,
 				B826CE1219937EED000CD368 /* con_req_089021.xml in Resources */,
+				D576C0DE19CFBD7900EAC727 /* 完成1.png in Resources */,
 				B826CE0B19937EED000CD368 /* con_req_089012.xml in Resources */,
+				D576C0DB19CFBD7900EAC727 /* 字母按钮.png in Resources */,
 				B826CE1C19937EED000CD368 /* con_req_089032.xml in Resources */,
 				B8CF711E196EDDEE00C7B09E /* FeedBackViewController.xib in Resources */,
 				B826CE2C19937EED000CD368 /* con_req_999000001.xml in Resources */,
@@ -1977,6 +2090,8 @@
 				B840F18D196F7FE1007CA174 /* RegisterViewController.xib in Resources */,
 				B826CDF819937EED000CD368 /* con_req_020023.xml in Resources */,
 				B8A588F2197670F90057AABD /* InputPswViewController.xib in Resources */,
+				D576C0D219CFBD7900EAC727 /* bg_punctuation@2x.png in Resources */,
+				D576C0DC19CFBD7900EAC727 /* 字母按钮1.png in Resources */,
 				B826CDFE19937EED000CD368 /* con_req_080003.xml in Resources */,
 				B826CE2019937EED000CD368 /* con_req_100003.xml in Resources */,
 				B826CE1619937EED000CD368 /* con_req_089025.xml in Resources */,
@@ -1987,6 +2102,7 @@
 				B826CE1D19937EED000CD368 /* con_req_089034.xml in Resources */,
 				B826CE3219937EED000CD368 /* msg_config.xml in Resources */,
 				B826CE0F19937EED000CD368 /* con_req_089018.xml in Resources */,
+				D576C0D519CFBD7900EAC727 /* 删除按钮.png in Resources */,
 				B826CE0119937EED000CD368 /* con_req_089001.xml in Resources */,
 				B8A58903197676DA0057AABD /* BankCardTradeQueryViewController.xib in Resources */,
 				B826CE1519937EED000CD368 /* con_req_089024.xml in Resources */,
@@ -1995,19 +2111,26 @@
 				B826CE1019937EED000CD368 /* con_req_089019.xml in Resources */,
 				B826CDFA19937EED000CD368 /* con_req_050000.xml in Resources */,
 				B826CE0E19937EED000CD368 /* con_req_089016.xml in Resources */,
+				D576C0D119CFBD7900EAC727 /* bg_punctuation.png in Resources */,
 				B803066619740C8E00C2FB98 /* GetMoneyStepOneViewController.xib in Resources */,
 				B8E342B519A4396500B749E3 /* AboutViewController.xib in Resources */,
 				B826CE0619937EED000CD368 /* con_req_089007.xml in Resources */,
+				D576C0E019CFBD7900EAC727 /* 数字按钮1.png in Resources */,
+				D576C0D019CFBD7900EAC727 /* bg_letter@2x.png in Resources */,
 				B826CE0319937EED000CD368 /* con_req_089004.xml in Resources */,
 				D55D8C4E19C80A550075353E /* SetPayPwdViewController.xib in Resources */,
+				D576C0E319CFBD7900EAC727 /* 数字选中.png in Resources */,
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B826CE1F19937EED000CD368 /* con_req_100002.xml in Resources */,
 				B826CE2219937EED000CD368 /* con_req_100005.xml in Resources */,
+				D576C0E719CFBD7900EAC727 /* 空格1.png in Resources */,
 				B826CE2819937EED000CD368 /* con_req_600000001.xml in Resources */,
 				B826CE0819937EED000CD368 /* con_req_089009.xml in Resources */,
 				B83A6F8F196BDFAF0080D593 /* LoginViewController.xib in Resources */,
+				D576C0D719CFBD7900EAC727 /* 取消.png in Resources */,
 				B826CE0C19937EED000CD368 /* con_req_089013.xml in Resources */,
 				B8DE453E19A339D9000DAC2D /* InputMoneyViewController.xib in Resources */,
+				D576C0E419CFBD7900EAC727 /* 确定按钮.png in Resources */,
 				B853B2841979039A00E37812 /* AccountTradeViewController.xib in Resources */,
 				B8A588FD197676890057AABD /* SwipeCardMessViewController.xib in Resources */,
 				B826CE2B19937EED000CD368 /* con_req_700000002.xml in Resources */,
@@ -2015,9 +2138,11 @@
 				B826CE2D19937EED000CD368 /* con_req_999000002.xml in Resources */,
 				B8EBF55419A337CE005F8F99 /* RevokeListTableViewCell.xib in Resources */,
 				B826CE0019937EED000CD368 /* con_req_089000.xml in Resources */,
+				D576C0E219CFBD7900EAC727 /* 数字空格1.png in Resources */,
 				B826CDFC19937EED000CD368 /* con_req_080001.xml in Resources */,
 				B826CDF719937EED000CD368 /* con_req_020022.xml in Resources */,
 				B826CE1A19937EED000CD368 /* con_req_089029.xml in Resources */,
+				D576C0B219CFB5C600EAC727 /* IPhoneCustomKeyboard.xib in Resources */,
 				B8B235271977B86F00518EA8 /* CardTradeListViewController.xib in Resources */,
 				B8EBF55219A337CE005F8F99 /* RevokeConfirmViewController.xib in Resources */,
 				B826CE3519937F02000CD368 /* reversalmap.xml in Resources */,
@@ -2164,6 +2289,7 @@
 				B83A7104196BE2600080D593 /* AnnouncementModel.m in Sources */,
 				B8DE453D19A339D9000DAC2D /* InputMoneyViewController.m in Sources */,
 				B8BD256B196CE6B70092F2C5 /* BaseViewController.m in Sources */,
+				D576C0B119CFB5C600EAC727 /* IPhoneCustomKeyboard.m in Sources */,
 				B828CD001973778E005760F3 /* LevelOneMenuViewController.m in Sources */,
 				B8E0EFC8196D8E6300946DF2 /* PooCodeView.m in Sources */,
 				B83A70D9196BE1750080D593 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
@@ -2315,7 +2441,6 @@
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -2342,7 +2467,6 @@
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";
