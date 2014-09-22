@@ -280,6 +280,8 @@
 		B8EBF55419A337CE005F8F99 /* RevokeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EBF54D19A337CE005F8F99 /* RevokeListTableViewCell.xib */; };
 		B8EBF55519A337CE005F8F99 /* RevokeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EBF54F19A337CE005F8F99 /* RevokeListViewController.m */; };
 		B8EBF55619A337CE005F8F99 /* RevokeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EBF55019A337CE005F8F99 /* RevokeListViewController.xib */; };
+		D55D8C4D19C80A550075353E /* SetPayPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55D8C4B19C80A550075353E /* SetPayPwdViewController.m */; };
+		D55D8C4E19C80A550075353E /* SetPayPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55D8C4C19C80A550075353E /* SetPayPwdViewController.xib */; };
 		D564502419A33FAE00F5902F /* PaintMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D564502319A33FAE00F5902F /* PaintMaskView.m */; };
 		D564502719A3535100F5902F /* tradeSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564502619A3535100F5902F /* tradeSucViewController.m */; };
 /* End PBXBuildFile section */
@@ -809,6 +811,9 @@
 		B8EBF54E19A337CE005F8F99 /* RevokeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevokeListViewController.h; sourceTree = "<group>"; };
 		B8EBF54F19A337CE005F8F99 /* RevokeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevokeListViewController.m; sourceTree = "<group>"; };
 		B8EBF55019A337CE005F8F99 /* RevokeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RevokeListViewController.xib; sourceTree = "<group>"; };
+		D55D8C4A19C80A550075353E /* SetPayPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPayPwdViewController.h; sourceTree = "<group>"; };
+		D55D8C4B19C80A550075353E /* SetPayPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPayPwdViewController.m; sourceTree = "<group>"; };
+		D55D8C4C19C80A550075353E /* SetPayPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPayPwdViewController.xib; sourceTree = "<group>"; };
 		D564502219A33FAE00F5902F /* PaintMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintMaskView.h; sourceTree = "<group>"; };
 		D564502319A33FAE00F5902F /* PaintMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintMaskView.m; sourceTree = "<group>"; };
 		D564502519A3535100F5902F /* tradeSucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tradeSucViewController.h; sourceTree = "<group>"; };
@@ -1774,6 +1779,9 @@
 				8D137AAA1973D0A100D631BE /* ResetPayPwdViewController.h */,
 				8D137AAB1973D0A100D631BE /* ResetPayPwdViewController.m */,
 				8D137AAC1973D0A100D631BE /* ResetPayPwdViewController.xib */,
+				D55D8C4A19C80A550075353E /* SetPayPwdViewController.h */,
+				D55D8C4B19C80A550075353E /* SetPayPwdViewController.m */,
+				D55D8C4C19C80A550075353E /* SetPayPwdViewController.xib */,
 			);
 			path = MyManage;
 			sourceTree = "<group>";
@@ -1991,6 +1999,7 @@
 				B8E342B519A4396500B749E3 /* AboutViewController.xib in Resources */,
 				B826CE0619937EED000CD368 /* con_req_089007.xml in Resources */,
 				B826CE0319937EED000CD368 /* con_req_089004.xml in Resources */,
+				D55D8C4E19C80A550075353E /* SetPayPwdViewController.xib in Resources */,
 				B8E1BA46196E347900AE41A2 /* DateSelectViewController.xib in Resources */,
 				B826CE1F19937EED000CD368 /* con_req_100002.xml in Resources */,
 				B826CE2219937EED000CD368 /* con_req_100005.xml in Resources */,
@@ -2163,6 +2172,7 @@
 				B83A700A196BE04C0080D593 /* NSString+TKUtilities.m in Sources */,
 				B83A6F89196BDF770080D593 /* AppDelegate.m in Sources */,
 				B83A7019196BE04C0080D593 /* PageView.m in Sources */,
+				D55D8C4D19C80A550075353E /* SetPayPwdViewController.m in Sources */,
 				B83A70DD196BE1750080D593 /* Reachability.m in Sources */,
 				B83A7013196BE04C0080D593 /* AFPickerView.m in Sources */,
 				B83A701F196BE04C0080D593 /* TKAddressBook.m in Sources */,
@@ -2304,7 +2314,8 @@
 					"$(PROJECT_DIR)/BFT/lib",
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -2330,7 +2341,8 @@
 					"$(PROJECT_DIR)/BFT/lib",
 					"$(PROJECT_DIR)/BFT/Resource/External/PKRevealController",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "../lib $(BUILT_PRODUCTS_DIR)";
 				VALID_ARCHS = "armv7 armv7s";

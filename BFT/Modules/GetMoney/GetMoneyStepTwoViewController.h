@@ -19,7 +19,7 @@
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
 #import "YLTPasswordTextField.h"
-
+#import "BaseViewController.h"
 @interface GetMoneyStepTwoViewController : BaseViewController<UITextFieldDelegate>
 {
     UITextField *currentTxtField;

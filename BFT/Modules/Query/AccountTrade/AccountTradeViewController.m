@@ -85,8 +85,8 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    //    NSDictionary *dict =trades[indexPath.section];
-    //    [cell setCellDataWithDictonary:dict];
+     //   NSDictionary *dict =trades[indexPath.section];
+     //   [cell setCellDataWithDictonary:dict];
     
     return cell;
 }

@@ -8,6 +8,7 @@
 
 #import "AuthenticationUpImageViewController.h"
 #import "Base64.h"
+#import "SetPayPwdViewController.h"
 
 #define Button_Tag_ImageOne    100        //正面照图片按钮
 #define Button_Tag_ImageTwo    101        //反面照图片按钮
@@ -194,11 +195,17 @@
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
                                              [SVProgressHUD showSuccessWithStatus:@"信息已上传，等待后台人员审核。"];
-                                             [self.navigationController popViewControllerAnimated:YES];
+                                             //[self.navigationController popViewControllerAnimated:YES];
+                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
+                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES];
+                                             
                                          }
                                          else
                                          {
                                              [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
+                                             
+//                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
+//                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES]; TODO
                                          }
                                          
                                           

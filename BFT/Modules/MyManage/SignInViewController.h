@@ -18,6 +18,7 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @interface SignInViewController : BaseViewController
 

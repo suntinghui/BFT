@@ -252,6 +252,11 @@ static Transfer *instance = nil;
     {
         return @"logout";
     }
+    else if([self.transferCode isEqualToString:@"089022"]) //设置支付密码
+    {
+    
+        return @"set-pay-pwd";
+    }
     return nil;
 }
 //

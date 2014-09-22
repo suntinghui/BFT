@@ -18,7 +18,7 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
-
+#import "BaseViewController.h"
 @interface ModifyBankCardViewController : BaseViewController<UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     int operateType;

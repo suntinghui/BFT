@@ -18,6 +18,8 @@
  //
  ----------------------------------------------------------------*/
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+
 @class SuccessTransferModel;
 
 @interface RevokeConfirmViewController : BaseViewController
