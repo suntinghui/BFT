@@ -270,13 +270,27 @@
     [[Transfer sharedTransfer] startTransfer:@"089001"
                                       fskCmd:@"Request_GetExtKsn"
                                     paramDic:requstDict
-                                        mess:@"正在获取验证码"
+                                        mess:@"正在加载"
                                      success:^(id result) {
                                          
                                          if ([result[@"rtCd"] isEqualToString:@"00"])
                                          {
+                                             
                                              [SVProgressHUD showSuccessWithStatus:@"注册成功，您可使用此账号登录"];
                                              [self.navigationController popViewControllerAnimated:YES];
+                                             
+//                                             [AppDataCenter sharedAppDataCenter].__VENDOR = result[@"merchantNo"];
+//                                             [AppDataCenter sharedAppDataCenter].__TERID = result[@"terminalNo"];
+                                             
+                                             if ([StaticTools isEmptyString:result[@"merchantNo"]]|| [StaticTools isEmptyString:result[@"terminalNo"]])
+                                             {
+                                                 NSLog(@"返回商户号和终端号错误 无法更新商户号");
+                                                 return ;
+                                             }
+                                             //更新商户号和终端号
+                                             [[Transfer sharedTransfer] startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_ReNewVT|string:%@,string:%@",result[@"merchantNo"],result[@"terminalNo"]] paramDic:nil mess:nil success:^(id result) {
+                                                 
+                                             } fail:nil];
                                          }
                                          else
                                          {

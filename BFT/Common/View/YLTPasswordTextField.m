@@ -11,7 +11,7 @@
 
 @interface YLTPasswordTextField ()
 {
-    __strong NSMutableString        *value;
+    
 }
 
 @end
@@ -27,7 +27,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        value = [[NSMutableString alloc] init];
         
         
         // Initialization code
@@ -70,7 +69,6 @@
 }
 
 -(void) awakeFromNib{
-    value = [[NSMutableString alloc] init];
     
     
     // Initialization code
@@ -106,65 +104,7 @@
     randomKeyBoardView.delegate = self;
     [self addSubview:pwdTF];
 }
-- (void) numberKeyBoardInput:(NSInteger) number
-{
-#ifndef DEMO
-    if (self.rsaValue) {
-        return;
-    }
-#endif
-    
-    if (value.length < 6) {
-        [value appendFormat:@"%d", number];
-    }
-    
-    if(value.length == 6){
-        self.md5Value = [EncryptionUtil MD5Encrypt:[NSString stringWithFormat:@"%@%@",value,INIT_PUBLICKEY_MOD]];
-        
-    }
-    NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:6];
-    for (int i=0; i<value.length; i++) {
-        [tmpStr appendString:@"*"];
-    }
-    [self.pwdTF setText:tmpStr];
-    [self setRsa];
-}
 
-- (void) numberKeyBoardDelete
-{
-    if(value.length>0){
-        [value deleteCharactersInRange:NSMakeRange(value.length-1, 1)];
-        NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:6];
-        for (int i=0; i<value.length; i++) {
-            [tmpStr appendString:@"*"];
-        }
-        [self.pwdTF setText:tmpStr];
-    }
-    
-    rsaValue = nil;
-}
-
-- (void) numberKeyBoardConfim
-{
-    [self.pwdTF resignFirstResponder];
-    
-//    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
-//    NSTimeInterval animationDuration = 0.30f;
-//    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
-//    [UIView setAnimationDuration:animationDuration];
-//    //    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
-//    CGRect rect = CGRectMake(0.0f, 0.0f,320,[UIScreen mainScreen].bounds.size.height);
-//    self.superview.frame = rect;
-//    [UIView commitAnimations];
-}
-
-- (void) numberKeyBoardClear
-{
-    [value deleteCharactersInRange:NSMakeRange(0, value.length)];
-    [self.pwdTF setText:@""];
-    
-    rsaValue = nil;
-}
 
 - (void) numberKeyBoardAbout
 {
@@ -180,9 +120,9 @@
 -(void)setRsa
 {
 #ifndef DEMO
-    if([value length] == 6){
-        rsaValue = [NSString stringWithString:[EncryptionUtil rsaEncrypt:[NSString stringWithFormat:@"%@FF",value]]];
-    }
+    
+        rsaValue = [NSString stringWithString:[EncryptionUtil rsaEncrypt:[NSString stringWithFormat:@"%@",pwdTF.text]]];
+    
 #endif
 }
 
@@ -192,21 +132,12 @@
     NSLog(@"写死的密码");
     return @"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0";
 #else
+    
+   
     return rsaValue;
 #endif
 }
-- (void)setTextFieldValue:(NSString*)values
-{
-    value = [NSMutableString stringWithString:values];
-    [self.pwdTF setText:value];
-}
-- (void) clearInput
-{
-    value = [[NSMutableString alloc]initWithCapacity:0];
-    [self.pwdTF setText:@""];
-    rsaValue = nil;
-    
-}
+
 
 #pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -223,7 +154,11 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-
+    if(textField.text.length>=6) //TODO
+    {
+       [self setRsa];
+    }
+    
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {
         [self.delegate textFieldDidEndEditing:textField];

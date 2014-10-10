@@ -204,8 +204,8 @@
                                          {
                                              [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
                                              
-                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
-                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES]; //TODO
+//                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
+//                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES]; //TODO
                                          }
                                          
                                           
