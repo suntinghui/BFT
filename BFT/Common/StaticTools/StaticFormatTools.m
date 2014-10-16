@@ -283,10 +283,45 @@
  */
 + (BOOL)isValidatePassword:(NSString*)psw
 {
+    //原来的规则
+//    NSString *emailRegex = @"^[A-Za-z0-9]+$";
+//    NSPredicate *pswTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
+//    return [pswTest evaluateWithObject:psw];
     
-    NSString *emailRegex = @"^[A-Za-z0-9]+$";
-    NSPredicate *pswTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
-    return [pswTest evaluateWithObject:psw];
+    //修改后的规则
+    if (psw.length<=7 || psw.length>20) {
+        UIAlertView *alerts = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码长度应为8到20位" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alerts show];
+        return NO;
+    }
+    BOOL isHaveCharacter = NO;
+    for (int i=0; i<psw.length; i++) {
+        if ([psw  characterAtIndex:i]>='a'&& [psw characterAtIndex:i]<='z') {
+            isHaveCharacter = YES;
+            break;
+        }
+    }
+    if (isHaveCharacter == NO) {
+        UIAlertView *alerts = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码中必须包含小写字母" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alerts show];
+        return NO;
+    }
+    isHaveCharacter = NO;
+    for (int i=0; i<[psw length]; i++) {
+        if ([psw characterAtIndex:i]>'A'&&[psw characterAtIndex:i]<='Z') {
+            isHaveCharacter = YES;
+            break;
+        }
+    }
+    if (isHaveCharacter == NO) {
+        UIAlertView *alerts = [[UIAlertView alloc]initWithTitle:@"提示" message:@"密码中必须包含大写字母" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alerts show];
+        return NO;
+    }else
+        return YES;
+    
+    
+    
 }
 
 /**
