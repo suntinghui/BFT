@@ -288,6 +288,7 @@
     NSPredicate *pswTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
     return [pswTest evaluateWithObject:psw];
 }
+
 /**
  *  判断邮政编码是否正确
  *
