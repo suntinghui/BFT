@@ -110,11 +110,10 @@
     NSMutableString *str = [[NSMutableString alloc]init];
     for (int i=0; i<(128-plainText.length); i++)
     {
-//        [str appendString:[ConvertUtil hexToBinStr:@"0x00"]];
-        [str appendString:@"0"];
+        [str appendString:@" "];
     }
     
-    plainText = [NSString stringWithFormat:@"%@%@",str,plainText];
+    plainText = [NSString stringWithFormat:@"%@%@",plainText,str];
 
     NSLog(@" plaintext:%@\n",plainText);
     

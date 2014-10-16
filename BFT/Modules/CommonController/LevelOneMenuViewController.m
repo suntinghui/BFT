@@ -99,7 +99,7 @@
                 [rootNav popToRootViewControllerAnimated:YES];
                 if ([result[@"rtCd"] isEqualToString:@"00"])
                 {
-                    [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
+                    [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-1] animated:YES];
                     
 
                 }

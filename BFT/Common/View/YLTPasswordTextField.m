@@ -11,7 +11,7 @@
 
 @interface YLTPasswordTextField ()
 {
-    __strong NSMutableString        *value;
+    
 }
 
 @end
@@ -27,7 +27,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        value = [[NSMutableString alloc] init];
         
         
         // Initialization code
@@ -63,7 +62,6 @@
 }
 
 -(void) awakeFromNib{
-    value = [[NSMutableString alloc] init];
     
     
     // Initialization code
@@ -93,30 +91,8 @@
   //  randomKeyBoardView.delegate = self;
     [self addSubview:pwdTF];
 }
-- (void) numberKeyBoardInput:(NSInteger) number
-{
-#ifndef DEMO
-    if (self.rsaValue) {
-        return;
-    }
-#endif
-    
-    if (value.length < 6) {
-        [value appendFormat:@"%d", number];
-    }
-    
-    if(value.length == 6){
-        self.md5Value = [EncryptionUtil MD5Encrypt:[NSString stringWithFormat:@"%@%@",value,INIT_PUBLICKEY_MOD]];
-        
-    }
-    NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:6];
-    for (int i=0; i<value.length; i++) {
-        [tmpStr appendString:@"*"];
-    }
-    [self.pwdTF setText:tmpStr];
-    [self setRsa];
-}
 
+<<<<<<< HEAD
 //- (void) numberKeyBoardDelete
 //{
 //    if(value.length>0){
@@ -164,12 +140,26 @@
 //    [alert show];
 //}
 //
+=======
+
+- (void) numberKeyBoardAbout
+{
+    NSString *mess = [NSString stringWithFormat:@"%@为保护您的密码安全，请您使用定制的键盘输入密码。密码键盘每次随机打乱按键顺序，并且在您输入完6位密码后自动对密码进行加密，全面保护您的账户安全。",@"百付通"];
+    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"关于"
+                                                   message:mess
+                                                  delegate:self
+                                         cancelButtonTitle:@"确 定"
+                                         otherButtonTitles:nil];
+    [alert show];
+}
+
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
 -(void)setRsa
 {
 #ifndef DEMO
-    if([value length] == 6){
-        rsaValue = [NSString stringWithString:[EncryptionUtil rsaEncrypt:[NSString stringWithFormat:@"%@FF",value]]];
-    }
+    
+        rsaValue = [NSString stringWithString:[EncryptionUtil rsaEncrypt:[NSString stringWithFormat:@"%@",pwdTF.text]]];
+    
 #endif
 }
 
@@ -179,9 +169,12 @@
     NSLog(@"写死的密码");
     return @"3dc8afdc432bf3be2370fde5707ccbf248a1853d5a85e3782088f7d4a8767e12dfe687096a6364876dd62f7148191608f118bc65a85002cf74f4a5afb65be312b612ce8358da9dcdfbcf84adab8a4c50613cd225617314e882a41a52037ca648ca13bed5829e99b86cd59a26d56536f0a1e3e2cb5e99703b63872e726c1321e0";
 #else
+    
+   
     return rsaValue;
 #endif
 }
+<<<<<<< HEAD
 //- (void)setTextFieldValue:(NSString*)values
 //{
 //    value = [NSMutableString stringWithString:values];
@@ -201,6 +194,16 @@
 //   // [self.randomKeyBoardView refresh:nil];
 //    return YES;
 //}
+=======
+
+
+#pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+   // [self.randomKeyBoardView refresh:nil];
+    return YES;
+}
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ([self.delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
@@ -210,6 +213,13 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+<<<<<<< HEAD
+=======
+    if(textField.text.length>=6) //TODO
+    {
+       [self setRsa];
+    }
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
     
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {

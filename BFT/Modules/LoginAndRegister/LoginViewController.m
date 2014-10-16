@@ -46,30 +46,24 @@
     [self.verCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     
     self.remenberPswBtn.selected = [UserDefaults boolForKey:kRemenbPassword];
+    if (self.remenberPswBtn.selected)
+    {
+        if (![StaticTools isEmptyString: [UserDefaults objectForKey:PWDLOGIN]])
+        {
+            self.tf_pwd.pwdTF.text =[UserDefaults objectForKey:PWDLOGIN];
+        }
+        
+    }
+    NSString *lastLogin = [UserDefaults objectForKey:PHONENUM];
+    if (lastLogin!=nil)
+    {
+        self.userNameTxtField.text = lastLogin;
+    }
     
 //    [self getAppVersion]; TODO
     
     //直接请求时 超时  原因未知
     [self performSelector:@selector(getPicVerCode) withObject:nil afterDelay:0.5];
-    
-    self.userNameTxtField.text = @"18734825880"; //TODO
-    
-    [[Transfer sharedTransfer]startTransfer:@"082001" fskCmd:nil paramDic:nil mess:@"正在退出" success:^(id result) {
-        
-        UINavigationController *rootNav = (UINavigationController*)ApplicationDelegate.window.rootViewController;
-        [rootNav popToRootViewControllerAnimated:YES];
-        if ([result[@"rtCd"] isEqualToString:@"00"])
-        {
-            [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
-            
-            
-        }
-        else
-        {
-            
-        }
-        
-    } fail:nil];
     
 }
 
@@ -230,6 +224,7 @@
                                          {
                                              APPDataCenter.CertificationStatus = result[@"CertificationStatus"];
                                              [UserDefaults setObject:self.userNameTxtField.text forKey:PHONENUM];
+                                             [UserDefaults setObject:self.tf_pwd.pwdTF.text forKey:PWDLOGIN];
                                              [UserDefaults synchronize];
                                              
                                              [self gotoHome];

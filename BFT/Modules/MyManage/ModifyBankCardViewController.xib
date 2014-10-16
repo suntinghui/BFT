@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -118,7 +118,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8cg-hc-QfC">
-                    <rect key="frame" x="20" y="403" width="280" height="40"/>
+                    <rect key="frame" x="20" y="363" width="280" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <state key="normal" title="确认修改" backgroundImage="ip_button">
@@ -138,11 +138,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ey3-D3-Uai">
-                    <rect key="frame" x="0.0" y="10" width="320" height="416"/>
+                    <rect key="frame" x="0.0" y="14" width="320" height="412"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rv8-jh-2Xk">
-                            <rect key="frame" x="177" y="6" width="120" height="120"/>
+                            <rect key="frame" x="177" y="2" width="120" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="add_card_icon_one">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,29 +152,29 @@
                             </connections>
                         </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证正面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xPd-Wq-ue4">
-                            <rect key="frame" x="20" y="4" width="85" height="21"/>
+                            <rect key="frame" x="20" y="0.0" width="85" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证反面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7d-mL-64O">
-                            <rect key="frame" x="20" y="144" width="85" height="21"/>
+                            <rect key="frame" x="20" y="140" width="85" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行卡图片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d37-r7-htc">
-                            <rect key="frame" x="20" y="288" width="85" height="21"/>
+                            <rect key="frame" x="20" y="284" width="85" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" id="NZa-81-7bO">
-                            <rect key="frame" x="0.0" y="432" width="320" height="1"/>
+                            <rect key="frame" x="0.0" y="428" width="320" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Din-i4-X6G">
-                            <rect key="frame" x="177" y="144" width="120" height="120"/>
+                            <rect key="frame" x="177" y="140" width="120" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="add_card_icon_two">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,7 +184,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pvd-cM-cB3">
-                            <rect key="frame" x="177" y="288" width="120" height="120"/>
+                            <rect key="frame" x="177" y="284" width="120" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="add_card_icon">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,17 +194,17 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input_bg" id="gvQ-Yq-OxH">
-                            <rect key="frame" x="20" y="450" width="280" height="40"/>
+                            <rect key="frame" x="20" y="446" width="280" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_user" id="BzP-1A-i77">
-                            <rect key="frame" x="34" y="462" width="14" height="15"/>
+                            <rect key="frame" x="34" y="458" width="14" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="真实姓名" minimumFontSize="17" id="SCc-j1-chC">
-                            <rect key="frame" x="67" y="455" width="210" height="30"/>
+                            <rect key="frame" x="67" y="451" width="210" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -214,17 +214,17 @@
                             </connections>
                         </textField>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input_bg" id="hPI-tq-1g7">
-                            <rect key="frame" x="20" y="516" width="280" height="40"/>
+                            <rect key="frame" x="20" y="512" width="280" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_idcard" id="U3h-yB-Mmh">
-                            <rect key="frame" x="34" y="528" width="14" height="15"/>
+                            <rect key="frame" x="34" y="524" width="14" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="身份证" minimumFontSize="17" id="hAs-8K-3bH">
-                            <rect key="frame" x="67" y="521" width="210" height="30"/>
+                            <rect key="frame" x="67" y="517" width="210" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -234,17 +234,17 @@
                             </connections>
                         </textField>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input_bg" id="O5C-c7-Cvh">
-                            <rect key="frame" x="20" y="582" width="280" height="40"/>
+                            <rect key="frame" x="20" y="578" width="280" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bankcard" id="ihd-ui-uQb">
-                            <rect key="frame" x="34" y="596" width="14" height="15"/>
+                            <rect key="frame" x="34" y="592" width="14" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="原银行卡号" minimumFontSize="17" id="EBo-pj-tYR">
-                            <rect key="frame" x="67" y="589" width="210" height="30"/>
+                            <rect key="frame" x="67" y="585" width="210" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -254,17 +254,17 @@
                             </connections>
                         </textField>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="input_bg" id="4Cw-s4-VOC">
-                            <rect key="frame" x="20" y="648" width="280" height="40"/>
+                            <rect key="frame" x="20" y="644" width="280" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bankcard" id="yhB-kL-nNc">
-                            <rect key="frame" x="34" y="661" width="14" height="15"/>
+                            <rect key="frame" x="34" y="657" width="14" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         </imageView>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新银行卡号" minimumFontSize="17" id="Snl-Ml-IPX">
-                            <rect key="frame" x="67" y="653" width="210" height="30"/>
+                            <rect key="frame" x="67" y="649" width="210" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -274,7 +274,7 @@
                             </connections>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="短信验证码" minimumFontSize="17" background="input_bg" id="CBF-ZT-W6j">
-                            <rect key="frame" x="20" y="711" width="130" height="40"/>
+                            <rect key="frame" x="20" y="707" width="130" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -283,7 +283,7 @@
                             </connections>
                         </textField>
                         <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bnv-Tb-dQf">
-                            <rect key="frame" x="182" y="711" width="118" height="40"/>
+                            <rect key="frame" x="182" y="707" width="118" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="获取短信校验码" backgroundImage="ip_button">
                                 <color key="titleColor" red="0.017239317600000002" green="0.015348079840000001" blue="0.015683222069999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,7 +293,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="72y-xq-V19">
-                            <rect key="frame" x="20" y="783" width="280" height="40"/>
+                            <rect key="frame" x="20" y="779" width="280" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="确认修改" backgroundImage="ip_button">

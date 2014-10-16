@@ -151,7 +151,7 @@
 - (void)getVerCode
 {
     
-    NSDictionary *requstDict = @{@"mobNo":@"18734825880", //TODO
+    NSDictionary *requstDict = @{@"mobNo":[UserDefaults objectForKey:PHONENUM],
                                  @"sendTime":[StaticTools getDateStrWithDate:[NSDate date] withCutStr:@"-" hasTime:YES],
                                  @"type":@"0",
                                  @"money":@""};
@@ -204,8 +204,8 @@
                                          {
                                              [SVProgressHUD showErrorWithStatus:result[@"rtCmnt"]];
                                              
-                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
-                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES]; //TODO
+//                                             SetPayPwdViewController *setPayPwdViewController = [[SetPayPwdViewController alloc]init];
+//                                             [self.navigationController pushViewController:setPayPwdViewController animated:YES]; //TODO
                                          }
                                          
                                           
