@@ -92,7 +92,6 @@
     [self addSubview:pwdTF];
 }
 
-<<<<<<< HEAD
 //- (void) numberKeyBoardDelete
 //{
 //    if(value.length>0){
@@ -140,7 +139,6 @@
 //    [alert show];
 //}
 //
-=======
 
 - (void) numberKeyBoardAbout
 {
@@ -153,7 +151,6 @@
     [alert show];
 }
 
->>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
 -(void)setRsa
 {
 #ifndef DEMO
@@ -174,27 +171,7 @@
     return rsaValue;
 #endif
 }
-<<<<<<< HEAD
-//- (void)setTextFieldValue:(NSString*)values
-//{
-//    value = [NSMutableString stringWithString:values];
-//    [self.pwdTF setText:value];
-//}
-//- (void) clearInput
-//{
-//    value = [[NSMutableString alloc]initWithCapacity:0];
-//    [self.pwdTF setText:@""];
-//    rsaValue = nil;
-//    
-//}
-//
-//#pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-//{
-//   // [self.randomKeyBoardView refresh:nil];
-//    return YES;
-//}
-=======
+
 
 
 #pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
@@ -203,7 +180,7 @@
    // [self.randomKeyBoardView refresh:nil];
     return YES;
 }
->>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ([self.delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
@@ -213,14 +190,6 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-<<<<<<< HEAD
-=======
-    if(textField.text.length>=6) //TODO
-    {
-       [self setRsa];
-    }
->>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
-    
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {
         [self.delegate textFieldDidEndEditing:textField];
