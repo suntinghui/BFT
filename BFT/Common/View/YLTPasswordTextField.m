@@ -51,17 +51,10 @@
 
         [pwdTF setFont:[UIFont systemFontOfSize:15]];
         
-       // randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
-        
         randomKeyBoardView = [[IPhoneCustomKeyboard alloc] init];
-        
-      //  pwdTF.inputView = randomKeyBoardView;
-        [randomKeyBoardView setTextView:pwdTF];
+                [randomKeyBoardView setTextView:pwdTF];
         
         randomKeyBoardView.delegate = self;
-        
-        //自己+
-      //  [randomKeyBoardView setTextView:(UITextView *)pwdTF.inputView];
         
         [self addSubview:pwdTF];
     }
@@ -92,19 +85,62 @@
     pwdTF.secureTextEntry = YES;
     [pwdTF setFont:[UIFont systemFontOfSize:15]];
     
-  //  randomKeyBoardView = [[RandomKeyBoardView alloc] initWithFrame:CGRectMake(0, 100, 480, 200)];
-    
     randomKeyBoardView = [[IPhoneCustomKeyboard alloc]init];
-    
- //   pwdTF.inputView = randomKeyBoardView;
- 
-    //自己+
     [randomKeyBoardView setTextView:pwdTF];
     
-    randomKeyBoardView.delegate = self;
+  //  randomKeyBoardView.delegate = self;
     [self addSubview:pwdTF];
 }
 
+<<<<<<< HEAD
+//- (void) numberKeyBoardDelete
+//{
+//    if(value.length>0){
+//        [value deleteCharactersInRange:NSMakeRange(value.length-1, 1)];
+//        NSMutableString *tmpStr = [[NSMutableString alloc] initWithCapacity:6];
+//        for (int i=0; i<value.length; i++) {
+//            [tmpStr appendString:@"*"];
+//        }
+//        [self.pwdTF setText:tmpStr];
+//    }
+//    
+//    rsaValue = nil;
+//}
+//
+//- (void) numberKeyBoardConfim
+//{
+//    [self.pwdTF resignFirstResponder];
+//    
+////    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+////    NSTimeInterval animationDuration = 0.30f;
+////    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
+////    [UIView setAnimationDuration:animationDuration];
+////    //    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
+////    CGRect rect = CGRectMake(0.0f, 0.0f,320,[UIScreen mainScreen].bounds.size.height);
+////    self.superview.frame = rect;
+////    [UIView commitAnimations];
+//}
+//
+//- (void) numberKeyBoardClear
+//{
+//    [value deleteCharactersInRange:NSMakeRange(0, value.length)];
+//    [self.pwdTF setText:@""];
+//    
+//    rsaValue = nil;
+//}
+//
+//- (void) numberKeyBoardAbout
+//{
+//    NSString *mess = [NSString stringWithFormat:@"%@为保护您的密码安全，请您使用定制的键盘输入密码。密码键盘每次随机打乱按键顺序，并且在您输入完6位密码后自动对密码进行加密，全面保护您的账户安全。",@"百付通"];
+//    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"关于"
+//                                                   message:mess
+//                                                  delegate:self
+//                                         cancelButtonTitle:@"确 定"
+//                                         otherButtonTitles:nil];
+//    [alert show];
+//}
+//
+=======
 
 - (void) numberKeyBoardAbout
 {
@@ -117,6 +153,7 @@
     [alert show];
 }
 
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
 -(void)setRsa
 {
 #ifndef DEMO
@@ -137,6 +174,27 @@
     return rsaValue;
 #endif
 }
+<<<<<<< HEAD
+//- (void)setTextFieldValue:(NSString*)values
+//{
+//    value = [NSMutableString stringWithString:values];
+//    [self.pwdTF setText:value];
+//}
+//- (void) clearInput
+//{
+//    value = [[NSMutableString alloc]initWithCapacity:0];
+//    [self.pwdTF setText:@""];
+//    rsaValue = nil;
+//    
+//}
+//
+//#pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
+//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+//{
+//   // [self.randomKeyBoardView refresh:nil];
+//    return YES;
+//}
+=======
 
 
 #pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
@@ -145,6 +203,7 @@
    // [self.randomKeyBoardView refresh:nil];
     return YES;
 }
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ([self.delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
@@ -154,10 +213,13 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+<<<<<<< HEAD
+=======
     if(textField.text.length>=6) //TODO
     {
        [self setRsa];
     }
+>>>>>>> ff36420c64f14ddca913abe92e70fd1202a38bd5
     
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {

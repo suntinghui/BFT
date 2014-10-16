@@ -570,7 +570,8 @@ enum {
     }
     
     [text setFont:[UIFont boldSystemFontOfSize:44]];
-    [text setTextAlignment:UITextAlignmentCenter];
+   // [text setTextAlignment:UITextAlignmentCenter];
+    [text setTextAlignment:NSTextAlignmentCenter];
     [text setBackgroundColor:[UIColor clearColor]];
     [text setShadowColor:[UIColor whiteColor]];
     [text setText:b.titleLabel.text];

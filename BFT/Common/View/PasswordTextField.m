@@ -136,11 +136,11 @@
 #endif
 }
 
-#pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    [randomKeyBoardView refresh:nil];
-    return YES;
-}
+//#pragma mark - UITextFieldDelegate 每一次弹出密码框都要刷新键盘
+//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+//{
+//    [randomKeyBoardView refresh:nil];
+//    return YES;
+//}
 
 @end
