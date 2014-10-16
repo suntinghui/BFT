@@ -25,6 +25,8 @@
 {
 @private
     __weak id<IPhoneCustomKeyboard> _delegate;
+    
+    BOOL addCustomKeyboardNotification;//是否添加键盘通知
 
     
 }
@@ -92,5 +94,8 @@
 - (IBAction)finishPressed:(id)sender;
 //切换系统输入法按钮事件
 - (IBAction)changeToSysInputMethodPressed:(id)sender;
+
+
+
 
 @end

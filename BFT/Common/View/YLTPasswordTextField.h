@@ -24,12 +24,12 @@
 @property(nonatomic, strong) NSString                   *md5Value;
 @property(nonatomic, assign) id<UITextFieldDelegate>delegate;
 
-//- (void) numberKeyBoardInput:(NSInteger) number;
+- (void) numberKeyBoardInput:(NSInteger) number;
 //- (void) numberKeyBoardDelete;
 //- (void) numberKeyBoardConfim;
 //- (void) numberKeyBoardClear;
 //- (void) numberKeyBoardAbout;
-//- (void) setRsa;
+- (void) setRsa;
 //- (void) clearInput;
 //- (void)setTextFieldValue:(NSString*)values;
 @end

@@ -10,31 +10,62 @@
 	<string>BFT</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>568F4869-7D1B-4AC3-9423-AADC74022E06</key>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++1031</key>
+		<string>svn://192.168.0.248/source/client/Pos2iPhone/lib</string>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++7266</key>
+		<string>svn://192.168.0.248/source/client/Pos2iPhone/POS2iPhone/Source/Client/DB</string>
+		<key>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</key>
 		<string>https://github.com/suntinghui/BFT.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BFT.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>568F4869-7D1B-4AC3-9423-AADC74022E06</key>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++1031</key>
+		<string>../../BFT/lib</string>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++7266</key>
+		<string>../../BFT/Common/Client/DB</string>
+		<key>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</key>
 		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++1031</key>
+		<string>svn://192.168.0.248</string>
+		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++7266</key>
+		<string>svn://192.168.0.248</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/suntinghui/BFT.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>568F4869-7D1B-4AC3-9423-AADC74022E06</string>
+	<string>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>568F4869-7D1B-4AC3-9423-AADC74022E06</string>
+			<string>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BFT</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++7266</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DB</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++1031</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lib</string>
 		</dict>
 	</array>
 </dict>
