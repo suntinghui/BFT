@@ -26,6 +26,6 @@
     NSArray *titles;
 }
 @property (weak, nonatomic) IBOutlet UITableView *listTabelView;
-@property (assign, nonatomic) int pageType; /*0：我的管理 1：我要查询 2：我要收款 3：我的存款 4：系统相关*/
+@property (assign, nonatomic) int pageType; /*0：我的管理 1：我要查询 2：我要收款 3：系统相关*/
 
 @end
