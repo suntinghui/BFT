@@ -140,6 +140,7 @@
 //}
 //
 
+
 - (void) numberKeyBoardAbout
 {
     NSString *mess = [NSString stringWithFormat:@"%@为保护您的密码安全，请您使用定制的键盘输入密码。密码键盘每次随机打乱按键顺序，并且在您输入完6位密码后自动对密码进行加密，全面保护您的账户安全。",@"百付通"];
@@ -190,6 +191,7 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+
     if ([self.delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {
         [self.delegate textFieldDidEndEditing:textField];

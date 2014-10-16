@@ -14,7 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-//#define DEMO   1
+#define DEMO   1
 
 #import "Constants.h"
 #import "Transfer.h"
