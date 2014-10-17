@@ -47,7 +47,7 @@
     [model setAmount:@"123"];
     [model setTraceNum:@"000001"];
     model.transCode = @"020022";
-    [model setDate:@"0827"];
+    [model setDate:@"1017"];
     [model setContent:@{@"da":@"te"}];
     
     BOOL flag = [helper insertASuccessTrans:model];
