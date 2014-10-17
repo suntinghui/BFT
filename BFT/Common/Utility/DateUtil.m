@@ -45,7 +45,7 @@
         return mutableStr;
     }
     
-    NSLog(@"DateUtil->formatDateString : The parameter is illegal");
+    NSLog(@"DateUtil->formatDateString : The parameter is illegal（%@）",yyyyMMdd);
     return yyyyMMdd;
 }
 

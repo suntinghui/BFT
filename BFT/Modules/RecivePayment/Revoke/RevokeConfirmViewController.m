@@ -43,7 +43,7 @@
 {
     [super viewWillAppear:animated];
     
-    self.scrView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height-40);
+    self.scrView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
 }
 - (void)didReceiveMemoryWarning
 {
