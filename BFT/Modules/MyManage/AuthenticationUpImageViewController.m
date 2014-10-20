@@ -62,6 +62,41 @@
     [self.view endEditing:YES];
 }
 
+- (BOOL)checkValue
+{
+    NSString *err = nil;
+    
+    for (int i=100; i<103; i++)
+    {
+        UIButton *button = (UIButton*)[self.view viewWithTag:i];
+        if ([button backgroundImageForState:UIControlStateNormal]==nil)
+        {
+            err = @"请确认照片信息完整";
+            break;
+        }
+    }
+    
+    
+    if ([StaticTools isEmptyString:self.tf_cardNo.text])
+    {
+        err = @"请输入银行卡号";
+    }
+    else if([StaticTools isEmptyString:self.tf_merchantName.text])
+    {
+        err = @"清输入商户名";
+    }
+    else if([StaticTools isEmptyString:self.tf_msg.text])
+    {
+        err = @"请输入验证码";
+    }
+    
+    if (err!=nil)
+    {
+        [SVProgressHUD showErrorWithStatus:err];
+        return NO;
+    }
+    return YES;
+}
 #pragma mark -keyboard
 - (void)keyBoardShowWithHeight:(float)height
 {
@@ -214,7 +249,11 @@
 
 -(IBAction)confirmAction:(id)sender{
     
-    [self realNameAuth];
+    if ([self checkValue])
+    {
+        [self realNameAuth];
+    }
+    
 }
 
 -(IBAction)bankAction:(id)sender{

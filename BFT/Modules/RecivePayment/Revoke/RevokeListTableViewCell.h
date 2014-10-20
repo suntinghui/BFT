@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *monyeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *stateImg;
 
 @end
