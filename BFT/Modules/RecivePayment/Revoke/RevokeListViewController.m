@@ -38,6 +38,8 @@
     self.listTableView.backgroundColor = [UIColor clearColor];
     self.listTableView.backgroundView = nil;
     
+    
+    //TODO  测试代码
     TransferSuccessDBHelper *helper = [[TransferSuccessDBHelper alloc] init];
     
     [helper deleteAllTransfer];
@@ -48,6 +50,7 @@
     [model setTraceNum:@"000001"];
     model.transCode = @"020022";
     [model setDate:@"1017"];
+
     [model setContent:@{@"da":@"te"}];
     
     BOOL flag = [helper insertASuccessTrans:model];
@@ -56,6 +59,8 @@
     } else {
         NSLog(@"交易成功但写入数据库时操作失败。。。");
     }
+    
+    
     
     self.revokeListArr = [NSArray arrayWithArray:[helper queryNeedRevokeTransfer]];
     [self.listTableView reloadData];

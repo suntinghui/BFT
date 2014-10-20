@@ -597,7 +597,8 @@
 
 - (void) showFSKProgress
 {
-    
+    [SVProgressHUD dismiss];
+    NSLog(@"fff:%@",self.currentFSKMethod);
     [SVProgressHUD showWithStatus:[self getWaittingMessage:self.currentFSKMethod] maskType:SVProgressHUDMaskTypeClear cancelBlock:^(id sender) {
         
         [SVProgressHUD dismiss];
@@ -607,6 +608,8 @@
 
 - (NSString *) getWaittingMessage:(NSString *) methodName
 {
+    return @"正在操作设备，请保持连接...";//FIXME 提示有些错乱 先直接返回
+    
     if ([methodName isEqualToString:@"Request_GetExtKsn"]) {
         return @"正在读取终端信息...";
     } else if([methodName isEqualToString:@"Request_VT"]) {
@@ -666,9 +669,6 @@
     [self.m_vcom StopRec];
     [self.m_vcom setMode:VCOM_TYPE_F2F recvMode:VCOM_TYPE_F2F];
     int smode=[self.m_vcom getSendMode];
-    
-
-    
 
 //     [self.m_vcom startDetector:14 random:"1234" randomLen:4 data:nil datalen:0 time:30];
     [self.m_vcom StartRec];
