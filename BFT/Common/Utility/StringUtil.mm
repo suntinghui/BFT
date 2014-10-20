@@ -128,7 +128,7 @@
     const char* cpc = [str cStringUsingEncoding:enc];
     char* pc = new char[[str length]];
     strcpy(pc, cpc);
-    
+
     return pc;
 }
 

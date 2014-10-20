@@ -419,12 +419,14 @@ static Transfer *instance = nil;
             if ([self.transferModel.shouldMac isEqualToString:@"true"]) {// 需要进行MAC计算
              
                     NSMutableData *data = [[NSMutableData alloc] init];
-                    NSData *tempByte = [_reqData subdataWithRange:NSMakeRange(1,19)];
-                    [data appendData:[_reqData subdataWithRange:NSMakeRange(11,tempByte.length)]];
-                    [data appendData:tempByte];
-                    
-                    NSString *bitmapHexStr = [[data description] stringByReplacingOccurrencesOfString:@" " withString:@""];
-                    NSLog(@"进行MAC计算bitmapHexStr:%@",bitmapHexStr);
+//                    NSData *tempByte = [_reqData subdataWithRange:NSMakeRange(1,19)];
+//                    [data appendData:[_reqData subdataWithRange:NSMakeRange(11,tempByte.length)]];
+//                    [data appendData:tempByte];
+                
+                  [data appendData:[_reqData subdataWithRange:NSMakeRange(13,_reqData.length-8-13)]];
+                
+                 NSString *bitmapHexStr = [[data description] stringByReplacingOccurrencesOfString:@" " withString:@""];
+                
                     // 进行MAC计算
 //                    [self startTransfer:nil fskCmd:[NSString stringWithFormat:@"Request_GetMac|string:%@", bitmapHexStr] paramDic:nil];
                 

@@ -79,6 +79,16 @@
 - (BOOL)checkInputValue
 {
     NSString *err;
+    for (int i=100; i<103; i++)
+    {
+        UIButton *button = (UIButton*)[self.view viewWithTag:i];
+        if ([button backgroundImageForState:UIControlStateNormal]==nil)
+        {
+            err = @"请确认照片信息完整";
+            break;
+        }
+    }
+    
     if ([StaticTools isEmptyString:self.nameTxtField.text])
     {
         err = @"请输入您的真实姓名";
@@ -94,6 +104,10 @@
     else  if ([StaticTools isEmptyString:self.nowBankCardTxtField.text])
     {
         err = @"请输入新银行卡号";
+    }
+    else if([StaticTools isEmptyString:self.verCodeTxtField.text])
+    {
+         err = @"请输入验证码";
     }
     
     if (err!=nil)

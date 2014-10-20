@@ -17,6 +17,7 @@
 //#import "InputMoneyViewController.h"
 //#import "QueryBalanceViewController.h"
 //#import "GatherCancelTableViewController.h"
+#import <string.h>
 
 @implementation Transfer (FSK)
 
@@ -500,7 +501,7 @@
         // mac
         if (vs->macresLen > 0) {
             [AppDataCenter sharedAppDataCenter].__PSAMMAC = [StringUtil ASCII2Hex:[self.m_vcom HexValue:vs->macres Len:vs->macresLen]];
-            NSLog(@"App Data:%@", [AppDataCenter sharedAppDataCenter].__PSAMMAC);
+            NSLog(@"mac 计算数据:%@", [AppDataCenter sharedAppDataCenter].__PSAMMAC);
         }
         
         if (vs->macres) {
@@ -727,8 +728,23 @@
 // 计算mac
 -(void) Request_GetMac:(NSString *) data
 {
-    NSLog(@"点付宝:计算MAC");
+    NSLog(@"点付宝:计算MAC:%@",data);
+    
+//    NSString *str = data;
+//    char * temp=HexToBin((char *)[str UTF8String]);
+//    int datalen = [str length]/2;
+//    NSLog(@"数据长度%i",datalen);
+//    
+//    char* pc = new char[datalen];
+//    strcpy(pc, temp);
+//    [self.m_vcom Request_GetMac:0 keyIndex:1 random:[StringUtil string2char:@""] randomLen:0 data:pc dataLen:datalen];
+    
+//    char datatt[datalen];
+//    memcpy(data, temp, datalen);
+    
     [self.m_vcom Request_GetMac:0 keyIndex:1 random:[StringUtil string2char:@""] randomLen:0 data:[StringUtil string2char:data] dataLen:strlen([StringUtil string2char:data])];
+    
+    
 }
 
 // 校验MAC
