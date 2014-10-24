@@ -18,13 +18,13 @@
 		<string>https://github.com/suntinghui/BFT.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BFT.xcodeproj/project.xcworkspace</string>
+	<string>BFT.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++1031</key>
-		<string>../../BFT/lib</string>
+		<string>../..BFT/lib/</string>
 		<key>2d0e23fe-48ec-47f8-8d5d-872e2c4e3599++7266</key>
-		<string>../../BFT/Common/Client/DB</string>
+		<string>../..BFT/Common/Client/DB/</string>
 		<key>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</key>
 		<string>../..</string>
 	</dict>
@@ -49,7 +49,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>48095FB4CA6104A4AFC12C0964ABA890DEAADE04</string>
 			<key>IDESourceControlWCCName</key>
-			<string>BFT</string>
+			<string>BFT_IOS</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

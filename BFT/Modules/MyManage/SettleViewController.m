@@ -39,13 +39,22 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     self.navigationItem.hidesBackButton = false;
-    
+     
     [super viewWillAppear:animated];
 }
 
 -(IBAction)confirmAction:(id)sender{
     
     [[Transfer sharedTransfer]startTransfer:@"050000" fskCmd:@"Request_VT#Request_GetExtKsn" paramDic:nil mess:@"正在结算" success:^(id result) {
+        
+        // 更新批次号
+        NSString *batchNum = [[result objectForKey:@"field60"] substringWithRange:NSMakeRange(2, 6)];
+        [[AppDataCenter sharedAppDataCenter] setBatchNum:batchNum];
+        
+        [StaticTools showMessagePageWithType:kMessageTypeSeccuss mess:@"结算成功" clicked:^{
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+
         
     } fail:nil];
 }

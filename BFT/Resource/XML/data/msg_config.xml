@@ -258,7 +258,7 @@
 		<field id="37"	datatype="ALPHA"	type="ASCII"	length="12" />
 		<field id="41" 	datatype="ALPHA" 	type="ASCII" 	length="8" 	must="true"/>
 		<field id="42" 	datatype="ALPHA" 	type="ASCII" 	length="15" must="true"/>
-		<field id="48" datatype="NUMERIC"	type="BCD"	addLen="true"	align="left"/>
+		<field id="48" datatype="LLLNVAR"	type="BCD"	addLen="true"	align="left"/>
 		<field id="49" datatype="ALPHA"	type="ASCII" length="3"	/>
 		<field id="60" datatype="LLLNVAR" type="BCD"	must="true"	addLen="true" align="left"/>
 		<field id="63" 	datatype="LLLVAR" type="ASCII" 	must="true" addLen="true"/>
@@ -268,13 +268,13 @@
 		<field id="12" 	datatype="TIME" 	type="BCD"	must="true"/>
 		<field id="13" 	datatype="DATE4"		type="BCD"	must="false" />
 		<field id="15" datatype="DATE4" 	type="BCD" />
-		<field id="32" 	datatype="LLVAR" 	type="BCD"	addLen="true"	align="left"/>
+		<field id="32" 	datatype="LLNVAR" 	type="BCD"	addLen="true"	align="left"/>
 		<field id="37"	datatype="ALPHA"	type="ASCII"	length="12" />
 		<field id="41" 	datatype="ALPHA" 	type="ASCII" 	length="8" 	must="true"/>
 		<field id="42" 	datatype="ALPHA" 	type="ASCII" 	length="15" must="true"/>
-		<field id="48" datatype="LLLVAR"	type="BCD"	addLen="true"	align="left"/>
+		<field id="48" datatype="LLLNVAR"	type="BCD"	addLen="true"	align="left"/>
 		<field id="49" datatype="ALPHA"	type="ASCII" length="3"	/>
-		<field id="60" datatype="LLLVAR" type="BCD"	must="true"	addLen="true" align="left"/>
+		<field id="60" datatype="LLLNVAR" type="BCD"	must="true"	addLen="true" align="left"/>
 		<field id="63" 	datatype="LLLVAR" type="ASCII" 	must="true" addLen="true"/>
 	</parseinfo>
 	

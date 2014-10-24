@@ -605,7 +605,10 @@ static Transfer *instance = nil;
             }
             else
             {
-                [self checkField39];
+                if ([self.transferCode isEqualToString:@"050000"]) {
+                    [self.receDic   setObject:@"00" forKey:@"field39"];
+                    [self checkField39];
+                }
             }
         }
     }
